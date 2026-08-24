@@ -1,0 +1,48 @@
+{
+  "method": "ensemble_b06 frozen from Phase 10; no retuning",
+  "targets": 125,
+  "strategy": {
+    "cost": 2892.0,
+    "payout": 2067.0,
+    "net_pl": -825.0,
+    "roi": 0.7147302904564315,
+    "profitable_share": 0.128,
+    "N_min": 19,
+    "N_median": 20.0,
+    "N_max": 45,
+    "max_target_payout": 177.0
+  },
+  "same_N_random_40": {
+    "roi_mean": 0.559508990318119,
+    "roi_std": 0.17240689826803623,
+    "roi_p05": 0.447216459197787,
+    "roi_p95": 1.087327109266943,
+    "best_roi": 1.1573305670816045,
+    "worst_roi": 0.4256569847856155,
+    "replicates_beating_strategy": 3,
+    "empirical_one_sided_p": 0.0975609756097561
+  },
+  "payout_concentration": {
+    "tier_1": 339.0,
+    "tier_5": 498.0,
+    "tier_6": 435.0,
+    "tier_7": 195.0,
+    "tier_8": 600.0,
+    "tier_9": 0.0,
+    "tier_10": 0.0,
+    "share_from_8plus": 0.29027576197387517
+  },
+  "blocks": [
+    {"dates": ["2026-02-22", "2026-05-12"], "strategy_roi": 0.6520787746170679, "random_roi_mean": 0.5441192560175054, "net_pl": -318.0, "above_random_mean": true},
+    {"dates": ["2026-05-13", "2026-06-21"], "strategy_roi": 0.8291891891891892, "random_roi_mean": 0.5349729729729729, "net_pl": -158.0, "above_random_mean": true},
+    {"dates": ["2026-07-10", "2026-08-23"], "strategy_roi": 0.6685660018993352, "random_roi_mean": 0.594420702754036, "net_pl": -349.0, "above_random_mean": true}
+  ],
+  "decision": {
+    "strategy_positive": false,
+    "beats_random_overall": true,
+    "beats_random_blocks": 3,
+    "positive_blocks": 0,
+    "promote_to_signal_decomposition": true
+  },
+  "note": "Exact full per-target trace is reproducible from experiments/phase10b_ensemble_verify.py. A serializer wrapper was added because the frozen script emits numpy scalar booleans at JSON serialization time."
+}
