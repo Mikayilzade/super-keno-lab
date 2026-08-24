@@ -4,100 +4,125 @@ Last updated: 2026-08-24
 
 ## Phase
 
-`PHASE 6 — frame-level equipment annotation / externally defined physical regimes`
+`PHASE 7 — adversarial portfolio search + walk-forward real-draw track`
 
 ## Core state
 
 - Dedicated repo: `Mikayilzade/super-keno-lab`; broad `loto-research` remains separate and untouched.
 - **195** validated Super Keno draws, 2022-12-21..2026-08-23.
-- Final **35 draws (2026-07-20..2026-08-23) remain sealed / unscored**.
-- Portfolio size **N is a free integer optimization variable**.
-- Current official rules/payouts are snapshotted; scorer/evaluator, baselines and robust free-N search are reproducible.
+- Portfolio size **N is a free integer optimization variable**; round-number grids are controls only.
+- Physical/video investigation is no longer a priority. Working assumption: lototron unchanged.
+- Current official rules/payouts are snapshotted; scorer/evaluator, baselines and robust search are reproducible.
 
-## Phase 1 — naive matrix anti-example
+## Exact universal fixed-portfolio result — CLOSED
 
-Naive matrix selected N=370 and achieved 120/120 profitable design draws with minimum design P/L +137 AZN, then collapsed on the next 40 exposed rows: min return 0.2378, average return 0.6136, profitable 5%.
+See `research/FIXED_PORTFOLIO_MAXIMIN_BOUND.md`.
 
-Verdict: historical memorization / overfit, rejected.
+For any fixed 10-number ticket, exact gross mean payout across all possible 20-of-70 draws is:
+
+**0.5985557942634199 AZN per 1 AZN stake.**
+
+Therefore for every fixed N-ticket portfolio:
+
+`min_draw_return_ratio <= 0.5985557942634199`.
+
+The bound is achieved exactly by taking all `C(70,10)=396,704,524,216` different tickets: every possible draw then pays `237,449,791,580 AZN`, ratio **0.5985557942634199**.
+
+Conclusion: **no fixed ticket list at any N can guarantee break-even or profit against every mathematically possible draw under current rules.**
+
+This does not close the actual-real-draw problem; a persistent real-world edge would require predictive/non-uniform information or an adaptive/conditional process.
+
+## Phase 1 — historical overfit anti-example
+
+Naive matrix selected **N=370**, achieved 120/120 profitable design draws with minimum P/L +137 AZN, then collapsed on the next 40 exposed rows: min return 0.2378, average return 0.6136, profitable 5%.
 
 ## Phase 2 — robust complementary portfolio
 
-Frozen robust search selected N=203. Reused 40-row diagnostic: min return 0.2759, average return 0.7393, worst P/L -147 AZN, profitable 12.5%.
+Frozen robust search selected **N=203**. Reused 40-row diagnostic: min return 0.2759, average return 0.7393, worst P/L -147 AZN, profitable 12.5%.
 
-A 500-draw fair-generator control showed portfolio geometry alone is not the missing edge.
+A fair-generator control showed portfolio geometry alone does not create an edge.
 
-## Phase 3 — empirical signal audit
+## Phase 3 — empirical signals
 
-No signal gate passed. Previous-draw repeat/avoid, raw hot/cold, fixed pairs and simple structural persistence failed. Weak leads only: contextual pair score and mild group-level mean reversion.
+No signal gate passed. Previous-draw repeat/avoid, raw hot/cold, fixed pairs and simple structural persistence failed. Contextual pair score remained only a weak lead.
 
-## Phase 4 — physical mechanism audit
+## Phases 4–5 — operational/physical branch
 
-Evidence supports a **physical lototron / physical-ball process** for televised Super Keno and use of French Akanis Technologies equipment at the draw-lottery level. Exact Super Keno machine model, ball-set rotation, RFID configuration and backup-machine substitution dates remain unknown.
+Physical lototron evidence was documented, but no actionable machine/set edge was confirmed. User has now explicitly deprioritized this branch and instructed the project to treat the lototron as unchanged.
 
-First 160 exposed rows: number 4 is coldest (24 appearances vs fair expectation 45.714); global distribution remains compatible with fair behavior. Independent next-40 check for #4 is directionally low but weak (8 vs expected 11.43; p≈0.15). Hard exclusion of #4 worsened overall monetary performance.
-
-Weak numeric change-point near 2026-06-01→02 did not persist on longer windows.
-
-## Phase 5 — video metadata / operational regimes
+## Phase 6 — direct search for an “always plus” historical list
 
 See:
-- `research/PHASE5_VIDEO_METADATA_LEDGER.md`
-- `results/PHASE5_VIDEO_AND_REGIME_LEDGER.md`
-- `experiments/phase5_operational_regime_audit.py`
-- `results/phase5_operational_regime_audit.json`
+- `results/PHASE6_FIXED_PORTFOLIO_PIVOT.md`
+- `experiments/phase6_fixed_portfolio_search.py`
+- `results/phase6_candidate_662_indices.json`
 
-### Official media trail established
+A new free-N greedy maximin fit used the first **160 previously exposed real draws**, 30,000 deterministic candidate tickets, seed `260824`, and continuous N search through 1200.
 
-Official Telegram archive contains draw media continuously across **2026-06-01..06-08** (26231..26241 calendar-coded series), covering the Phase-4 weak change-point neighborhood.
+Best fitted portfolio: **N=662**.
 
-Official Azərlotereya TV YouTube videos exist around January 2025, including 2025-01-05 (25017), 2025-01-10 (25025) and 2025-01-11 (25026).
+Fit on those 160 draws:
+- worst payout **1086 AZN** on 662 AZN cost;
+- worst P/L **+424 AZN**;
+- minimum return **1.64048**;
+- profitable draws **160/160**.
 
-Frames have not yet been reliably annotated in this workflow, so no machine/ball-set change is claimed from the videos yet.
+This is exactly the type of historical list the project was asked to search for.
 
-### Better January operational boundary
+### One-time forward check on the original final 35 rows
 
-Official material confirms 2025-01-06 was the final 5/36 draw and Beşdə 5 replaced it from 2025-01-07; a broader draw-lottery branding/site refresh was announced 2025-01-15.
+The algorithm and exact 662-ticket portfolio were frozen first; then the formerly sealed 35 rows were opened once.
 
-`2025-01-07` is therefore an **externally documented program/studio-lineup boundary**, but remains mechanically UNKNOWN for Super Keno.
+Result:
+- profitable draws **0/35**;
+- worst payout **249 AZN**;
+- worst P/L **-413 AZN**;
+- minimum return **0.37613**;
+- average return **0.505999**;
+- best return **0.75831**.
 
-### Draw IDs resolved
+Verdict: **extreme finite-history overfit**. 100% profitability on a known archive is not a sufficient criterion.
 
-Across the first 160 exposed rows, **107/107 known official draw IDs** equal calendar code `YYWWD` = two-digit ISO week-year + ISO week + ISO weekday.
+The final 35 rows are now **consumed** and must never again be called untouched holdout.
 
-Therefore apparent draw-number jumps are not sequential missing-draw evidence. Cancellation/postponement must be proven independently.
+## Current objective
 
-### #4 chronology / weekday sanity check
+Continue searching by different methods/stages for persistent positive performance on **real unseen draws**, while keeping the exact impossibility of universal fixed >1 return in view.
 
-Number 4 counts across exposed 20-row blocks: `6, 2, 1, 2, 4, 1, 4, 4`. Coldness predates June 2026 and does not identify a sharp June machine regime.
+Two tracks run conceptually in parallel:
 
-Simple weekday/shared-program fingerprint is also unsupported. In the later documented current-schedule period, the Tue/Fri-vs-other-days 70-number frequency-difference correlation from design to reused diagnostic is **-0.0027**; individual weekday profile correlations are all roughly -0.152..+0.027.
+### Track A — adversarial/maximin coverage
 
-Verdict: a simple fixed ball-set-by-weekday/shared-program explanation is rejected on exposed data.
+Purpose: construct strong finite-N portfolios and force them to face newly generated worst-case draws instead of only historical rows.
 
-## Current hypothesis ledger
+- build candidate portfolio with free N;
+- search the 20-of-70 draw space for a low-payout adversarial witness;
+- add witness as a constraint;
+- rebuild portfolio;
+- repeat until the floor stabilizes;
+- compare achieved floor with exact universal ceiling 0.5985557942634199.
 
-- `H-MECH-01` pure software RNG: evidence against as working model; physical lototron better supported.
-- `H-RULE-01` 2025-01-10 mechanical reset: rejected as unsupported.
-- `H-TIME-01` Super-Keno-specific 18:45 shift: rejected; likely site-wide display/metadata behavior.
-- `H-PHY-01` persistent physical/ball-set bias, especially #4: open but unconfirmed.
-- `H-REG-01` early-June-2026 operational change: open only for independent video check; number evidence alone is weak.
-- `H-WDAY-01` stable weekday/shared-program ball-set fingerprint: rejected in simple form.
-- `H-JAN25-01` 2025-01-07 program/studio transition: confirmed operational boundary, mechanical status unknown.
-- `H-DRAWID-01` draw-number gaps imply sequential missing draws: rejected; IDs are YYWWD calendar codes.
+This track cannot produce universal positive profit, but it prevents fake historical guarantees and may produce highly balanced portfolio components useful in conditional strategies.
 
-## Holdout policy
+### Track B — real-draw walk-forward strategy
 
-The final **35 real draws remain sealed**. Do not inspect/score them until a frozen signal-conditioned method is materially stronger on independent past-only checks.
+Purpose: find a process that changes/selects the portfolio before each draw using only information available at that time.
 
-## NEXT ACTION — Phase 6
+- nested rolling walk-forward evaluation across the 195 historical rows;
+- test multiple materially different methods, not only frequency signals;
+- allow conditional selection among several prebuilt complementary portfolios;
+- N remains free at every step;
+- future draws after a method is frozen become the next truly fresh validation set.
 
-1. Obtain frame-level annotations from official 2026-06-01..08 and January-2025 draw media: machine/chamber shape, loader/output path, ball color/font, reader/display, studio position and visible substitutions.
-2. Extend the video ledger around 2026-05-20..06-15 and older 2022/2023 footage.
-3. Search authoritative/public evidence for exact Akanis model, ball-set count, rotation/replacement policy, RFID mode and backup-machine use.
-4. If an equipment boundary is externally confirmed, rerun physical-frequency tests only inside predefined homogeneous regimes.
-5. Expand older contiguous draw history where video-covered periods can provide independent verification.
-6. If machine metadata remains inaccessible, pivot from ball identity to other operational information knowable before ticket purchase rather than endlessly mining frequencies.
-7. Only then feed a supported signal into robust free-N portfolio selection.
-8. Keep failed hypotheses/results recorded and keep final 35 holdout sealed.
+## NEXT ACTION — Phase 7
+
+1. Implement an adversarial draw finder for an arbitrary fixed portfolio using 70-bit masks + multi-start swap/local search.
+2. Verify it finds much worse draws than the 195-history archive for Phase-1/2/6 portfolios.
+3. Build a cutting-plane loop: portfolio -> adversarial witnesses -> rebuilt free-N portfolio -> new witnesses.
+4. Record best finite-N floor and concrete worst-draw witnesses at each iteration.
+5. In parallel, redesign the historical evaluation as rolling walk-forward because the old holdout is spent.
+6. Test conditional/dynamic portfolio families separately from fixed-list coverage.
+7. Do not return to machine/video research unless a later strategy explicitly needs it.
+8. Keep all failures and exact reproducibility seeds/results in the repo.
 
 No autonomous recurring task is enabled for this repository.
