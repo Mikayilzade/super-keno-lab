@@ -1,0 +1,38 @@
+name: Phase 9 LP Maximin
+
+on:
+  push:
+    paths:
+      - 'src/lp_maximin.py'
+      - 'experiments/phase9_lp_maximin.py'
+      - '.github/workflows/phase9_lp.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-phase9:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Phase 9
+        run: python experiments/phase9_lp_maximin.py
+      - name: Commit reproducible results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/phase9_lp_maximin.json results/PHASE9_LP_MAXIMIN.md results/phase9_lp_portfolio_*.csv
+          if git diff --cached --quiet; then
+            echo 'No result changes'
+          else
+            git commit -m 'Save Phase 9 LP maximin results'
+            git push
+          fi
