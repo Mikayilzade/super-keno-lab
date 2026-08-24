@@ -2,7 +2,9 @@
 
 ## Core question
 
-For a chosen ticket count N, search for ticket-generation and portfolio-selection rules that maximize persistent net performance across real Super Keno draws, especially the minimum result over unseen draws.
+Search for ticket-generation and portfolio-selection rules that maximize persistent net performance across real Super Keno draws, especially the minimum result over unseen draws.
+
+**Portfolio size N is a free optimization variable.** It must not be restricted to round values such as 10, 100, 1000 or a small preset grid. Round/non-round sample sizes may be used for baselines, but optimizers should track every meaningful intermediate N or otherwise justify the search over N. A result at N=347, 12,354, 81,907, etc. is fully valid.
 
 ## Evaluation layers
 
@@ -48,6 +50,8 @@ The central optimization target is the **worst unseen-draw P/L floor**, not the 
 ## Anti-overfitting rule
 
 A strategy that performs well only after seeing the test period is rejected. Any new rule inspired by validation/holdout results becomes a new experiment and must receive a new untouched evaluation period.
+
+An optimizer that directly memorizes historical draw rows is not accepted merely because it creates a positive floor in-sample. Robustness must be established with chronological internal folds, leave-block-out tests, walk-forward evaluation, perturbation/synthetic stress tests and ultimately unseen/forward data.
 
 ## Monetary results
 
