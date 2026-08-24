@@ -46,8 +46,7 @@ The best historical prefix was **N=662**.
 - profitable draws: **160/160**
 - average payout/cost: **5.28834**
 
-Exact 662-ticket list:
-`results/phase6_overfit_candidate_662.csv`.
+Exact selected candidate indices are stored in `results/phase6_candidate_662_indices.json`; together with the deterministic generator/seed they reproduce the exact 662-ticket list. The experiment script can also emit the expanded ticket CSV.
 
 This is an even stronger historical “always plus” construction than Phase 1.
 
