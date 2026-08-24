@@ -35,3 +35,4 @@ jobs:
             git commit -m 'Save Phase 10B ensemble verification'
             git push
           fi
+# trigger: phase10b-initial-run
