@@ -4,7 +4,7 @@ Last updated: 2026-08-24
 
 ## Phase
 
-`PHASE 9 — LP/maximin relaxation + Track B walk-forward start`
+`PHASE 10 — rolling walk-forward / adaptive conditional portfolio search`
 
 ## Core state
 
@@ -12,7 +12,7 @@ Last updated: 2026-08-24
 - **195** validated Super Keno draws, 2022-12-21..2026-08-23.
 - Portfolio size **N is a free integer optimization variable**; round-number grids are controls only.
 - Physical/video investigation is deprioritized. Working assumption: lototron unchanged.
-- The old final 35-row holdout was consumed once in Phase 6 and is no longer fresh validation.
+- All 195 historical rows are now exposed. Future draws after a frozen method are the only fresh validation source.
 
 ## Exact universal fixed-portfolio result — CLOSED
 
@@ -22,89 +22,104 @@ Therefore every fixed N-ticket portfolio satisfies:
 
 `min_draw_return_ratio <= 0.5985557942634199`.
 
-The bound is achieved by the all-ticket portfolio of `C(70,10)=396,704,524,216` distinct tickets. So no fixed ticket list at any N can guarantee break-even/profit against every mathematically possible draw.
+No fixed ticket list at any N can guarantee break-even/profit against every mathematically possible draw. Persistent real-world profit, if it exists, requires predictive/non-uniform information or an adaptive/conditional process.
 
-This does **not** close the real-draw problem: persistent real-world profit would require predictive/non-uniform information or an adaptive/conditional process.
-
-## Phase 6 — strongest historical always-plus anti-example
+## Phase 6 — historical always-plus anti-example
 
 Free-N fit on first 160 exposed real draws selected **N=662** and was profitable 160/160 with minimum return **1.64048**, then failed 0/35 on the next frozen block; minimum return **0.37613**, average **0.505999**.
 
 Verdict: extreme finite-history overfit.
 
-## Phase 7 — adversarial finder + first cutting-plane
+## Phase 7 — adversarial finder
 
-See `results/PHASE7_ADVERSARIAL_START.md`.
+The N=662 historical portfolio was attacked down to reproducible valid draws returning only about **14–15%** of stake. Cutting-plane rebuilds still admitted 14–17% holes.
 
-The N=662 historical portfolio was attacked down from real-history minimum 0.376 to reproducible adversarial witnesses around **0.142–0.147**. Five one-witness cutting-plane iterations still left 14–17% adversarial-return holes.
+Verdict: historical rows alone miss large weak regions in fitted portfolio geometry.
 
-Verdict: real history misses large weak regions in fitted portfolio geometry.
+## Phase 8 — multi-witness greedy/CVaR comparison
 
-## Phase 8 — multi-witness bank + builder comparison
+See `results/PHASE8_MULTIWITNESS_AND_BUILDERS.md`.
+
+Best broad-tail greedy initially reached ~21% adversarial return, but a stronger independent attack reduced it to **0.19699**, while same-N random returned **0.19467**.
+
+Verdict: greedy/capped/CVaR-like fixed geometry does not materially beat random under fresh adversarial search.
+
+## Phase 9 — LP/fractional maximin
 
 See:
-- `experiments/phase8_multiwitness_builder_compare.py`
-- `results/phase8_multiwitness_builder_compare.json`
-- `results/PHASE8_MULTIWITNESS_AND_BUILDERS.md`
+- `src/lp_maximin.py`
+- `experiments/phase9_lp_maximin.py`
+- `results/phase9_lp_maximin.json`
+- `results/PHASE9_LP_MAXIMIN.md`
+- `results/phase9_lp_portfolio_1106.csv`
 
-Setup:
-- all 195 rows treated as exposed geometry constraints;
+Method:
 - 12,000 deterministic candidate tickets, seed `260824`;
-- four adversarial-bank rounds, four distinct witnesses added per round;
-- N free.
+- finite bank = all 195 real draws + adversarial witnesses;
+- LP variables optimize ticket weights and minimum scenario return;
+- per-ticket LP weight capped at `1/N`, matching a relaxation of N distinct uniformly purchased tickets;
+- fractional solutions rounded into actual distinct-ticket portfolios;
+- N searched/adapted rather than fixed to round values;
+- each rounded portfolio attacked by fresh adversarial search and new witnesses added.
 
-Shared-bank builder progression:
+Final canonical GitHub run:
+- **N = 1106** distinct tickets;
+- fractional finite-bank floor **0.957675**;
+- fractional support **1219** candidates;
+- rounded finite-bank / real-195 minimum **0.432188**;
+- strong adversarial witnessed return **0.225136**.
 
-| round | N | fitted min | weakest new adversarial return |
-|---:|---:|---:|---:|
-| 0 | 898 | 0.7082 | 0.1971 |
-| 1 | 891 | 0.6846 | 0.1987 |
-| 2 | 847 | 0.7166 | 0.1960 |
-| 3 | 705 | 0.5872 | 0.1957 |
+Controls:
+- bottom-64 free-N control: N=1120, adversarial **0.219643**;
+- random N=1106 seed 99117: **0.221519**;
+- random N=1106 seed 99173: **0.223327**.
 
-### Same-bank builder comparison
+Verdict: **NO MATERIAL ADVERSARIAL ADVANTAGE OVER RANDOM.** LP greatly improves the finite-bank relaxation, but the actual rounded distinct-ticket portfolio is only ~0.18–0.55 percentage points above tested random controls under strong fresh attack. This is too small to justify further fixed-geometry optimization as the main route.
 
-- worst-8 greedy: N=829, fitted min 0.9614, adversarial 0.1942;
-- bottom-24: N=893, adversarial 0.1937;
-- bottom-64 / CVaR-like: N=863, initial adversarial 0.2109;
-- cap-15 bottom-24: N=716, adversarial 0.1774;
-- cap-30 bottom-24: N=854, adversarial 0.1991;
-- random same-N control: N=863, adversarial 0.2005;
-- cyclic control: N=847, a valid adversarial draw produced **0 payout**.
+The exact 1106-ticket LP portfolio is preserved as a robust-component candidate, not as a profit strategy.
 
-Worst-8 is another overfit warning: nearly break-even fitted floor but only ~19% under attack.
+## Strategic decision
 
-### Stronger independent attack
+Track A fixed-portfolio geometry has now been tested with:
+1. historical greedy maximin;
+2. robust/capped/CVaR greedy;
+3. multi-witness cutting-plane;
+4. fractional LP + rounding.
 
-Bottom-64 N=863 was attacked using 30,000 additional random valid draws, retaining weak seeds and locally descending them:
-- bottom-64 strongest witness: **170/863 = 0.19699**;
-- same-N random control: **168/863 = 0.19467**.
+All converge toward adversarial performance close to random once unseen weak draws are actively searched.
 
-Difference is only ~0.23 percentage points. Current greedy/CVaR/capped builders therefore **do not materially beat random portfolio geometry** under stronger adversarial search.
+Therefore **Track A is demoted to a robustness/component role**. The adversarial oracle remains mandatory for testing any portfolio component, but no more phases should be spent merely tuning fixed-list geometry unless a new mathematical formulation provides a qualitatively different mechanism.
 
-Verdict: **NO ADVERSARIAL EDGE YET. Stop tuning bottom-k constants.**
+## Main objective — Track B
 
-## Current objective
+Find a process that selects or rebuilds a portfolio **before each draw** using only information that existed at that time, with the practical target of persistent positive net P/L on real future draws.
 
-Continue searching by materially different methods/stages for persistent positive performance on **real unseen draws**, while retaining the adversarial oracle as a mandatory anti-overfit gate.
+The process may:
+- choose among several prebuilt complementary portfolios;
+- change N freely per draw;
+- use rolling statistics/signals only from prior draws;
+- combine weak signals rather than relying on one hot/cold heuristic;
+- abstain / buy zero tickets when the model has insufficient confidence;
+- use adversarially robust portfolio components as the execution layer after a predictive decision is made.
 
-### Track A — robust portfolio components
+## NEXT ACTION — Phase 10
 
-Track A cannot produce universal >1 return, but should seek substantially better finite-N geometry than random and create robust components for conditional strategies.
-
-### Track B — actual-profit process
-
-Portfolio may change/select before each draw using only information available then. This is the only route still compatible with persistent real-world profit under the exact fixed-list impossibility result.
-
-## NEXT ACTION — Phase 9
-
-1. Formulate a **fractional maximin / linear-programming relaxation** over a finite candidate-ticket pool and the current adversarial witness bank.
-2. Optimize ticket weights directly instead of greedy prefix order.
-3. Round/sparsify fractional weights into distinct-ticket portfolios with free N.
-4. Attack LP-rounded portfolios with the strong adversarial finder and add new witnesses in a cutting-plane loop.
-5. Compare LP-rounded portfolios against matched-N random and Phase-8 bottom-64 controls.
-6. Start **Track B rolling walk-forward** dynamic/conditional portfolio experiments separately using only past information at each historical step.
-7. Do not spend further phases on bottom-k parameter tuning unless LP results show a concrete reason.
-8. Keep all failures, seeds, exact witnesses and reproducible outputs in the repo.
+1. Build a strict rolling walk-forward harness across the 195 draws. At every target row, training data must end before that row.
+2. Use expanding and rolling windows; begin scoring only after enough history exists.
+3. Compare materially different dynamic families:
+   - contextual pair/triple scores;
+   - rolling hot/cold with shrinkage;
+   - previous-draw/group mean reversion;
+   - ensemble ranking of multiple weak signals;
+   - conditional selection among several prebuilt robust portfolio components;
+   - abstention/confidence thresholds;
+   - adaptive free N linked to signal strength.
+4. Optimize for actual P/L, worst P/L, profitable-draw share, losing streak and drawdown — not hit-count alone.
+5. Use nested walk-forward: thresholds/parameters are chosen only from earlier internal windows, then frozen for the next block.
+6. Compare every adaptive strategy against same-cost random and no-play baselines.
+7. Retain only methods showing repeated forward improvement across multiple chronological blocks, not one lucky period.
+8. Use the adversarial oracle on any fixed portfolio component before allowing it into the adaptive system.
+9. Save every failed family and exact seeds/results to avoid rediscovery.
+10. Future draws after a frozen Phase-10+ method become the only true fresh validation set.
 
 No autonomous recurring task is enabled for this repository.
