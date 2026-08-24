@@ -1,0 +1,52 @@
+{
+  "date": "2026-08-25",
+  "status": "VALID_MODELS_NO_EDGE_ORACLE_NEAR_BREAKEVEN",
+  "fixed_pool": {"size": 5000, "seed": 424242},
+  "targets": 125,
+  "N_policy": "free integer 19..400, selected from prior capped15 prefix curves",
+  "valid_models": {
+    "ridge_structure": {
+      "roi": 0.4919770242727441,
+      "net_pl": -13709,
+      "random_mean_roi": 0.5589382990550306,
+      "blocks_above_random": 0,
+      "positive_blocks": 0,
+      "prediction_rmse_mean": 0.11527348977667967,
+      "block_rois": [0.5085939274627091, 0.4774349821519633, 0.474216380182002]
+    },
+    "rolling20_structure": {
+      "roi": 0.48419762298139957,
+      "net_pl": -9678,
+      "random_mean_roi": 0.5532457496136012,
+      "blocks_above_random": 0,
+      "positive_blocks": 0,
+      "prediction_rmse_mean": 0.10264416741227901,
+      "block_rois": [0.5134952766531714, 0.5155608528671699, 0.4553956834532374]
+    },
+    "knn_structure": {
+      "roi": 0.5476711472335105,
+      "net_pl": -11576,
+      "random_mean_roi": 0.5571311347296031,
+      "blocks_above_random": 1,
+      "positive_blocks": 0,
+      "prediction_rmse_mean": 0.10619742200839186,
+      "block_rois": [0.7788615286216821, 0.48738110336081164, 0.462935475421287]
+    }
+  },
+  "oracle_structure": {
+    "diagnostic_only": true,
+    "cost": 10202,
+    "payout": 9785,
+    "net_pl": -417,
+    "roi": 0.9591256616349735,
+    "capped15_roi": 0.7738678690452853,
+    "profitable_share": 0.28,
+    "N_min": 19,
+    "N_median": 77,
+    "N_max": 232,
+    "block_rois": [0.9184960888215998, 1.0015678896205706, 0.9675409836065574],
+    "block_pl": [-323, 5, -99]
+  },
+  "promotion_gate_passed": false,
+  "next_phase": "PHASE 15 — oracle structural-factor decomposition + forecastability/value intersection"
+}
