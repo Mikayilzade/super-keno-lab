@@ -4,122 +4,112 @@ Last updated: 2026-08-24
 
 ## Phase
 
-`PHASE 10 — rolling walk-forward / adaptive conditional portfolio search`
+`PHASE 11 — verify frozen ensemble lead, then redesign adaptive process`
 
 ## Core state
 
 - Dedicated repo: `Mikayilzade/super-keno-lab`; broad `loto-research` remains separate and untouched.
 - **195** validated Super Keno draws, 2022-12-21..2026-08-23.
-- Portfolio size **N is a free integer optimization variable**; round-number grids are controls only.
-- Physical/video investigation is deprioritized. Working assumption: lototron unchanged.
-- All 195 historical rows are now exposed. Future draws after a frozen method are the only fresh validation source.
+- Portfolio size **N remains a free integer optimization variable**.
+- Physical/video investigation is deprioritized; working assumption: lototron unchanged.
+- All 195 historical rows are exposed. Future draws after a frozen method are the only truly fresh validation source.
 
-## Exact universal fixed-portfolio result — CLOSED
+## Exact universal fixed-list result — CLOSED
 
-For any fixed 10-number ticket, exact gross mean payout across all possible 20-of-70 draws is **0.5985557942634199 AZN per 1 AZN stake**.
+Every fixed 10-number ticket has exact gross mean payout **0.5985557942634199 AZN per 1 AZN stake** over all possible 20-of-70 draws. Therefore no fixed N-ticket list can guarantee break-even/profit against every mathematically possible draw.
 
-Therefore every fixed N-ticket portfolio satisfies:
+Track A fixed geometry was tested with historical greedy, robust/CVaR greedy, multi-witness cutting-plane, and LP/fractional maximin + rounding. Under fresh adversarial attack all materially converged close to random geometry. Track A remains only a robustness/component layer.
 
-`min_draw_return_ratio <= 0.5985557942634199`.
+## Phase 9 — LP/fractional maximin summary
 
-No fixed ticket list at any N can guarantee break-even/profit against every mathematically possible draw. Persistent real-world profit, if it exists, requires predictive/non-uniform information or an adaptive/conditional process.
+Canonical final LP-rounded portfolio: **N=1106**.
 
-## Phase 6 — historical always-plus anti-example
+- fractional finite-bank floor: **0.957675**;
+- rounded real-195 / finite-bank minimum: **0.432188**;
+- strong adversarial witnessed return: **0.225136**;
+- random same-N controls: **0.221519 / 0.223327**;
+- bottom-64 control: **0.219643**.
 
-Free-N fit on first 160 exposed real draws selected **N=662** and was profitable 160/160 with minimum return **1.64048**, then failed 0/35 on the next frozen block; minimum return **0.37613**, average **0.505999**.
+Verdict: no material fixed-geometry edge over random.
 
-Verdict: extreme finite-history overfit.
-
-## Phase 7 — adversarial finder
-
-The N=662 historical portfolio was attacked down to reproducible valid draws returning only about **14–15%** of stake. Cutting-plane rebuilds still admitted 14–17% holes.
-
-Verdict: historical rows alone miss large weak regions in fitted portfolio geometry.
-
-## Phase 8 — multi-witness greedy/CVaR comparison
-
-See `results/PHASE8_MULTIWITNESS_AND_BUILDERS.md`.
-
-Best broad-tail greedy initially reached ~21% adversarial return, but a stronger independent attack reduced it to **0.19699**, while same-N random returned **0.19467**.
-
-Verdict: greedy/capped/CVaR-like fixed geometry does not materially beat random under fresh adversarial search.
-
-## Phase 9 — LP/fractional maximin
+## Phase 10 — strict rolling walk-forward adaptive search
 
 See:
-- `src/lp_maximin.py`
-- `experiments/phase9_lp_maximin.py`
-- `results/phase9_lp_maximin.json`
-- `results/PHASE9_LP_MAXIMIN.md`
-- `results/phase9_lp_portfolio_1106.csv`
+- `experiments/phase10_walkforward_adaptive.py`
+- `results/phase10_walkforward_adaptive.json`
+- `results/PHASE10_WALKFORWARD_ADAPTIVE.md`
 
-Method:
-- 12,000 deterministic candidate tickets, seed `260824`;
-- finite bank = all 195 real draws + adversarial witnesses;
-- LP variables optimize ticket weights and minimum scenario return;
-- per-ticket LP weight capped at `1/N`, matching a relaxation of N distinct uniformly purchased tickets;
-- fractional solutions rounded into actual distinct-ticket portfolios;
-- N searched/adapted rather than fixed to round values;
-- each rounded portfolio attacked by fresh adversarial search and new witnesses added.
+Protocol:
+- warmup: first **70** accepted draws;
+- scored targets: next **125** draws;
+- at target `t`, every portfolio is built only from rows `< t`;
+- nine materially different signal/config families: hot, cold, contextual pairs, group mean reversion, and two ensemble strengths;
+- 320 signal-conditioned candidate tickets per family/target;
+- actual portfolio N chosen freely from every prefix **19..320** using only a trailing 32-draw past calibration window;
+- meta-family selection uses only earlier realized target outcomes;
+- abstention uses only earlier realized outcomes;
+- matched-random controls use the exact selected N/cost.
 
-Final canonical GitHub run:
-- **N = 1106** distinct tickets;
-- fractional finite-bank floor **0.957675**;
-- fractional support **1219** candidates;
-- rounded finite-bank / real-195 minimum **0.432188**;
-- strong adversarial witnessed return **0.225136**.
+### Phase 10 overall result — NO GATE
 
-Controls:
-- bottom-64 free-N control: N=1120, adversarial **0.219643**;
-- random N=1106 seed 99117: **0.221519**;
-- random N=1106 seed 99173: **0.223327**.
+Meta selector without abstention:
+- cost **3615 AZN**;
+- payout **1648 AZN**;
+- net P/L **-1967 AZN**;
+- ROI **0.4559**;
+- profitable targets **7.2%**.
 
-Verdict: **NO MATERIAL ADVERSARIAL ADVANTAGE OVER RANDOM.** LP greatly improves the finite-bank relaxation, but the actual rounded distinct-ticket portfolio is only ~0.18–0.55 percentage points above tested random controls under strong fresh attack. This is too small to justify further fixed-geometry optimization as the main route.
+Meta selector + abstention:
+- played **17 / 125** targets;
+- cost **639 AZN**;
+- payout **279 AZN**;
+- net P/L **-360 AZN**;
+- ROI **0.4366**;
+- matched-random with the same play/abstain dates and cost: ROI **0.6839**, P/L **-202 AZN**.
 
-The exact 1106-ticket LP portfolio is preserved as a robust-component candidate, not as a profit strategy.
+Chronological block gate:
+- 2026-02-22..2026-05-12: negative;
+- 2026-05-13..2026-06-21: negative;
+- 2026-07-10..2026-08-23: negative;
+- positive blocks: **0 / 3**.
 
-## Strategic decision
+Verdict: recent-performance family switching and the first confidence/abstention gate are rejected. They do not extract a profitable regime and are worse than same-cost random.
 
-Track A fixed-portfolio geometry has now been tested with:
-1. historical greedy maximin;
-2. robust/capped/CVaR greedy;
-3. multi-witness cutting-plane;
-4. fractional LP + rounding.
+## Weak lead retained from Phase 10
 
-All converge toward adversarial performance close to random once unseen weak draws are actively searched.
+The best frozen individual family was **`ensemble_b06`** (cold-frequency + contextual-pair + group-mean-reversion blend with moderate signal strength):
 
-Therefore **Track A is demoted to a robustness/component role**. The adversarial oracle remains mandatory for testing any portfolio component, but no more phases should be spent merely tuning fixed-list geometry unless a new mathematical formulation provides a qualitatively different mechanism.
+- targets: **125**;
+- cost **2892 AZN**;
+- payout **2067 AZN**;
+- net P/L **-825 AZN**;
+- ROI **0.71473**;
+- profitable targets **12.8%**;
+- max drawdown **956 AZN**;
+- max losing streak **19**;
+- selected N range **19..45**, median **20**.
 
-## Main objective — Track B
+This is still substantially negative and is **not a strategy success**. However, its ROI is materially above the Phase-10 generic matched-random no-abstention control (0.5787), so it is retained as a **weak signal lead pending same-N multi-seed verification**.
 
-Find a process that selects or rebuilds a portfolio **before each draw** using only information that existed at that time, with the practical target of persistent positive net P/L on real future draws.
+`experiments/phase10b_ensemble_verify.py` has been added to freeze this exact family and compare it against many same-N random replicas, chronological blocks, and payout-tier concentration. Until that verification produces a recorded result, do not promote the ensemble beyond weak-lead status.
 
-The process may:
-- choose among several prebuilt complementary portfolios;
-- change N freely per draw;
-- use rolling statistics/signals only from prior draws;
-- combine weak signals rather than relying on one hot/cold heuristic;
-- abstain / buy zero tickets when the model has insufficient confidence;
-- use adversarially robust portfolio components as the execution layer after a predictive decision is made.
+## What Phase 10 ruled out
 
-## NEXT ACTION — Phase 10
+- choosing whichever signal family recently had the best realized ROI;
+- the first abstention threshold based on recent realized ratios;
+- raw hot/cold or pair families as standalone adaptive profit strategies;
+- treating a lower number of plays as automatically safer/profitable;
+- using historical calibration fit as a substitute for repeated forward improvement.
 
-1. Build a strict rolling walk-forward harness across the 195 draws. At every target row, training data must end before that row.
-2. Use expanding and rolling windows; begin scoring only after enough history exists.
-3. Compare materially different dynamic families:
-   - contextual pair/triple scores;
-   - rolling hot/cold with shrinkage;
-   - previous-draw/group mean reversion;
-   - ensemble ranking of multiple weak signals;
-   - conditional selection among several prebuilt robust portfolio components;
-   - abstention/confidence thresholds;
-   - adaptive free N linked to signal strength.
-4. Optimize for actual P/L, worst P/L, profitable-draw share, losing streak and drawdown — not hit-count alone.
-5. Use nested walk-forward: thresholds/parameters are chosen only from earlier internal windows, then frozen for the next block.
-6. Compare every adaptive strategy against same-cost random and no-play baselines.
-7. Retain only methods showing repeated forward improvement across multiple chronological blocks, not one lucky period.
-8. Use the adversarial oracle on any fixed portfolio component before allowing it into the adaptive system.
-9. Save every failed family and exact seeds/results to avoid rediscovery.
-10. Future draws after a frozen Phase-10+ method become the only true fresh validation set.
+## NEXT ACTION — Phase 11
+
+1. Complete/fix the frozen `ensemble_b06` same-N multi-seed verification; determine whether its ~0.715 ROI is a reproducible separation from random or just sample luck / payout concentration.
+2. If the separation does **not** survive, close the current signal blend and move to a qualitatively different adaptive class rather than retuning beta/window constants.
+3. If it **does** survive, decompose the ensemble with nested past-only ablations and learn signal weights only from earlier forward blocks; keep parameters frozen on later blocks.
+4. Replace recent-winner meta-selection with stable model averaging / shrinkage rather than hard switching.
+5. Design abstention from predicted *edge uncertainty* rather than realized recent ROI; zero-play remains valid when uncertainty is high.
+6. Let N remain continuous/free and tie exposure to calibrated edge strength, but compare every selected N against same-cost random distributions.
+7. Evaluate cumulative P/L, ROI, drawdown, losing streak, chronological block consistency, and payout concentration (especially 8+ hit dependence).
+8. Any candidate process that survives historical walk-forward becomes a frozen paper strategy for future genuinely unseen draws; do not call historical survival proof of future profit.
 
 No autonomous recurring task is enabled for this repository.
