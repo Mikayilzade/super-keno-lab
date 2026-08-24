@@ -4,7 +4,7 @@ Last updated: 2026-08-24
 
 ## Phase
 
-`PHASE 7 — adversarial portfolio search + walk-forward real-draw track`
+`PHASE 9 — LP/maximin relaxation + Track B walk-forward start`
 
 ## Core state
 
@@ -26,91 +26,85 @@ The bound is achieved by the all-ticket portfolio of `C(70,10)=396,704,524,216` 
 
 This does **not** close the real-draw problem: persistent real-world profit would require predictive/non-uniform information or an adaptive/conditional process.
 
-## Phase 6 — strongest historical “always plus” anti-example
+## Phase 6 — strongest historical always-plus anti-example
 
-Free-N maximin fit on the first 160 already-exposed real draws selected **N=662**.
-
-Fit:
-- minimum return **1.64048**;
-- worst P/L **+424 AZN**;
-- profitable **160/160**.
-
-One-time next-35 check after freezing the portfolio:
-- profitable **0/35**;
-- minimum return **0.37613**;
-- average return **0.505999**.
+Free-N fit on first 160 exposed real draws selected **N=662** and was profitable 160/160 with minimum return **1.64048**, then failed 0/35 on the next frozen block; minimum return **0.37613**, average **0.505999**.
 
 Verdict: extreme finite-history overfit.
 
-## Phase 7 — adversarial finder implemented
+## Phase 7 — adversarial finder + first cutting-plane
+
+See `results/PHASE7_ADVERSARIAL_START.md`.
+
+The N=662 historical portfolio was attacked down from real-history minimum 0.376 to reproducible adversarial witnesses around **0.142–0.147**. Five one-witness cutting-plane iterations still left 14–17% adversarial-return holes.
+
+Verdict: real history misses large weak regions in fitted portfolio geometry.
+
+## Phase 8 — multi-witness bank + builder comparison
 
 See:
-- `src/adversarial.py`
-- `experiments/phase7_cutting_plane.py`
-- `results/PHASE7_ADVERSARIAL_START.md`
-- `results/phase7_cutting_plane_checkpoint.json`
+- `experiments/phase8_multiwitness_builder_compare.py`
+- `results/phase8_multiwitness_builder_compare.json`
+- `results/PHASE8_MULTIWITNESS_AND_BUILDERS.md`
 
-The adversarial finder performs multi-start steepest one-out/one-in swap descent over valid 20-of-70 draws. Each result is a concrete low-payout witness, not a global-minimum proof.
+Setup:
+- all 195 rows treated as exposed geometry constraints;
+- 12,000 deterministic candidate tickets, seed `260824`;
+- four adversarial-bank rounds, four distinct witnesses added per round;
+- N free.
 
-### Attack on the Phase-6 N=662 portfolio
+Shared-bank builder progression:
 
-Historical minima:
-- fitted first 160: **1.64048** return;
-- all 195 real draws: **0.37613** return.
+| round | N | fitted min | weakest new adversarial return |
+|---:|---:|---:|---:|
+| 0 | 898 | 0.7082 | 0.1971 |
+| 1 | 891 | 0.6846 | 0.1987 |
+| 2 | 847 | 0.7166 | 0.1960 |
+| 3 | 705 | 0.5872 | 0.1957 |
 
-Adversarial search found:
-- 97-AZN witness with 25-start deterministic run: return **0.14653**;
-- independent heavier multi-start run: **94 AZN**, return about **0.1420**;
-- independent 100,000-random-draw scan followed by local descent: **96 AZN**, return **0.1450**.
+### Same-bank builder comparison
 
-Conclusion: the real archive missed a very large weak region in the fitted ticket geometry. The ~14–15% adversarial return is reproducible across search variants.
+- worst-8 greedy: N=829, fitted min 0.9614, adversarial 0.1942;
+- bottom-24: N=893, adversarial 0.1937;
+- bottom-64 / CVaR-like: N=863, initial adversarial 0.2109;
+- cap-15 bottom-24: N=716, adversarial 0.1774;
+- cap-30 bottom-24: N=854, adversarial 0.1991;
+- random same-N control: N=863, adversarial 0.2005;
+- cyclic control: N=847, a valid adversarial draw produced **0 payout**.
 
-## Cutting-plane checkpoint
+Worst-8 is another overfit warning: nearly break-even fitted floor but only ~19% under attack.
 
-Each iteration fits a free-N portfolio against the first 160 real draws plus all prior adversarial witnesses, then generates a new witness.
+### Stronger independent attack
 
-First five completed iterations:
+Bottom-64 N=863 was attacked using 30,000 additional random valid draws, retaining weak seeds and locally descending them:
+- bottom-64 strongest witness: **170/863 = 0.19699**;
+- same-N random control: **168/863 = 0.19467**.
 
-| iter | constraints | N | fitted constraint min | real-195 min | new adversarial return |
-|---:|---:|---:|---:|---:|---:|
-| 0 | 160 | 662 | 1.6405 | 0.3761 | 0.1465 |
-| 1 | 161 | 560 | 1.5964 | 0.3750 | 0.1482 |
-| 2 | 162 | 733 | 1.5593 | 0.3615 | 0.1678 |
-| 3 | 163 | 484 | 1.5661 | 0.3347 | 0.1405 |
-| 4 | 164 | 728 | 1.5742 | 0.3503 | 0.1717 |
+Difference is only ~0.23 percentage points. Current greedy/CVaR/capped builders therefore **do not materially beat random portfolio geometry** under stronger adversarial search.
 
-The adversarial column is not expected to be monotonic because both portfolio building and adversarial minimization are currently heuristic. The key fact is that every rebuilt portfolio still admits a concrete valid witness paying only about **14–17%** of stake despite appearing >150% guaranteed on its fitted constraint set.
+Verdict: **NO ADVERSARIAL EDGE YET. Stop tuning bottom-k constants.**
 
 ## Current objective
 
-Continue searching by different methods/stages for persistent positive performance on **real unseen draws**, while using adversarial search to prevent fake historical guarantees.
+Continue searching by materially different methods/stages for persistent positive performance on **real unseen draws**, while retaining the adversarial oracle as a mandatory anti-overfit gate.
 
-### Track A — adversarial/maximin coverage
+### Track A — robust portfolio components
 
-- strengthen the adversarial finder;
-- keep a growing witness bank;
-- rebuild free-N portfolios against multiple adversaries, not just history;
-- compare different portfolio builders against the same witness bank;
-- approach the exact universal ceiling 0.5985557943 as closely as practical for finite N.
+Track A cannot produce universal >1 return, but should seek substantially better finite-N geometry than random and create robust components for conditional strategies.
 
-Track A cannot itself yield universal >1 profit; its output is robust portfolio geometry/components.
+### Track B — actual-profit process
 
-### Track B — real-draw walk-forward strategy
+Portfolio may change/select before each draw using only information available then. This is the only route still compatible with persistent real-world profit under the exact fixed-list impossibility result.
 
-- rolling/nested walk-forward across historical rows;
-- portfolio may change before each draw using only prior information;
-- test materially different conditional/dynamic rules, not only frequency signals;
-- N remains free at every step;
-- future draws after a method is frozen become fresh validation.
+## NEXT ACTION — Phase 9
 
-## NEXT ACTION
-
-1. Upgrade adversarial search to combine bulk random/population seeding with local descent and keep several distinct low-payout witnesses per portfolio.
-2. Continue cutting-plane for longer sequences using a witness bank, not one witness per iteration only.
-3. Compare alternative portfolio constructors: bottom-k greedy, capped-payout robust greedy, diversity/intersection penalties, and LP/ILP relaxation if practical.
-4. Record best finite-N adversarial floor and explicit worst-draw witnesses for each constructor.
-5. Start Track B rolling walk-forward dynamic portfolio experiments separately.
-6. Do not return to machine/video research unless a later strategy explicitly requires it.
-7. Keep all failed approaches, seeds and reproducible outputs in the repo.
+1. Formulate a **fractional maximin / linear-programming relaxation** over a finite candidate-ticket pool and the current adversarial witness bank.
+2. Optimize ticket weights directly instead of greedy prefix order.
+3. Round/sparsify fractional weights into distinct-ticket portfolios with free N.
+4. Attack LP-rounded portfolios with the strong adversarial finder and add new witnesses in a cutting-plane loop.
+5. Compare LP-rounded portfolios against matched-N random and Phase-8 bottom-64 controls.
+6. Start **Track B rolling walk-forward** dynamic/conditional portfolio experiments separately using only past information at each historical step.
+7. Do not spend further phases on bottom-k parameter tuning unless LP results show a concrete reason.
+8. Keep all failures, seeds, exact witnesses and reproducible outputs in the repo.
 
 No autonomous recurring task is enabled for this repository.
