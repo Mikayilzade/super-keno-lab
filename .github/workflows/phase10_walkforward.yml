@@ -5,6 +5,7 @@ on:
     paths:
       - 'experiments/phase10_walkforward_adaptive.py'
       - 'experiments/phase10b_ensemble_verify.py'
+      - 'experiments/phase10b_runner.py'
       - '.github/workflows/phase10_walkforward.yml'
   workflow_dispatch:
 
@@ -24,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run frozen Phase 10B verification
-        run: python experiments/phase10b_ensemble_verify.py
+        run: python experiments/phase10b_runner.py
       - name: Commit reproducible results
         run: |
           git config user.name 'github-actions[bot]'
@@ -36,4 +37,3 @@ jobs:
             git commit -m 'Save Phase 10B ensemble verification'
             git push
           fi
-# clean retry: phase10b-verification
