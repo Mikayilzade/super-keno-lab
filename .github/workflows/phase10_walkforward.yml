@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'experiments/phase10_walkforward_adaptive.py'
+      - 'experiments/phase10b_ensemble_verify.py'
       - '.github/workflows/phase10_walkforward.yml'
   workflow_dispatch:
 
@@ -22,17 +23,17 @@ jobs:
           cache: 'pip'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Run Phase 10
-        run: python experiments/phase10_walkforward_adaptive.py
+      - name: Run frozen Phase 10B verification
+        run: python experiments/phase10b_ensemble_verify.py
       - name: Commit reproducible results
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add results/phase10_walkforward_adaptive.json results/PHASE10_WALKFORWARD_ADAPTIVE.md
+          git add results/phase10b_ensemble_verify.json results/PHASE10B_ENSEMBLE_VERIFY.md
           if git diff --cached --quiet; then
             echo 'No result changes'
           else
-            git commit -m 'Save Phase 10 walk-forward results'
+            git commit -m 'Save Phase 10B ensemble verification'
             git push
           fi
-# trigger: phase10-initial-run
+# established workflow reused for Phase 10B
