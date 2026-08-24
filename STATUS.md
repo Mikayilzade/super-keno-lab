@@ -4,135 +4,132 @@ Last updated: 2026-08-24
 
 ## Phase
 
-`PHASE 4 — operational/regime discovery before further portfolio optimization`
+`PHASE 5 — video/equipment-set metadata and independent physical-bias verification`
 
-## Completed foundation
+## Core project state
 
 - Dedicated repository: `Mikayilzade/super-keno-lab`; broad `loto-research` remains separate and untouched.
-- Copied and validated **195** Azerbaijan Super Keno draws in four chronological CSV shards.
-- Dataset: earliest **2022-12-21**, latest **2026-08-23**; structural errors 0, duplicate dates 0, duplicate 20-number combinations 0.
-- Current official rules/payouts/ticket price are snapshotted in `rules/SUPER_KENO_RULES_2026-08-24.md`.
-- Configurable scorer/evaluator and deterministic baselines are implemented.
-- Portfolio size **N is a free integer optimization variable**, not a round-number grid.
-
-## Evaluation policy
-
-- Original Phase 1 design: first **120** accepted draws.
-- Reused diagnostic block: next **40**, 2026-05-23 .. 2026-07-19.
-- Final holdout: last **35**, 2026-07-20 .. 2026-08-23 — **still sealed / not scored**.
-- The 40-row block was exposed by Phase 1, so later use is diagnostic only.
-
-### Current-rule regime correction
-
-Official Super Keno registration shown on the current game page is **285 / 07.01.2025**, effective **10.01.2025–31.12.2027**.
-
-The copied dataset contains **8 rows before 2025-01-10** (one 2022 row and 2025-01-01 through 2025-01-07). These rows are now treated as **legacy/pre-current-rule** and are excluded by default from current-regime signal fitting.
-
-See `research/OPERATIONAL_MECHANICS_2026-08-24.md`.
+- **195** validated Azerbaijan Super Keno draws, earliest 2022-12-21, latest 2026-08-23.
+- Structural errors 0; duplicate dates 0; duplicate 20-number combinations 0.
+- Portfolio size **N is a free integer optimization variable**.
+- Final **35 draws (2026-07-20..2026-08-23) remain sealed / not scored**.
+- The next 40 rows after original design were exposed in Phase 1 and are reused only as a diagnostic block.
 
 ## Phase 1 — naive matrix anti-example
 
 See `results/PHASE1_BASELINES.md`.
 
-Naive matrix search selected **N=370** and achieved 120/120 profitable training draws with minimum training P/L **+137 AZN**, then collapsed on the next 40 rows:
-- min payout/cost **0.2378**;
-- average payout/cost **0.6136**;
-- profitable draws **5%**.
+Naive matrix selected **N=370** and created 120/120 profitable design draws, minimum design P/L **+137 AZN**, then collapsed on the next 40:
+- min return 0.2378;
+- average return 0.6136;
+- profitable draws 5%.
 
 Verdict: historical memorization / overfit, rejected.
 
-## Phase 2 — robust complementary search
+## Phase 2 — robust complementary portfolio
 
-See `results/PHASE2_ROBUST.md`, `experiments/phase2_robust.py`, `src/robust_search.py`.
+See `results/PHASE2_ROBUST.md`.
 
 Frozen robust search selected **N=203**.
 
-Reused 40-row diagnostic result:
-- min payout/cost **0.2759**;
-- average payout/cost **0.7393**;
+Reused 40-row diagnostic:
+- min return **0.2759**;
+- average return **0.7393**;
 - worst P/L **-147 AZN**;
 - average P/L **-52.93 AZN**;
 - profitable draws **12.5%**.
 
-A 500-draw uniform-random control showed this geometry behaves close to ordinary random same-size portfolios under a fair generator. Portfolio geometry alone is not the missing edge.
+A 500-draw fair-generator control showed portfolio geometry alone is not the missing edge.
 
-## Phase 3 — empirical signal audit
+## Phase 3 — walk-forward empirical number signals
 
-See `results/PHASE3_SIGNAL_AUDIT.md` and `experiments/phase3_signal_audit.py`.
+See `results/PHASE3_SIGNAL_AUDIT.md`.
 
 Verdict: **NO SIGNAL GATE PASSED**.
 
-### Previous-draw behavior
+Weak leads only:
+- contextual pair score (20-draw window): diagnostic top-30 mean hits 9.026 vs fair 8.571, p≈0.073;
+- mild first-quarter composition mean reversion.
 
-Current-regime design consecutive-day transitions: **95**.
-- mean consecutive overlap **5.579**;
-- P(next | number appeared previous day) **0.2789**;
-- P(next | absent previous day) **0.2884**.
+### Important Phase 4 correction to Phase 3
 
-Diagnostic consecutive transitions: **39**.
-- mean overlap **6.000**;
-- P(next | appeared previous day) **0.3000**;
-- P(next | absent previous day) **0.2800**.
+Phase 3 provisionally treated the current-rule effective date **2025-01-10** as a regime boundary and excluded earlier rows for some current-regime signal checks.
 
-Direction reverses. Simple repeat/avoid rules rejected.
+That mechanical interpretation is now **superseded**. Official Azərlotereya TV draw numbering is continuous across Jan 9–12, 2025 (25024 → 25025 → 25026 → 25027), and Super Keno existed/broadcast earlier. The registration date alone is not evidence of a machine/ball-set change.
 
-### Hot/cold
+Do not exclude older rows from physical-regime work solely because of 2025-01-10.
 
-Long-window cold ranking looked mildly positive inside design but did not reach a convincing diagnostic gate.
+## Phase 4 — operational mechanics + physical-bias audit
 
-Cold-80 top-30:
-- diagnostic mean hits **8.875** vs fair **8.571**;
-- Monte Carlo one-sided fair-control p **0.165**.
+See:
+- `research/OPERATIONAL_MECHANICS_2026-08-24.md`
+- `results/PHASE4_OPERATIONAL_AND_PHYSICAL.md`
+- `experiments/phase4_physical_regime_audit.py`
+- `results/phase4_physical_regime_audit.json`
+- `experiments/phase4_cold_exclusion_test.py`
 
-Per-number frequency rankings are not stable:
-- design-half frequency correlation **-0.109**;
-- later design half vs diagnostic **0.021**.
+### Mechanism finding
 
-### Pair context
+Evidence now strongly supports a **physical lototron / physical-ball process** for televised Super Keno rather than a pure software-RNG working model:
 
-Best weak lead: 20-draw contextual pair score using previous-day numbers.
-- diagnostic mean top-30 hits **9.026** vs fair **8.571**;
-- diagnostic AUC **0.5155**;
-- Monte Carlo one-sided p **0.073**.
+- Azerbaijani draw-lottery rules explicitly regulate lototron operation, equal ball/item weight/size/shape, transparent automatic mixing and sealed/closed storage;
+- a 2022 studio media tour specifically covering Super Keno reports equipment testing, ball weighing, gloves, French **Akanis Technologies** machines and backup lototron/equipment;
+- Akanis specializes in air-mix draw machines and ball sets.
 
-Interesting but below gate; not promoted to money strategy.
+Exact current machine model, ball-set rotation/replacement and RFID/automatic-recognition configuration are still unknown.
 
-Fixed pair maps are unstable:
-- design-half pair residual correlation **0.0286**;
-- later design half vs diagnostic **0.0035**.
+### 19:45 vs 18:45
 
-### Structural features
+Official TV schedule says **19:45**. Current results metadata says **18:45**, but the same 18:45 timestamp appears for Beşdə 5 and 4+4. Treat as likely site-wide metadata/timezone/display behavior, not a Super Keno-specific edge.
 
-Most lag signals in range/parity/sum/runs reverse or disappear. Mild negative lag correlation for first-quarter count (1..17) persists descriptively, but no validated monetary edge exists.
+### Physical-frequency audit — first 160 exposed rows only
 
-## Operational clues discovered
+Expected appearances per number: **45.714**.
 
-Official sources currently create unresolved questions that may matter more than number-frequency fitting:
+Observed:
+- number **4**: only **24** appearances (coldest);
+- number **45**: **58** appearances (hottest);
+- max-min range 34, adjusted MC p≈**0.052**;
+- maximum scanned single-number deviation, adjusted MC p≈**0.011**;
+- global 70-number chi-like statistic p≈**0.909**.
 
-- current page calls Super Keno a **virtual numeric lottery** with 20 balls taken from a **lototron**;
-- official explanatory material also discusses computer/virtual execution of online draw lotteries;
-- official live schedule repeatedly states **19:45** every day;
-- recent result metadata is stamped **18:45**;
-- live broadcasts exist on Xəzər TV / Azərlotereya TV;
-- technical issues may lead to cancellation/postponement.
+So the global distribution is not abnormal, but number 4 is a legitimate follow-up outlier.
 
-These are clues/data-quality questions only, not claimed edges. See `research/OPERATIONAL_MECHANICS_2026-08-24.md`.
+Independent diagnostic check for #4: **8 appearances in 40** vs expected ≈11.43; one-sided p≈**0.15**. Direction persists but does not pass the signal gate.
+
+Hard-excluding #4 or the design-coldest groups from Phase-2 candidate tickets did **not** create an edge. Avoiding #4 improved the single worst diagnostic ratio to ~0.317 but reduced average return to ~0.494 and profitable draws to 2.5%.
+
+Verdict: physical-cold hypothesis remains **unconfirmed; not a betting rule**.
+
+### Change-point scan
+
+Strongest 10-row hint is at **2026-06-01 → 2026-06-02**, adjusted MC p≈**0.070**. Longer 15/20/30-row windows weaken sharply (≈0.149 / 0.505 / 0.897).
+
+Verdict: weak lead only; no statistical or documented regime boundary yet.
+
+## Current hypothesis ledger
+
+- `H-MECH-01` pure software RNG: **evidence against / not working model**.
+- `H-RULE-01` Jan-10-2025 mechanical reset: **rejected as unsupported**.
+- `H-TIME-01` Super-Keno-specific 18:45 shift: **rejected as game-specific clue**.
+- `H-PHY-01` persistent ball/set-specific physical bias (#4 lead): **open, unconfirmed**.
+- `H-REG-01` early-June-2026 operational change: **open weak lead, unconfirmed**.
 
 ## Holdout policy
 
-The final **35 real draws remain sealed**. Do not score or inspect them for strategy selection until a materially stronger, frozen signal-conditioned method exists.
+The final **35 real draws remain sealed**. Do not inspect/score them for strategy selection until a physical/signal-conditioned method is frozen and materially stronger on independent past-only tests.
 
-## NEXT ACTION
+## NEXT ACTION — Phase 5
 
-Run **Phase 4 operational/regime discovery**:
+Build a **historical draw-video / equipment-set metadata ledger** before further portfolio tuning:
 
-1. Determine the actual Super Keno randomization mechanism from authoritative rules, technical/audit documentation or historical draw footage: physical ball machine vs software/RNG/virtual process.
-2. Resolve the official **19:45 schedule vs 18:45 result timestamp** discrepancy; establish whether it is timezone/backend metadata or a genuine regime change.
-3. Search official news/archive/broadcast evidence for equipment, software, studio, draw-process or schedule changes since 2022, especially around **2025-01-10**.
-4. Collect cancellation/postponement/technical-exception dates if available.
-5. Map official draw-number/date continuity and regime boundaries without inventing missing rows.
-6. If documented regimes exist, rerun Phase 3 signal tests separately within homogeneous regimes.
-7. Only if a regime-conditioned signal passes nested walk-forward gates should it feed the Phase 2 robust free-N portfolio layer.
-8. Keep the final 35-row holdout sealed.
+1. Inspect official Azərlotereya TV draw videos, prioritizing 2025-01-09..12 and 2026-05-20..06-15.
+2. Record draw date/number, machine appearance/model clues, ball-set appearance, studio/layout, sequence, presenters and visible interruptions/substitutions.
+3. Find authoritative evidence for exact Akanis model, number of ball sets, set rotation/replacement policy, RFID/number recognition and backup-machine use.
+4. Search official news/reports for technical interruptions, equipment/studio changes and maintenance/substitution events.
+5. Expand older **contiguous** Super Keno result history where possible; physical-bias verification needs more independent draws and known regimes.
+6. Use externally identified equipment/regime boundaries to retest #4 and other ball identities; do not data-mine a boundary and then call it independent.
+7. Only after a physical signal survives independent temporal checks should it feed the robust **free-N** portfolio layer.
+8. Keep failed hypotheses/results in the repo and keep the final 35-row holdout sealed.
 
 No autonomous recurring task is enabled for this repository.
