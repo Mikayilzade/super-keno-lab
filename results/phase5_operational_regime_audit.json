@@ -1,0 +1,52 @@
+{
+  "scope": {
+    "exposed_rows": 160,
+    "holdout_opened": false,
+    "latest_used": "2026-07-19"
+  },
+  "official_draw_code": {
+    "known_ids": 107,
+    "matches": 107,
+    "mismatches": [],
+    "formula": "YYWWD using ISO week-year/week/weekday"
+  },
+  "number4_by_20row_blocks": [
+    {"rows": [0, 19], "start": "2022-12-21", "end": "2025-08-19", "draws": 20, "number4_count": 6},
+    {"rows": [20, 39], "start": "2025-08-20", "end": "2025-11-05", "draws": 20, "number4_count": 2},
+    {"rows": [40, 59], "start": "2025-11-06", "end": "2025-12-25", "draws": 20, "number4_count": 1},
+    {"rows": [60, 79], "start": "2025-12-26", "end": "2026-03-17", "draws": 20, "number4_count": 2},
+    {"rows": [80, 99], "start": "2026-03-27", "end": "2026-04-29", "draws": 20, "number4_count": 4},
+    {"rows": [100, 119], "start": "2026-04-30", "end": "2026-05-22", "draws": 20, "number4_count": 1},
+    {"rows": [120, 139], "start": "2026-05-23", "end": "2026-06-11", "draws": 20, "number4_count": 4},
+    {"rows": [140, 159], "start": "2026-06-12", "end": "2026-07-19", "draws": 20, "number4_count": 4}
+  ],
+  "number4_by_weekday": [
+    {"weekday": "Mon", "draws": 21, "number4_count": 1, "number4_rate": 0.0476190476},
+    {"weekday": "Tue", "draws": 21, "number4_count": 2, "number4_rate": 0.0952380952},
+    {"weekday": "Wed", "draws": 24, "number4_count": 5, "number4_rate": 0.2083333333},
+    {"weekday": "Thu", "draws": 23, "number4_count": 2, "number4_rate": 0.0869565217},
+    {"weekday": "Fri", "draws": 24, "number4_count": 6, "number4_rate": 0.25},
+    {"weekday": "Sat", "draws": 24, "number4_count": 3, "number4_rate": 0.125},
+    {"weekday": "Sun", "draws": 23, "number4_count": 5, "number4_rate": 0.2173913043}
+  ],
+  "current_schedule_sanity_check": {
+    "known_from": "2025-11-26",
+    "period_rows": 109,
+    "design_rows": 69,
+    "diagnostic_rows": 40,
+    "tue_fri_design_draws": 21,
+    "other_design_draws": 48,
+    "tue_fri_diagnostic_draws": 11,
+    "other_diagnostic_draws": 29,
+    "tue_fri_vs_other_frequency_difference_corr_design_to_diagnostic": -0.0026687155,
+    "weekday_profile_correlations": {
+      "Mon": {"design_draws": 9, "diagnostic_draws": 5, "frequency_profile_corr": -0.1463076200},
+      "Tue": {"design_draws": 10, "diagnostic_draws": 5, "frequency_profile_corr": 0.0266294116},
+      "Wed": {"design_draws": 11, "diagnostic_draws": 5, "frequency_profile_corr": -0.0859131990},
+      "Thu": {"design_draws": 11, "diagnostic_draws": 5, "frequency_profile_corr": -0.1054571424},
+      "Fri": {"design_draws": 11, "diagnostic_draws": 6, "frequency_profile_corr": 0.0073415714},
+      "Sat": {"design_draws": 8, "diagnostic_draws": 7, "frequency_profile_corr": 0.0260834348},
+      "Sun": {"design_draws": 9, "diagnostic_draws": 7, "frequency_profile_corr": -0.1515167465}
+    }
+  }
+}
