@@ -35,3 +35,4 @@ jobs:
             git commit -m 'Save Phase 15 factor decomposition results'
             git push
           fi
+# trigger: phase15-initial-run
