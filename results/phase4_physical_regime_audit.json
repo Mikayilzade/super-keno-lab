@@ -1,0 +1,46 @@
+{
+  "holdout_opened": false,
+  "rows_used": 160,
+  "design_rows": 120,
+  "diagnostic_rows": 40,
+  "seed": 20260824,
+  "fair_simulations": 1000,
+  "marginal_frequency": {
+    "expected_count_per_number": 45.71428571428571,
+    "min_number": 4,
+    "min_count": 24,
+    "max_number": 45,
+    "max_count": 58,
+    "range": 34,
+    "range_mc_p": 0.05194805194805195,
+    "max_abs_deviation": 21.714285714285708,
+    "max_abs_deviation_mc_p": 0.01098901098901099,
+    "global_chi_like": 54.031250000000014,
+    "global_chi_like_mc_p": 0.9090909090909091
+  },
+  "coldest_design_numbers": [
+    {"number": 4, "design_count": 16, "diagnostic_count": 8},
+    {"number": 19, "design_count": 28, "diagnostic_count": 9},
+    {"number": 64, "design_count": 28, "diagnostic_count": 12},
+    {"number": 1, "design_count": 29, "diagnostic_count": 8},
+    {"number": 38, "design_count": 29, "diagnostic_count": 12},
+    {"number": 59, "design_count": 29, "diagnostic_count": 21},
+    {"number": 14, "design_count": 30, "diagnostic_count": 11},
+    {"number": 2, "design_count": 30, "diagnostic_count": 12},
+    {"number": 43, "design_count": 30, "diagnostic_count": 12},
+    {"number": 63, "design_count": 30, "diagnostic_count": 14}
+  ],
+  "change_point_scan": {
+    "10": {"stat": 4.620000000000001, "cut_index": 130, "left_last_date": "2026-06-01", "right_first_date": "2026-06-02", "mc_p": 0.06993006993006994},
+    "15": {"stat": 2.9511111111111106, "cut_index": 130, "left_last_date": "2026-06-01", "right_first_date": "2026-06-02", "mc_p": 0.14885114885114886},
+    "20": {"stat": 2.005, "cut_index": 134, "left_last_date": "2026-06-05", "right_first_date": "2026-06-06", "mc_p": 0.5054945054945055},
+    "30": {"stat": 1.1644444444444446, "cut_index": 106, "left_last_date": "2026-05-05", "right_first_date": "2026-05-06", "mc_p": 0.8971028971028971}
+  },
+  "notes": [
+    "Maximum single-number deviation is a flagged lead, not a proven physical bias.",
+    "Number 4 is the extreme low-frequency number in the first 160 exposed rows.",
+    "Its independent 40-row diagnostic persistence is weak and below the signal gate.",
+    "The strongest 10-row change-point hint is near 2026-06-02; longer windows do not support a stable regime boundary.",
+    "No final holdout row was inspected or scored."
+  ]
+}
