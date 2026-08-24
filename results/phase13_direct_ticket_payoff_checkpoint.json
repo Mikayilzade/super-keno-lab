@@ -1,0 +1,72 @@
+{
+  "date": "2026-08-25",
+  "status": "NO_EDGE",
+  "targets": 125,
+  "fixed_pool": {"size": 5000, "seed": 424242, "reused_from_phase12": true},
+  "N_policy": "free integer 19..400, selected from prior capped15 prefix curves only",
+  "random_replicates_per_model": 20,
+  "models": {
+    "ridge_cap15": {
+      "cost": 31642,
+      "payout": 15322,
+      "net_pl": -16320,
+      "roi": 0.4842298211238228,
+      "random_mean_roi": 0.5645376398457747,
+      "random_replicates_beating_strategy": 20,
+      "blocks_above_random": 0,
+      "positive_blocks": 0,
+      "block_rois": [0.4679236606116349, 0.4999269326318866, 0.4763447828904731],
+      "share_payout_from_8plus": 0.06852891267458557,
+      "N_min": 19,
+      "N_median": 334,
+      "N_max": 400
+    },
+    "ridge_cap5": {
+      "cost": 26207,
+      "payout": 12827,
+      "net_pl": -13380,
+      "roi": 0.4894493837524326,
+      "random_mean_roi": 0.539197542641279,
+      "random_replicates_beating_strategy": 19,
+      "blocks_above_random": 0,
+      "positive_blocks": 0,
+      "block_rois": [0.45403295750216827, 0.5259301014656145, 0.46177437020810513],
+      "share_payout_from_8plus": 0.09355266235284945,
+      "N_min": 19,
+      "N_median": 208,
+      "N_max": 397
+    },
+    "ridge_profit_ticket": {
+      "cost": 25840,
+      "payout": 12631,
+      "net_pl": -13209,
+      "roi": 0.4888157894736842,
+      "random_mean_roi": 0.5340305727554179,
+      "random_replicates_beating_strategy": 20,
+      "blocks_above_random": 0,
+      "positive_blocks": 0,
+      "block_rois": [0.4821308912218003, 0.4904247104247104, 0.49872967479674796],
+      "share_payout_from_8plus": 0.07125326577468134,
+      "N_min": 19,
+      "N_median": 190,
+      "N_max": 397
+    },
+    "empirical_cap15": {
+      "cost": 23506,
+      "payout": 12194,
+      "net_pl": -11312,
+      "roi": 0.5187611673615247,
+      "random_mean_roi": 0.5445652173913044,
+      "random_replicates_beating_strategy": 16,
+      "blocks_above_random": 2,
+      "positive_blocks": 0,
+      "block_rois": [0.5719398711524696, 0.5561754222842089, 0.4717836894897514],
+      "share_payout_from_8plus": 0.11071018533705101,
+      "N_min": 19,
+      "N_median": 92,
+      "N_max": 400
+    }
+  },
+  "promotion_gate_passed": false,
+  "next_phase": "PHASE 14 — draw-level regime/structure prediction + conditioned deterministic portfolios"
+}
