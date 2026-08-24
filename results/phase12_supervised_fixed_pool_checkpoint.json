@@ -1,0 +1,34 @@
+{
+  "method": {
+    "pool_size": 5000,
+    "pool_seed": 424242,
+    "ridge_penalty": 20.0,
+    "features": ["freq5", "freq10", "freq20", "freq40", "freq80", "gap", "previous_hit", "pair_context", "group_reversion"],
+    "N_policy": "free 19..300 from trailing 32 realized target curves",
+    "targets": 125,
+    "no_future_leakage": true
+  },
+  "strategy": {
+    "cost": 9232,
+    "payout": 4932.0,
+    "net_pl": -4300.0,
+    "roi": 0.5342287694974004,
+    "profitable_share": 0.096,
+    "N_min": 19,
+    "N_median": 28.0,
+    "N_max": 277
+  },
+  "matched_random": {
+    "cost": 9232,
+    "payout": 5204.0,
+    "net_pl": -4028.0,
+    "roi": 0.5636915077989602,
+    "profitable_share": 0.088
+  },
+  "blocks": [
+    {"rows": [70, 110], "strategy_roi": 0.45100745238752415, "random_roi": 0.5180789401048854, "strategy_pl": -1989.0},
+    {"rows": [110, 150], "strategy_roi": 0.5980335454019664, "random_roi": 0.5899363794100636, "strategy_pl": -1390.0},
+    {"rows": [150, 195], "strategy_roi": 0.5718270571827058, "random_roi": 0.5983263598326359, "strategy_pl": -921.0}
+  ],
+  "verdict": "NO_EDGE"
+}
