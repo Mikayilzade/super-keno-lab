@@ -1,0 +1,37 @@
+name: Phase 15 Oracle Factor Decomposition
+
+on:
+  push:
+    paths:
+      - 'experiments/phase15_oracle_factor_decomposition.py'
+      - '.github/workflows/phase15_oracle_factor_decomposition.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-phase15:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Phase 15
+        run: python experiments/phase15_oracle_factor_decomposition.py
+      - name: Commit reproducible results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/phase15_oracle_factor_decomposition.json
+          if git diff --cached --quiet; then
+            echo 'No result changes'
+          else
+            git commit -m 'Save Phase 15 factor decomposition results'
+            git push
+          fi
