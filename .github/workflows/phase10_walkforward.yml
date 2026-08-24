@@ -35,3 +35,4 @@ jobs:
             git commit -m 'Save Phase 10 walk-forward results'
             git push
           fi
+# trigger: phase10-initial-run
