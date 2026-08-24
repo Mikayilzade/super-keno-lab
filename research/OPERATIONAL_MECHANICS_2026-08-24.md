@@ -4,62 +4,99 @@ Date: 2026-08-24
 
 ## Why this matters
 
-Phase 2 showed that portfolio geometry alone behaves close to a fair/random same-size portfolio on synthetic draws. Therefore a persistent edge, if one exists, is more likely to require an empirical or operational signal in how real draws are produced, timestamped, scheduled or changed over time.
+Phase 2 showed that portfolio geometry alone behaves close to a fair/random same-size portfolio on synthetic draws. Therefore a persistent edge, if one exists, is more likely to require a real signal in how draws are physically produced, maintained, scheduled or changed over time.
 
-## Official observations
+## Phase 4 correction: 2025-01-10 is NOT a proven mechanical regime boundary
 
-### Current rule registration
+The current Super Keno page lists registration **285 / 07.01.2025**, effective **10.01.2025 through 31.12.2027**. Earlier Phase 3 work provisionally treated rows before 2025-01-10 as legacy.
 
-The official Super Keno page states registration **285 / 07.01.2025**, effective **10.01.2025 through 31.12.2027**.
+That interpretation is now **superseded** as a mechanical claim. Official Azərlotereya TV broadcasts show ordinary draw-number continuity around the date:
 
-Source: https://www.azerlotereya.com/game/superkeno
+- 2025-01-09: draw **25024**;
+- 2025-01-10: draw **25025**;
+- 2025-01-11: draw **25026**;
+- 2025-01-12: draw **25027**.
 
-Dataset consequence: the copied 195-row history contains **8 rows before the current-rule effective date**: one 2022 row plus 2025-01-01 through 2025-01-07. These are now tagged conceptually as **legacy/pre-current-rule** and must not be mixed into current-regime signal fitting without an explicit reason.
+Super Keno was also already being broadcast in 2022. The registration date may be an administrative renewal/registration event rather than a machine, ball-set or randomization change. Pre-2025-01-10 rows must therefore **not be excluded solely because of that registration date**. A physical regime boundary requires independent evidence.
 
-### Draw mechanism wording is ambiguous
+YouTube evidence:
+- https://www.youtube.com/watch?v=BmEClQ1caD8
+- https://www.youtube.com/watch?v=PBc9H0Tt5hs
+- https://www.youtube.com/watch?v=AuuHAB0rDpg
+- https://www.youtube.com/watch?v=tX_IrXoxxrU
 
-The official Super Keno game page describes the game as a **virtual numeric lottery** in which 20 of 70 numbered balls are taken from a **lototron**.
+## Randomization mechanism: evidence now points to a physical air-mix draw process
 
-A separate official explainer says online draw lotteries can be conducted in a virtual/computer environment and lists Super Keno among popular draw games available online.
+The exact current Super Keno machine model and ball-set rotation remain unconfirmed, but the earlier software-RNG-vs-physical ambiguity has narrowed substantially.
 
-Sources:
-- https://www.azerlotereya.com/game/superkeno
-- https://www.azerlotereya.com/bloq/online-lotereya-tirajli-lotereya-ve-poz-qazandan-nece-ferqlenir-22
+### Official regulatory requirements
 
-This does **not** yet establish whether Super Keno uses a physical ball machine, a software RNG feeding a virtual lototron, or another audited process. The exact generator must be established before claiming any equipment/RNG bias hypothesis.
+The current Azerbaijani rules for non-virtual lotteries contain explicit physical-lototron requirements. In section 16 they require, among other things:
 
-### Live schedule vs result timestamp
+- the organizer to ensure correct/fair operation of lototron equipment;
+- the draw commission to verify procedure-compliant operation before the draw;
+- balls/items used for random selection to have equal weight within manufacturer tolerances, equal size and shape;
+- deformed/non-compliant items to be replaced and the replacement documented;
+- automatic mixing lototrons to have transparent plastic/glass covers so mixing is visible;
+- lototron equipment to be stored closed or sealed between uses.
 
-The official TV schedule says Super Keno is broadcast live **every day at 19:45** on Xəzər TV / Azərlotereya TV. Multiple official news items from 2022, 2023, 2025 and April 2026 repeat 19:45.
+Official source:
+https://www.azerlotereya.com/qanunvericilik-aktlari
+Direct PDF currently linked there as “Lotereyaların təşkili və keçirilməsi qaydası”.
 
-However, the official current results page records recent Super Keno result metadata such as draw **26347 on 23.08.2026 at 18:45**.
+### Studio evidence specific to Super Keno
 
-Sources:
-- https://www.azerlotereya.com/tv-yayimlari
-- https://www.azerlotereya.com/xeberler/super-keno-lotereyaasinda-100-000-manat-uduldu-1905
-- https://www.azerlotereya.com/lotereya-neticeleri
+A June 2022 media tour reports visiting the Xəzər TV studio where **Mega 5/36, 4+4 and Super Keno** draws were conducted. It reports that before the broadcast:
 
-The one-hour difference is **not treated as evidence of a draw-time change**. Plausible alternatives include backend/server timezone handling, display normalization or a genuine schedule metadata change. It is a data-quality / regime clue that needs direct archive/video verification.
+- equipment is tested;
+- balls are weighed;
+- staff use gloves to avoid particles affecting ball weight;
+- the machines are manufactured by French company **Akanis Technologies**;
+- backup lototron/equipment is kept ready for technical problems.
 
-### Live broadcasts exist
+Source:
+https://metbuat.az/news/1441403/azerlotereya-da-1-milyon-manatliq-udus.html
 
-The official site states Super Keno draws are broadcast on Xəzər TV and the Azərlotereya YouTube channel. This gives a possible path to inspect historical draw videos for machine/software presentation changes, draw timing, studio/equipment changes and recurring operational metadata.
+### Manufacturer capabilities
 
-### Technical interruptions
+Akanis Technologies states that it specializes exclusively in **air-mix lottery draw machines**, including Keno systems. Its systems can be PC-operated in manual or automatic mode; optional RFID ball recognition and audit trails are available; ball sets are manufactured/tested for weight and diameter.
 
-The official FAQ says that if a technical problem occurs during a draw, the draw can be cancelled or moved to another date and the information will be announced through official channels.
+Source:
+https://www.akanis.tech/
 
-Source: https://www.azerlotereya.com/lotereya/fast-loto
+Important limitation: manufacturer capabilities do **not** prove that Azərlotereya’s current Super Keno installation uses RFID, a particular software mode, one specific ball set, or a specific machine model. Those details remain research targets.
 
-This means draw-level exception metadata is potentially relevant and should be collected if available.
+## 19:45 schedule vs 18:45 website timestamp
+
+The official TV schedule currently states Super Keno is broadcast live every day at **19:45** on Xəzər TV / Azərlotereya TV.
+
+Source:
+https://www.azerlotereya.com/tv-yayimlari
+
+The current results page stamps recent Super Keno results at **18:45**. However, the same page also stamps recent **Beşdə 5** and **4+4** TV draws at 18:45. Therefore the one-hour difference is now treated as most likely a **site-wide timestamp/display/timezone issue**, not a Super Keno-specific operational signal, unless contradictory evidence appears.
+
+Source:
+https://www.azerlotereya.com/lotereya-neticeleri
+
+Historical schedules did change: the June 2022 studio article described the televised draw show at 20:30. Schedule changes are worth cataloguing, but they do not by themselves imply a randomization-mechanism change.
+
+## Phase 4 hypothesis ledger
+
+| ID | Hypothesis | Current status |
+|---|---|---|
+| H-MECH-01 | Super Keno results are generated only by software RNG | **Evidence against / not current working model**. Physical lototron/balls are strongly supported. |
+| H-RULE-01 | 2025-01-10 registration marks a mechanical regime reset | **Rejected as unsupported**. Broadcast/draw-number continuity crosses the date. |
+| H-TIME-01 | 18:45 metadata is a Super Keno-specific draw-time shift | **Rejected as game-specific clue** for now; other TV lotteries show the same 18:45 metadata. |
+| H-PHY-01 | A persistent ball/set-specific physical bias exists | **Open, unconfirmed**. Must be tested out-of-sample and linked to equipment/ball-set continuity. |
+| H-REG-01 | A physical/operational regime changed around early June 2026 | **Weak statistical lead only**; no documentary evidence yet. |
 
 ## Research implications
 
-1. Future signal fitting should use the **current-rule regime (>= 2025-01-10)** by default.
-2. Preserve legacy rows for comparison/regime-change tests, not as automatic training data.
-3. Determine the actual randomization mechanism from official rules, audited documentation or historical draw footage.
-4. Resolve the **19:45 vs 18:45** discrepancy before using draw time as a feature.
-5. Search historical broadcasts/news for equipment, studio, software or schedule changes and for cancelled/postponed draws.
-6. If a documented operational regime change is found, evaluate number/pair statistics separately on each side rather than pooling all history.
-
-No operational edge is claimed yet.
+1. Do not infer physical regime boundaries from rule-registration dates alone.
+2. Treat Super Keno as a physical-lototron hypothesis unless stronger current evidence contradicts it.
+3. Physical-bias testing must account for possible machine/ball-set replacement or rotation; pooling across unknown sets could erase a real bias or create a false one.
+4. Build a historical video/equipment metadata ledger and look for visible machine, ball-set, studio and procedure changes.
+5. Identify exact Akanis model, ball-set count/rotation/replacement policy and whether RFID/automatic recognition is used.
+6. Collect documented technical interruptions and equipment substitutions if available.
+7. Only promote a ball/physical hypothesis after independent temporal confirmation and a monetary walk-forward improvement.
+8. Final 35-draw holdout remains sealed.
