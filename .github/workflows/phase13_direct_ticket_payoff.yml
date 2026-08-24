@@ -1,0 +1,37 @@
+name: Phase 13 Direct Ticket Payoff
+
+on:
+  push:
+    paths:
+      - 'experiments/phase13_direct_ticket_payoff.py'
+      - '.github/workflows/phase13_direct_ticket_payoff.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-phase13:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Phase 13
+        run: python experiments/phase13_direct_ticket_payoff.py
+      - name: Commit reproducible results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/phase13_direct_ticket_payoff.json results/PHASE13_DIRECT_TICKET_PAYOFF.md
+          if git diff --cached --quiet; then
+            echo 'No result changes'
+          else
+            git commit -m 'Save Phase 13 direct ticket payoff results'
+            git push
+          fi
