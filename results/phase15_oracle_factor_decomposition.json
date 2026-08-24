@@ -1,0 +1,932 @@
+{
+  "method": {
+    "pool_size": 5000,
+    "pool_seed": 424242,
+    "groups": {
+      "quadrants": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "balance": [
+        4,
+        5
+      ],
+      "mean_location": [
+        6
+      ],
+      "dispersion_span_gaps": [
+        7,
+        9,
+        10
+      ],
+      "runs": [
+        8
+      ]
+    },
+    "predictors": [
+      "expanding_mean",
+      "rolling20",
+      "ridge",
+      "knn"
+    ],
+    "N_policy": "free integer 19..400 selected only from earlier capped15 curves",
+    "oracle_is_diagnostic_only": true,
+    "valid_forecastability_is_strict_walk_forward": true
+  },
+  "groups": {
+    "quadrants": {
+      "dims": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "oracle": {
+        "strategy": {
+          "targets": 125,
+          "cost": 8428,
+          "payout": 7079.0,
+          "net_pl": -1349.0,
+          "roi": 0.839938300901756,
+          "capped15_roi": 0.6637399145704793,
+          "profitable_share": 0.208,
+          "N_min": 19,
+          "N_median": 44.0,
+          "N_max": 237
+        },
+        "random_roi_mean": 0.5871440436639773,
+        "random_roi_p05": 0.4883542952064547,
+        "random_roi_p95": 0.7223065970574276,
+        "oracle_lift_vs_random": 0.2527942572377787,
+        "random_replicates_beating_oracle": 0,
+        "blocks": [
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 1229,
+              "payout": 1046.0,
+              "net_pl": -183.0,
+              "roi": 0.8510984540276648,
+              "capped15_roi": 0.741253051261188,
+              "profitable_share": 0.225,
+              "N_min": 19,
+              "N_median": 22.0,
+              "N_max": 153
+            },
+            "random_roi_mean": 0.600447518307567,
+            "oracle_lift_vs_random": 0.2506509357200978
+          },
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 2334,
+              "payout": 2436.0,
+              "net_pl": 102.0,
+              "roi": 1.0437017994858613,
+              "capped15_roi": 0.6966580976863753,
+              "profitable_share": 0.225,
+              "N_min": 32,
+              "N_median": 44.0,
+              "N_max": 205
+            },
+            "random_roi_mean": 0.6245501285347043,
+            "oracle_lift_vs_random": 0.419151670951157
+          },
+          {
+            "strategy": {
+              "targets": 45,
+              "cost": 4865,
+              "payout": 3597.0,
+              "net_pl": -1268.0,
+              "roi": 0.7393627954779034,
+              "capped15_roi": 0.6283658787255909,
+              "profitable_share": 0.17777777777777778,
+              "N_min": 43,
+              "N_median": 44.0,
+              "N_max": 237
+            },
+            "random_roi_mean": 0.5658376156217884,
+            "oracle_lift_vs_random": 0.17352517985611504
+          }
+        ]
+      },
+      "forecastability": {
+        "expanding_mean": {
+          "rmse_mean": 0.9745067692155687,
+          "mse_skill_vs_expanding": 0.0,
+          "blocks": [
+            {
+              "rmse_mean": 0.9750139257736794,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 0.9898353642137654,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 0.9604305456099616,
+              "mse_skill_vs_expanding": 0.0
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "rolling20": {
+          "rmse_mean": 0.9965234659259985,
+          "mse_skill_vs_expanding": -0.05182559961377686,
+          "blocks": [
+            {
+              "rmse_mean": 0.9906876364114489,
+              "mse_skill_vs_expanding": -0.04758628172393142
+            },
+            {
+              "rmse_mean": 1.0229103965530089,
+              "mse_skill_vs_expanding": -0.061065396647385084
+            },
+            {
+              "rmse_mean": 0.9782558204927003,
+              "mse_skill_vs_expanding": -0.047008473007374096
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "ridge": {
+          "rmse_mean": 1.115003069286499,
+          "mse_skill_vs_expanding": -0.3012958720138985,
+          "blocks": [
+            {
+              "rmse_mean": 1.1543270346221004,
+              "mse_skill_vs_expanding": -0.40477755452696895
+            },
+            {
+              "rmse_mean": 1.1389403039107588,
+              "mse_skill_vs_expanding": -0.32554070668063284
+            },
+            {
+              "rmse_mean": 1.0587708915444007,
+              "mse_skill_vs_expanding": -0.18410605165449412
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "knn": {
+          "rmse_mean": 1.0347739941828398,
+          "mse_skill_vs_expanding": -0.12670487761235028,
+          "blocks": [
+            {
+              "rmse_mean": 1.000935924840256,
+              "mse_skill_vs_expanding": -0.09631638564229683
+            },
+            {
+              "rmse_mean": 1.0757637152324002,
+              "mse_skill_vs_expanding": -0.16798925442019352
+            },
+            {
+              "rmse_mean": 1.0284169704433053,
+              "mse_skill_vs_expanding": -0.11562388044851613
+            }
+          ],
+          "positive_skill_blocks": 0
+        }
+      },
+      "best_predictor_by_predeclared_rule": "expanding_mean",
+      "best_forecast_skill": 0.0,
+      "best_positive_skill_blocks": 0
+    },
+    "balance": {
+      "dims": [
+        4,
+        5
+      ],
+      "oracle": {
+        "strategy": {
+          "targets": 125,
+          "cost": 10139,
+          "payout": 7260.0,
+          "net_pl": -2879.0,
+          "roi": 0.7160469474307131,
+          "capped15_roi": 0.6228424893973765,
+          "profitable_share": 0.16,
+          "N_min": 19,
+          "N_median": 53.0,
+          "N_max": 316
+        },
+        "random_roi_mean": 0.582325673143308,
+        "random_roi_p05": 0.475032054443239,
+        "random_roi_p95": 0.7458625110957688,
+        "oracle_lift_vs_random": 0.1337212742874051,
+        "random_replicates_beating_oracle": 2,
+        "blocks": [
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 2374,
+              "payout": 1404.0,
+              "net_pl": -970.0,
+              "roi": 0.5914069081718618,
+              "capped15_roi": 0.5914069081718618,
+              "profitable_share": 0.15,
+              "N_min": 19,
+              "N_median": 43.0,
+              "N_max": 316
+            },
+            "random_roi_mean": 0.5093513058129738,
+            "oracle_lift_vs_random": 0.08205560235888798
+          },
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 3629,
+              "payout": 2912.0,
+              "net_pl": -717.0,
+              "roi": 0.8024249104436484,
+              "capped15_roi": 0.6536235877652246,
+              "profitable_share": 0.2,
+              "N_min": 19,
+              "N_median": 53.0,
+              "N_max": 309
+            },
+            "random_roi_mean": 0.5992008817856158,
+            "oracle_lift_vs_random": 0.20322402865803257
+          },
+          {
+            "strategy": {
+              "targets": 45,
+              "cost": 4136,
+              "payout": 2944.0,
+              "net_pl": -1192.0,
+              "roi": 0.7117988394584139,
+              "capped15_roi": 0.6138781431334622,
+              "profitable_share": 0.13333333333333333,
+              "N_min": 27,
+              "N_median": 70.0,
+              "N_max": 287
+            },
+            "random_roi_mean": 0.6094052224371374,
+            "oracle_lift_vs_random": 0.10239361702127658
+          }
+        ]
+      },
+      "forecastability": {
+        "expanding_mean": {
+          "rmse_mean": 0.916313522128407,
+          "mse_skill_vs_expanding": 0.0,
+          "blocks": [
+            {
+              "rmse_mean": 0.9441348038885561,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 1.0072378772065576,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 0.810761844938807,
+              "mse_skill_vs_expanding": 0.0
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "rolling20": {
+          "rmse_mean": 0.9345015319752827,
+          "mse_skill_vs_expanding": -0.05161819756324171,
+          "blocks": [
+            {
+              "rmse_mean": 0.9624009863440133,
+              "mse_skill_vs_expanding": -0.036867934342567965
+            },
+            {
+              "rmse_mean": 1.0377632978753932,
+              "mse_skill_vs_expanding": -0.08029078946470314
+            },
+            {
+              "rmse_mean": 0.817913780625202,
+              "mse_skill_vs_expanding": -0.03055417313763442
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "ridge": {
+          "rmse_mean": 1.037802484215967,
+          "mse_skill_vs_expanding": -0.2569869965591016,
+          "blocks": [
+            {
+              "rmse_mean": 1.1388529811496673,
+              "mse_skill_vs_expanding": -0.3990512103959991
+            },
+            {
+              "rmse_mean": 1.0415246126177793,
+              "mse_skill_vs_expanding": -0.10916458197888956
+            },
+            {
+              "rmse_mean": 0.9446712616955114,
+              "mse_skill_vs_expanding": -0.2845427376175771
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "knn": {
+          "rmse_mean": 0.958284633394112,
+          "mse_skill_vs_expanding": -0.07653600133509131,
+          "blocks": [
+            {
+              "rmse_mean": 1.030117456290683,
+              "mse_skill_vs_expanding": -0.1426104643050483
+            },
+            {
+              "rmse_mean": 0.9913210204224953,
+              "mse_skill_vs_expanding": -0.009023178935264387
+            },
+            {
+              "rmse_mean": 0.8650675579052641,
+              "mse_skill_vs_expanding": -0.08765853021225345
+            }
+          ],
+          "positive_skill_blocks": 0
+        }
+      },
+      "best_predictor_by_predeclared_rule": "expanding_mean",
+      "best_forecast_skill": 0.0,
+      "best_positive_skill_blocks": 0
+    },
+    "mean_location": {
+      "dims": [
+        6
+      ],
+      "oracle": {
+        "strategy": {
+          "targets": 125,
+          "cost": 12459,
+          "payout": 10765.0,
+          "net_pl": -1694.0,
+          "roi": 0.8640340316237258,
+          "capped15_roi": 0.5281322738582551,
+          "profitable_share": 0.096,
+          "N_min": 19,
+          "N_median": 55.0,
+          "N_max": 399
+        },
+        "random_roi_mean": 0.5567902720924632,
+        "random_roi_p05": 0.49390400513684884,
+        "random_roi_p95": 0.7109559354683362,
+        "oracle_lift_vs_random": 0.3072437595312626,
+        "random_replicates_beating_oracle": 0,
+        "blocks": [
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 4230,
+              "payout": 4072.0,
+              "net_pl": -158.0,
+              "roi": 0.9626477541371158,
+              "capped15_roi": 0.48392434988179667,
+              "profitable_share": 0.1,
+              "N_min": 19,
+              "N_median": 40.0,
+              "N_max": 399
+            },
+            "random_roi_mean": 0.5204373522458628,
+            "oracle_lift_vs_random": 0.44221040189125294
+          },
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 3615,
+              "payout": 4036.0,
+              "net_pl": 421.0,
+              "roi": 1.1164591977869986,
+              "capped15_roi": 0.5936376210235131,
+              "profitable_share": 0.125,
+              "N_min": 33,
+              "N_median": 35.0,
+              "N_max": 260
+            },
+            "random_roi_mean": 0.6454771784232365,
+            "oracle_lift_vs_random": 0.47098201936376216
+          },
+          {
+            "strategy": {
+              "targets": 45,
+              "cost": 4614,
+              "payout": 2657.0,
+              "net_pl": -1957.0,
+              "roi": 0.5758560901603814,
+              "capped15_roi": 0.5173385348938014,
+              "profitable_share": 0.06666666666666667,
+              "N_min": 28,
+              "N_median": 71.0,
+              "N_max": 326
+            },
+            "random_roi_mean": 0.5206328565236238,
+            "oracle_lift_vs_random": 0.05522323363675763
+          }
+        ]
+      },
+      "forecastability": {
+        "expanding_mean": {
+          "rmse_mean": 0.9180537384448162,
+          "mse_skill_vs_expanding": 0.0,
+          "blocks": [
+            {
+              "rmse_mean": 0.9813435122778067,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 0.9918947031204219,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 0.7961597486593972,
+              "mse_skill_vs_expanding": 0.0
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "rolling20": {
+          "rmse_mean": 0.9212616877288857,
+          "mse_skill_vs_expanding": -0.03198923146519239,
+          "blocks": [
+            {
+              "rmse_mean": 0.9903047495937027,
+              "mse_skill_vs_expanding": -0.03207059665479961
+            },
+            {
+              "rmse_mean": 0.9993339945460681,
+              "mse_skill_vs_expanding": -0.04194301520056154
+            },
+            {
+              "rmse_mean": 0.790492471122664,
+              "mse_skill_vs_expanding": -0.019734768680690795
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "ridge": {
+          "rmse_mean": 1.042144090444382,
+          "mse_skill_vs_expanding": -0.28643679926923715,
+          "blocks": [
+            {
+              "rmse_mean": 1.1248216604818566,
+              "mse_skill_vs_expanding": -0.38248729133519555
+            },
+            {
+              "rmse_mean": 0.9841385946740149,
+              "mse_skill_vs_expanding": -0.04590396784660822
+            },
+            {
+              "rmse_mean": 1.0202133577625079,
+              "mse_skill_vs_expanding": -0.4751164916380137
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "knn": {
+          "rmse_mean": 0.958413985088815,
+          "mse_skill_vs_expanding": -0.1164141624922419,
+          "blocks": [
+            {
+              "rmse_mean": 0.9547456363410145,
+              "mse_skill_vs_expanding": -0.07935886080686338
+            },
+            {
+              "rmse_mean": 1.0582640558265535,
+              "mse_skill_vs_expanding": -0.15354084157303927
+            },
+            {
+              "rmse_mean": 0.872919121097759,
+              "mse_skill_vs_expanding": -0.1116600431203214
+            }
+          ],
+          "positive_skill_blocks": 0
+        }
+      },
+      "best_predictor_by_predeclared_rule": "expanding_mean",
+      "best_forecast_skill": 0.0,
+      "best_positive_skill_blocks": 0
+    },
+    "dispersion_span_gaps": {
+      "dims": [
+        7,
+        9,
+        10
+      ],
+      "oracle": {
+        "strategy": {
+          "targets": 125,
+          "cost": 15927,
+          "payout": 9342.0,
+          "net_pl": -6585.0,
+          "roi": 0.5865511395743078,
+          "capped15_roi": 0.527217931813901,
+          "profitable_share": 0.096,
+          "N_min": 19,
+          "N_median": 50.0,
+          "N_max": 394
+        },
+        "random_roi_mean": 0.5409242167388711,
+        "random_roi_p05": 0.4915395240786086,
+        "random_roi_p95": 0.6224398819614491,
+        "oracle_lift_vs_random": 0.04562692283543668,
+        "random_replicates_beating_oracle": 4,
+        "blocks": [
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 3147,
+              "payout": 1838.0,
+              "net_pl": -1309.0,
+              "roi": 0.5840482999682237,
+              "capped15_roi": 0.5411503018748014,
+              "profitable_share": 0.1,
+              "N_min": 19,
+              "N_median": 31.0,
+              "N_max": 338
+            },
+            "random_roi_mean": 0.5239116619002225,
+            "oracle_lift_vs_random": 0.06013663806800118
+          },
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 4491,
+              "payout": 2638.0,
+              "net_pl": -1853.0,
+              "roi": 0.5873970162547317,
+              "capped15_roi": 0.5272767757737697,
+              "profitable_share": 0.125,
+              "N_min": 25,
+              "N_median": 31.0,
+              "N_max": 394
+            },
+            "random_roi_mean": 0.5312513916722332,
+            "oracle_lift_vs_random": 0.0561456245824985
+          },
+          {
+            "strategy": {
+              "targets": 45,
+              "cost": 8289,
+              "payout": 4866.0,
+              "net_pl": -3423.0,
+              "roi": 0.5870430691277597,
+              "capped15_roi": 0.5218964893231994,
+              "profitable_share": 0.06666666666666667,
+              "N_min": 19,
+              "N_median": 148.0,
+              "N_max": 371
+            },
+            "random_roi_mean": 0.5526239594643504,
+            "oracle_lift_vs_random": 0.03441910966340933
+          }
+        ]
+      },
+      "forecastability": {
+        "expanding_mean": {
+          "rmse_mean": 0.9270899149668596,
+          "mse_skill_vs_expanding": 0.0,
+          "blocks": [
+            {
+              "rmse_mean": 0.9671628897726485,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 0.924748945506732,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 0.893550354659605,
+              "mse_skill_vs_expanding": 0.0
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "rolling20": {
+          "rmse_mean": 0.9596974437628981,
+          "mse_skill_vs_expanding": -0.06654978932221889,
+          "blocks": [
+            {
+              "rmse_mean": 1.0039568099793341,
+              "mse_skill_vs_expanding": -0.06268304939211711
+            },
+            {
+              "rmse_mean": 0.9713577183936742,
+              "mse_skill_vs_expanding": -0.08868607270927242
+            },
+            {
+              "rmse_mean": 0.9099910963431542,
+              "mse_skill_vs_expanding": -0.0509422448723762
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "ridge": {
+          "rmse_mean": 1.0771988817744014,
+          "mse_skill_vs_expanding": -0.32690071256541886,
+          "blocks": [
+            {
+              "rmse_mean": 1.0662802343486768,
+              "mse_skill_vs_expanding": -0.16372927674451754
+            },
+            {
+              "rmse_mean": 1.0767081141883128,
+              "mse_skill_vs_expanding": -0.44341086344000225
+            },
+            {
+              "rmse_mean": 1.0873405840071244,
+              "mse_skill_vs_expanding": -0.41119253018431845
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "knn": {
+          "rmse_mean": 1.0036194147948847,
+          "mse_skill_vs_expanding": -0.16481876922525407,
+          "blocks": [
+            {
+              "rmse_mean": 1.0066409050886385,
+              "mse_skill_vs_expanding": -0.05444592032099416
+            },
+            {
+              "rmse_mean": 1.0291598592377391,
+              "mse_skill_vs_expanding": -0.2512879736321403
+            },
+            {
+              "rmse_mean": 0.9782310283623435,
+              "mse_skill_vs_expanding": -0.21487634247692755
+            }
+          ],
+          "positive_skill_blocks": 0
+        }
+      },
+      "best_predictor_by_predeclared_rule": "expanding_mean",
+      "best_forecast_skill": 0.0,
+      "best_positive_skill_blocks": 0
+    },
+    "runs": {
+      "dims": [
+        8
+      ],
+      "oracle": {
+        "strategy": {
+          "targets": 125,
+          "cost": 12818,
+          "payout": 8801.0,
+          "net_pl": -4017.0,
+          "roi": 0.6866125760649088,
+          "capped15_roi": 0.5075674832267124,
+          "profitable_share": 0.072,
+          "N_min": 19,
+          "N_median": 60.0,
+          "N_max": 394
+        },
+        "random_roi_mean": 0.5554415665470431,
+        "random_roi_p05": 0.4959002964581058,
+        "random_roi_p95": 0.650421282571384,
+        "oracle_lift_vs_random": 0.13117100951786564,
+        "random_replicates_beating_oracle": 1,
+        "blocks": [
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 3106,
+              "payout": 1726.0,
+              "net_pl": -1380.0,
+              "roi": 0.5556986477784932,
+              "capped15_roi": 0.5122343850611719,
+              "profitable_share": 0.05,
+              "N_min": 19,
+              "N_median": 61.0,
+              "N_max": 394
+            },
+            "random_roi_mean": 0.5524629748873149,
+            "oracle_lift_vs_random": 0.0032356728911783206
+          },
+          {
+            "strategy": {
+              "targets": 40,
+              "cost": 6872,
+              "payout": 5145.0,
+              "net_pl": -1727.0,
+              "roi": 0.7486903376018627,
+              "capped15_roi": 0.49330616996507565,
+              "profitable_share": 0.05,
+              "N_min": 19,
+              "N_median": 177.0,
+              "N_max": 362
+            },
+            "random_roi_mean": 0.5618160651920838,
+            "oracle_lift_vs_random": 0.18687427240977883
+          },
+          {
+            "strategy": {
+              "targets": 45,
+              "cost": 2840,
+              "payout": 1930.0,
+              "net_pl": -910.0,
+              "roi": 0.6795774647887324,
+              "capped15_roi": 0.5369718309859155,
+              "profitable_share": 0.1111111111111111,
+              "N_min": 19,
+              "N_median": 36.0,
+              "N_max": 356
+            },
+            "random_roi_mean": 0.5432746478873239,
+            "oracle_lift_vs_random": 0.13630281690140844
+          }
+        ]
+      },
+      "forecastability": {
+        "expanding_mean": {
+          "rmse_mean": 0.8533771092733793,
+          "mse_skill_vs_expanding": 0.0,
+          "blocks": [
+            {
+              "rmse_mean": 0.7511635570521028,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 0.9350417708118369,
+              "mse_skill_vs_expanding": 0.0
+            },
+            {
+              "rmse_mean": 0.8716427898803294,
+              "mse_skill_vs_expanding": 0.0
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "rolling20": {
+          "rmse_mean": 0.8933642850994793,
+          "mse_skill_vs_expanding": -0.0810847828468022,
+          "blocks": [
+            {
+              "rmse_mean": 0.8105086228126275,
+              "mse_skill_vs_expanding": -0.09543938303317212
+            },
+            {
+              "rmse_mean": 0.9733271399302096,
+              "mse_skill_vs_expanding": -0.08761724363676748
+            },
+            {
+              "rmse_mean": 0.8959356695049204,
+              "mse_skill_vs_expanding": -0.06287890406888308
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "ridge": {
+          "rmse_mean": 0.9773679060776475,
+          "mse_skill_vs_expanding": -0.3525049634177726,
+          "blocks": [
+            {
+              "rmse_mean": 0.8444029129101395,
+              "mse_skill_vs_expanding": -0.30261194131485025
+            },
+            {
+              "rmse_mean": 1.0335748861633196,
+              "mse_skill_vs_expanding": -0.3056023900418159
+            },
+            {
+              "rmse_mean": 1.0455972510392793,
+              "mse_skill_vs_expanding": -0.4404722470284248
+            }
+          ],
+          "positive_skill_blocks": 0
+        },
+        "knn": {
+          "rmse_mean": 0.8686930145400057,
+          "mse_skill_vs_expanding": -0.09068383365112975,
+          "blocks": [
+            {
+              "rmse_mean": 0.7440944689001138,
+              "mse_skill_vs_expanding": 0.007996046295227655
+            },
+            {
+              "rmse_mean": 0.9754733734559661,
+              "mse_skill_vs_expanding": -0.10396283016551444
+            },
+            {
+              "rmse_mean": 0.8845314027390561,
+              "mse_skill_vs_expanding": -0.15647285773650887
+            }
+          ],
+          "positive_skill_blocks": 1
+        }
+      },
+      "best_predictor_by_predeclared_rule": "knn",
+      "best_forecast_skill": -0.09068383365112975,
+      "best_positive_skill_blocks": 1
+    }
+  },
+  "diagnostic_combinations": [
+    {
+      "groups": [
+        "mean_location",
+        "quadrants"
+      ],
+      "dims": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ],
+      "strategy": {
+        "targets": 125,
+        "cost": 9181,
+        "payout": 8606.0,
+        "net_pl": -575.0,
+        "roi": 0.9373706567911992,
+        "capped15_roi": 0.6726936063609629,
+        "profitable_share": 0.216,
+        "N_min": 19,
+        "N_median": 55.0,
+        "N_max": 278
+      }
+    },
+    {
+      "groups": [
+        "mean_location",
+        "quadrants",
+        "balance"
+      ],
+      "dims": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "strategy": {
+        "targets": 125,
+        "cost": 10339,
+        "payout": 10964.0,
+        "net_pl": 625.0,
+        "roi": 1.0604507205725893,
+        "capped15_roi": 0.7340168294806074,
+        "profitable_share": 0.288,
+        "N_min": 19,
+        "N_median": 23.0,
+        "N_max": 357
+      }
+    }
+  ],
+  "value_forecastability_table": [
+    {
+      "group": "quadrants",
+      "oracle_roi": 0.839938300901756,
+      "random_roi_mean": 0.5871440436639773,
+      "oracle_lift": 0.2527942572377787,
+      "best_predictor": "expanding_mean",
+      "forecast_skill": 0.0,
+      "positive_skill_blocks": 0,
+      "value_x_positive_skill": 0.0
+    },
+    {
+      "group": "balance",
+      "oracle_roi": 0.7160469474307131,
+      "random_roi_mean": 0.582325673143308,
+      "oracle_lift": 0.1337212742874051,
+      "best_predictor": "expanding_mean",
+      "forecast_skill": 0.0,
+      "positive_skill_blocks": 0,
+      "value_x_positive_skill": 0.0
+    },
+    {
+      "group": "mean_location",
+      "oracle_roi": 0.8640340316237258,
+      "random_roi_mean": 0.5567902720924632,
+      "oracle_lift": 0.3072437595312626,
+      "best_predictor": "expanding_mean",
+      "forecast_skill": 0.0,
+      "positive_skill_blocks": 0,
+      "value_x_positive_skill": 0.0
+    },
+    {
+      "group": "dispersion_span_gaps",
+      "oracle_roi": 0.5865511395743078,
+      "random_roi_mean": 0.5409242167388711,
+      "oracle_lift": 0.04562692283543668,
+      "best_predictor": "expanding_mean",
+      "forecast_skill": 0.0,
+      "positive_skill_blocks": 0,
+      "value_x_positive_skill": 0.0
+    },
+    {
+      "group": "runs",
+      "oracle_roi": 0.6866125760649088,
+      "random_roi_mean": 0.5554415665470431,
+      "oracle_lift": 0.13117100951786564,
+      "best_predictor": "knn",
+      "forecast_skill": -0.09068383365112975,
+      "positive_skill_blocks": 1,
+      "value_x_positive_skill": 0.0
+    }
+  ],
+  "decision": {
+    "promising_groups": [],
+    "promotion_rule": "oracle lift >= 0.10, positive forecast MSE skill overall, and positive skill in >=2/3 blocks"
+  }
+}
