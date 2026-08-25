@@ -106,6 +106,22 @@ Fresh public scan on 2026-08-26:
 
 Decision: ordinary mainstream bank cashback/reward stacking is now **low priority / closed under current published rules**. Reopen only if a future campaign explicitly includes lottery transactions.
 
+## Phase 18E — retail / merchant overlay audit
+
+See:
+- `results/PHASE18E_RETAIL_OVERLAY_AUDIT.md`
+- updated `results/phase18_ev_modifier_ledger.csv`
+
+Fresh retail-channel findings:
+- OBA receipt-lottery terms explicitly exclude `şans oyunlarının alışı`; a second OBA lottery page independently shows the same chance-game exclusion. Therefore OBA receipt-lottery stacking is closed under current published mechanics.
+- Araz sells Azerlotereya Poz-Qazan tickets in 360+ stores, but its standard mobile-app cashback rules explicitly exclude `uduşlu oyunlar`, so ordinary Araz cashback cannot subsidize lottery spend.
+- Araz has separately run receipt-lottery campaigns whose published exclusions were narrower. `Uçuşa hazır ol` (4 Jul–4 Aug 2026) gave 1 chance per 20 AZN receipt and 10 x 5,000 AZN travel vouchers; the published exclusions mentioned tobacco/alcohol but did **not** explicitly mention chance games.
+- This does **not** make the historical campaign actionable: it is inactive, Super Keno checkout eligibility at Araz is unverified, and total entry count is unknown.
+
+Diagnostic only: if a future materially identical 50,000-AZN equal-entry receipt overlay explicitly allowed 20 AZN of Super Keno spend, the base-game EV shortfall would be **8.16385933 AZN per chance**, so break-even would require approximately **<= 6,124 total equal-weight entries** before discounting non-cash prize value or other friction.
+
+Decision: distinguish **retail cashback exclusions** from **receipt-lottery qualification rules**. A retailer can close one while leaving the other ambiguous; future campaign terms must be checked independently.
+
 ## Strategic decision
 
 The base game remains negative-EV. External subsidies can overturn that negative EV, but stale/archived offers must never be counted as live opportunities.
@@ -120,11 +136,11 @@ Finite one-time offers remain separate from repeatable strategies.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Prioritize **non-bank external overlays**: merchant/retail partner promotions, promo codes, free-ticket bundles, stimulating lotteries and cross-game qualification where lottery spend is explicitly eligible.
-2. Search stimulating-lottery/extra-chance overlays for published entry counts or defensible upper/lower bounds; use generic overlay helpers for immediate EV classification.
-3. Investigate current Misli/Azerlotereya account-independent announcements and terms launched after the current snapshot.
-4. Search retailer channels that already sell tickets (Araz, OBA, Azərpoçt, kiosks) for explicit loyalty/receipt/reward promotions that do not blacklist lottery tickets.
-5. Keep ABB/Birbank/Unibank standard rewards closed unless materially new terms explicitly include lottery MCCs.
+1. Audit **Azərpoçt / kiosk / distributor** channels and any retailer-specific promotions for exact lottery-spend qualification language, especially channels that directly sell numerical lottery tickets rather than only scratch cards.
+2. Search stimulating-lottery/extra-chance overlays for published total entry counts, winner lists from which participation can be bounded, or official statements on code volume; apply generic overlay helpers immediately when a denominator is defensible.
+3. Continue current Misli/Azerlotereya account-independent announcement scans for newly launched post-snapshot terms.
+4. Monitor future Araz receipt-lottery campaigns specifically for whether `uduşlu oyunlar` / `şans oyunları` are excluded; do not infer receipt-lottery eligibility from cashback rules.
+5. Keep OBA standard receipt-lottery stacking closed unless future terms explicitly remove the chance-game exclusion.
 6. For every new modifier, update `results/phase18_ev_modifier_ledger.csv` with current/inactive/conflicted status and exact EV classification.
 7. If a current positive-EV modifier is verified, design a variance-aware distinct-ticket execution with **N free**, optimizing downside/variance while preserving subsidy-driven positive expectation.
 8. Do not reopen rejected history-prediction branches without materially new information.
