@@ -41,6 +41,43 @@ def one_wager_bonus_break_even_ratio(multiplier: int = 1) -> float:
     return 1.0 / e - 1.0
 
 
+def overlay_ev_per_qualifying_spend(
+    prize_pool: float,
+    competition_entries: float,
+    entries_earned: float = 1.0,
+    qualifying_spend: float = 5.0,
+) -> float:
+    """Expected overlay prize value per 1 AZN qualifying spend.
+
+    Assumes equal-probability entries and a known/valued aggregate prize pool.
+    Returns 0 for an empty prize pool or zero entries earned. Invalid denominator/spend
+    raises ValueError rather than silently fabricating EV.
+    """
+    if competition_entries <= 0:
+        raise ValueError("competition_entries must be > 0")
+    if qualifying_spend <= 0:
+        raise ValueError("qualifying_spend must be > 0")
+    if prize_pool < 0 or entries_earned < 0:
+        raise ValueError("prize_pool and entries_earned must be >= 0")
+    return (prize_pool / competition_entries) * entries_earned / qualifying_spend
+
+
+def combined_return_ratio_with_overlay(
+    base_return_ratio: float,
+    prize_pool: float,
+    competition_entries: float,
+    entries_earned: float = 1.0,
+    qualifying_spend: float = 5.0,
+) -> float:
+    """Personal-capital expected return ratio from base play plus an independent overlay."""
+    return base_return_ratio + overlay_ev_per_qualifying_spend(
+        prize_pool=prize_pool,
+        competition_entries=competition_entries,
+        entries_earned=entries_earned,
+        qualifying_spend=qualifying_spend,
+    )
+
+
 @dataclass(frozen=True)
 class Promotion:
     paid_stake: float
