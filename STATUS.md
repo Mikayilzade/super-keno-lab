@@ -85,12 +85,26 @@ If currently valid, playing 10 AZN paid + 10 AZN bonus once at 1x Super Keno wou
 
 ### Current status resolution — 2026-08-26
 
-The ambiguity is now resolved against actionability:
+The ambiguity is resolved against actionability:
 - official `Cari kampaniyalar` public snapshot explicitly says **`Cari kampaniya mövcud deyil`**;
 - the dedicated 10→10 URL is indexed/labeled **`keçmiş kampaniya`**;
-- its body still says through 31 August while embedded FAQ says 14 April–31 July, so these conflicting date fragments are treated as stale archived content.
+- its body still says through 31 August while embedded FAQ says 14 April–31 July, so conflicting date fragments are treated as stale archived content.
 
-Decision: reclassify 10→10 as **`historical_inactive_positive_mechanism`**, not a current opportunity. Do not play on the assumption that it is active unless a new dated official announcement or authenticated account-visible offer reactivates it.
+Decision: reclassify 10→10 as **`historical_inactive_positive_mechanism`**, not a current opportunity.
+
+## Phase 18D — current overlay + payment-channel scan
+
+See:
+- `results/PHASE18D_CURRENT_OVERLAY_AND_PAYMENT_SCAN.md`
+- updated `results/phase18_ev_modifier_ledger.csv`
+
+Fresh public scan on 2026-08-26:
+- official Azerlotereya current-campaign page still says **no current campaign**;
+- recent `Sürətlə Qazan` tournament ran **7–14 Aug 2026**, applied only to 52 tagged digital/ePoz games and is not a Super-Keno modifier;
+- `Şans Karvanı 2` publishes gifts/event activity but no defensible ticket-linked qualification/probability table, so its EV is not quantifiable;
+- Unibank, ABB/TamKart and Birbank/Kapital Bank published reward rules all exclude lottery/gambling transactions or the relevant MCCs (notably 7800/7995; ABB also names Loto/Casino/Gambling merchants).
+
+Decision: ordinary mainstream bank cashback/reward stacking is now **low priority / closed under current published rules**. Reopen only if a future campaign explicitly includes lottery transactions.
 
 ## Strategic decision
 
@@ -106,11 +120,11 @@ Finite one-time offers remain separate from repeatable strategies.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Continue scanning genuinely current Azerlotereya/Misli campaigns, dated announcements, and partner/payment promos for modifiers exceeding the established threshold.
-2. Search stimulating-lottery/extra-chance overlays for published entry counts or defensible upper bounds; use generic overlay helpers for immediate EV classification.
-3. Investigate cross-game qualification offers where Super Keno spend can earn an external prize/bonus even if the promoted prize itself sits outside Super Keno.
-4. Audit payment/reward channels only where lottery transactions are explicitly eligible; exclusions are evidence, not assumptions.
-5. For every new modifier, update `results/phase18_ev_modifier_ledger.csv` with current/inactive/conflicted status and exact EV classification.
-6. If a current positive-EV modifier is verified, then design a variance-aware distinct-ticket execution with **N free**, optimizing downside/variance while preserving subsidy-driven positive expectation.
-7. Keep checking for a defensible denominator for historical/current stimulating-lottery overlays; no participant-count guesswork.
+1. Prioritize **non-bank external overlays**: merchant/retail partner promotions, promo codes, free-ticket bundles, stimulating lotteries and cross-game qualification where lottery spend is explicitly eligible.
+2. Search stimulating-lottery/extra-chance overlays for published entry counts or defensible upper/lower bounds; use generic overlay helpers for immediate EV classification.
+3. Investigate current Misli/Azerlotereya account-independent announcements and terms launched after the current snapshot.
+4. Search retailer channels that already sell tickets (Araz, OBA, Azərpoçt, kiosks) for explicit loyalty/receipt/reward promotions that do not blacklist lottery tickets.
+5. Keep ABB/Birbank/Unibank standard rewards closed unless materially new terms explicitly include lottery MCCs.
+6. For every new modifier, update `results/phase18_ev_modifier_ledger.csv` with current/inactive/conflicted status and exact EV classification.
+7. If a current positive-EV modifier is verified, design a variance-aware distinct-ticket execution with **N free**, optimizing downside/variance while preserving subsidy-driven positive expectation.
 8. Do not reopen rejected history-prediction branches without materially new information.
