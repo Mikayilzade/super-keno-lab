@@ -1,0 +1,1553 @@
+{
+  "method": {
+    "pool_size": 5000,
+    "pool_seed": 424242,
+    "Ks": [
+      4,
+      6,
+      8
+    ],
+    "combo_dims": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "methods": [
+      "prior",
+      "markov1",
+      "markov2",
+      "knn",
+      "mixture"
+    ],
+    "N_policy": "free integer 19..400 selected from prior capped15 curves",
+    "no_future_leakage": true
+  },
+  "configs": {
+    "4": {
+      "state_entropy_mean": 1.334010841747953,
+      "state_count_min_over_time": 2,
+      "methods": {
+        "prior": {
+          "strategy": {
+            "targets": 125,
+            "cost": 15742,
+            "payout": 9136.0,
+            "net_pl": -6606.0,
+            "roi": 0.5803582772201753,
+            "capped15_roi": 0.468873078389023,
+            "profitable_share": 0.024,
+            "N_min": 19,
+            "N_median": 97.0,
+            "N_max": 383
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 4255,
+                "payout": 3530.0,
+                "net_pl": -725.0,
+                "roi": 0.8296122209165687,
+                "capped15_roi": 0.4806110458284371,
+                "profitable_share": 0.025,
+                "N_min": 19,
+                "N_median": 94.0,
+                "N_max": 267
+              },
+              "random_roi_mean": 0.5251938895417156,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 5376,
+                "payout": 2579.0,
+                "net_pl": -2797.0,
+                "roi": 0.4797247023809524,
+                "capped15_roi": 0.45461309523809523,
+                "profitable_share": 0.025,
+                "N_min": 26,
+                "N_median": 49.0,
+                "N_max": 383
+              },
+              "random_roi_mean": 0.5455357142857142,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 6111,
+                "payout": 3027.0,
+                "net_pl": -3084.0,
+                "roi": 0.4953362788414335,
+                "capped15_roi": 0.4732449680903289,
+                "profitable_share": 0.022222222222222223,
+                "N_min": 42,
+                "N_median": 149.0,
+                "N_max": 356
+              },
+              "random_roi_mean": 0.5484781541482573,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5411796468047262,
+            "roi_p05": 0.4842872570194385,
+            "roi_p95": 0.6392167450133401,
+            "replicates_beating_strategy": 4
+          },
+          "classification": {
+            "accuracy": 0.328,
+            "logloss": 1.350338951699128
+          }
+        },
+        "markov1": {
+          "strategy": {
+            "targets": 125,
+            "cost": 17396,
+            "payout": 9833.0,
+            "net_pl": -7563.0,
+            "roi": 0.5652448838813521,
+            "capped15_roi": 0.4643596229018165,
+            "profitable_share": 0.056,
+            "N_min": 19,
+            "N_median": 151.0,
+            "N_max": 370
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 6624,
+                "payout": 4970.0,
+                "net_pl": -1654.0,
+                "roi": 0.7503019323671497,
+                "capped15_roi": 0.48535628019323673,
+                "profitable_share": 0.1,
+                "N_min": 19,
+                "N_median": 161.0,
+                "N_max": 370
+              },
+              "random_roi_mean": 0.551917270531401,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 4255,
+                "payout": 1983.0,
+                "net_pl": -2272.0,
+                "roi": 0.4660399529964747,
+                "capped15_roi": 0.4660399529964747,
+                "profitable_share": 0.075,
+                "N_min": 19,
+                "N_median": 73.0,
+                "N_max": 280
+              },
+              "random_roi_mean": 0.5594829612220916,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 6517,
+                "payout": 2880.0,
+                "net_pl": -3637.0,
+                "roi": 0.44192112935399724,
+                "capped15_roi": 0.44192112935399724,
+                "profitable_share": 0.0,
+                "N_min": 29,
+                "N_median": 83.0,
+                "N_max": 367
+              },
+              "random_roi_mean": 0.5299294153751726,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5455305817429293,
+            "roi_p05": 0.48462002759255,
+            "roi_p95": 0.6321740630029893,
+            "replicates_beating_strategy": 6
+          },
+          "classification": {
+            "accuracy": 0.392,
+            "logloss": 1.3185842027274368
+          }
+        },
+        "markov2": {
+          "strategy": {
+            "targets": 125,
+            "cost": 16985,
+            "payout": 9670.0,
+            "net_pl": -7315.0,
+            "roi": 0.5693258757727406,
+            "capped15_roi": 0.4659994112452164,
+            "profitable_share": 0.04,
+            "N_min": 19,
+            "N_median": 148.0,
+            "N_max": 376
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 6274,
+                "payout": 4580.0,
+                "net_pl": -1694.0,
+                "roi": 0.7299968122409946,
+                "capped15_roi": 0.4717883328020402,
+                "profitable_share": 0.05,
+                "N_min": 19,
+                "N_median": 165.5,
+                "N_max": 359
+              },
+              "random_roi_mean": 0.5634762511954097,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 5225,
+                "payout": 2597.0,
+                "net_pl": -2628.0,
+                "roi": 0.4970334928229665,
+                "capped15_roi": 0.47119617224880384,
+                "profitable_share": 0.075,
+                "N_min": 21,
+                "N_median": 41.0,
+                "N_max": 376
+              },
+              "random_roi_mean": 0.5393014354066986,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 5486,
+                "payout": 2493.0,
+                "net_pl": -2993.0,
+                "roi": 0.45442945679912505,
+                "capped15_roi": 0.45442945679912505,
+                "profitable_share": 0.0,
+                "N_min": 22,
+                "N_median": 148.0,
+                "N_max": 220
+              },
+              "random_roi_mean": 0.5607546481954067,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.55516043567854,
+            "roi_p05": 0.47671180453341183,
+            "roi_p95": 0.6566176037680307,
+            "replicates_beating_strategy": 5
+          },
+          "classification": {
+            "accuracy": 0.368,
+            "logloss": 1.3469599213709165
+          }
+        },
+        "knn": {
+          "strategy": {
+            "targets": 125,
+            "cost": 23290,
+            "payout": 13668.0,
+            "net_pl": -9622.0,
+            "roi": 0.5868613138686132,
+            "capped15_roi": 0.47093173035637614,
+            "profitable_share": 0.056,
+            "N_min": 19,
+            "N_median": 147.0,
+            "N_max": 400
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 10857,
+                "payout": 7662.0,
+                "net_pl": -3195.0,
+                "roi": 0.7057198121027908,
+                "capped15_roi": 0.4943354517822603,
+                "profitable_share": 0.075,
+                "N_min": 19,
+                "N_median": 382.0,
+                "N_max": 400
+              },
+              "random_roi_mean": 0.5570277240490006,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 5681,
+                "payout": 2837.0,
+                "net_pl": -2844.0,
+                "roi": 0.4993839112832248,
+                "capped15_roi": 0.45185706741770815,
+                "profitable_share": 0.05,
+                "N_min": 20,
+                "N_median": 90.0,
+                "N_max": 395
+              },
+              "random_roi_mean": 0.5538461538461539,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 6752,
+                "payout": 3169.0,
+                "net_pl": -3583.0,
+                "roi": 0.4693424170616114,
+                "capped15_roi": 0.4493483412322275,
+                "profitable_share": 0.044444444444444446,
+                "N_min": 20,
+                "N_median": 147.0,
+                "N_max": 394
+              },
+              "random_roi_mean": 0.5844564573459716,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5642035208243882,
+            "roi_p05": 0.5066444826105624,
+            "roi_p95": 0.6705410047230571,
+            "replicates_beating_strategy": 6
+          },
+          "classification": {
+            "accuracy": 0.288,
+            "logloss": 1.382793716221967
+          }
+        },
+        "mixture": {
+          "strategy": {
+            "targets": 125,
+            "cost": 20872,
+            "payout": 11551.0,
+            "net_pl": -9321.0,
+            "roi": 0.5534208509007282,
+            "capped15_roi": 0.4628689152932158,
+            "profitable_share": 0.04,
+            "N_min": 19,
+            "N_median": 174.0,
+            "N_max": 400
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 8352,
+                "payout": 5730.0,
+                "net_pl": -2622.0,
+                "roi": 0.6860632183908046,
+                "capped15_roi": 0.475933908045977,
+                "profitable_share": 0.075,
+                "N_min": 19,
+                "N_median": 228.0,
+                "N_max": 400
+              },
+              "random_roi_mean": 0.542492816091954,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 6268,
+                "payout": 2955.0,
+                "net_pl": -3313.0,
+                "roi": 0.47144224633056797,
+                "capped15_roi": 0.44990427568602426,
+                "profitable_share": 0.025,
+                "N_min": 19,
+                "N_median": 173.0,
+                "N_max": 343
+              },
+              "random_roi_mean": 0.5510768985322272,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 6252,
+                "payout": 2866.0,
+                "net_pl": -3386.0,
+                "roi": 0.4584133077415227,
+                "capped15_roi": 0.4584133077415227,
+                "profitable_share": 0.022222222222222223,
+                "N_min": 46,
+                "N_median": 134.0,
+                "N_max": 373
+              },
+              "random_roi_mean": 0.5166026871401151,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5373155423533922,
+            "roi_p05": 0.49716605979302414,
+            "roi_p95": 0.5792233614411653,
+            "replicates_beating_strategy": 4
+          },
+          "classification": {
+            "accuracy": 0.352,
+            "logloss": 1.3288114030005176
+          }
+        },
+        "oracle_state": {
+          "strategy": {
+            "targets": 125,
+            "cost": 20176,
+            "payout": 12265.0,
+            "net_pl": -7911.0,
+            "roi": 0.6079004758128469,
+            "capped15_roi": 0.5276070578905631,
+            "profitable_share": 0.072,
+            "N_min": 19,
+            "N_median": 147.0,
+            "N_max": 400
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 4899,
+                "payout": 3234.0,
+                "net_pl": -1665.0,
+                "roi": 0.6601347213717085,
+                "capped15_roi": 0.5774647887323944,
+                "profitable_share": 0.1,
+                "N_min": 19,
+                "N_median": 99.0,
+                "N_max": 201
+              }
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 7815,
+                "payout": 4454.0,
+                "net_pl": -3361.0,
+                "roi": 0.5699296225207934,
+                "capped15_roi": 0.5181062060140755,
+                "profitable_share": 0.075,
+                "N_min": 26,
+                "N_median": 189.0,
+                "N_max": 396
+              }
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 7462,
+                "payout": 4577.0,
+                "net_pl": -2885.0,
+                "roi": 0.6133744304476012,
+                "capped15_roi": 0.5048244438488341,
+                "profitable_share": 0.044444444444444446,
+                "N_min": 33,
+                "N_median": 76.0,
+                "N_max": 400
+              }
+            }
+          ]
+        }
+      }
+    },
+    "6": {
+      "state_entropy_mean": 1.7225717202726576,
+      "state_count_min_over_time": 1,
+      "methods": {
+        "prior": {
+          "strategy": {
+            "targets": 125,
+            "cost": 13655,
+            "payout": 6558.0,
+            "net_pl": -7097.0,
+            "roi": 0.48026363969242036,
+            "capped15_roi": 0.4703771512266569,
+            "profitable_share": 0.016,
+            "N_min": 19,
+            "N_median": 67.0,
+            "N_max": 390
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 2828,
+                "payout": 1495.0,
+                "net_pl": -1333.0,
+                "roi": 0.5286421499292786,
+                "capped15_roi": 0.4809052333804809,
+                "profitable_share": 0.025,
+                "N_min": 19,
+                "N_median": 66.0,
+                "N_max": 252
+              },
+              "random_roi_mean": 0.5431577086280055,
+              "above_random": false
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 4393,
+                "payout": 2084.0,
+                "net_pl": -2309.0,
+                "roi": 0.47439107671295244,
+                "capped15_roi": 0.47439107671295244,
+                "profitable_share": 0.0,
+                "N_min": 27,
+                "N_median": 66.0,
+                "N_max": 260
+              },
+              "random_roi_mean": 0.613430457546096,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 6434,
+                "payout": 2979.0,
+                "net_pl": -3455.0,
+                "roi": 0.463009014609885,
+                "capped15_roi": 0.463009014609885,
+                "profitable_share": 0.022222222222222223,
+                "N_min": 24,
+                "N_median": 138.0,
+                "N_max": 390
+              },
+              "random_roi_mean": 0.5368588747280073,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5627975100695715,
+            "roi_p05": 0.4839509337239107,
+            "roi_p95": 0.6465690223361406,
+            "replicates_beating_strategy": 19
+          },
+          "classification": {
+            "accuracy": 0.192,
+            "logloss": 1.7818605369267693
+          }
+        },
+        "markov1": {
+          "strategy": {
+            "targets": 125,
+            "cost": 17631,
+            "payout": 9701.0,
+            "net_pl": -7930.0,
+            "roi": 0.5502240372071919,
+            "capped15_roi": 0.45834042311837103,
+            "profitable_share": 0.024,
+            "N_min": 19,
+            "N_median": 123.0,
+            "N_max": 400
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 4585,
+                "payout": 3670.0,
+                "net_pl": -915.0,
+                "roi": 0.8004362050163577,
+                "capped15_roi": 0.4765539803707743,
+                "profitable_share": 0.025,
+                "N_min": 19,
+                "N_median": 90.0,
+                "N_max": 365
+              },
+              "random_roi_mean": 0.5607088331515812,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 4760,
+                "payout": 2332.0,
+                "net_pl": -2428.0,
+                "roi": 0.4899159663865546,
+                "capped15_roi": 0.4615546218487395,
+                "profitable_share": 0.025,
+                "N_min": 28,
+                "N_median": 51.0,
+                "N_max": 362
+              },
+              "random_roi_mean": 0.5498424369747898,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 8286,
+                "payout": 3699.0,
+                "net_pl": -4587.0,
+                "roi": 0.44641564083997104,
+                "capped15_roi": 0.44641564083997104,
+                "profitable_share": 0.022222222222222223,
+                "N_min": 34,
+                "N_median": 154.0,
+                "N_max": 400
+              },
+              "random_roi_mean": 0.5424269852763698,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.549183256763655,
+            "roi_p05": 0.4800153139356815,
+            "roi_p95": 0.642867676252056,
+            "replicates_beating_strategy": 7
+          },
+          "classification": {
+            "accuracy": 0.168,
+            "logloss": 1.8073130352139855
+          }
+        },
+        "markov2": {
+          "strategy": {
+            "targets": 125,
+            "cost": 17237,
+            "payout": 10047.0,
+            "net_pl": -7190.0,
+            "roi": 0.5828740500087022,
+            "capped15_roi": 0.4653942101293729,
+            "profitable_share": 0.04,
+            "N_min": 19,
+            "N_median": 89.0,
+            "N_max": 391
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 4703,
+                "payout": 4002.0,
+                "net_pl": -701.0,
+                "roi": 0.850946204550287,
+                "capped15_roi": 0.4777801403359558,
+                "profitable_share": 0.075,
+                "N_min": 19,
+                "N_median": 71.0,
+                "N_max": 331
+              },
+              "random_roi_mean": 0.5541675526259834,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 4264,
+                "payout": 2114.0,
+                "net_pl": -2150.0,
+                "roi": 0.49577861163227016,
+                "capped15_roi": 0.46411819887429645,
+                "profitable_share": 0.025,
+                "N_min": 27,
+                "N_median": 76.0,
+                "N_max": 285
+              },
+              "random_roi_mean": 0.5407012195121952,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 8270,
+                "payout": 3931.0,
+                "net_pl": -4339.0,
+                "roi": 0.47533252720677144,
+                "capped15_roi": 0.45900846432889963,
+                "profitable_share": 0.022222222222222223,
+                "N_min": 75,
+                "N_median": 221.0,
+                "N_max": 391
+              },
+              "random_roi_mean": 0.551614268440145,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5496113012705227,
+            "roi_p05": 0.48225909380982773,
+            "roi_p95": 0.6447960782038638,
+            "replicates_beating_strategy": 5
+          },
+          "classification": {
+            "accuracy": 0.184,
+            "logloss": 1.7818143495192087
+          }
+        },
+        "knn": {
+          "strategy": {
+            "targets": 125,
+            "cost": 26269,
+            "payout": 14459.0,
+            "net_pl": -11810.0,
+            "roi": 0.5504206479119875,
+            "capped15_roi": 0.4579161749590772,
+            "profitable_share": 0.048,
+            "N_min": 19,
+            "N_median": 216.0,
+            "N_max": 400
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 9696,
+                "payout": 6372.0,
+                "net_pl": -3324.0,
+                "roi": 0.6571782178217822,
+                "capped15_roi": 0.47617574257425743,
+                "profitable_share": 0.075,
+                "N_min": 19,
+                "N_median": 244.0,
+                "N_max": 400
+              },
+              "random_roi_mean": 0.5145523927392739,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 8115,
+                "payout": 4071.0,
+                "net_pl": -4044.0,
+                "roi": 0.5016635859519408,
+                "capped15_roi": 0.45175600739371535,
+                "profitable_share": 0.05,
+                "N_min": 19,
+                "N_median": 221.0,
+                "N_max": 392
+              },
+              "random_roi_mean": 0.5255637707948244,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 8458,
+                "payout": 4016.0,
+                "net_pl": -4442.0,
+                "roi": 0.47481674154646486,
+                "capped15_roi": 0.44289430125325135,
+                "profitable_share": 0.022222222222222223,
+                "N_min": 33,
+                "N_median": 185.0,
+                "N_max": 315
+              },
+              "random_roi_mean": 0.5401276897611729,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5261886634436026,
+            "roi_p05": 0.49954128440366974,
+            "roi_p95": 0.5885454337812631,
+            "replicates_beating_strategy": 2
+          },
+          "classification": {
+            "accuracy": 0.216,
+            "logloss": 1.8261964266445825
+          }
+        },
+        "mixture": {
+          "strategy": {
+            "targets": 125,
+            "cost": 17958,
+            "payout": 10383.0,
+            "net_pl": -7575.0,
+            "roi": 0.578182425659873,
+            "capped15_roi": 0.46541931172736384,
+            "profitable_share": 0.056,
+            "N_min": 19,
+            "N_median": 116.0,
+            "N_max": 373
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 5299,
+                "payout": 4131.0,
+                "net_pl": -1168.0,
+                "roi": 0.7795810530288734,
+                "capped15_roi": 0.47386299301755047,
+                "profitable_share": 0.05,
+                "N_min": 19,
+                "N_median": 98.0,
+                "N_max": 312
+              },
+              "random_roi_mean": 0.5777222117380638,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 5235,
+                "payout": 2784.0,
+                "net_pl": -2451.0,
+                "roi": 0.5318051575931232,
+                "capped15_roi": 0.4802292263610315,
+                "profitable_share": 0.075,
+                "N_min": 37,
+                "N_median": 109.0,
+                "N_max": 373
+              },
+              "random_roi_mean": 0.557803247373448,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 7424,
+                "payout": 3468.0,
+                "net_pl": -3956.0,
+                "roi": 0.4671336206896552,
+                "capped15_roi": 0.44894935344827586,
+                "profitable_share": 0.044444444444444446,
+                "N_min": 22,
+                "N_median": 152.0,
+                "N_max": 342
+              },
+              "random_roi_mean": 0.5266433189655173,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5507990867579908,
+            "roi_p05": 0.495756765786836,
+            "roi_p95": 0.6478811671678361,
+            "replicates_beating_strategy": 6
+          },
+          "classification": {
+            "accuracy": 0.184,
+            "logloss": 1.7779009789061817
+          }
+        },
+        "oracle_state": {
+          "strategy": {
+            "targets": 125,
+            "cost": 13932,
+            "payout": 9589.0,
+            "net_pl": -4343.0,
+            "roi": 0.6882716049382716,
+            "capped15_roi": 0.5719925351708297,
+            "profitable_share": 0.096,
+            "N_min": 19,
+            "N_median": 95.0,
+            "N_max": 351
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 5478,
+                "payout": 3926.0,
+                "net_pl": -1552.0,
+                "roi": 0.7166849215041986,
+                "capped15_roi": 0.5934647681635633,
+                "profitable_share": 0.125,
+                "N_min": 19,
+                "N_median": 148.0,
+                "N_max": 253
+              }
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 2973,
+                "payout": 2403.0,
+                "net_pl": -570.0,
+                "roi": 0.8082744702320888,
+                "capped15_roi": 0.5812310797174571,
+                "profitable_share": 0.125,
+                "N_min": 19,
+                "N_median": 87.0,
+                "N_max": 351
+              }
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 5481,
+                "payout": 3260.0,
+                "net_pl": -2221.0,
+                "roi": 0.5947819740923189,
+                "capped15_roi": 0.5455208903484765,
+                "profitable_share": 0.044444444444444446,
+                "N_min": 21,
+                "N_median": 119.0,
+                "N_max": 251
+              }
+            }
+          ]
+        }
+      }
+    },
+    "8": {
+      "state_entropy_mean": 2.002668114058521,
+      "state_count_min_over_time": 1,
+      "methods": {
+        "prior": {
+          "strategy": {
+            "targets": 125,
+            "cost": 11863,
+            "payout": 5810.0,
+            "net_pl": -6053.0,
+            "roi": 0.4897580713141701,
+            "capped15_roi": 0.4783781505521369,
+            "profitable_share": 0.016,
+            "N_min": 19,
+            "N_median": 68.0,
+            "N_max": 369
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 3177,
+                "payout": 1708.0,
+                "net_pl": -1469.0,
+                "roi": 0.5376141013534781,
+                "capped15_roi": 0.4951211835064526,
+                "profitable_share": 0.025,
+                "N_min": 19,
+                "N_median": 67.0,
+                "N_max": 249
+              },
+              "random_roi_mean": 0.5036355051935788,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 3459,
+                "payout": 1677.0,
+                "net_pl": -1782.0,
+                "roi": 0.48482220294882916,
+                "capped15_roi": 0.48482220294882916,
+                "profitable_share": 0.0,
+                "N_min": 19,
+                "N_median": 71.0,
+                "N_max": 257
+              },
+              "random_roi_mean": 0.5647152356172305,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 5227,
+                "payout": 2425.0,
+                "net_pl": -2802.0,
+                "roi": 0.4639372488999426,
+                "capped15_roi": 0.4639372488999426,
+                "profitable_share": 0.022222222222222223,
+                "N_min": 27,
+                "N_median": 52.0,
+                "N_max": 369
+              },
+              "random_roi_mean": 0.5142816146929404,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5261358846834698,
+            "roi_p05": 0.485117592514541,
+            "roi_p95": 0.604859647643935,
+            "replicates_beating_strategy": 18
+          },
+          "classification": {
+            "accuracy": 0.104,
+            "logloss": 2.1100103792461566
+          }
+        },
+        "markov1": {
+          "strategy": {
+            "targets": 125,
+            "cost": 17289,
+            "payout": 9581.0,
+            "net_pl": -7708.0,
+            "roi": 0.5541673896697322,
+            "capped15_roi": 0.4526577592688993,
+            "profitable_share": 0.016,
+            "N_min": 19,
+            "N_median": 85.0,
+            "N_max": 399
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 3731,
+                "payout": 3228.0,
+                "net_pl": -503.0,
+                "roi": 0.865183596890914,
+                "capped15_roi": 0.46716697936210133,
+                "profitable_share": 0.025,
+                "N_min": 19,
+                "N_median": 38.5,
+                "N_max": 376
+              },
+              "random_roi_mean": 0.5741490217099974,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 7737,
+                "payout": 3801.0,
+                "net_pl": -3936.0,
+                "roi": 0.49127568825126017,
+                "capped15_roi": 0.4563784412563009,
+                "profitable_share": 0.025,
+                "N_min": 19,
+                "N_median": 132.5,
+                "N_max": 391
+              },
+              "random_roi_mean": 0.5249192193356599,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 5821,
+                "payout": 2552.0,
+                "net_pl": -3269.0,
+                "roi": 0.43841264387562273,
+                "capped15_roi": 0.43841264387562273,
+                "profitable_share": 0.0,
+                "N_min": 33,
+                "N_median": 115.0,
+                "N_max": 399
+              },
+              "random_roi_mean": 0.5274179694210617,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5363844062698826,
+            "roi_p05": 0.48686158829313436,
+            "roi_p95": 0.6134536410434381,
+            "replicates_beating_strategy": 7
+          },
+          "classification": {
+            "accuracy": 0.208,
+            "logloss": 2.0477595771643275
+          }
+        },
+        "markov2": {
+          "strategy": {
+            "targets": 125,
+            "cost": 13139,
+            "payout": 7744.0,
+            "net_pl": -5395.0,
+            "roi": 0.5893903645635132,
+            "capped15_roi": 0.4660933099931502,
+            "profitable_share": 0.024,
+            "N_min": 19,
+            "N_median": 73.0,
+            "N_max": 309
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 3732,
+                "payout": 3328.0,
+                "net_pl": -404.0,
+                "roi": 0.8917470525187567,
+                "capped15_roi": 0.45766345123258306,
+                "profitable_share": 0.05,
+                "N_min": 19,
+                "N_median": 67.0,
+                "N_max": 268
+              },
+              "random_roi_mean": 0.5713290460878885,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 3772,
+                "payout": 1819.0,
+                "net_pl": -1953.0,
+                "roi": 0.48223753976670203,
+                "capped15_roi": 0.48223753976670203,
+                "profitable_share": 0.025,
+                "N_min": 19,
+                "N_median": 75.0,
+                "N_max": 283
+              },
+              "random_roi_mean": 0.5477863202545069,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 5635,
+                "payout": 2597.0,
+                "net_pl": -3038.0,
+                "roi": 0.4608695652173913,
+                "capped15_roi": 0.4608695652173913,
+                "profitable_share": 0.0,
+                "N_min": 50,
+                "N_median": 73.0,
+                "N_max": 309
+              },
+              "random_roi_mean": 0.55131322094055,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5559859958900982,
+            "roi_p05": 0.48806225740162873,
+            "roi_p95": 0.6610510693355659,
+            "replicates_beating_strategy": 6
+          },
+          "classification": {
+            "accuracy": 0.16,
+            "logloss": 2.079003536027171
+          }
+        },
+        "knn": {
+          "strategy": {
+            "targets": 125,
+            "cost": 26279,
+            "payout": 14292.0,
+            "net_pl": -11987.0,
+            "roi": 0.5438563111229499,
+            "capped15_roi": 0.46166140264089195,
+            "profitable_share": 0.016,
+            "N_min": 19,
+            "N_median": 174.0,
+            "N_max": 397
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 9736,
+                "payout": 6496.0,
+                "net_pl": -3240.0,
+                "roi": 0.6672144617912901,
+                "capped15_roi": 0.4869556285949055,
+                "profitable_share": 0.05,
+                "N_min": 19,
+                "N_median": 242.0,
+                "N_max": 397
+              },
+              "random_roi_mean": 0.514826417419885,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 8764,
+                "payout": 4321.0,
+                "net_pl": -4443.0,
+                "roi": 0.49303970789593793,
+                "capped15_roi": 0.44682793245093566,
+                "profitable_share": 0.0,
+                "N_min": 31,
+                "N_median": 177.0,
+                "N_max": 397
+              },
+              "random_roi_mean": 0.5542959835691466,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 7779,
+                "payout": 3475.0,
+                "net_pl": -4304.0,
+                "roi": 0.44671551613317906,
+                "capped15_roi": 0.44671551613317906,
+                "profitable_share": 0.0,
+                "N_min": 93,
+                "N_median": 163.0,
+                "N_max": 395
+              },
+              "random_roi_mean": 0.5482259930582336,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5378762509988964,
+            "roi_p05": 0.49331405304615855,
+            "roi_p95": 0.5935119296776894,
+            "replicates_beating_strategy": 7
+          },
+          "classification": {
+            "accuracy": 0.2,
+            "logloss": 2.0650358951179
+          }
+        },
+        "mixture": {
+          "strategy": {
+            "targets": 125,
+            "cost": 16424,
+            "payout": 9134.0,
+            "net_pl": -7290.0,
+            "roi": 0.5561373599610326,
+            "capped15_roi": 0.457501217730151,
+            "profitable_share": 0.024,
+            "N_min": 19,
+            "N_median": 93.0,
+            "N_max": 396
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 4840,
+                "payout": 3886.0,
+                "net_pl": -954.0,
+                "roi": 0.802892561983471,
+                "capped15_roi": 0.4681818181818182,
+                "profitable_share": 0.05,
+                "N_min": 19,
+                "N_median": 92.5,
+                "N_max": 272
+              },
+              "random_roi_mean": 0.5333574380165288,
+              "above_random": true
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 5675,
+                "payout": 2528.0,
+                "net_pl": -3147.0,
+                "roi": 0.4454625550660793,
+                "capped15_roi": 0.4454625550660793,
+                "profitable_share": 0.0,
+                "N_min": 19,
+                "N_median": 80.5,
+                "N_max": 396
+              },
+              "random_roi_mean": 0.5367312775330395,
+              "above_random": false
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 5909,
+                "payout": 2720.0,
+                "net_pl": -3189.0,
+                "roi": 0.4603147740734473,
+                "capped15_roi": 0.4603147740734473,
+                "profitable_share": 0.022222222222222223,
+                "N_min": 58,
+                "N_median": 126.0,
+                "N_max": 227
+              },
+              "random_roi_mean": 0.5595193772211882,
+              "above_random": false
+            }
+          ],
+          "random": {
+            "roi_mean": 0.5439357038480274,
+            "roi_p05": 0.4909248660496834,
+            "roi_p95": 0.6998356064296152,
+            "replicates_beating_strategy": 4
+          },
+          "classification": {
+            "accuracy": 0.168,
+            "logloss": 2.044770296505776
+          }
+        },
+        "oracle_state": {
+          "strategy": {
+            "targets": 125,
+            "cost": 21351,
+            "payout": 13961.0,
+            "net_pl": -7390.0,
+            "roi": 0.6538803803100557,
+            "capped15_roi": 0.5780057140180788,
+            "profitable_share": 0.08,
+            "N_min": 19,
+            "N_median": 105.0,
+            "N_max": 387
+          },
+          "blocks": [
+            {
+              "rows": [
+                70,
+                110
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 7467,
+                "payout": 4681.0,
+                "net_pl": -2786.0,
+                "roi": 0.6268916566224723,
+                "capped15_roi": 0.5726530065622071,
+                "profitable_share": 0.05,
+                "N_min": 19,
+                "N_median": 208.0,
+                "N_max": 387
+              }
+            },
+            {
+              "rows": [
+                110,
+                150
+              ],
+              "strategy": {
+                "targets": 40,
+                "cost": 5852,
+                "payout": 4291.0,
+                "net_pl": -1561.0,
+                "roi": 0.7332535885167464,
+                "capped15_roi": 0.5948393711551606,
+                "profitable_share": 0.125,
+                "N_min": 28,
+                "N_median": 82.0,
+                "N_max": 377
+              }
+            },
+            {
+              "rows": [
+                150,
+                195
+              ],
+              "strategy": {
+                "targets": 45,
+                "cost": 8032,
+                "payout": 4989.0,
+                "net_pl": -3043.0,
+                "roi": 0.6211404382470119,
+                "capped15_roi": 0.5707171314741036,
+                "profitable_share": 0.06666666666666667,
+                "N_min": 87,
+                "N_median": 223.0,
+                "N_max": 275
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "decision": {
+    "promoted": [],
+    "oracle_state_note": "uses target regime class and is diagnostic only"
+  }
+}
