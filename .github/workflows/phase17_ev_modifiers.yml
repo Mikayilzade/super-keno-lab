@@ -20,5 +20,5 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt pytest
       - name: Run EV modifier tests
-        run: pytest -q tests/test_ev_modifiers.py
-# trigger: phase17-test
+        run: PYTHONPATH=. pytest -q tests/test_ev_modifiers.py
+# trigger: phase17-test-retry
