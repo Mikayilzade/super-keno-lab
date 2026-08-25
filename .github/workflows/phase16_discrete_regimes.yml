@@ -1,0 +1,37 @@
+name: Phase 16 Discrete Regimes
+
+on:
+  push:
+    paths:
+      - 'experiments/phase16_discrete_regimes.py'
+      - '.github/workflows/phase16_discrete_regimes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-phase16:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Phase 16
+        run: python experiments/phase16_discrete_regimes.py
+      - name: Commit reproducible results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/phase16_discrete_regimes.json results/PHASE16_DISCRETE_REGIMES.md
+          if git diff --cached --quiet; then
+            echo 'No result changes'
+          else
+            git commit -m 'Save Phase 16 discrete regime results'
+            git push
+          fi
