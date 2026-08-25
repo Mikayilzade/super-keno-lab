@@ -51,11 +51,7 @@ Break-even thresholds for 1x Super Keno:
 - one-wager bonus balance: **68.97% of paid stake**;
 - a genuine 100% one-wager match implies expected personal-capital ROI about **1.1836** before extra friction.
 
-`src/ev_modifiers.py` now also supports equal-entry prize overlays via:
-- `overlay_ev_per_qualifying_spend(...)`;
-- `combined_return_ratio_with_overlay(...)`.
-
-CI passes with the Phase-18 overlay boundary test.
+`src/ev_modifiers.py` supports equal-entry prize overlays via `overlay_ev_per_qualifying_spend(...)` and `combined_return_ratio_with_overlay(...)`.
 
 ## Phase 18A — stimulating-lottery overlay pilot
 
@@ -70,70 +66,51 @@ Historical `Sürətli Şans` (2025) control:
 
 For 5 AZN of 1x Super Keno, expected after-tax base cash is 2.9590 AZN, so the overlay must contribute at least **2.0409648325 AZN per code** to reach personal-capital break-even.
 
-Cash-only weekly break-even requires competition pool approximately:
+Cash-only weekly break-even requires competition pool approximately **<= 11,759 chance codes**. Public denominator remains unknown, so this historical overlay is `indeterminate`, not positive EV.
 
-**<= 11,759 chance codes**.
+## Phase 18B/18C — welcome-bonus candidate resolved
 
-The public denominator is unknown, so the historical overlay remains `indeterminate`, not positive EV.
+See:
+- `results/PHASE18B_WELCOME_BONUS_CONDITIONAL_EV.md`
+- `results/PHASE18C_WELCOME_BONUS_STATUS_RESOLUTION.md`
+- `results/phase18_ev_modifier_ledger.csv`
 
-## Phase 18B — important conditional-positive candidate
+The archived `10 oyna, 10 qazan` mechanics are mathematically important:
+- new eligible user played 10 AZN;
+- 10 AZN additional balance;
+- no turnover requirement on additional balance;
+- one use per user; first 10,000 eligible users.
 
-See `results/PHASE18B_WELCOME_BONUS_CONDITIONAL_EV.md`.
+If currently valid, playing 10 AZN paid + 10 AZN bonus once at 1x Super Keno would have expected personal-capital ROI **1.1836140670**, expected P/L **+1.8361406702 AZN** on 10 AZN personal outlay.
 
-The official `10 oyna, 10 qazan` page currently contains contradictory status signals:
-- campaign body and term #5 say validity through **31 August 23:59**;
-- term #8 references bonus loading from **24 July** onward;
-- same page/search classification labels it a **past campaign**;
-- embedded FAQ still says **14 April–31 July**, indicating stale/conflicting content;
-- an official Azerlotereya Telegram post advertises the same 10-play/10-bonus offer as new, but its public rendering does not provide a reliable calendar date.
+### Current status resolution — 2026-08-26
 
-Terms currently exposed on the official campaign page:
-- new Azerlotereya.com account;
-- deposit/play at least 10 AZN;
-- verify account;
-- first 10,000 eligible users;
-- 10 AZN additional balance, one use per user;
-- Misli-to-Azerlotereya migrated accounts excluded;
-- additional balance has no turnover requirement;
-- unused deposited/additional balance withdrawal fee: 30%, minimum 5 AZN;
-- winnings withdrawal: no commission.
+The ambiguity is now resolved against actionability:
+- official `Cari kampaniyalar` public snapshot explicitly says **`Cari kampaniya mövcud deyil`**;
+- the dedicated 10→10 URL is indexed/labeled **`keçmiş kampaniya`**;
+- its body still says through 31 August while embedded FAQ says 14 April–31 July, so these conflicting date fragments are treated as stale archived content.
 
-### Conditional Super Keno EV
-
-If the offer is currently enforceable and the user is eligible:
-
-**Route A — wager 10 AZN paid + wager 10 AZN bonus once in 1x Super Keno**
-- personal outlay: 10 AZN;
-- expected total cash: **11.8361406702 AZN**;
-- expected P/L: **+1.8361406702 AZN**;
-- expected personal-capital ROI: **1.1836140670** (+18.36%).
-
-**Route B — wager required 10 AZN paid, withdraw 10 AZN unused bonus under stated fee rule**
-- expected original-play cash: 5.9180703351 AZN;
-- net bonus withdrawal after minimum 5 AZN fee: 5 AZN;
-- expected total cash: **10.9180703351 AZN**;
-- expected ROI: **1.0918070335**.
-
-Route A is superior in expectation. This is the first externally driven **conditional +EV candidate** in this repo, but it is not yet classified as currently actionable because the official page status/date signals conflict.
-
-No account circumvention or multi-account exploitation is considered; this model assumes one lawful eligible user and one permitted use.
+Decision: reclassify 10→10 as **`historical_inactive_positive_mechanism`**, not a current opportunity. Do not play on the assumption that it is active unless a new dated official announcement or authenticated account-visible offer reactivates it.
 
 ## Strategic decision
 
-The base game remains negative-EV. External subsidies can overturn that negative EV. The project therefore prioritizes:
-1. current promotions/bonuses with exact terms;
+The base game remains negative-EV. External subsidies can overturn that negative EV, but stale/archived offers must never be counted as live opportunities.
+
+The project prioritizes:
+1. genuinely current promotions/bonuses with exact terms;
 2. prize overlays with a defensible entry denominator;
 3. legal stackability across independent modifiers;
 4. variance-aware execution only after positive EV is established.
 
-Finite one-time offers are tracked separately from repeatable strategies.
+Finite one-time offers remain separate from repeatable strategies.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Resolve current status of `10 oyna, 10 qazan` using a clean current signal: active campaign API/listing, account-visible offer, or dated official announcement. Do not call it actionable while status remains conflicted.
-2. Continue scanning current Azerlotereya/Misli campaigns and partner/payment promos for modifiers exceeding the established threshold.
-3. Search stimulating-lottery/extra-chance overlays for published entry counts or defensible upper bounds; use generic overlay helpers for immediate EV classification.
-4. If the 10→10 candidate is confirmed active and eligible, design a variance-aware 20-AZN total play execution (10 paid + 10 bonus) with **N free**, while preserving the subsidy-driven +EV.
-5. Compare possible distinct-ticket portfolios for that finite 20-AZN execution by downside/variance, not by pretending ticket selection changes base EV.
-6. Keep current/inactive/conflicted statuses explicit in `results/phase18_ev_modifier_ledger.csv` so stale pages never become false opportunities.
-7. Continue searching for repeatable modifiers after the one-time welcome offer because even a valid +EV welcome bonus is capacity- and account-limited.
+1. Continue scanning genuinely current Azerlotereya/Misli campaigns, dated announcements, and partner/payment promos for modifiers exceeding the established threshold.
+2. Search stimulating-lottery/extra-chance overlays for published entry counts or defensible upper bounds; use generic overlay helpers for immediate EV classification.
+3. Investigate cross-game qualification offers where Super Keno spend can earn an external prize/bonus even if the promoted prize itself sits outside Super Keno.
+4. Audit payment/reward channels only where lottery transactions are explicitly eligible; exclusions are evidence, not assumptions.
+5. For every new modifier, update `results/phase18_ev_modifier_ledger.csv` with current/inactive/conflicted status and exact EV classification.
+6. If a current positive-EV modifier is verified, then design a variance-aware distinct-ticket execution with **N free**, optimizing downside/variance while preserving subsidy-driven positive expectation.
+7. Keep checking for a defensible denominator for historical/current stimulating-lottery overlays; no participant-count guesswork.
+8. Do not reopen rejected history-prediction branches without materially new information.
