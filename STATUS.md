@@ -4,148 +4,123 @@ Last updated: 2026-08-25
 
 ## Phase
 
-`PHASE 16 — discrete coarse-regime classification + probabilistic component selection`
+`PHASE 18 — external EV modifiers / promotion overlays / variance-aware execution`
 
 ## Core state
 
 - Dedicated repo: `Mikayilzade/super-keno-lab`; broad `loto-research` remains separate and untouched.
 - **195** validated Super Keno draws, 2022-12-21..2026-08-23.
-- Portfolio size **N remains a free integer optimization variable**; round-number N values are controls only.
-- Working assumption: lototron unchanged; physical/video branch is deprioritized.
-- All 195 historical rows are exposed. Future draws after a frozen method are the only truly fresh validation source.
-- Mandatory evidence rule: if any strategy construction step is stochastic, report its **strategy/universe-seed distribution**, not one favorable seed.
+- Portfolio size **N remains a free integer optimization variable**.
+- All 195 historical rows are exposed; future draws after a frozen method are the only fresh validation source.
+- Working assumption: lototron unchanged; physical/video branch remains deprioritized.
+- Mandatory rule: stochastic strategy construction must be evaluated across strategy/universe seeds, never one favorable seed.
 
-## Exact universal fixed-list result — CLOSED
+## Exact fixed-list result — CLOSED
 
-Every fixed 10-number ticket has exact gross mean payout **0.5985557942634199 AZN per 1 AZN stake** across all mathematically possible 20-of-70 draws. Therefore no fixed list at any N can guarantee break-even/profit against every possible draw.
+For a fixed 10-number ticket, exact gross return over all possible 20-of-70 draws is **0.5985557942634199 per 1 AZN stake**. Hence no fixed ticket list at any N can guarantee break-even/profit against every mathematically possible draw.
 
-Fixed-geometry methods (historical maximin, adversarial cutting-plane, broad-tail/CVaR greedy, LP + rounding) all converge near random geometry under fresh adversarial attack. Track A remains only a robustness/component layer.
+Fixed geometry has been tested via historical maximin, adversarial cutting-plane, broad-tail/CVaR greedy and LP + rounding. All converge close to random geometry under fresh adversarial attack.
 
-## Closed / rejected primary routes
+## History-based predictive routes — CLOSED AS PRIMARY SOURCE
 
-1. Fixed-list geometry alone.
-2. Hot/cold + contextual pairs + group mean reversion with stochastic ticket generation; attractive seed-7 result collapsed across strategy seeds.
-3. Supervised per-number probability ranking with deterministic 5,000-ticket universe.
-4. Direct ticket-payoff regression/ranking.
-5. Generic continuous multivariate structure prediction (ridge / rolling / KNN) as currently formulated.
+Rejected after strict walk-forward / seed robustness:
+1. hot/cold, contextual pairs, group mean reversion and their ensembles;
+2. supervised per-number probability ranking;
+3. direct ticket-payoff regression/ranking;
+4. continuous draw-structure prediction;
+5. discrete regime classification using past structure transitions.
 
-See prior phase reports in `results/` for exact seeds, controls and failures.
+Do not reopen these routes by tuning nearby windows/K/beta values without a materially new information source.
 
-## Phase 13 — direct ticket-payoff — NO EDGE
+## Phase 15 — oracle structural value
 
-See `results/PHASE13_DIRECT_TICKET_PAYOFF.md`.
+Perfect knowledge of coarse `mean/location + quadrants + balance` was economically valuable as a diagnostic and approximately break-even across multiple fixed ticket universes, but valid pre-target forecasting had no stable skill. This motivated the final discrete-state attempt.
 
-125 strict walk-forward targets, fixed 5,000-ticket universe seed `424242`, N free 19..400, 20 matched-N random replicas.
-
-- ridge cap15 ROI **0.48423** vs random **0.56454**;
-- ridge cap5 **0.48945** vs **0.53920**;
-- ridge profit-ticket **0.48882** vs **0.53403**;
-- empirical cap15 **0.51876** vs **0.54457**.
-
-No model has a positive-P/L chronological block set; learned ridge rankings are consistently worse than random.
-
-## Phase 14 — full draw-structure pilot
-
-See `results/PHASE14_DRAW_STRUCTURE_PILOT.md`.
-
-Valid pre-target models:
-- ridge structure ROI **0.49198**;
-- rolling20 structure **0.48420**;
-- KNN structure **0.54767**;
-- matched-random around **0.55–0.56**.
-
-No valid model promoted.
-
-### Full-structure oracle ceiling
-
-Using true future coarse structure only as a diagnostic, not actual numbers:
-- ROI **0.95913**;
-- P/L **-417 AZN**;
-- block ROIs **0.91850 / 1.00157 / 0.96754**.
-
-This showed that draw structure contains meaningful payoff information even though current forecasting is inadequate.
-
-## Phase 15 — factor value × forecastability
+## Phase 16 — discrete coarse regimes — CLOSED, NO GATE
 
 See:
-- `experiments/phase15_oracle_factor_decomposition.py`
-- `results/phase15_oracle_factor_decomposition.json`
-- `results/PHASE15_FACTOR_VALUE_FORECASTABILITY.md`
-- `results/phase15b_oracle_combo_robustness_compact.json`
+- `experiments/phase16_discrete_regimes.py`
+- `results/phase16_discrete_regimes.json`
+- `results/PHASE16_DISCRETE_REGIMES.md`
 
-Five predeclared structural groups were separated into economic oracle value and strict walk-forward forecastability.
+Method:
+- past-only deterministic K-means regimes on the seven high-value dimensions: 4 quadrants + odd share + <=35 share + mean/location;
+- K = 4 / 6 / 8 fixed in advance;
+- valid predictors: class prior, Markov-1, Markov-2, nearest-context class distribution, shrinkage mixture;
+- fixed 5,000-ticket universe seed `424242`;
+- N free **19..400**, selected only from earlier capped-payout curves;
+- 20 matched-N random replicas.
 
-| factor | oracle ROI | random mean | oracle lift | best valid forecast skill vs expanding mean | positive skill blocks |
-|---|---:|---:|---:|---:|---:|
-| mean/location | **0.86403** | 0.55679 | **+0.30724** | 0.000 | 0/3 |
-| quadrants | **0.83994** | 0.58714 | **+0.25279** | 0.000 | 0/3 |
-| balance (odd + <=35) | **0.71605** | 0.58233 | **+0.13372** | 0.000 | 0/3 |
-| runs | 0.68661 | 0.55544 | +0.13117 | -0.09068 | 1/3 |
-| dispersion/span/gaps | 0.58655 | 0.54092 | +0.04563 | 0.000 | 0/3 |
+Best valid overall result was `K=8 / Markov-2`:
+- ROI **0.58939**;
+- matched-random mean **0.55599**;
+- P/L **-5,395 AZN**;
+- blocks above random **1/3**;
+- positive-P/L blocks **0/3**;
+- class accuracy **16.0%**.
 
-No individual factor passes the predeclared `value × forecastability` gate.
+Other valid configurations had ROI ~0.48..0.587 and all had **0/3 positive blocks**. No configuration passed the promotion gate.
 
-### Important oracle combination
+Oracle class-state diagnostics were also weak: ROI **0.6079 / 0.6883 / 0.6539** for K=4/6/8, showing that coarse clustering itself discards much of the valuable exact structural information.
 
-Diagnostic combination of the three high-value coarse groups — **mean/location + quadrants + balance** — produced on canonical universe seed `424242`:
-- ROI **1.06045**;
-- cost **10,339 AZN**;
-- payout **10,964 AZN**;
-- P/L **+625 AZN**;
-- N range **19..357**, median **23**.
+Decision: **close `past draw history -> next draw structure/regime` as a primary edge source.**
 
-This is the first coarse-structure oracle in the project with positive aggregate historical P/L. It is **not a valid strategy**, because it uses true future regime information and the combination was selected diagnostically.
+## Phase 17 — external purchase-economics / EV modifiers
 
-### Universe-seed robustness of the same oracle combination
+See:
+- `results/PHASE17_EXTERNAL_EV_MODIFIERS.md`
+- `src/ev_modifiers.py`
+- `tests/test_ev_modifiers.py`
 
-Four independent 5,000-ticket universes:
-- seed 424242: ROI **1.06045**, P/L +625;
-- seed 10101: **1.00324**, +33;
-- seed 20202: **0.97899**, -177;
-- seed 30303: **0.93284**, -416.
+CI: Phase-17 EV tests pass after import-path fix.
 
-Across universes:
-- mean ROI **0.99388**;
-- median ROI **0.99112**;
-- positive P/L **2/4** seeds.
+### Current exact after-tax base EV
 
-Interpretation: perfect knowledge of this coarse regime brings the execution layer approximately to break-even across different ticket universes. The result is not merely a favorable universe-seed artifact, but positive P/L is not robust enough to be called an edge by itself.
+Using the current published payout table and ticketwise tax formula:
 
-### Accuracy-sensitivity warning
+| multiplier | expected cash / stake |
+|---:|---:|
+| 1x | **0.591807** |
+| 2x | 0.591266 |
+| 5x | 0.589036 |
+| 10x | 0.586982 |
 
-On the canonical universe, shrinking the true regime toward its expanding historical mean gave approximate ROIs:
-- 0% true-regime information: **0.60972**;
-- 25%: **0.58789**;
-- 50%: **0.78097**;
-- 75%: **0.78246**;
-- 100% exact oracle: **1.06045**.
+Therefore 1x is the best multiplier on expected after-tax cash. Multipliers do not create edge.
 
-A finer 0.80..0.975 interpolation remained below break-even (~0.78..0.87). This curve is not monotonic because regime states and ticket structures are discrete and N changes adaptively, but it shows that **small continuous prediction improvements are unlikely to be enough**. The next test must predict discrete useful states/classes, not tune continuous regression.
+### Promotion thresholds
 
-## Strategic interpretation
+For 1x Super Keno:
+- directly cashable rebate needed for break-even: **~40.82% of paid stake**;
+- bonus balance that must itself be wagered once before withdrawing winnings: **~68.97% of paid stake**;
+- a genuine 100% one-wager match would imply expected personal-capital cash ROI about **1.1836**, i.e. roughly **+18.36% expected profit** before extra account/withdrawal friction.
 
-The valuable information is concentrated in three coarse dimensions:
-1. draw mean/location;
-2. allocation across the four number quadrants;
-3. odd/even and low/high balance.
+### Public promotion snapshot — 2026-08-25
 
-Continuous pre-target regression has essentially zero stable forecasting skill for these factors. Therefore the structure branch is not yet closed, but the next attempt must be materially different: **discrete regime classification / probabilistic state selection**.
+- Official Azerlotereya `Cari kampaniyalar` page says **no current campaign**.
+- A publicly indexed `10 oyna, 10 qazan` 10-AZN-for-10-AZN welcome offer is classified as a **past campaign**; it is retained only as proof that a sufficiently large external subsidy can mathematically cross break-even.
+- Current Unibank cashback terms explicitly exclude gambling/betting and lottery payments, so ordinary Unibank cashback cannot be counted as a subsidy.
+- No current repeatable public Super-Keno-specific promo meeting the calculated threshold is verified at this snapshot.
 
-## NEXT ACTION — Phase 16
+## Strategic decision
 
-1. Define discrete regime states for `mean/location + quadrants + balance` using only past-derived bin boundaries / counts; do not use future global quantiles for valid predictions.
-2. Measure regime-state entropy, class frequencies and exact/near-state recurrence to avoid impossible ultra-sparse classes.
-3. Test strict walk-forward predictors materially different from continuous regression:
-   - Markov / transition frequencies from recent regime states;
-   - shrinkage class priors conditioned on previous one/two states;
-   - nearest-context class probability distribution;
-   - simple ordinal/multiclass linear scoring if class counts are sufficient.
-4. Do not require one exact point state: output a **probability distribution over states**.
-5. Prebuild deterministic ticket-component rankings for regime states from a fixed universe. Combine component scores by predicted class probabilities; no fresh ticket pool per target.
-6. Keep exact-regime oracle and class-prior/randomized-state baselines as ceilings/controls only.
-7. N remains free and is selected only from earlier realized capped-payout curves.
-8. Compare with many matched-N random controls and report chronological blocks.
-9. Promotion requires positive aggregate P/L, beating random overall, and repeated block-level superiority; a single lucky state/seed is insufficient.
-10. If discrete classification also has no predictive skill, close the structure-history branch and move to a genuinely new information source rather than feature/window tuning.
+The project now distinguishes two fundamentally different objectives:
+
+1. **Base-game fixed/adaptive ticket selection:** extensive history-based methods have not found a persistent edge.
+2. **External EV overlays:** promotions, rebates, free tickets, stimulating-lottery codes, channel-specific rewards or other legal subsidies can mathematically make personal-capital EV positive even when the underlying ticket remains negative-EV.
+
+The second route is now the main research direction because it changes the economics rather than trying to predict a fair draw.
+
+## NEXT ACTION — Phase 18
+
+1. Build a structured EV-modifier ledger: source/date, active/inactive, eligibility, eligible games, paid stake, bonus/rebate, wagering requirement, withdrawal rules, max size and expiry.
+2. Search current Azerlotereya/Misli/public partner campaigns and account-independent promo-code mechanics; separate current offers from historical examples.
+3. Audit stimulating-lottery / extra-chance overlays where ordinary lottery spending grants an additional prize draw; estimate overlay EV only when prize pool and participant/code counts permit defensible bounds.
+4. Audit payment-channel rewards/cashback only where lottery transactions are explicitly eligible; do not assume ordinary card cashback applies.
+5. For every modifier, compute effective personal-capital EV using `src/ev_modifiers.py` and classify: below threshold / near threshold / positive EV.
+6. For any positive-EV modifier, design a variance-aware distinct-ticket portfolio with N free; the objective becomes preserving the subsidy-driven positive expectation while controlling worst draw/downside.
+7. Examine whether multiple independent modifiers may legally stack; never assume stackability without terms.
+8. Retain multipliers/multi-draw purchase only as controls unless a price discount/reward changes effective stake.
+9. Keep promotions finite and capacity-limited in the economic model; a one-time +EV welcome offer is not a perpetual strategy.
+10. Save exact terms, calculations, failure reasons and expiry dates so stale promotions are never mistaken for current opportunities.
 
 No autonomous recurring task is enabled for this repository.
