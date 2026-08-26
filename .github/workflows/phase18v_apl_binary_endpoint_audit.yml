@@ -1,0 +1,31 @@
+name: Phase 18V APL Binary Endpoint Audit
+
+on:
+  push:
+    paths:
+      - 'experiments/phase18v_apl_binary_endpoint_audit.sh'
+      - '.github/workflows/phase18v_apl_binary_endpoint_audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit public APL app endpoints
+        run: bash experiments/phase18v_apl_binary_endpoint_audit.sh
+      - name: Commit extracted endpoint report only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/phase18v_apl_binary_endpoint_audit.txt
+          if git diff --cached --quiet; then
+            echo 'No report changes'
+          else
+            git commit -m 'Save Phase 18V APL endpoint audit'
+            git push
+          fi
