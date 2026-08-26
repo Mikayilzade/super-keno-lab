@@ -52,7 +52,8 @@ Do not reopen without materially new information:
 - `PHASE18H-I-J-K-L`: Oley Oley economics, prize bounds, schedule correction and denominator-search methodology.
 - `PHASE18M_OLEY_OLEY_STATUS_CORRECTION.md`: Oley Oley is historical/non-executable as of 2026-08-26.
 - `PHASE18N_WELCOME_BONUS_OFFICIAL_CONTRADICTION.md`: fresh first-party crawl reopened only the **status question** for 10→10 because the dedicated page says through 31 Aug while classification/FAQ/current index conflict.
-- `PHASE18O_WELCOME_BONUS_PUBLIC_SURFACE_EXHAUSTION.md`: same-day first-party dedicated page, current-campaign index and FAQ remain mutually inconsistent. Public-web research is now considered exhausted until a materially new operational signal appears.
+- `PHASE18O_WELCOME_BONUS_PUBLIC_SURFACE_EXHAUSTION.md`: same-day first-party dedicated page, current-campaign index and FAQ remained mutually inconsistent; repeated crawl of unchanged surfaces was stopped.
+- `PHASE18P_CURRENT_SURFACE_AND_RADIOARENA_RECHECK.md`: fresh 2026-08-26 current-campaign page no longer exposes the earlier literal `Cari kampaniya mövcud deyil`; this weakens that specific negative signal but does not prove 10→10 active. RadioArena terms remain unresolved; no new verified current Lottery/Super-Keno overlay was found.
 
 ## 10→10 current classification
 
@@ -65,10 +66,12 @@ Dedicated page currently exposes:
 - winnings withdrawal without commission;
 - active-looking registration CTA.
 
-At the same time:
-- current-campaign index says `Cari kampaniya mövcud deyil`;
-- official FAQ says campaign dates are 14 Apr–31 Jul;
-- page/search classification calls it a past campaign.
+Conflicting evidence remains:
+- page/search presentation calls it a past campaign;
+- official FAQ previously gave 14 Apr–31 Jul;
+- an earlier current-campaign index snapshot explicitly said no current campaign.
+
+Fresh 2026-08-26 crawl of the current-campaign index **no longer exposes that explicit no-campaign sentence**; it only returns current/past/history navigation in the text snapshot. Therefore the old index-negative evidence is now weaker/stale, but this is not enough to promote the offer to active.
 
 Classification remains:
 
@@ -89,25 +92,24 @@ Do **not** stake for 10→10 unless one of these appears:
 - current `*2080` support confirms it is active for the account on/after 2026-08-26;
 - newly dated official social/current-campaign source explicitly confirms the extension.
 
-Do not spend routine future research cycles re-crawling the same contradictory public pages unless one changes materially.
+Do not spend routine future research cycles re-crawling unchanged 10→10 surfaces unless one changes materially.
 
 ## Other current lead
 
-Misli RadioArena publicly advertises weekday 20:00 / 106.3 FM chances to win **10 AZN promo codes**. Public first-party material still does not resolve product scope/wagering/withdrawal/expiry/award count. Because it is tagged `#Futbol`, treat as secondary until cross-product/Super-Keno eligibility is proven.
+Misli RadioArena publicly advertises weekday 20:00 / 106.3 FM chances to win **10 AZN promo codes**. Fresh Phase 18P search still does not resolve product scope/wagering/withdrawal/expiry/award count. Because the known public post is tagged `#Futbol`, keep it secondary until cross-product/Super-Keno eligibility is proven.
 
 ## CURRENT CLASSIFICATION
 
 No **fully verified executable repeatable** positive-EV Super Keno modifier is known at the 2026-08-26 snapshot.
 
-10→10 remains conditionally positive but operationally unresolved; public-web status resolution is exhausted pending a new signal.
+10→10 remains conditionally positive but operationally unresolved. The fresh campaign-index crawl weakens one previous negative signal, but the execution gate is unchanged.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Shift primary research effort away from repeated 10→10 page crawling and toward **new current first-party Lottery-eligible overlays**.
-2. Resolve Misli RadioArena promo-code product scope/wagering/withdrawal/expiry from first-party terms or a materially new official source.
-3. Scan current Misli/Azerlotereya/partner channels for free balance/free tickets, stimulating-lottery overlays, price/reward differences or cross-game qualifications that explicitly admit Lotereya/Super Keno.
-4. Passively recheck 10→10 only if a materially new dated source or operational signal appears; otherwise leave classification unchanged.
-5. Keep `results/phase18_ev_modifier_ledger.csv` synchronized and historical/current status strictly separated.
-6. For every live candidate, compute exact personal-capital EV before execution design.
-7. If any candidate is confirmed +EV, design a variance-aware distinct-ticket Super Keno execution with **N free** and total wager constrained only by modifier terms.
-8. Do not reopen rejected draw-history prediction branches without materially new information.
+1. Search first-party Misli promo-code/help/bonus rules for generic code product-scope behavior rather than repeating the same RadioArena post search.
+2. Scan newly dated Misli/Azerlotereya campaign/news/social material for explicit `Lotereya` qualification, free tickets, extra draws, free balance or cross-game reward mechanics.
+3. Passively recheck 10→10 only if a materially new operational/current signal appears; otherwise leave classification unchanged.
+4. Keep `results/phase18_ev_modifier_ledger.csv` synchronized and historical/current status strictly separated.
+5. For every live candidate, compute exact personal-capital EV before execution design.
+6. If any candidate is confirmed +EV, design a variance-aware distinct-ticket Super Keno execution with **N free** and total wager constrained only by modifier terms.
+7. Do not reopen rejected draw-history prediction branches without materially new information.
