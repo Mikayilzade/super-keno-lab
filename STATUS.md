@@ -44,52 +44,63 @@ Do not reopen without materially new information:
 ## Phase 18 checkpoints
 
 - `PHASE18_OVERLAY_LEDGER_PILOT.md`: historical `Sürətli Şans`; denominator unknown.
-- `PHASE18B_WELCOME_BONUS_CONDITIONAL_EV.md` / `PHASE18C_WELCOME_BONUS_STATUS_RESOLUTION.md`: old 10→10 offer would be +EV if live, but is historical/inactive.
-- `PHASE18D_CURRENT_OVERLAY_AND_PAYMENT_SCAN.md`: no active Azerlotereya public campaign; mainstream bank cashback stacks excluded.
+- `PHASE18B_WELCOME_BONUS_CONDITIONAL_EV.md`: 10→10 mechanism is conditionally +EV for Super Keno.
+- `PHASE18C_WELCOME_BONUS_STATUS_RESOLUTION.md`: earlier snapshot treated it as historical due campaign-list/page classification conflict.
+- `PHASE18D_CURRENT_OVERLAY_AND_PAYMENT_SCAN.md`: mainstream bank cashback stacks excluded.
 - `PHASE18E_RETAIL_OVERLAY_AUDIT.md`: OBA/Araz retail overlays mostly excluded or historical/unverified.
 - `PHASE18F/G`: Azərpoçt neutral; RadioArena promo live but Super-Keno terms unresolved.
-- `PHASE18H_CURRENT_OLEY_OLEY_OVERLAY.md`: Oley Oley explicitly included Lotereya at 2 chances / 5 AZN while active.
-- `PHASE18I_OLEY_OLEY_VALUE_BOUNDS.md`: full prize-value scenarios and denominator thresholds.
-- `PHASE18J_OLEY_OLEY_DRAW_SCHEDULE_CORRECTION.md`: car was not weekly; draw-3/draw-4 structure corrected.
-- `PHASE18K_OLEY_OLEY_DENOMINATOR_SEARCH.md`: no defensible public denominator found.
-- `PHASE18L_OLEY_OLEY_ARTIFACT_INDEX.md`: exact week-1/2/3 winner artifacts identified.
-- `PHASE18M_OLEY_OLEY_STATUS_CORRECTION.md`: **fresh 2026-08-26 status correction — Oley Oley is no longer treated as live/current for execution.**
+- `PHASE18H-I-J-K-L`: Oley Oley economics, prize bounds, schedule correction and denominator-search methodology.
+- `PHASE18M_OLEY_OLEY_STATUS_CORRECTION.md`: Oley Oley is historical/non-executable as of 2026-08-26.
+- `PHASE18N_WELCOME_BONUS_OFFICIAL_CONTRADICTION.md`: fresh first-party crawl reopens only the **status question** for 10→10 because the live body/conditions explicitly say through 31 Aug while classification/FAQ still say past/31 Jul.
 
-## Phase 18M — current status correction
+## Phase 18N — strongest current lead: 10→10 official-status conflict
 
-Fresh 2026-08-26 evidence shows the previously prioritized `Oley Oley` window is stale/historical rather than a current executable opportunity:
-- current Misli Telegram feed no longer carries a live Oley Oley join/draw call in its current feed window;
-- fresh indexed media/mirror content reports the **second Changan UNI-Z has already been awarded** and uses retrospective wording for the campaign;
-- earlier public material explicitly said the second car would be determined in the next draw after the first car, so the car-draw window is no longer upcoming.
+Fresh 2026-08-26 first-party evidence on the dedicated Azerlotereya offer page explicitly states:
+- new registrations through **31 August**;
+- first 10,000 qualifying users;
+- minimum 10 AZN deposit + minimum 10 AZN play;
+- eligible sections explicitly include **Lotereya**;
+- 10 AZN additional balance;
+- no turnover requirement on additional balance;
+- winnings withdrawal has no commission;
+- detailed condition #5 says valid through **31 August 23:59**;
+- condition #8 references bonus crediting after **24 July**.
 
-Therefore previous classification:
+But the same official web estate is internally contradictory:
+- page/search title calls it **`keçmiş kampaniya`**;
+- embedded FAQ still states **14 April–31 July**;
+- current-campaign listing does not expose it as an active campaign.
 
-`current_super_keno_eligible_denominator_unresolved`
+Therefore classification is now:
 
-is replaced by:
+`official_status_conflict_conditional_positive`
 
-`historical_lottery_eligible_overlay_denominator_unresolved`
+—not confidently inactive and not yet executable.
 
-Do **not** stake based on Oley Oley now. Old winner-ID/denominator extraction is retained only as methodology for a future repeat.
+If operational and the user is actually eligible for a new Azerlotereya.com account, using 10 AZN paid + 10 AZN bonus as one-time 1x Super Keno wager has exact model expectation:
+- expected withdrawable winnings: **11.83614067 AZN**;
+- personal outlay: **10 AZN**;
+- expected profit: **+1.83614067 AZN**;
+- expected personal-capital ROI: **1.183614067** (**+18.3614%**).
 
-Reusable Oley Oley economics remain:
-- 5 AZN 1x Super Keno base expected cash: **2.9590351675 AZN**;
-- shortfall: **2.0409648325 AZN**;
-- while active, Lotereya earned **2 entries / 5 AZN**;
-- required overlay EV: **1.02048241625 AZN per entry**;
-- conservative car-draw break-even pool threshold: **~39,587 entries**;
-- conservative non-car threshold: **~10,997 entries**.
+Execution requires a live-status confirmation signal: account UI eligibility/progress, current *2080/support confirmation, or a fresh official social/current-listing statement.
+
+## Other current lead
+
+Misli RadioArena still publicly advertises weekday 20:00 / 106.3 FM chances to win **10 AZN promo codes**. Public first-party material still does not resolve product scope/wagering/withdrawal/expiry/award count. Because it is tagged `#Futbol`, treat as secondary until cross-product/Super-Keno eligibility is proven.
 
 ## CURRENT CLASSIFICATION
 
-No currently verified repeatable positive-EV Super Keno modifier is known at the 2026-08-26 snapshot.
+No **fully verified executable repeatable** positive-EV Super Keno modifier is known at the 2026-08-26 snapshot.
+
+However, 10→10 is now the strongest near-actionable candidate because its current official body text explicitly includes Lotereya and a 31-Aug expiry, while official classification metadata conflicts.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Fresh-scan **currently active** Misli/Azerlotereya campaigns and public partner channels; do not spend the main research budget on archived Oley Oley denominator extraction.
-2. Prioritize offers with explicit `Lotereya` eligibility, free tickets/direct bonus, cross-game chance generation, prize-pool overlays or price/reward differences.
-3. Resolve the still-live RadioArena 10-AZN promo product scope/wagering if public terms can be found.
-4. Search current stimulating-lottery / receipt / retailer / partner mechanics where lottery purchases explicitly qualify.
-5. For every live candidate, run exact effective-personal-capital EV through `src/ev_modifiers.py` before any execution design.
-6. If a live modifier crosses break-even, design a variance-aware distinct-ticket Super Keno portfolio with **N free**.
-7. If no live modifier exists, continue to genuinely new external information sources rather than reopening rejected draw-history prediction branches.
+1. Seek fresh first-party evidence resolving whether 10→10 is operational on/after 2026-08-26; do not stake until resolved.
+2. Continue current Misli/Azerlotereya/partner scans for explicitly Lottery-eligible promotions, free balance/free tickets, stimulating-lottery overlays or price/reward differences.
+3. Resolve RadioArena product scope/wagering only from first-party evidence where possible.
+4. Keep `results/phase18_ev_modifier_ledger.csv` synchronized; Oley Oley must remain historical, not current.
+5. For every live candidate, compute exact personal-capital EV before execution design.
+6. If 10→10 or another candidate is confirmed +EV, design a variance-aware distinct-ticket Super Keno execution with **N free** and total wager constrained only by the modifier terms.
+7. Do not reopen rejected draw-history prediction branches without materially new information.
