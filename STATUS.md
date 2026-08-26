@@ -51,56 +51,63 @@ Do not reopen without materially new information:
 - `PHASE18F/G`: Azərpoçt neutral; RadioArena promo live but Super-Keno terms unresolved.
 - `PHASE18H-I-J-K-L`: Oley Oley economics, prize bounds, schedule correction and denominator-search methodology.
 - `PHASE18M_OLEY_OLEY_STATUS_CORRECTION.md`: Oley Oley is historical/non-executable as of 2026-08-26.
-- `PHASE18N_WELCOME_BONUS_OFFICIAL_CONTRADICTION.md`: fresh first-party crawl reopens only the **status question** for 10→10 because the live body/conditions explicitly say through 31 Aug while classification/FAQ still say past/31 Jul.
+- `PHASE18N_WELCOME_BONUS_OFFICIAL_CONTRADICTION.md`: fresh first-party crawl reopened only the **status question** for 10→10 because the dedicated page says through 31 Aug while classification/FAQ/current index conflict.
+- `PHASE18O_WELCOME_BONUS_PUBLIC_SURFACE_EXHAUSTION.md`: same-day first-party dedicated page, current-campaign index and FAQ remain mutually inconsistent. Public-web research is now considered exhausted until a materially new operational signal appears.
 
-## Phase 18N — strongest current lead: 10→10 official-status conflict
+## 10→10 current classification
 
-Fresh 2026-08-26 first-party evidence on the dedicated Azerlotereya offer page explicitly states:
-- new registrations through **31 August**;
-- first 10,000 qualifying users;
+Dedicated page currently exposes:
+- 31-Aug registration/end date;
+- first 10,000 qualifying new users;
 - minimum 10 AZN deposit + minimum 10 AZN play;
-- eligible sections explicitly include **Lotereya**;
-- 10 AZN additional balance;
-- no turnover requirement on additional balance;
-- winnings withdrawal has no commission;
-- detailed condition #5 says valid through **31 August 23:59**;
-- condition #8 references bonus crediting after **24 July**.
+- eligible `Lotereya`, `ePoz-Qazan`, Digital Oyunlar;
+- no turnover requirement on additional 10 AZN;
+- winnings withdrawal without commission;
+- active-looking registration CTA.
 
-But the same official web estate is internally contradictory:
-- page/search title calls it **`keçmiş kampaniya`**;
-- embedded FAQ still states **14 April–31 July**;
-- current-campaign listing does not expose it as an active campaign.
+At the same time:
+- current-campaign index says `Cari kampaniya mövcud deyil`;
+- official FAQ says campaign dates are 14 Apr–31 Jul;
+- page/search classification calls it a past campaign.
 
-Therefore classification is now:
+Classification remains:
 
 `official_status_conflict_conditional_positive`
 
-—not confidently inactive and not yet executable.
-
-If operational and the user is actually eligible for a new Azerlotereya.com account, using 10 AZN paid + 10 AZN bonus as one-time 1x Super Keno wager has exact model expectation:
+If operational and eligible, 10 AZN paid + 10 AZN bonus played once through 1x Super Keno has model expectation:
 - expected withdrawable winnings: **11.83614067 AZN**;
 - personal outlay: **10 AZN**;
 - expected profit: **+1.83614067 AZN**;
-- expected personal-capital ROI: **1.183614067** (**+18.3614%**).
+- expected personal-capital ROI: **1.183614067 (+18.3614%)**.
 
-Execution requires a live-status confirmation signal: account UI eligibility/progress, current *2080/support confirmation, or a fresh official social/current-listing statement.
+Unused-bonus direct withdrawal is inferior under the published 30% / min-5-AZN withdrawal fee: withdrawing 10 AZN unused would net 5 AZN, versus 5.918070335 AZN expected cash from one 1x Super Keno wager.
+
+### Operational gate
+
+Do **not** stake for 10→10 unless one of these appears:
+- account UI shows campaign eligibility/progress;
+- current `*2080` support confirms it is active for the account on/after 2026-08-26;
+- newly dated official social/current-campaign source explicitly confirms the extension.
+
+Do not spend routine future research cycles re-crawling the same contradictory public pages unless one changes materially.
 
 ## Other current lead
 
-Misli RadioArena still publicly advertises weekday 20:00 / 106.3 FM chances to win **10 AZN promo codes**. Public first-party material still does not resolve product scope/wagering/withdrawal/expiry/award count. Because it is tagged `#Futbol`, treat as secondary until cross-product/Super-Keno eligibility is proven.
+Misli RadioArena publicly advertises weekday 20:00 / 106.3 FM chances to win **10 AZN promo codes**. Public first-party material still does not resolve product scope/wagering/withdrawal/expiry/award count. Because it is tagged `#Futbol`, treat as secondary until cross-product/Super-Keno eligibility is proven.
 
 ## CURRENT CLASSIFICATION
 
 No **fully verified executable repeatable** positive-EV Super Keno modifier is known at the 2026-08-26 snapshot.
 
-However, 10→10 is now the strongest near-actionable candidate because its current official body text explicitly includes Lotereya and a 31-Aug expiry, while official classification metadata conflicts.
+10→10 remains conditionally positive but operationally unresolved; public-web status resolution is exhausted pending a new signal.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Seek fresh first-party evidence resolving whether 10→10 is operational on/after 2026-08-26; do not stake until resolved.
-2. Continue current Misli/Azerlotereya/partner scans for explicitly Lottery-eligible promotions, free balance/free tickets, stimulating-lottery overlays or price/reward differences.
-3. Resolve RadioArena product scope/wagering only from first-party evidence where possible.
-4. Keep `results/phase18_ev_modifier_ledger.csv` synchronized; Oley Oley must remain historical, not current.
-5. For every live candidate, compute exact personal-capital EV before execution design.
-6. If 10→10 or another candidate is confirmed +EV, design a variance-aware distinct-ticket Super Keno execution with **N free** and total wager constrained only by the modifier terms.
-7. Do not reopen rejected draw-history prediction branches without materially new information.
+1. Shift primary research effort away from repeated 10→10 page crawling and toward **new current first-party Lottery-eligible overlays**.
+2. Resolve Misli RadioArena promo-code product scope/wagering/withdrawal/expiry from first-party terms or a materially new official source.
+3. Scan current Misli/Azerlotereya/partner channels for free balance/free tickets, stimulating-lottery overlays, price/reward differences or cross-game qualifications that explicitly admit Lotereya/Super Keno.
+4. Passively recheck 10→10 only if a materially new dated source or operational signal appears; otherwise leave classification unchanged.
+5. Keep `results/phase18_ev_modifier_ledger.csv` synchronized and historical/current status strictly separated.
+6. For every live candidate, compute exact personal-capital EV before execution design.
+7. If any candidate is confirmed +EV, design a variance-aware distinct-ticket Super Keno execution with **N free** and total wager constrained only by modifier terms.
+8. Do not reopen rejected draw-history prediction branches without materially new information.
