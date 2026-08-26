@@ -53,12 +53,10 @@ Earlier checkpoints established:
 - historical DÇ-2026 Fantasy proved the pattern `free external competition -> Misli bonus`.
 
 Latest checkpoints:
-- `PHASE18Q_PROMOCODE_RULES_AND_FREE_ENTRY_BONUS_PATTERN.md`
 - `PHASE18R_CURRENT_APL_FANTASY_ZERO_COST_BONUS.md`
+- `PHASE18S_APL_FANTASY_BONUS_TYPE_EVIDENCE.md`
 
 ## 10→10 current classification
-
-Classification remains:
 
 `official_status_conflict_conditional_positive`
 
@@ -72,20 +70,18 @@ Do **not** stake for 10→10 unless account UI, current `*2080` support, or a ne
 
 ## RadioArena promo code
 
-Classification remains:
-
 `current_terms_unresolved_sports_context`
 
 Public first-party generic promo/help surfaces do not expose product scope, wagering, withdrawal, expiry or award count. Revisit only on materially new terms/account evidence.
 
-## New strongest current zero-cost lead — APL Fantasy
+## Strongest current zero-cost lead — APL Fantasy
 
-A current Misli post now reports **second-week winners** of its `APL Fantasy` private league and repeats the free join flow:
+Misli has now published **two consecutive weekly winner posts** for its `APL Fantasy` private league. Both repeat the free join flow:
 1. register at `aplfantasy.az`;
 2. create a 15-player team;
 3. join Misli.az league using code `188533-FJA0T`.
 
-Published weekly prizes:
+Published weekly prizes remain:
 - **30 AZN bonus** for 1st;
 - **20 AZN bonus** for 2nd;
 - **10 AZN bonus** for 3rd;
@@ -93,20 +89,20 @@ Published weekly prizes:
 
 No paid Misli stake/deposit is stated as a qualification requirement. Winners send their Misli member number to receive the bonus.
 
-AFFA reported on 2026-08-19 that the overall APL Fantasy platform had already exceeded **14,000 registered users** and described the season as **33 rounds**. This is not the Misli private-league denominator. Launch coverage states a user can create up to two teams, so total registrations cannot be mechanically used as competition entries.
+Phase 18S also found that earlier DÇ-2026 Fantasy used the same wording pattern (`send Misli member number -> receive bonus`), strengthening the interpretation that this is an **internal Misli account-bonus credit pattern** rather than an external voucher. However, this still does **not** prove that the bonus can be used in `Lotereya` / Super Keno.
 
 Current classification:
 
 `current_repeatable_free_entry_bonus_product_scope_unresolved`
-
-This is the first **currently evidenced recurring zero-paid-spend bonus lead** in Phase 18.
 
 If — and only if — the awarded Misli bonus is usable once on 1x Super Keno and resulting winnings are withdrawable, conditional cash values are:
 - 10 AZN bonus -> **5.9181 AZN** expected cash;
 - 20 AZN -> **11.8361 AZN**;
 - 30 AZN -> **17.7542 AZN**.
 
-Because qualification gambling spend is 0 AZN, the ordinary 40.82% / 68.97% subsidy thresholds do not apply to entering the fantasy competition. This does **not** imply guaranteed profit: competition probability and time/attention cost remain.
+Because qualification gambling spend is 0 AZN, ordinary paid-stake subsidy thresholds do not apply to entering the fantasy competition. Competition probability and time/attention cost remain separate issues.
+
+Public APL Fantasy platform totals are **not** the Misli private-league denominator. The exact private-league team/participant count remains unknown.
 
 Critical unresolved fields:
 - whether APL Fantasy Misli bonus is eligible in `Lotereya` / Super Keno;
@@ -119,14 +115,14 @@ Critical unresolved fields:
 
 No **fully verified executable repeatable positive-EV Super Keno modifier** is yet known at the 2026-08-26 snapshot.
 
-However, Phase 18R materially improves the live opportunity set: `APL Fantasy -> weekly Misli bonus` is current, recurring and requires **zero paid gambling spend** to qualify. It becomes directly relevant to Super Keno if product-scope rules allow Lottery usage.
+Phase 18S strengthens the current lead but does not cross the execution gate: APL Fantasy is now well evidenced as **current + recurring + zero-paid-spend**, while the remaining blocker is specifically the bonus wallet/product-scope/wager-withdrawal rules.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Target first-party/app/account evidence for **APL Fantasy bonus type**: where the 10/20/30 AZN is credited and whether `Lotereya` is an allowed product.
-2. Search winner posts/screenshots/comments/help text for wagering, expiry and withdrawal restrictions; do not infer from generic word `bonus`.
-3. Obtain the Misli private-league team/participant count if exposed; use it to estimate contest EV/time efficiency, keeping the >14,000 global platform figure only as context.
-4. Continue newly dated scans for other **free-entry competitions, quizzes, fantasy, giveaways, free balance/free tickets** with explicit Lottery scope.
+1. Search exact APL Fantasy winner-result artifacts/comments/screenshots for the **credited bonus wallet/type**; prioritize evidence showing where the 10/20/30 AZN appears in Misli.
+2. Search first-party/app/help surfaces only for materially new text resolving `Lotereya` eligibility, wagering, expiry or withdrawal; do not infer from generic `bonus` wording.
+3. Attempt to recover the Misli private-league team count from public APL Fantasy league/result pages or APIs if exposed.
+4. Continue fresh scans for **other zero-cost/free-entry bonuses with explicit `Lotereya` eligibility**; such a lead outranks APL Fantasy immediately.
 5. Revisit RadioArena or 10→10 only on materially new evidence.
 6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized and current/historical status strictly separated.
 7. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
