@@ -25,13 +25,11 @@ Current exact after-tax expected cash-return ratios:
 - 5x: 0.589036;
 - 10x: 0.586982.
 
-1x is therefore best on expected after-tax cash.
+1x is best on expected after-tax cash.
 
 Break-even modifier thresholds at 1x:
 - direct cash-equivalent subsidy: **40.82%** of paid stake;
 - one-wager bonus balance: **68.97%** of paid stake.
-
-See `results/PHASE17_EXTERNAL_EV_MODIFIERS.md` and `src/ev_modifiers.py`.
 
 ## Closed primary routes
 
@@ -43,57 +41,58 @@ Do not reopen without materially new information:
 5. continuous structure forecasting;
 6. discrete regime/Markov forecasting.
 
-## Phase 18 completed checkpoints
+## Phase 18 checkpoints
 
 - `PHASE18_OVERLAY_LEDGER_PILOT.md`: historical `Sürətli Şans`; denominator unknown.
 - `PHASE18B_WELCOME_BONUS_CONDITIONAL_EV.md` / `PHASE18C_WELCOME_BONUS_STATUS_RESOLUTION.md`: old 10→10 offer would be +EV if live, but is historical/inactive.
-- `PHASE18D_CURRENT_OVERLAY_AND_PAYMENT_SCAN.md`: current Azerlotereya public campaign listing had no active campaign; mainstream bank cashback stacks are excluded by published rules.
-- `PHASE18E_RETAIL_OVERLAY_AUDIT.md`: OBA excludes chance-game purchases; Araz cashback excludes winning games; historical Araz receipt overlay remained unverified.
-- `PHASE18F_DISTRIBUTOR_AND_CURRENT_PROMOCODE_SCAN.md`: Azərpoçt is neutral distribution; live RadioArena 10-AZN promo-code lead found.
-- `PHASE18G_RADIOARENA_TERMS_RESOLUTION_ATTEMPT.md`: RadioArena promo remains live but public official sources do not resolve product eligibility/wagering/withdrawal; do not count it as Super-Keno EV.
-- `PHASE18H_CURRENT_OLEY_OLEY_OVERLAY.md`: live Oley Oley explicitly includes Lotereya at 2 chances / 5 AZN; denominator unresolved.
-- `PHASE18I_OLEY_OLEY_VALUE_BOUNDS.md`: full weekly prize ladder valued under conservative/central/optimistic realizability scenarios.
+- `PHASE18D_CURRENT_OVERLAY_AND_PAYMENT_SCAN.md`: no active Azerlotereya public campaign; mainstream bank cashback stacks excluded.
+- `PHASE18E_RETAIL_OVERLAY_AUDIT.md`: OBA/Araz retail overlays mostly excluded or historical/unverified.
+- `PHASE18F/G`: Azərpoçt neutral; RadioArena promo live but Super-Keno terms unresolved.
+- `PHASE18H_CURRENT_OLEY_OLEY_OVERLAY.md`: live Oley Oley explicitly includes Lotereya at 2 chances / 5 AZN.
+- `PHASE18I_OLEY_OLEY_VALUE_BOUNDS.md`: full prize-value scenarios and initial car-week denominator thresholds.
+- `PHASE18J_OLEY_OLEY_DRAW_SCHEDULE_CORRECTION.md`: corrected campaign draw schedule; car is not weekly.
 
-## Phase 18I — Oley Oley value bounds — HIGHEST PRIORITY
+## Phase 18J — Oley Oley schedule correction — HIGHEST PRIORITY
 
-Fresh official Misli posts still make `Oley Oley` the strongest current external-EV lead:
-- every 5 AZN sports betting => 1 chance;
-- every 5 AZN in Virtual Idman, ePoz-Qazan, **Lotereya** => 2 chances.
+Fresh official/forwarded Misli campaign history establishes:
+- campaign total inventory: **2 Changan UNI-Z + 18 iPhone 17 Pro + 30 PS5 + 60,000 AZN bonus**;
+- each ordinary draw uses **3 iPhone + 5 PS5 + 50×200 AZN bonus (10,000 AZN)**;
+- therefore campaign structure is **6 draws total**;
+- draw 1 had no car;
+- draw 3 included the **first car**;
+- after the first car winner, the campaign message explicitly states the **second car will be determined in the next week's draw**;
+- after draw 3, remaining inventory is exactly 1 car + 9 iPhones + 15 PS5 + 30,000 AZN bonus = three remaining base ladders, with only one remaining car.
 
-Published weekly ladder:
-- 1 x Changan UNI-Z;
-- 3 x iPhone 17 Pro;
-- 5 x PlayStation 5;
-- 50 x 200 AZN bonus.
+Therefore the upcoming **draw 4 is the second/final car draw**. Later draws 5-6 are non-car draws.
 
-Current Azerbaijan prize-value references used only as valuation anchors:
-- Changan UNI-Z IDD: **38,900 AZN** official reference;
-- iPhone 17 Pro 256GB: about **3,099.99 AZN** current retail promo reference;
-- PS5 Slim Blue-Ray 1TB: about **1,449.99 AZN** current retail promo reference.
-
-### Break-even math
+### Corrected draw-specific denominator gates
 
 For 5 AZN 1x Super Keno:
 - base expected cash = **2.9590351675 AZN**;
 - shortfall = **2.0409648325 AZN**;
 - 2 campaign entries are earned;
-- required campaign EV = **1.02048241625 AZN per entry**.
+- required overlay EV = **1.02048241625 AZN per entry**.
 
-### Weekly denominator thresholds
+Using Phase18I valuation assumptions:
 
-`PHASE18I` deliberately separates realizable value from face value:
-
-| scenario | effective weekly prize value | max equal-probability weekly entries for combined EV >= 1 |
+| scenario | non-car draw max entries | car draw max entries |
 |---|---:|---:|
-| conservative | **40,397.45 AZN** | **~39,587** |
-| central | **54,633.00 AZN** | **~53,536** |
-| optimistic | **65,449.92 AZN** | **~64,136** |
+| conservative | **~10,997** | **~39,587** |
+| central | **~19,229** | **~53,536** |
+| optimistic | **~26,017** | **~64,136** |
 
-Conservative assumptions already assign **zero** value to the 10,000-AZN nominal bonus and haircut physical prizes heavily. Central values the bonus only at one-wager Super-Keno expected cash. Optimistic uses full retail/face values.
+The previous ~39.6k–64.1k range applies to a **car draw**, not every week. This materially lowers EV for draws 5-6 but makes the upcoming draw 4 the campaign's highest-priority remaining window.
 
-This materially improves the earlier bonus-only threshold (~9,799 entries): the car/electronics account for most of the overlay value. Therefore Oley Oley could remain compatible with positive combined EV at competition pools in the tens of thousands.
+## Still unresolved
 
-However, public official material still does **not** disclose a defensible weekly entry denominator, number-domain interpretation, reset/accumulation rule, or 200-AZN bonus wagering/withdrawal terms. Winner-number ranges are not used to infer denominator without proof.
+No defensible public total-entry count or participant count is available yet.
+
+Also unresolved:
+- chance reset vs accumulation between draws;
+- exact 200-AZN bonus turnover/withdrawal/product scope;
+- exact legal campaign timestamps.
+
+Winner-number ranges are not used as denominator evidence without proof of the numbering scheme.
 
 Classification remains:
 
@@ -101,22 +100,13 @@ Classification remains:
 
 Do **not** stake based on this overlay yet.
 
-## Current EV-modifier ledger
-
-See `results/phase18_ev_modifier_ledger.csv`.
-
-Key live states:
-- `Oley Oley`: explicit lottery eligibility; full-prize break-even threshold now ~39.6k–64.1k weekly entries depending realizable value; denominator unresolved — highest priority;
-- RadioArena 10 AZN promo: live, but Super-Keno product scope unresolved;
-- ordinary bank/retail cashback routes: excluded/low priority under current published rules.
-
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** resolve `Oley Oley` weekly denominator or a defensible upper bound from official material; do not infer it merely from winner-number ranges.
-2. Resolve whether entries reset each weekly draw or accumulate and retrieve exact campaign start/end dates from official terms if a newly indexed source appears.
-3. Resolve 200-AZN bonus withdrawal/turnover/product-scope rules; update central scenario rather than assuming one wager if exact terms surface.
-4. Search official draw videos/results/posts for an explicit total-entry count, issued-number count, participant count, or numbering statement.
-5. If no exact denominator exists, seek an evidence-based upper bound from official campaign/platform participation disclosures.
-6. If a defensible denominator/upper bound falls below **~39,587 weekly entries**, promote immediately to positive-EV candidate even under the conservative prize-value scenario and design a variance-aware distinct-ticket Super Keno execution with **N free**.
-7. Continue scanning genuinely current lottery-eligible overlays in parallel; do not spend repeated cycles on unchanged RadioArena keywords.
-8. Do not reopen rejected history-prediction branches without materially new information.
+1. **Highest priority:** inspect draw-4 official live/video/result material for an explicit total chances/participants/issued-number count.
+2. Search newly indexed official terms/app screenshots for chance reset vs accumulation.
+3. Resolve the 200-AZN bonus turnover/withdrawal/product-scope rules.
+4. Seek a defensible upper bound on draw-4 entries from official platform/campaign participation disclosures if exact denominator remains unpublished.
+5. If draw-4 denominator/upper bound is below **~39,587**, promote immediately to positive-EV candidate even under the conservative car-prize scenario.
+6. If promoted, design a variance-aware distinct-ticket Super Keno execution with **N free**; do not force round-number portfolio sizes.
+7. Treat draws 5-6 separately with stricter non-car thresholds (~11.0k / 19.2k / 26.0k).
+8. Continue scanning genuinely current lottery-eligible overlays in parallel; do not reopen rejected history-prediction branches without materially new evidence.
