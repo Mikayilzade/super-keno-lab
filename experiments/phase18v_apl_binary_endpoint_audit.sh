@@ -61,3 +61,5 @@ if find . -maxdepth 3 -type f \( -name '*.apk' -o -name '*.xapk' -o -name '*.aab
   echo "ERROR: binary artifact found in repository tree" >&2
   exit 2
 fi
+
+# trigger: phase18v-1
