@@ -122,6 +122,21 @@ Diagnostic only: if a future materially identical 50,000-AZN equal-entry receipt
 
 Decision: distinguish **retail cashback exclusions** from **receipt-lottery qualification rules**. A retailer can close one while leaving the other ambiguous; future campaign terms must be checked independently.
 
+## Phase 18F — distributor channels + current promo-code lead
+
+See:
+- `results/PHASE18F_DISTRIBUTOR_AND_CURRENT_PROMOCODE_SCAN.md`
+- updated `results/phase18_ev_modifier_ledger.csv`
+
+Fresh findings:
+- Azərpoçt branches are confirmed official physical Super Keno sales channels, but no current Azərpoçt-specific cashback/free-ticket/receipt overlay was found; physical availability is EV-neutral by itself.
+- Historical `Sürətli Şans` does **not** support a physical Azərpoçt stacking interpretation: published qualification is account play on Azerlotereya.com/Misli.az, with ePoz-Qazan treated separately.
+- Winner chance-number ranges from `Sürətli Şans` are not used to infer total entries because the global numbering scheme/start point is not officially established.
+- **New live lead:** official Misli Telegram currently advertises weekday 20:00 / 106.3 FM `RadioArena` opportunities to win **10 AZN promo codes**.
+- Current public post does not publish lottery/Super-Keno eligibility, wagering requirements or withdrawal terms, so this lead is `current_terms_unresolved`, not yet positive EV.
+- Conditional value: if a free 10 AZN code can be wagered once on 1x Super Keno and resulting winnings are withdrawable, expected after-tax cash per awarded code is **5.918070335 AZN** before friction.
+- Azerlotereya's current account menu exposes a `Promokod` section, proving promo-code infrastructure exists on the lottery platform, but not proving Misli codes are cross-platform or lottery-eligible.
+
 ## Strategic decision
 
 The base game remains negative-EV. External subsidies can overturn that negative EV, but stale/archived offers must never be counted as live opportunities.
@@ -136,11 +151,11 @@ Finite one-time offers remain separate from repeatable strategies.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Audit **Azərpoçt / kiosk / distributor** channels and any retailer-specific promotions for exact lottery-spend qualification language, especially channels that directly sell numerical lottery tickets rather than only scratch cards.
-2. Search stimulating-lottery/extra-chance overlays for published total entry counts, winner lists from which participation can be bounded, or official statements on code volume; apply generic overlay helpers immediately when a denominator is defensible.
-3. Continue current Misli/Azerlotereya account-independent announcement scans for newly launched post-snapshot terms.
-4. Monitor future Araz receipt-lottery campaigns specifically for whether `uduşlu oyunlar` / `şans oyunları` are excluded; do not infer receipt-lottery eligibility from cashback rules.
-5. Keep OBA standard receipt-lottery stacking closed unless future terms explicitly remove the chance-game exclusion.
+1. **Highest priority:** resolve official terms for the current Misli `RadioArena` 10 AZN promo codes — eligible product set, whether lottery/Super Keno is allowed, wagering requirement, withdrawal treatment and award count/probability.
+2. Search current official Misli/Azerlotereya social posts, FAQ/support/campaign pages for other account-independent promo-code or free-ticket distributions; ignore affiliate/SEO claims unless confirmed.
+3. Continue stimulating-lottery denominator work only with defensible published counts/bounds; do not infer counts from chance-number ranges without proof of numbering scheme.
+4. Treat Azərpoçt/kiosk/distributor availability as neutral unless an explicit subsidy or receipt-overlay appears.
+5. Monitor future Araz receipt-lottery campaigns specifically for chance-game exclusions and keep OBA closed unless terms change.
 6. For every new modifier, update `results/phase18_ev_modifier_ledger.csv` with current/inactive/conflicted status and exact EV classification.
 7. If a current positive-EV modifier is verified, design a variance-aware distinct-ticket execution with **N free**, optimizing downside/variance while preserving subsidy-driven positive expectation.
 8. Do not reopen rejected history-prediction branches without materially new information.
