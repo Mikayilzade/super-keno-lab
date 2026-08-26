@@ -1,6 +1,6 @@
 # Super Keno Lab — status
 
-Last updated: 2026-08-26
+Last updated: 2026-08-27
 
 ## Phase
 
@@ -52,7 +52,7 @@ Earlier checkpoints established:
 - `Oley Oley` was Lottery-eligible but is now historical and denominator unresolved;
 - historical DÇ-2026 Fantasy proved the pattern `free external competition -> Misli bonus`.
 
-Latest checkpoints:
+Latest checkpoints include:
 - `PHASE18R_CURRENT_APL_FANTASY_ZERO_COST_BONUS.md`
 - `PHASE18S_APL_FANTASY_BONUS_TYPE_EVIDENCE.md`
 - `PHASE18T_APL_SCOPE_EXHAUSTION_AND_CASH_LEAGUE_BENCHMARK.md`
@@ -62,6 +62,8 @@ Latest checkpoints:
 - `PHASE18X_PUBLIC_ARTIFACT_AND_CURRENT_CAMPAIGN_RECHECK.md`
 - `PHASE18Y_FRESH_SOCIAL_FEED_AND_FANTASY_PATTERN_RECHECK.md`
 - `PHASE18Z_FRESH_FEED_AND_PRIVATE_LEAGUE_BENCHMARK.md`
+- `PHASE18AA_APL_ROUND3_TIMING_AND_FRESH_CANONICAL_FEED.md`
+- `PHASE18AB_PROMOCODE_BONUS_ARCHITECTURE_AND_FRESH_SCAN.md`
 
 ## 10→10 classification
 
@@ -73,13 +75,15 @@ If operational and eligible, 10 AZN paid + 10 AZN bonus played once through 1x S
 - expected profit: **+1.83614067 AZN**;
 - expected personal-capital ROI: **1.183614067 (+18.3614%)**.
 
-The archived dedicated page still contains future-dated 31-August terms, but the official `Cari kampaniyalar` surface on 2026-08-26 again states that no current campaign is available. Therefore do **not** stake for 10→10 unless account UI, current `*2080` support, or a newly dated official source confirms operational eligibility. Do not spend routine cycles re-crawling unchanged public surfaces.
+Do **not** stake for 10→10 unless account UI, current `*2080` support, or a newly dated official source confirms operational eligibility. Do not spend routine cycles re-crawling unchanged public surfaces.
+
+Important architectural fact from the official 10→10 FAQ: Azerlotereya has documented a promotional additional balance that can explicitly be used in `Lotereya`, `ePoz-Qazan`, and `Digital Oyunlar` with no turnover requirement, while winnings can be withdrawn without commission. This proves `Lotereya`-eligible promotional credit is a real operator capability, even though 10→10 current status remains unresolved.
 
 ## RadioArena promo code
 
 `current_terms_unresolved_sports_context`
 
-Public first-party generic promo/help surfaces do not expose product scope, wagering, withdrawal, expiry or award count. Revisit only on materially new terms/account evidence.
+The current public account architecture visibly supports a `Promokod` input surface, but public first-party rules still do not expose RadioArena product scope, wagering, withdrawal, expiry or award count. Revisit only on materially new terms/account evidence.
 
 ## Strongest current Super-Keno-adjacent lead — Misli APL Fantasy
 
@@ -109,56 +113,25 @@ Known denominator facts:
 - global APL registrations exceeded 10,000 before round 1 and later reports cited 14,000+;
 - this is not the Misli private-league denominator;
 - a separate Fanat.Az private league had **500+ participants again in round 2** and paid 50 AZN cash to that round winner;
-- repeated 500+ evidence makes a low-hundreds private-league scale plausible in the ecosystem, but it does **not** justify assuming Misli has the same denominator;
 - exact `188533-FJA0T` row count remains unresolved.
 
-## Phase 18W — binary/API path decision
+## Phase 18AB — current promo architecture result
 
-Phase 18V's GitHub Actions endpoint-extraction workflow was explicitly re-triggered on commit `9835b04b508b85c02114546bbe4fb63989dcfb22`.
+Fresh 27-Aug-2026 scans found **no newly dated zero-cost/free-entry offer with explicit `Lotereya` / Super Keno eligibility**.
 
-The workflow-run query for that exact SHA returned **zero runs**, and `results/phase18v_apl_binary_endpoint_audit.txt` still does not exist.
+However, two first-party surfaces now give a stronger architectural model for future scans:
+- Azerlotereya account UI exposes separate `Bonus` and `Promokod` surfaces;
+- the official 10→10 FAQ proves a promotional balance can be explicitly scoped to `Lotereya` and can produce withdrawable winnings without a turnover requirement.
 
-Decision: **close this CI/binary extraction path as a technical surface.** This is not evidence that APL has no discoverable API; it only means this execution path is not producing data and should not consume further cycles.
+Decision: `explicit Lotereya-eligible promotional balance` is now a **proven operator mechanism**, not merely a hypothetical one.
 
-## Phase 18X — public artifact surface decision
-
-Fresh cached/indexed APL winner/result text and image-search surfaces still expose only the already-known two weekly winner posts. They do not reveal:
-- Misli league total rows/member count;
-- bonus-wallet/product label;
-- `Lotereya` / Super Keno eligibility;
-- wagering count;
-- expiry;
-- withdrawal treatment.
-
-Decision: **stop routine repetition of the same APL public winner-post/image queries.** Revisit only on a newly dated weekly post, materially different screenshot/result card, or a client-visible standings surface.
-
-A fresh zero-cost / Lottery-eligible scan produced no new executable offer, so no EV-ledger classification changed.
-
-## Phase 18Y — fresh social-feed scan
-
-A new official-feed scan found **no newly dated zero-cost offer with explicit `Lotereya` / Super Keno eligibility**.
-
-However, older Misli English Fantasy Premier League posts independently reproduce the same operator pattern seen in APL Fantasy: free external Fantasy entry, join a Misli private league, then winners provide their Misli member number and receive/use a Misli bonus. This strengthens the interpretation that APL's 30/20/10 AZN awards are internal Misli-account bonuses rather than external vouchers.
-
-It does **not** prove product scope. Generic wording such as `bonusla ürəyincə əylən` must not be treated as evidence that the balance can be used in `Lotereya`.
-
-No APL post found in this run exposed Misli private-league row count, wagering, expiry or withdrawal treatment. Classification therefore does not change.
-
-## Phase 18Z — fresh feed + denominator benchmark
-
-Fresh 26-Aug-2026 searches again found no new executable zero-cost/free-entry Super Keno modifier and no newly indexed Misli APL result artifact with bonus-wallet scope.
-
-A newly indexed 25-Aug report states that the independent Fanat.Az APL private league still had **500+ participants in round 2**, while paying **50 AZN cash** to the round winner. This strengthens the private-league scale benchmark: individual leagues can remain in the low hundreds even when global APL registrations are in five figures.
-
-This is benchmark evidence only. It does not permit substituting ~500 for the Misli league denominator, and it is not a Super Keno edge.
-
-Targeted searches for first-party `Misli bonus account + Lotereya` rules still did not prove generic bonus balances are lottery-eligible. No ledger classification changed.
+This does **not** change APL Fantasy or RadioArena classifications. Generic `bonus` or `promokod` wording remains insufficient; exact product-category wording or account evidence is still required.
 
 ## CURRENT CLASSIFICATION
 
-No **fully verified executable repeatable positive-EV Super Keno modifier** is known at the 2026-08-26 snapshot.
+No **fully verified executable repeatable positive-EV Super Keno modifier** is known at the 2026-08-27 snapshot.
 
-Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qualification gambling spend is zero and the bonus repeats weekly, but the execution gate still requires direct proof of:
+Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qualification gambling spend is zero and the bonus repeats weekly, but execution still requires direct proof of:
 - `Lotereya` / Super Keno eligibility;
 - wagering count;
 - expiry;
@@ -167,10 +140,10 @@ Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qu
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Watch for the **next newly dated APL Fantasy weekly winner/result post**; inspect only if it exposes materially new standings or bonus-wallet information.
-2. Prioritize genuinely new **zero-cost/free-entry offers with explicit `Lotereya` eligibility**; any such lead outranks APL immediately.
+1. Until APL round 3 is complete, prioritize only genuinely new zero-cost/free-entry offers that explicitly name `Lotereya` or expose a product-category label for credited bonus/promocode balance.
+2. After the next newly dated APL weekly winner/result post appears, inspect it for materially new wallet/category/standings evidence before repeating any generic APL search.
 3. If a client-visible APL standings page or bonus-wallet screenshot becomes public, immediately extract Misli league denominator and bonus scope.
-4. Continue targeted first-party search for bonus-wallet product-category rules; do not infer lottery eligibility from generic `bonus` wording.
+4. Search for exact first-party phrases proving product scope (`Lotereya bölməsində istifadə`, `əlavə balans`, `dövriyyə şərti yoxdur`) rather than generic bonus language.
 5. Revisit RadioArena or 10→10 only on materially new operational evidence.
 6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
 7. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
