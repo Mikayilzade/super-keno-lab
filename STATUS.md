@@ -55,8 +55,9 @@ Earlier checkpoints established:
 Latest checkpoints:
 - `PHASE18R_CURRENT_APL_FANTASY_ZERO_COST_BONUS.md`
 - `PHASE18S_APL_FANTASY_BONUS_TYPE_EVIDENCE.md`
+- `PHASE18T_APL_SCOPE_EXHAUSTION_AND_CASH_LEAGUE_BENCHMARK.md`
 
-## 10→10 current classification
+## 10→10 classification
 
 `official_status_conflict_conditional_positive`
 
@@ -74,14 +75,14 @@ Do **not** stake for 10→10 unless account UI, current `*2080` support, or a ne
 
 Public first-party generic promo/help surfaces do not expose product scope, wagering, withdrawal, expiry or award count. Revisit only on materially new terms/account evidence.
 
-## Strongest current zero-cost lead — APL Fantasy
+## Strongest current Super-Keno-adjacent lead — Misli APL Fantasy
 
-Misli has now published **two consecutive weekly winner posts** for its `APL Fantasy` private league. Both repeat the free join flow:
+Misli has published two consecutive weekly winner posts for its `APL Fantasy` private league. Published flow remains:
 1. register at `aplfantasy.az`;
 2. create a 15-player team;
 3. join Misli.az league using code `188533-FJA0T`.
 
-Published weekly prizes remain:
+Published weekly prizes:
 - **30 AZN bonus** for 1st;
 - **20 AZN bonus** for 2nd;
 - **10 AZN bonus** for 3rd;
@@ -89,40 +90,46 @@ Published weekly prizes remain:
 
 No paid Misli stake/deposit is stated as a qualification requirement. Winners send their Misli member number to receive the bonus.
 
-Phase 18S also found that earlier DÇ-2026 Fantasy used the same wording pattern (`send Misli member number -> receive bonus`), strengthening the interpretation that this is an **internal Misli account-bonus credit pattern** rather than an external voucher. However, this still does **not** prove that the bonus can be used in `Lotereya` / Super Keno.
-
 Current classification:
 
 `current_repeatable_free_entry_bonus_product_scope_unresolved`
 
-If — and only if — the awarded Misli bonus is usable once on 1x Super Keno and resulting winnings are withdrawable, conditional cash values are:
+Conditional one-wager 1x Super Keno cash values, **only if Lotereya use and withdrawability are proven**:
 - 10 AZN bonus -> **5.9181 AZN** expected cash;
 - 20 AZN -> **11.8361 AZN**;
 - 30 AZN -> **17.7542 AZN**.
 
-Because qualification gambling spend is 0 AZN, ordinary paid-stake subsidy thresholds do not apply to entering the fantasy competition. Competition probability and time/attention cost remain separate issues.
+Phase 18T conclusion: generic indexed searches for `Misli bonus + Lotereya/Super Keno` are now surface-exhausted. Misli repeatedly uses the same `bonusla ürəyincə əylən` wording across multiple fantasy promotions, so that phrase is **not** evidence of cross-product bonus eligibility.
 
-Public APL Fantasy platform totals are **not** the Misli private-league denominator. The exact private-league team/participant count remains unknown.
+AFFA reports global APL Fantasy registrations above **10,000**, but this is not the Misli private-league denominator and must not be used as such.
 
-Critical unresolved fields:
-- whether APL Fantasy Misli bonus is eligible in `Lotereya` / Super Keno;
-- wagering count;
-- expiry;
-- withdrawal treatment;
-- exact Misli private-league participant/team count.
+## New adjacent benchmark — Fanat.Az APL cash league
+
+Current APL Fantasy private league run by Fanat.Az reported **500+ participants** and a **50 AZN cash prize** for the second-round winner on 2026-08-24. It is a zero-cost, repeatable cash competition and proves that individual private-league denominators can be in the hundreds even when the global platform exceeds 10,000 users.
+
+Classification:
+
+`current_repeatable_zero_cost_cash_competition_adjacent_not_super_keno_modifier`
+
+It is **not counted as a Super Keno modifier** because the cash prize is earned in a separate fantasy skill competition rather than attached to Super Keno spend. It remains useful as a denominator benchmark and as evidence for liquid zero-cost overlays.
 
 ## CURRENT CLASSIFICATION
 
-No **fully verified executable repeatable positive-EV Super Keno modifier** is yet known at the 2026-08-26 snapshot.
+No **fully verified executable repeatable positive-EV Super Keno modifier** is known at the 2026-08-26 snapshot.
 
-Phase 18S strengthens the current lead but does not cross the execution gate: APL Fantasy is now well evidenced as **current + recurring + zero-paid-spend**, while the remaining blocker is specifically the bonus wallet/product-scope/wager-withdrawal rules.
+Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qualification gambling spend is zero and the bonus repeats weekly, but the execution gate still requires direct proof of:
+- `Lotereya` / Super Keno eligibility;
+- wagering count;
+- expiry;
+- withdrawal treatment;
+- Misli private-league participant count.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Search exact APL Fantasy winner-result artifacts/comments/screenshots for the **credited bonus wallet/type**; prioritize evidence showing where the 10/20/30 AZN appears in Misli.
-2. Search first-party/app/help surfaces only for materially new text resolving `Lotereya` eligibility, wagering, expiry or withdrawal; do not infer from generic `bonus` wording.
-3. Attempt to recover the Misli private-league team count from public APL Fantasy league/result pages or APIs if exposed.
-4. Continue fresh scans for **other zero-cost/free-entry bonuses with explicit `Lotereya` eligibility**; such a lead outranks APL Fantasy immediately.
+1. Target exact APL Fantasy winner-result artifacts/comments/screenshots for the **credited bonus wallet/type**; generic bonus-rule searches are exhausted until new text appears.
+2. Attempt to recover the Misli private-league participant/team count from APL Fantasy public standings, result pages or exposed APIs; do not substitute the >10,000 global registration figure.
+3. Continue fresh scans for other **zero-cost/free-entry offers with explicit `Lotereya` eligibility**; any such lead outranks APL immediately.
+4. Track current APL partner/private leagues with cash/free-ticket/redeemable-value prizes and published denominators as an adjacent evidence stream, but keep them separate from Super Keno modifiers.
 5. Revisit RadioArena or 10→10 only on materially new evidence.
 6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized and current/historical status strictly separated.
 7. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
