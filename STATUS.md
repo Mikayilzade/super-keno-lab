@@ -64,6 +64,7 @@ Latest checkpoints include:
 - `PHASE18Z_FRESH_FEED_AND_PRIVATE_LEAGUE_BENCHMARK.md`
 - `PHASE18AA_APL_ROUND3_TIMING_AND_FRESH_CANONICAL_FEED.md`
 - `PHASE18AB_PROMOCODE_BONUS_ARCHITECTURE_AND_FRESH_SCAN.md`
+- `PHASE18AC_1001_SEVINC_FINITE_POOL_ROUTE.md`
 
 ## 10→10 classification
 
@@ -127,6 +128,29 @@ Decision: `explicit Lotereya-eligible promotional balance` is now a **proven ope
 
 This does **not** change APL Fantasy or RadioArena classifications. Generic `bonus` or `promokod` wording remains insufficient; exact product-category wording or account evidence is still required.
 
+## Phase 18AC — active finite-pool mechanism discovered
+
+A materially different operator-side mechanism was identified in active `1001 Sevinc` in-kind draws.
+
+Current first-party/public surfaces establish:
+- each prize category has a finite ticket inventory and a predeclared draw date;
+- if the inventory sells out early, the draw may be moved earlier;
+- Misli exposes a live `Satıldı:` percentage for active items;
+- current indexed surface includes an iPhone 17 Pro 256 GB Deep Blue draw at **33% sold**;
+- current Azerlotereya surface lists eleven draws for **16.09.2026** at 0.5/1 AZN ticket prices.
+
+If a draw occurs among sold tickets even when the inventory is under-subscribed, the generic single-prize ROI is approximately:
+
+`ROI = V / (p * M)`
+
+where `V` is conservative net realizable prize value, `p` ticket price and `M` valid sold-ticket count. This can exceed 1 when the realized denominator is sufficiently low.
+
+This is **not a Super Keno modifier** and is not added to the Super Keno EV-modifier ledger. It is retained as a separate secondary finite-pool route because it uses live denominator information rather than draw prediction.
+
+Current blockers: exact ticket cap per draw, exact sold count, unsold-ticket treatment/minimum-sales rule, conservative prize resale value and in-kind tax/friction.
+
+See `results/PHASE18AC_1001_SEVINC_FINITE_POOL_ROUTE.md`.
+
 ## CURRENT CLASSIFICATION
 
 No **fully verified executable repeatable positive-EV Super Keno modifier** is known at the 2026-08-27 snapshot.
@@ -138,6 +162,8 @@ Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qu
 - withdrawal treatment;
 - Misli private-league participant/team count.
 
+Separately, `1001 Sevinc` is now the strongest materially new **finite-denominator operator mechanism**, but it is not yet classified +EV and is kept separate from Super Keno.
+
 ## NEXT ACTION — Phase 18 continuation
 
 1. Until APL round 3 is complete, prioritize only genuinely new zero-cost/free-entry offers that explicitly name `Lotereya` or expose a product-category label for credited bonus/promocode balance.
@@ -145,6 +171,7 @@ Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qu
 3. If a client-visible APL standings page or bonus-wallet screenshot becomes public, immediately extract Misli league denominator and bonus scope.
 4. Search for exact first-party phrases proving product scope (`Lotereya bölməsində istifadə`, `əlavə balans`, `dövriyyə şərti yoxdur`) rather than generic bonus language.
 5. Revisit RadioArena or 10→10 only on materially new operational evidence.
-6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
-7. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-8. Do not reopen rejected draw-history prediction branches without materially new information.
+6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
+7. Secondary finite-pool route: recover `1001 Sevinc` ticket caps / sold counts / unsold-ticket treatment for current draw IDs and compute conservative ROI bounds if the denominator becomes available.
+8. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+9. Do not reopen rejected draw-history prediction branches without materially new information.
