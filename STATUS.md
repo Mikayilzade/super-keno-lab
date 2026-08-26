@@ -51,15 +51,25 @@ Do not reopen without materially new information:
 - `PHASE18H_CURRENT_OLEY_OLEY_OVERLAY.md`: live Oley Oley explicitly includes Lotereya at 2 chances / 5 AZN.
 - `PHASE18I_OLEY_OLEY_VALUE_BOUNDS.md`: full prize-value scenarios and initial car-week denominator thresholds.
 - `PHASE18J_OLEY_OLEY_DRAW_SCHEDULE_CORRECTION.md`: corrected campaign draw schedule; car is not weekly.
-- `PHASE18K_OLEY_OLEY_DENOMINATOR_SEARCH.md`: current public-text search exhausted; no defensible denominator/upper bound found; next evidence must come from video/image/app artefacts rather than nearby text-query tuning.
+- `PHASE18K_OLEY_OLEY_DENOMINATOR_SEARCH.md`: public-text denominator search exhausted; no defensible denominator/upper bound found.
+- `PHASE18L_OLEY_OLEY_ARTIFACT_INDEX.md`: exact official winner-result artifacts for weeks 1/2/3 identified; denominator still unresolved, but broad rediscovery is no longer needed.
 
-## Phase 18K — Oley Oley denominator unresolved — HIGHEST PRIORITY
+## Phase 18L — artifact-level targets established — HIGHEST PRIORITY
 
-Fresh public evidence confirms:
-- draw 3 used 1 Changan UNI-Z + 3 iPhone 17 Pro + 5 PS5 + 50×200 AZN bonus;
-- after draw 3, official campaign messaging lists 1 car + 9 iPhones + 15 PS5 + 30,000 AZN bonus remaining;
-- forwarded campaign material says the second car winner will be determined in the **next week's draw**, confirming draw 4 as the second/final car draw;
-- Lottery continues to earn **2 chances per 5 AZN**.
+Fresh artifact discovery identified exact official Instagram winner-result posts referenced by Misli's official Telegram feed:
+- week 1: `DZsnX2dCKZl`;
+- week 2: `DZ-kmE5CJAn`;
+- week 3: `DaQwwaFiGbl`.
+
+These posts are now the preferred image/cache/mirror targets for extracting visible chance IDs. Search-indexed Telegram text does not expose the actual winner numbers.
+
+Fresh official feed evidence also reconfirms:
+- sports betting: 1 chance per 5 AZN;
+- Virtual Sport / ePoz-Qazan / Lottery: **2 chances per 5 AZN**;
+- after week/draw 3, public messaging lists 1 car + 9 iPhones + 15 PS5 + 30,000 AZN bonus remaining;
+- draw 3 itself used 1 car + 3 iPhones + 5 PS5 + 50×200 AZN bonus.
+
+This is consistent with the established six-draw schedule but provides **no denominator evidence**.
 
 For 5 AZN 1x Super Keno:
 - base expected cash = **2.9590351675 AZN**;
@@ -95,11 +105,12 @@ Do **not** stake based on this overlay yet.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** inspect draw-3/draw-4 official video/live-stream material for an explicit total chances/participants/issued-number count or visible randomizer range.
-2. Inspect winner-result images across weeks for chance-number format; compare formats only to test reset/accumulation hypotheses, not to infer denominator without sequential-number proof.
-3. Search app-specific/cached campaign terms for chance reset/carry-forward wording and 200-AZN bonus conditions.
-4. If sequential numbering is proven, use the largest issued number immediately before draw 4 as a denominator proxy; otherwise keep denominator unresolved.
-5. If a defensible draw-4 denominator/upper bound is below **~39,587**, promote immediately to positive-EV candidate even under the conservative car-prize scenario.
-6. If promoted, design a variance-aware distinct-ticket Super Keno execution with **N free**; do not force round-number portfolio sizes.
-7. Treat draws 5-6 separately with stricter non-car thresholds (~11.0k / 19.2k / 26.0k).
-8. Continue scanning genuinely current lottery-eligible overlays in parallel; do not reopen rejected history-prediction branches without materially new evidence.
+1. Retrieve/cache/mirror the exact week-1/week-2/week-3 Instagram result artifacts by shortcode (`DZsnX2dCKZl`, `DZ-kmE5CJAn`, `DaQwwaFiGbl`) rather than repeating broad text search.
+2. Extract all visible winning chance IDs and formatting; compare magnitude/prefix/length across weeks only to test reset-vs-accumulation hypotheses.
+3. Locate official YouTube draw-3/draw-4 replay/live material by exact campaign/draw context and inspect visible randomizer range or announced total chances.
+4. Search app-specific/cached campaign terms for chance reset/carry-forward wording and 200-AZN bonus conditions.
+5. If sequential numbering is proven, use the largest issued number immediately before draw 4 as a denominator proxy; otherwise keep denominator unresolved.
+6. If a defensible draw-4 denominator/upper bound is below **~39,587**, promote immediately to positive-EV candidate even under the conservative car-prize scenario.
+7. If promoted, design a variance-aware distinct-ticket Super Keno execution with **N free**; do not force round-number portfolio sizes.
+8. Treat draws 5-6 separately with stricter non-car thresholds (~11.0k / 19.2k / 26.0k).
+9. Continue scanning genuinely current lottery-eligible overlays in parallel; do not reopen rejected history-prediction branches without materially new evidence.
