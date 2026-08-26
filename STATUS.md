@@ -61,6 +61,7 @@ Latest checkpoints:
 - `PHASE18W_APL_BINARY_PATH_CLOSED_AND_SURFACE_PIVOT.md`
 - `PHASE18X_PUBLIC_ARTIFACT_AND_CURRENT_CAMPAIGN_RECHECK.md`
 - `PHASE18Y_FRESH_SOCIAL_FEED_AND_FANTASY_PATTERN_RECHECK.md`
+- `PHASE18Z_FRESH_FEED_AND_PRIVATE_LEAGUE_BENCHMARK.md`
 
 ## 10→10 classification
 
@@ -105,9 +106,10 @@ Conditional one-wager 1x Super Keno cash values, **only if Lotereya use and with
 - 30 AZN -> **17.7542 AZN**.
 
 Known denominator facts:
-- global APL registrations exceeded 14,000 by the first round;
+- global APL registrations exceeded 10,000 before round 1 and later reports cited 14,000+;
 - this is not the Misli private-league denominator;
-- a separate Fanat.Az private league publicly exceeded 500 participants, proving private leagues can be much smaller than the global pool;
+- a separate Fanat.Az private league had **500+ participants again in round 2** and paid 50 AZN cash to that round winner;
+- repeated 500+ evidence makes a low-hundreds private-league scale plausible in the ecosystem, but it does **not** justify assuming Misli has the same denominator;
 - exact `188533-FJA0T` row count remains unresolved.
 
 ## Phase 18W — binary/API path decision
@@ -142,6 +144,16 @@ It does **not** prove product scope. Generic wording such as `bonusla ürəyinc�
 
 No APL post found in this run exposed Misli private-league row count, wagering, expiry or withdrawal treatment. Classification therefore does not change.
 
+## Phase 18Z — fresh feed + denominator benchmark
+
+Fresh 26-Aug-2026 searches again found no new executable zero-cost/free-entry Super Keno modifier and no newly indexed Misli APL result artifact with bonus-wallet scope.
+
+A newly indexed 25-Aug report states that the independent Fanat.Az APL private league still had **500+ participants in round 2**, while paying **50 AZN cash** to the round winner. This strengthens the private-league scale benchmark: individual leagues can remain in the low hundreds even when global APL registrations are in five figures.
+
+This is benchmark evidence only. It does not permit substituting ~500 for the Misli league denominator, and it is not a Super Keno edge.
+
+Targeted searches for first-party `Misli bonus account + Lotereya` rules still did not prove generic bonus balances are lottery-eligible. No ledger classification changed.
+
 ## CURRENT CLASSIFICATION
 
 No **fully verified executable repeatable positive-EV Super Keno modifier** is known at the 2026-08-26 snapshot.
@@ -158,7 +170,8 @@ Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qu
 1. Watch for the **next newly dated APL Fantasy weekly winner/result post**; inspect only if it exposes materially new standings or bonus-wallet information.
 2. Prioritize genuinely new **zero-cost/free-entry offers with explicit `Lotereya` eligibility**; any such lead outranks APL immediately.
 3. If a client-visible APL standings page or bonus-wallet screenshot becomes public, immediately extract Misli league denominator and bonus scope.
-4. Revisit RadioArena or 10→10 only on materially new operational evidence.
-5. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
-6. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-7. Do not reopen rejected draw-history prediction branches without materially new information.
+4. Continue targeted first-party search for bonus-wallet product-category rules; do not infer lottery eligibility from generic `bonus` wording.
+5. Revisit RadioArena or 10→10 only on materially new operational evidence.
+6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
+7. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+8. Do not reopen rejected draw-history prediction branches without materially new information.
