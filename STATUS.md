@@ -8,16 +8,16 @@ Last updated: 2026-08-26
 
 ## Core state
 
-- Dedicated repo: `Mikayilzade/super-keno-lab`; broad `loto-research` remains separate and untouched.
+- Dedicated repo: `Mikayilzade/super-keno-lab`; broad `loto-research` remains separate.
 - **195** validated Super Keno draws, 2022-12-21..2026-08-23.
 - Portfolio size **N remains a free integer optimization variable**.
-- All historical draw-based predictive branches are closed as primary edge sources after strict walk-forward/seed testing.
-- Working assumption: lototron unchanged; physical/video branch remains deprioritized.
-- Mandatory rule: stochastic strategy construction must be evaluated across strategy/universe seeds, never one favorable seed.
+- All history-based predictive branches are closed as primary edge sources after strict walk-forward/seed testing.
+- Fixed-list universal guarantee is mathematically impossible for the base game.
+- Mandatory rule: stochastic strategy construction must be evaluated across seeds, never one favorable seed.
 
-## Exact base-game result
+## Exact base-game economics
 
-For a fixed 10-number ticket, exact gross return over all mathematically possible 20-of-70 draws is **0.5985557942634199 per 1 AZN stake**. No fixed ticket list at any N can guarantee break-even/profit across all possible draws.
+For a fixed 10-number ticket, exact gross return over all mathematically possible 20-of-70 draws is **0.5985557942634199 per 1 AZN stake**.
 
 Current exact after-tax expected cash-return ratios:
 - 1x: **0.5918070335**;
@@ -25,137 +25,79 @@ Current exact after-tax expected cash-return ratios:
 - 5x: 0.589036;
 - 10x: 0.586982.
 
-Therefore 1x is the best multiplier on expected after-tax cash.
+1x is therefore best on expected after-tax cash.
 
-## Closed predictive routes
+Break-even modifier thresholds at 1x:
+- direct cash-equivalent subsidy: **40.82%** of paid stake;
+- one-wager bonus balance: **68.97%** of paid stake.
 
-Rejected as primary sources after strict robustness checks:
+See `results/PHASE17_EXTERNAL_EV_MODIFIERS.md` and `src/ev_modifiers.py`.
+
+## Closed primary routes
+
+Do not reopen without materially new information:
 1. fixed-list geometry alone;
-2. hot/cold, pairs, group mean reversion and ensembles;
+2. hot/cold, pair/context and mean-reversion ensembles;
 3. supervised per-number ranking;
 4. direct ticket-payoff regression/ranking;
-5. continuous draw-structure prediction;
-6. discrete regime/Markov classification.
+5. continuous structure forecasting;
+6. discrete regime/Markov forecasting.
 
-Do not reopen these via nearby parameter tuning without materially new information.
+## Phase 18 completed checkpoints
 
-## Phase 17 — EV modifier foundation
+- `PHASE18_OVERLAY_LEDGER_PILOT.md`: historical `Sürətli Şans`; denominator unknown.
+- `PHASE18B_WELCOME_BONUS_CONDITIONAL_EV.md` / `PHASE18C_WELCOME_BONUS_STATUS_RESOLUTION.md`: old 10→10 offer would be +EV if live, but is historical/inactive.
+- `PHASE18D_CURRENT_OVERLAY_AND_PAYMENT_SCAN.md`: current Azerlotereya public campaign listing had no active campaign; mainstream bank cashback stacks are excluded by published rules.
+- `PHASE18E_RETAIL_OVERLAY_AUDIT.md`: OBA excludes chance-game purchases; Araz cashback excludes winning games; historical Araz receipt overlay remained unverified.
+- `PHASE18F_DISTRIBUTOR_AND_CURRENT_PROMOCODE_SCAN.md`: Azərpoçt is neutral distribution; live RadioArena 10-AZN promo-code lead found.
+- `PHASE18G_RADIOARENA_TERMS_RESOLUTION_ATTEMPT.md`: RadioArena promo remains live but public official sources do not resolve product eligibility/wagering/withdrawal; `#Futbol` is a sports-context signal, not proof. Do not count it as Super-Keno EV.
 
-See:
-- `results/PHASE17_EXTERNAL_EV_MODIFIERS.md`
-- `src/ev_modifiers.py`
-- `tests/test_ev_modifiers.py`
+## Phase 18H — live `Oley Oley` overlay — HIGHEST PRIORITY
 
-Break-even thresholds for 1x Super Keno:
-- direct cash-equivalent subsidy: **40.82% of paid stake**;
-- one-wager bonus balance: **68.97% of paid stake**;
-- a genuine 100% one-wager match implies expected personal-capital ROI about **1.1836** before extra friction.
+See `results/PHASE18H_CURRENT_OLEY_OLEY_OVERLAY.md`.
 
-`src/ev_modifiers.py` supports equal-entry prize overlays via `overlay_ev_per_qualifying_spend(...)` and `combined_return_ratio_with_overlay(...)`.
+Fresh official Misli posts explicitly state:
+- every **5 AZN** of sports betting => **1 chance**;
+- every **5 AZN** in **Virtual İdman, ePoz-Qazan, Lotereya** => **2 chances**.
 
-## Phase 18A — stimulating-lottery overlay pilot
+This is the first currently live overlay in Phase 18 with **explicit lottery-category eligibility**, making it materially stronger than RadioArena for Super Keno research.
 
-See:
-- `results/PHASE18_OVERLAY_LEDGER_PILOT.md`
-- `results/phase18_ev_modifier_ledger.csv`
+Published weekly prize ladder for the third draw:
+- 1 x Changan UNI-Z;
+- 3 x iPhone 17 Pro;
+- 5 x PlayStation 5;
+- 50 x 200 AZN bonus (10,000 AZN nominal bonus face value).
 
-Historical `Sürətli Şans` (2025) control:
-- every 5 AZN ordinary eligible play earned 1 chance; ePoz-Qazan earned 2;
-- weekly cash pool = **24,000 AZN**;
-- total campaign cash = **192,000 AZN + 2 Toyota Corolla Hybrid**.
+After week 3, official Misli advertised remaining inventory equal to three such weekly prize ladders: 1 car, 9 iPhones, 15 PS5s and 30,000 AZN bonus.
 
-For 5 AZN of 1x Super Keno, expected after-tax base cash is 2.9590 AZN, so the overlay must contribute at least **2.0409648325 AZN per code** to reach personal-capital break-even.
+### Break-even math for Super Keno spend
 
-Cash-only weekly break-even requires competition pool approximately **<= 11,759 chance codes**. Public denominator remains unknown, so this historical overlay is `indeterminate`, not positive EV.
+For 5 AZN of 1x Super Keno:
+- expected base cash = **2.9590351675 AZN**;
+- shortfall to break-even = **2.0409648325 AZN**;
+- campaign grants **2 entries**;
+- required overlay EV = **1.02048241625 AZN per entry**.
 
-## Phase 18B/18C — welcome-bonus candidate resolved
+Diagnostic only: if the weekly 50x200-AZN bonus pool were worth its full 10,000-AZN face value as cash-equivalent EV, ignoring the car/iPhones/PS5s, combined break-even would hold for approximately **<=9,799 total weekly entries**. This is not yet a valid +EV claim because bonus conversion/wagering is unresolved and the entry denominator is unknown.
 
-See:
-- `results/PHASE18B_WELCOME_BONUS_CONDITIONAL_EV.md`
-- `results/PHASE18C_WELCOME_BONUS_STATUS_RESOLUTION.md`
-- `results/phase18_ev_modifier_ledger.csv`
+Classification: **`current_super_keno_eligible_denominator_unresolved`**.
 
-The archived `10 oyna, 10 qazan` mechanics are mathematically important:
-- new eligible user played 10 AZN;
-- 10 AZN additional balance;
-- no turnover requirement on additional balance;
-- one use per user; first 10,000 eligible users.
+## Current EV-modifier ledger
 
-If currently valid, playing 10 AZN paid + 10 AZN bonus once at 1x Super Keno would have expected personal-capital ROI **1.1836140670**, expected P/L **+1.8361406702 AZN** on 10 AZN personal outlay.
+See `results/phase18_ev_modifier_ledger.csv`.
 
-### Current status resolution — 2026-08-26
-
-The ambiguity is resolved against actionability:
-- official `Cari kampaniyalar` public snapshot explicitly says **`Cari kampaniya mövcud deyil`**;
-- the dedicated 10→10 URL is indexed/labeled **`keçmiş kampaniya`**;
-- its body still says through 31 August while embedded FAQ says 14 April–31 July, so conflicting date fragments are treated as stale archived content.
-
-Decision: reclassify 10→10 as **`historical_inactive_positive_mechanism`**, not a current opportunity.
-
-## Phase 18D — current overlay + payment-channel scan
-
-See:
-- `results/PHASE18D_CURRENT_OVERLAY_AND_PAYMENT_SCAN.md`
-- updated `results/phase18_ev_modifier_ledger.csv`
-
-Fresh public scan on 2026-08-26:
-- official Azerlotereya current-campaign page still says **no current campaign**;
-- recent `Sürətlə Qazan` tournament ran **7–14 Aug 2026**, applied only to 52 tagged digital/ePoz games and is not a Super-Keno modifier;
-- `Şans Karvanı 2` publishes gifts/event activity but no defensible ticket-linked qualification/probability table, so its EV is not quantifiable;
-- Unibank, ABB/TamKart and Birbank/Kapital Bank published reward rules all exclude lottery/gambling transactions or the relevant MCCs (notably 7800/7995; ABB also names Loto/Casino/Gambling merchants).
-
-Decision: ordinary mainstream bank cashback/reward stacking is now **low priority / closed under current published rules**. Reopen only if a future campaign explicitly includes lottery transactions.
-
-## Phase 18E — retail / merchant overlay audit
-
-See:
-- `results/PHASE18E_RETAIL_OVERLAY_AUDIT.md`
-- updated `results/phase18_ev_modifier_ledger.csv`
-
-Fresh retail-channel findings:
-- OBA receipt-lottery terms explicitly exclude `şans oyunlarının alışı`; a second OBA lottery page independently shows the same chance-game exclusion. Therefore OBA receipt-lottery stacking is closed under current published mechanics.
-- Araz sells Azerlotereya Poz-Qazan tickets in 360+ stores, but its standard mobile-app cashback rules explicitly exclude `uduşlu oyunlar`, so ordinary Araz cashback cannot subsidize lottery spend.
-- Araz has separately run receipt-lottery campaigns whose published exclusions were narrower. `Uçuşa hazır ol` (4 Jul–4 Aug 2026) gave 1 chance per 20 AZN receipt and 10 x 5,000 AZN travel vouchers; the published exclusions mentioned tobacco/alcohol but did **not** explicitly mention chance games.
-- This does **not** make the historical campaign actionable: it is inactive, Super Keno checkout eligibility at Araz is unverified, and total entry count is unknown.
-
-Diagnostic only: if a future materially identical 50,000-AZN equal-entry receipt overlay explicitly allowed 20 AZN of Super Keno spend, the base-game EV shortfall would be **8.16385933 AZN per chance**, so break-even would require approximately **<= 6,124 total equal-weight entries** before discounting non-cash prize value or other friction.
-
-Decision: distinguish **retail cashback exclusions** from **receipt-lottery qualification rules**. A retailer can close one while leaving the other ambiguous; future campaign terms must be checked independently.
-
-## Phase 18F — distributor channels + current promo-code lead
-
-See:
-- `results/PHASE18F_DISTRIBUTOR_AND_CURRENT_PROMOCODE_SCAN.md`
-- updated `results/phase18_ev_modifier_ledger.csv`
-
-Fresh findings:
-- Azərpoçt branches are confirmed official physical Super Keno sales channels, but no current Azərpoçt-specific cashback/free-ticket/receipt overlay was found; physical availability is EV-neutral by itself.
-- Historical `Sürətli Şans` does **not** support a physical Azərpoçt stacking interpretation: published qualification is account play on Azerlotereya.com/Misli.az, with ePoz-Qazan treated separately.
-- Winner chance-number ranges from `Sürətli Şans` are not used to infer total entries because the global numbering scheme/start point is not officially established.
-- **New live lead:** official Misli Telegram currently advertises weekday 20:00 / 106.3 FM `RadioArena` opportunities to win **10 AZN promo codes**.
-- Current public post does not publish lottery/Super-Keno eligibility, wagering requirements or withdrawal terms, so this lead is `current_terms_unresolved`, not yet positive EV.
-- Conditional value: if a free 10 AZN code can be wagered once on 1x Super Keno and resulting winnings are withdrawable, expected after-tax cash per awarded code is **5.918070335 AZN** before friction.
-- Azerlotereya's current account menu exposes a `Promokod` section, proving promo-code infrastructure exists on the lottery platform, but not proving Misli codes are cross-platform or lottery-eligible.
-
-## Strategic decision
-
-The base game remains negative-EV. External subsidies can overturn that negative EV, but stale/archived offers must never be counted as live opportunities.
-
-The project prioritizes:
-1. genuinely current promotions/bonuses with exact terms;
-2. prize overlays with a defensible entry denominator;
-3. legal stackability across independent modifiers;
-4. variance-aware execution only after positive EV is established.
-
-Finite one-time offers remain separate from repeatable strategies.
+Key live states:
+- `Oley Oley`: explicit lottery eligibility, denominator/value terms unresolved — highest priority;
+- RadioArena 10 AZN promo: live, but Super-Keno product scope unresolved;
+- ordinary bank/retail cashback routes: excluded/low priority under current published rules.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** resolve official terms for the current Misli `RadioArena` 10 AZN promo codes — eligible product set, whether lottery/Super Keno is allowed, wagering requirement, withdrawal treatment and award count/probability.
-2. Search current official Misli/Azerlotereya social posts, FAQ/support/campaign pages for other account-independent promo-code or free-ticket distributions; ignore affiliate/SEO claims unless confirmed.
-3. Continue stimulating-lottery denominator work only with defensible published counts/bounds; do not infer counts from chance-number ranges without proof of numbering scheme.
-4. Treat Azərpoçt/kiosk/distributor availability as neutral unless an explicit subsidy or receipt-overlay appears.
-5. Monitor future Araz receipt-lottery campaigns specifically for chance-game exclusions and keep OBA closed unless terms change.
-6. For every new modifier, update `results/phase18_ev_modifier_ledger.csv` with current/inactive/conflicted status and exact EV classification.
-7. If a current positive-EV modifier is verified, design a variance-aware distinct-ticket execution with **N free**, optimizing downside/variance while preserving subsidy-driven positive expectation.
+1. **Highest priority:** resolve `Oley Oley` exact official rules: campaign dates, whether chance numbers reset weekly or accumulate, 200-AZN bonus wagering/withdrawal rules, and any disclosed total entry count / number domain.
+2. Search official draw videos/results/posts only for a defensible denominator or upper bound; do not infer total entries from winner-number ranges without proof of numbering scheme.
+3. Build conservative / central / optimistic prize-value scenarios for the weekly Changan UNI-Z + 3 iPhone 17 Pro + 5 PS5 + 50x200-AZN bonus ladder.
+4. Convert each scenario into maximum weekly total entries compatible with combined Super Keno personal-capital EV >= 1.
+5. If an official denominator/bound falls below a break-even threshold, immediately design a variance-aware distinct-ticket Super Keno execution with **N free**.
+6. Keep RadioArena as a watch item; do not spend repeated cycles on the same unresolved public keywords unless new official material appears.
+7. Continue scanning genuinely current official Misli/Azerlotereya overlays only after the Oley Oley denominator/value audit.
 8. Do not reopen rejected history-prediction branches without materially new information.
