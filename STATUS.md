@@ -58,6 +58,7 @@ Latest checkpoints:
 - `PHASE18T_APL_SCOPE_EXHAUSTION_AND_CASH_LEAGUE_BENCHMARK.md`
 - `PHASE18U_APL_PRIVATE_LEAGUE_DENOMINATOR_SURFACE_AUDIT.md`
 - `PHASE18V_APL_BINARY_ENDPOINT_AUDIT_SETUP.md`
+- `PHASE18W_APL_BINARY_PATH_CLOSED_AND_SURFACE_PIVOT.md`
 
 ## 10→10 classification
 
@@ -101,20 +102,27 @@ Conditional one-wager 1x Super Keno cash values, **only if Lotereya use and with
 - 20 AZN -> **11.8361 AZN**;
 - 30 AZN -> **17.7542 AZN**.
 
-Phase 18T conclusion: generic indexed searches for `Misli bonus + Lotereya/Super Keno` are surface-exhausted. Misli repeatedly uses the same `bonusla ürəyincə əylən` wording across multiple fantasy promotions, so that phrase is **not** evidence of cross-product bonus eligibility.
+Known denominator facts:
+- global APL registrations exceeded 14,000 by the first round;
+- this is not the Misli private-league denominator;
+- a separate Fanat.Az private league publicly exceeded 500 participants, proving private leagues can be much smaller than the global pool;
+- exact `188533-FJA0T` row count remains unresolved.
 
-Phase 18U denominator audit:
-- Misli explicitly says winners are determined from Misli private-league results publicly shared on the official APL Fantasy site;
-- exact-code and site-scoped web search exposes no standings URL or team count;
-- `aplfantasy.az` presents as an application shell to crawlers;
-- global APL registrations remain invalid as the Misli private-league denominator.
+## Phase 18W — binary/API path decision
 
-Phase 18V moved to a materially different surface:
-- official Android package is `az.affa.fantasy`, developer Fantaking;
-- public Android distribution exposes current XAPK builds and app-store tracking shows active updates through 2026-08-24;
-- repository now contains `experiments/phase18v_apl_binary_endpoint_audit.sh` plus a workflow that is designed to download the public package only into runner temp storage, extract network/API/league/ranking strings, commit only a text endpoint report, and fail if an APK/XAPK/AAB appears in the repo tree;
-- during the Phase 18V batch, the connector showed no new workflow run/status for the trigger commit, so **no backend endpoint is claimed yet**;
-- ordinary indexed searches for `188533-FJA0T` remain closed unless new content appears.
+Phase 18V's GitHub Actions endpoint-extraction workflow was explicitly re-triggered on commit `9835b04b508b85c02114546bbe4fb63989dcfb22`.
+
+The workflow-run query for that exact SHA returned **zero runs**, and `results/phase18v_apl_binary_endpoint_audit.txt` still does not exist.
+
+Decision: **close this CI/binary extraction path as a technical surface.** This is not evidence that APL has no discoverable API; it only means this execution path is not producing data and should not consume further cycles.
+
+Fresh public app metadata still confirms:
+- Android package `az.affa.fantasy`, Fantaking;
+- public XAPK distribution exists;
+- current iOS tracking shows version `1.0.4`, updated 2026-08-24;
+- no indexed backend/standings endpoint is exposed by store metadata.
+
+The APL lead itself remains open.
 
 ## CURRENT CLASSIFICATION
 
@@ -127,13 +135,13 @@ Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qu
 - withdrawal treatment;
 - Misli private-league participant/team count.
 
-A fresh Phase 18V scan did not surface another current zero-cost offer with explicit `Lotereya` eligibility, so no EV-ledger classification changed.
+A fresh scan did not surface another current zero-cost offer with explicit `Lotereya` eligibility, so no EV-ledger classification changed.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Check for `results/phase18v_apl_binary_endpoint_audit.txt`; if it appears, inspect candidate public backend/API domains and query only public unauthenticated league/ranking routes for total rows of `188533-FJA0T`.
-2. If CI still does not execute, use another public app-artifact/static-analysis surface rather than repeating search-engine standings queries.
-3. Target exact APL Fantasy winner-result artifacts/comments/screenshots for a visible ranking footer/page count and the credited bonus wallet/type.
+1. Pivot from failed CI extraction to **public cached screenshots, result cards, app-store screenshots, winner artifacts and client-visible league pages**.
+2. Target evidence showing ranking footer/page count, total rows, member count, or a visible credited bonus-wallet/type for Misli `188533-FJA0T`.
+3. Use developer/privacy/help surfaces only when they expose a concrete API/base-domain clue; do not guess endpoints or repeat broad `188533-FJA0T` searches.
 4. Continue fresh scans for **zero-cost/free-entry offers with explicit `Lotereya` eligibility**; any such lead outranks APL immediately.
 5. Revisit RadioArena or 10→10 only on materially new evidence.
 6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized when classifications change; current/historical status must stay strictly separated.
