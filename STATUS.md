@@ -54,6 +54,7 @@ Do not reopen without materially new information:
 - `PHASE18N_WELCOME_BONUS_OFFICIAL_CONTRADICTION.md`: fresh first-party crawl reopened only the **status question** for 10→10 because the dedicated page says through 31 Aug while classification/FAQ/current index conflict.
 - `PHASE18O_WELCOME_BONUS_PUBLIC_SURFACE_EXHAUSTION.md`: same-day first-party dedicated page, current-campaign index and FAQ remained mutually inconsistent; repeated crawl of unchanged surfaces was stopped.
 - `PHASE18P_CURRENT_SURFACE_AND_RADIOARENA_RECHECK.md`: fresh 2026-08-26 current-campaign page no longer exposes the earlier literal `Cari kampaniya mövcud deyil`; this weakens that specific negative signal but does not prove 10→10 active. RadioArena terms remain unresolved; no new verified current Lottery/Super-Keno overlay was found.
+- `PHASE18Q_PROMOCODE_RULES_AND_FREE_ENTRY_BONUS_PATTERN.md`: generic Misli promo-code/help discovery is surface-exhausted publicly; RadioArena remains unresolved. A historical DÇ-2026 Fantasy league establishes a new zero-paid-spend modifier class: free external competition -> Misli bonus, though its bonus product scope is unresolved and the campaign is finished.
 
 ## 10→10 current classification
 
@@ -94,22 +95,39 @@ Do **not** stake for 10→10 unless one of these appears:
 
 Do not spend routine future research cycles re-crawling unchanged 10→10 surfaces unless one changes materially.
 
-## Other current lead
+## Other current leads
 
-Misli RadioArena publicly advertises weekday 20:00 / 106.3 FM chances to win **10 AZN promo codes**. Fresh Phase 18P search still does not resolve product scope/wagering/withdrawal/expiry/award count. Because the known public post is tagged `#Futbol`, keep it secondary until cross-product/Super-Keno eligibility is proven.
+### RadioArena promo code
+
+Misli publicly advertises weekday 20:00 / 106.3 FM chances to win **10 AZN promo codes**. Phase 18Q searched generic first-party promo-code/help/bonus surfaces instead of repeating the same post. Public `/komek-webview/bonus` and `/kampaniyalar` resolve as client-rendered shells and no indexed first-party generic promo-code rules expose product scope, wagering, withdrawal, expiry or award count.
+
+Classification remains:
+
+`current_terms_unresolved_sports_context`
+
+Do not repeat routine public generic-rule searches unless a materially new terms page/post/account surface appears.
+
+### Zero-paid-spend bonus pattern
+
+Historical official DÇ-2026 Fantasy posts show a free external competition where each round's top five received **50 / 40 / 30 / 20 / 10 AZN Misli bonuses**. Entry required FIFA Fantasy registration, a 15-player team and joining `Misli_az`; no paid Misli stake was stated as qualification.
+
+The campaign is finished by 2026-08-26 and its bonus product scope/wager/withdrawal rules are unresolved, so it is **not actionable**. It is retained as a new search class because future free-entry fantasy/quiz/social competitions can create bonus value without first overcoming the base-game paid-stake subsidy threshold.
+
+If a future free-entry bonus is explicitly one-wager Super-Keno eligible, 10/20/30/40/50 AZN face values correspond to approximate expected after-tax Super Keno cash of **5.9181 / 11.8361 / 17.7542 / 23.6723 / 29.5904 AZN** before bonus-specific restrictions.
 
 ## CURRENT CLASSIFICATION
 
 No **fully verified executable repeatable** positive-EV Super Keno modifier is known at the 2026-08-26 snapshot.
 
-10→10 remains conditionally positive but operationally unresolved. The fresh campaign-index crawl weakens one previous negative signal, but the execution gate is unchanged.
+10→10 remains conditionally positive but operationally unresolved. RadioArena remains product-scope unresolved. The new free-entry bonus pattern is historical, not executable.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Search first-party Misli promo-code/help/bonus rules for generic code product-scope behavior rather than repeating the same RadioArena post search.
-2. Scan newly dated Misli/Azerlotereya campaign/news/social material for explicit `Lotereya` qualification, free tickets, extra draws, free balance or cross-game reward mechanics.
-3. Passively recheck 10→10 only if a materially new operational/current signal appears; otherwise leave classification unchanged.
-4. Keep `results/phase18_ev_modifier_ledger.csv` synchronized and historical/current status strictly separated.
-5. For every live candidate, compute exact personal-capital EV before execution design.
-6. If any candidate is confirmed +EV, design a variance-aware distinct-ticket Super Keno execution with **N free** and total wager constrained only by modifier terms.
-7. Do not reopen rejected draw-history prediction branches without materially new information.
+1. Scan newly dated Misli Telegram/social/news specifically for **free-entry competitions, quizzes, fantasy rounds, promo giveaways, free balance and free tickets**, not only stake-linked campaigns.
+2. Search current Azerlotereya/Misli partner channels for explicit `Lotereya` qualification or a free lottery-ticket mechanism.
+3. For every bonus candidate, separate **qualification cost** from face value and prove product scope/wager/withdrawal before assigning Super Keno EV.
+4. Revisit RadioArena only on materially new product/terms evidence; generic public rule discovery is currently exhausted.
+5. Revisit 10→10 only on materially new operational/current evidence.
+6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized and historical/current status strictly separated.
+7. If any live zero-cost or +EV modifier becomes confirmed, design a variance-aware distinct-ticket Super Keno execution with **N free** and total wager constrained only by modifier terms.
+8. Do not reopen rejected draw-history prediction branches without materially new information.
