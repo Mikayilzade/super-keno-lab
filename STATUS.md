@@ -59,6 +59,7 @@ Latest checkpoints:
 - `PHASE18U_APL_PRIVATE_LEAGUE_DENOMINATOR_SURFACE_AUDIT.md`
 - `PHASE18V_APL_BINARY_ENDPOINT_AUDIT_SETUP.md`
 - `PHASE18W_APL_BINARY_PATH_CLOSED_AND_SURFACE_PIVOT.md`
+- `PHASE18X_PUBLIC_ARTIFACT_AND_CURRENT_CAMPAIGN_RECHECK.md`
 
 ## 10→10 classification
 
@@ -70,7 +71,7 @@ If operational and eligible, 10 AZN paid + 10 AZN bonus played once through 1x S
 - expected profit: **+1.83614067 AZN**;
 - expected personal-capital ROI: **1.183614067 (+18.3614%)**.
 
-Do **not** stake for 10→10 unless account UI, current `*2080` support, or a newly dated official source confirms operational eligibility. Do not spend routine cycles re-crawling unchanged public surfaces.
+The archived dedicated page still contains future-dated 31-August terms, but the official `Cari kampaniyalar` surface on 2026-08-26 again states that no current campaign is available. Therefore do **not** stake for 10→10 unless account UI, current `*2080` support, or a newly dated official source confirms operational eligibility. Do not spend routine cycles re-crawling unchanged public surfaces.
 
 ## RadioArena promo code
 
@@ -116,13 +117,19 @@ The workflow-run query for that exact SHA returned **zero runs**, and `results/p
 
 Decision: **close this CI/binary extraction path as a technical surface.** This is not evidence that APL has no discoverable API; it only means this execution path is not producing data and should not consume further cycles.
 
-Fresh public app metadata still confirms:
-- Android package `az.affa.fantasy`, Fantaking;
-- public XAPK distribution exists;
-- current iOS tracking shows version `1.0.4`, updated 2026-08-24;
-- no indexed backend/standings endpoint is exposed by store metadata.
+## Phase 18X — public artifact surface decision
 
-The APL lead itself remains open.
+Fresh cached/indexed APL winner/result text and image-search surfaces still expose only the already-known two weekly winner posts. They do not reveal:
+- Misli league total rows/member count;
+- bonus-wallet/product label;
+- `Lotereya` / Super Keno eligibility;
+- wagering count;
+- expiry;
+- withdrawal treatment.
+
+Decision: **stop routine repetition of the same APL public winner-post/image queries.** Revisit only on a newly dated weekly post, materially different screenshot/result card, or a client-visible standings surface.
+
+A fresh zero-cost / Lottery-eligible scan produced no new executable offer, so no EV-ledger classification changed.
 
 ## CURRENT CLASSIFICATION
 
@@ -135,15 +142,12 @@ Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qu
 - withdrawal treatment;
 - Misli private-league participant/team count.
 
-A fresh scan did not surface another current zero-cost offer with explicit `Lotereya` eligibility, so no EV-ledger classification changed.
-
 ## NEXT ACTION — Phase 18 continuation
 
-1. Pivot from failed CI extraction to **public cached screenshots, result cards, app-store screenshots, winner artifacts and client-visible league pages**.
-2. Target evidence showing ranking footer/page count, total rows, member count, or a visible credited bonus-wallet/type for Misli `188533-FJA0T`.
-3. Use developer/privacy/help surfaces only when they expose a concrete API/base-domain clue; do not guess endpoints or repeat broad `188533-FJA0T` searches.
-4. Continue fresh scans for **zero-cost/free-entry offers with explicit `Lotereya` eligibility**; any such lead outranks APL immediately.
-5. Revisit RadioArena or 10→10 only on materially new evidence.
-6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized when classifications change; current/historical status must stay strictly separated.
-7. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-8. Do not reopen rejected draw-history prediction branches without materially new information.
+1. Watch for the **next newly dated APL Fantasy weekly winner/result post**; inspect only if it exposes materially new standings or bonus-wallet information.
+2. Prioritize genuinely new **zero-cost/free-entry offers with explicit `Lotereya` eligibility**; any such lead outranks APL immediately.
+3. If a client-visible APL standings page or bonus-wallet screenshot becomes public, immediately extract Misli league denominator and bonus scope.
+4. Revisit RadioArena or 10→10 only on materially new operational evidence.
+5. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
+6. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+7. Do not reopen rejected draw-history prediction branches without materially new information.
