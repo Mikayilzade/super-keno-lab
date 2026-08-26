@@ -56,6 +56,7 @@ Latest checkpoints:
 - `PHASE18R_CURRENT_APL_FANTASY_ZERO_COST_BONUS.md`
 - `PHASE18S_APL_FANTASY_BONUS_TYPE_EVIDENCE.md`
 - `PHASE18T_APL_SCOPE_EXHAUSTION_AND_CASH_LEAGUE_BENCHMARK.md`
+- `PHASE18U_APL_PRIVATE_LEAGUE_DENOMINATOR_SURFACE_AUDIT.md`
 
 ## 10→10 classification
 
@@ -99,19 +100,17 @@ Conditional one-wager 1x Super Keno cash values, **only if Lotereya use and with
 - 20 AZN -> **11.8361 AZN**;
 - 30 AZN -> **17.7542 AZN**.
 
-Phase 18T conclusion: generic indexed searches for `Misli bonus + Lotereya/Super Keno` are now surface-exhausted. Misli repeatedly uses the same `bonusla ürəyincə əylən` wording across multiple fantasy promotions, so that phrase is **not** evidence of cross-product bonus eligibility.
+Phase 18T conclusion: generic indexed searches for `Misli bonus + Lotereya/Super Keno` are surface-exhausted. Misli repeatedly uses the same `bonusla ürəyincə əylən` wording across multiple fantasy promotions, so that phrase is **not** evidence of cross-product bonus eligibility.
 
-AFFA reports global APL Fantasy registrations above **10,000**, but this is not the Misli private-league denominator and must not be used as such.
+Phase 18U denominator audit:
+- Misli explicitly says winners are determined from Misli private-league results publicly shared on the official APL Fantasy site;
+- exact-code and site-scoped web search still exposes no standings URL or team count;
+- `aplfantasy.az` presents as an application shell to crawlers, so the likely remaining surface is the public client/API standings layer or a rendered result artifact;
+- on 2026-08-03 the platform had 3,700+ teams and dozens of leagues, with Misli specifically named among them; by the first round overall APL Fantasy reporting exceeded 14,000 users;
+- these global figures remain invalid as the Misli denominator;
+- Fanat.Az's separate private league at 500+ participants remains only a benchmark demonstrating that private leagues can be much smaller than the global platform.
 
-## New adjacent benchmark — Fanat.Az APL cash league
-
-Current APL Fantasy private league run by Fanat.Az reported **500+ participants** and a **50 AZN cash prize** for the second-round winner on 2026-08-24. It is a zero-cost, repeatable cash competition and proves that individual private-league denominators can be in the hundreds even when the global platform exceeds 10,000 users.
-
-Classification:
-
-`current_repeatable_zero_cost_cash_competition_adjacent_not_super_keno_modifier`
-
-It is **not counted as a Super Keno modifier** because the cash prize is earned in a separate fantasy skill competition rather than attached to Super Keno spend. It remains useful as a denominator benchmark and as evidence for liquid zero-cost overlays.
+Do **not** repeat ordinary search-engine variants for `188533-FJA0T` or generic Misli APL standings unless new indexed content appears.
 
 ## CURRENT CLASSIFICATION
 
@@ -122,15 +121,15 @@ Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qu
 - wagering count;
 - expiry;
 - withdrawal treatment;
-- Misli private-league participant count.
+- Misli private-league participant/team count.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Target exact APL Fantasy winner-result artifacts/comments/screenshots for the **credited bonus wallet/type**; generic bonus-rule searches are exhausted until new text appears.
-2. Attempt to recover the Misli private-league participant/team count from APL Fantasy public standings, result pages or exposed APIs; do not substitute the >10,000 global registration figure.
+1. Target the public APL Fantasy **client/API standings layer** or rendered league/result artifacts for league code `188533-FJA0T`; recover total rows/team count without substituting global registrations.
+2. Target exact APL Fantasy winner-result artifacts/comments/screenshots for a visible ranking footer/page count and the **credited bonus wallet/type**.
 3. Continue fresh scans for other **zero-cost/free-entry offers with explicit `Lotereya` eligibility**; any such lead outranks APL immediately.
 4. Track current APL partner/private leagues with cash/free-ticket/redeemable-value prizes and published denominators as an adjacent evidence stream, but keep them separate from Super Keno modifiers.
 5. Revisit RadioArena or 10→10 only on materially new evidence.
-6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized and current/historical status strictly separated.
+6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized when classifications change; current/historical status must stay strictly separated.
 7. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
 8. Do not reopen rejected draw-history prediction branches without materially new information.
