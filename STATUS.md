@@ -60,6 +60,7 @@ Latest checkpoints:
 - `PHASE18V_APL_BINARY_ENDPOINT_AUDIT_SETUP.md`
 - `PHASE18W_APL_BINARY_PATH_CLOSED_AND_SURFACE_PIVOT.md`
 - `PHASE18X_PUBLIC_ARTIFACT_AND_CURRENT_CAMPAIGN_RECHECK.md`
+- `PHASE18Y_FRESH_SOCIAL_FEED_AND_FANTASY_PATTERN_RECHECK.md`
 
 ## 10→10 classification
 
@@ -130,6 +131,16 @@ Fresh cached/indexed APL winner/result text and image-search surfaces still expo
 Decision: **stop routine repetition of the same APL public winner-post/image queries.** Revisit only on a newly dated weekly post, materially different screenshot/result card, or a client-visible standings surface.
 
 A fresh zero-cost / Lottery-eligible scan produced no new executable offer, so no EV-ledger classification changed.
+
+## Phase 18Y — fresh social-feed scan
+
+A new official-feed scan found **no newly dated zero-cost offer with explicit `Lotereya` / Super Keno eligibility**.
+
+However, older Misli English Fantasy Premier League posts independently reproduce the same operator pattern seen in APL Fantasy: free external Fantasy entry, join a Misli private league, then winners provide their Misli member number and receive/use a Misli bonus. This strengthens the interpretation that APL's 30/20/10 AZN awards are internal Misli-account bonuses rather than external vouchers.
+
+It does **not** prove product scope. Generic wording such as `bonusla ürəyincə əylən` must not be treated as evidence that the balance can be used in `Lotereya`.
+
+No APL post found in this run exposed Misli private-league row count, wagering, expiry or withdrawal treatment. Classification therefore does not change.
 
 ## CURRENT CLASSIFICATION
 
