@@ -40,6 +40,7 @@ Established facts:
 - sales can close at the scheduled cutoff even if not sold out, so under-sold draws are intended;
 - each purchased ticket has a chance number;
 - current parent page shows **11 draws dated 16.09.2026**;
+- current parent page on 2026-08-27 exposes **3 draws at 1 AZN and 8 draws at 0.5 AZN**;
 - recovered current IDs: 1 AZN `10065, 10064, 10066`; 0.5 AZN `10072, 10073, 10067, 10071, 10068, 10069, 10070, 10074`;
 - historical raw winning chance IDs use an offset/namespace, so `max(chance ID)` must **not** be used as sold count;
 - direct per-draw pages remain client shells to the crawler;
@@ -73,27 +74,35 @@ Azerbaijan State Tax Service guidance indicates property/non-cash lottery prizes
 
 where `h` is usable/resale value fraction.
 
-### Phase 18AN — coupon price conflict / execution guard
+### Phase 18AO — coupon price stale-source correction
 
-See `results/PHASE18AN_1001_SEVINC_COUPON_PRICE_CONFLICT.md`.
+See `results/PHASE18AO_1001_SEVINC_COUPON_PRICE_STALE_SOURCE_CORRECTION.md`.
 
-A fresh official Azerlotereya social/search surface exposes a **1000-AZN gift coupon at 1 AZN**, conflicting with the prior project assumption that the current 17%-sold coupon was **0.5 AZN**. Until price and sold% are tied to the same current drawId/date, the Phase 18AM coupon cap ceilings are **not execution-safe**.
+The source that triggered Phase 18AN's apparent **1-AZN current coupon** conflict was re-audited and is historical: it is the old Misli post that lists `iPhone 16 Pro Max`, AirPods Max and says prizes would be added by **18 July**. It therefore cannot price the current 16.09.2026 coupon.
 
-If the same current coupon is proven to be **1 AZN** and still **17% sold**, conservative property-tax break-even cap ceilings become:
-- 60% usable value: **~2,707**;
-- 70%: **~3,295**;
-- 80%: **~3,883**;
-- 100% face value: **~5,060**.
+**Current coupon price is again unresolved.** The official live parent page proves there are 3×1-AZN and 8×0.5-AZN current draws, but crawler-visible HTML still does not map prize names to those slots.
 
-These are approximately half the prior 0.5-AZN ceilings. No +EV claim is made until exact current price + sold% + cap/remaining are bound to one draw.
+If the current coupon with observed 17% sold is **0.5 AZN**, conservative property-tax break-even cap ceilings are approximately:
+- 60% usable value: **5,413**;
+- 70%: **6,589**;
+- 80%: **7,766**;
+- 100% face value: **10,119**.
+
+If the same current coupon is **1 AZN**, ceilings are approximately:
+- 60% usable value: **2,707**;
+- 70%: **3,295**;
+- 80%: **3,883**;
+- 100% face value: **5,060**.
+
+No +EV claim is made until exact current price + sold% + cap/remaining are bound to one draw.
 
 The official 1001 Sevinc explainer confirms the client surface shows how many tickets remain until the draw, so the required absolute denominator exists operationally even though crawler-accessible pages have not exposed it.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** bind the current 1000-AZN gift coupon to an exact drawId with explicit current **ticket price + sold% + draw date**; do not mix observations from different cycles.
+1. **Highest priority:** recover exact current prize→drawId mapping for the 1000-AZN gift coupon; price must come from that same current draw card, not an older social post.
 2. Recover predetermined **cap / absolute remaining / sold count** for that exact coupon draw. Second priority: Cosmic Orange.
-3. If price=1 AZN and sold%=17% belong to the same current coupon, use the stricter Phase 18AN ceilings; if a distinct 0.5-AZN coupon is proven, recompute only for that exact draw.
+3. Keep both 0.5-AZN and 1-AZN coupon EV thresholds live until exact mapping resolves the price.
 4. Seek first-party evidence for coupon tax/settlement classification; default to 14% property-prize treatment until proven otherwise.
 5. Re-snapshot sold percentages later to estimate velocity; always store observation date.
 6. If cap/remaining is recovered, compute conservative live ROI immediately with multiple value haircuts and friction.
