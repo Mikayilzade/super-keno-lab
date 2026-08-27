@@ -72,6 +72,16 @@ At the older 34% snapshot those ceilings were about 4,450 / 5,418 / 6,385 / 8,32
 
 Previously recovered indexed observations also included Deep Blue 35%, Silver 32%, PS5 Slim 55%, Galaxy S25 Ultra Black 42%, 1000-AZN gift coupon 17%, and iPad Air 26%; however only observations freshly bound to the current draw instance may be used for execution.
 
+### Phase 18AR — registration/client-surface audit
+
+See `results/PHASE18AR_1001_SEVINC_REGISTRATION_AND_CLIENT_SURFACE_AUDIT.md`.
+
+Fresh first-party crawl still reproduces Cosmic Orange at **43% sold**. The official game page identifies State Tax Service registration **№316 / 12.05.2025**, but targeted exact registration/name/domain searches did **not** recover a public indexed registration/rules document containing per-prize ticket quantities. Ordinary registry-number search is therefore closed unless a new registry surface appears.
+
+Important consistency warning: the same official parent page currently renders live cards as **3 × 1 AZN + 8 × 0.5 AZN**, while its static `Necə oynanılır?` copy still says `1, 2, 5 AZN`. Static explanatory copy can lag live configuration; execution price/category data must come only from a bound current card/draw observation.
+
+A materially different client-bundle fetch was attempted, but the execution container had no DNS/network access. This is a tooling blocker, not evidence that no client endpoint exists.
+
 ### Coupon observation status
 
 The old **1000-AZN gift coupon 17%** observation is **not execution-valid current data**. Phase 18AP could not freshly reproduce one current coupon record binding prize + price + sold% + 16.09.2026 date. Current coupon price also remains unresolved. Do not combine the old 17% snapshot with any current price or cap.
@@ -88,10 +98,10 @@ The official 1001 Sevinc explainer confirms the client surface shows how many ti
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority now:** Cosmic Orange is the strongest freshly reproducible finite-pool target. Recover its exact drawId and predetermined **cap / absolute remaining / sold count** from a materially different client/rendered surface.
-2. Re-snapshot the same Cosmic Orange card later with timestamp. Use multiple observations to bound sell-through velocity; do not rely on a single linear forecast.
+1. **Highest priority:** keep Cosmic Orange as the freshest bound target. Recover exact drawId and predetermined **cap / absolute remaining / sold count** from a materially different rendered/account/client surface; do not repeat ordinary registration-number search.
+2. Re-snapshot the same Cosmic Orange card later with timestamp. If sold% changes, recompute cap ceilings immediately; if the card disappears/stales, expire the 43% observation.
 3. If cap/remaining is recovered, compute live ROI immediately under 60/70/80/100% value haircuts, 14% property-prize tax and an execution buffer for sell-through between observation and purchase.
-4. In parallel, re-acquire the current 1000-AZN gift coupon only if it appears as one fresh bound record: prize + draw date + ticket price + sold% + timestamp. Do not reuse the expired 17% input otherwise.
+4. Re-acquire the current 1000-AZN gift coupon only if it appears as one fresh bound record: prize + draw date + ticket price + sold% + timestamp. Do not reuse the expired 17% input otherwise.
 5. Recover exact prize→drawId mapping for any newly bound coupon card before computing ROI.
 6. Seek first-party evidence for coupon tax/settlement classification; default to 14% property-prize treatment until proven otherwise.
 7. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
