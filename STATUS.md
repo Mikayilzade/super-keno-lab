@@ -95,9 +95,23 @@ Important implications:
 - exact mapping of the three iPhone colors to draw IDs `10065/10064/10066` remains unproven and must not be guessed from ordering;
 - at current 17% sold, the 1000-AZN coupon's no-haircut break-even cap ceiling is about **11,765 tickets**; with 20% value haircut, about **9,412**.
 
+### Phase 18AL — live cap-tolerance ranking
+
+See `results/PHASE18AL_1001_SEVINC_CAP_TOLERANCE_RANKING.md`.
+
+Current cap-tolerance ranking using live sold fractions and current Azerbaijan value benchmarks:
+
+1. **1000-AZN gift coupon** — 0.5 AZN ticket, 17% sold: break-even cap about **7,059 / 8,235 / 9,412 / 11,765** tickets at 60% / 70% / 80% / 100% usable value.
+2. **iPhone 17 Pro 256 GB Cosmic Orange** — 1 AZN ticket, 43% sold, 3,289-AZN current official-retailer benchmark: cap about **4,589 / 5,354 / 6,119 / 7,649** at the same value fractions.
+3. **PlayStation 5 Slim 1 TB** — 0.5 AZN ticket, 55% sold, ~1,449.99-AZN current retail benchmark: cap about **3,164 / 3,691 / 4,218 / 5,273**.
+
+The 1000-AZN coupon is therefore the **highest-information denominator target**: even with a severe value haircut it can tolerate a materially larger cap than the electronics cards. The official explainer explicitly states that players can see how many tickets remain until the draw, confirming that an absolute remaining-count exists in the operator/client surface even though the public crawler does not expose it.
+
+No +EV claim is made until exact cap/remaining is recovered.
+
 ## NEXT ACTION — Phase 18 continuation
 
-1. Continue priority search for predetermined **cap / absolute remaining / sold count** for current 16.09.2026 `1001 Sevinc` draws, especially Cosmic Orange and the 1000-AZN coupon.
+1. Highest priority: recover predetermined **cap / absolute remaining / sold count** for the current **1000-AZN gift coupon** draw; second priority Cosmic Orange.
 2. Bind prize names to exact draw IDs only from explicit evidence, never from card ordering alone.
 3. Re-snapshot current sold percentages on later dates to estimate sell-through velocity; always store crawl/observation date.
 4. If cap/remaining is recovered, compute conservative live ROI immediately using several `V_net` haircuts and tax/resale/usage friction.
