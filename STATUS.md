@@ -76,7 +76,19 @@ At retail benchmark `V=3,289 AZN`, 1-AZN ticket price and conservative 14% non-c
 
 A previously bound older snapshot for the same Cosmic Orange draw showed 34% sold; it is diagnostic only. Do not extrapolate crawl-to-crawl percentage movement linearly as a guaranteed transaction rate.
 
-Previously recovered indexed observations also included Deep Blue 35%, Silver 32%, PS5 Slim 55%, Galaxy S25 Ultra Black 42%, 1000-AZN gift coupon 17%, and iPad Air 26%; however only observations freshly bound to the current draw instance may be used for execution.
+Fresh 2026-08-27 indexing also exposes iPhone 17 Pro 256 GB Silver at **33% sold**, up from the previously recovered 32% snapshot, confirming sell-through is continuing.
+
+Previously recovered indexed observations also included Deep Blue 35%, PS5 Slim 55%, Galaxy S25 Ultra Black 42%, 1000-AZN gift coupon 17%, and iPad Air 26%; however only observations freshly bound to the current draw instance may be used for execution.
+
+### Public client/API endpoint audit — exhausted for now
+
+See `results/PHASE18AV_1001_SEVINC_PUBLIC_CLIENT_ENDPOINT_SURFACE_EXHAUSTION.md`.
+
+Targeted searches for `drawId`, `ticketCount`, `remainingTickets`, `soldCount`, exact `10065 + qalan bilet`, and exact current-prize remaining-count surfaces did **not** recover a public indexed first-party endpoint, JSON payload, static bundle field or absolute denominator. The detail page remains a client shell to the available crawler.
+
+A direct public-script inspection attempt was blocked by the execution environment's lack of external DNS and therefore provides no operator-side evidence. Do not treat that technical limitation as a game conclusion.
+
+Decision: do **not** repeat generic `10065 + remaining/cap/API-field` searches unless a materially new rendered/account/client surface appears.
 
 ### Registration/client-surface audit
 
@@ -100,14 +112,15 @@ where `h` is usable/resale value fraction.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** target **drawId=10065** directly and recover predetermined **cap / absolute remaining / sold count** from a materially different rendered/account/client surface; do not repeat ordinary registration-number or generic Trendyol searches.
-2. Re-snapshot Azerlotereya Cosmic Orange with timestamp. If sold% changes, expire 43% and recompute cap ceilings immediately. Do not interpret stale lower values from other surfaces as rollback.
-3. If cap/remaining is recovered, compute live ROI immediately under 60/70/80/100% value haircuts, 14% property-prize tax and an execution buffer for sell-through between observation and purchase.
-4. Re-acquire the current 1000-AZN gift coupon only if it appears as one fresh bound record: prize + draw date + ticket price + sold% + timestamp. Do not reuse the expired 17% input otherwise.
-5. Seek first-party evidence for coupon tax/settlement classification; default to 14% property-prize treatment until proven otherwise.
-6. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
-7. After APL round 3 completes, inspect the next newly dated result artifact once for materially new wallet/category/standings evidence.
-8. Revisit RadioArena or 10→10 only on materially new operational evidence.
-9. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
-10. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-11. Do not reopen rejected draw-history prediction branches without materially new information.
+1. **Highest priority:** rebuild the full current **11-prize table** for the 16.09.2026 cycle with fresh bound observations `(drawId where proven, prize, price, sold%, timestamp)` and rank candidates by break-even-cap tolerance under conservative net-value assumptions. Do not assume Cosmic Orange remains the best finite-pool target.
+2. Use the ranking to choose the best low-sold/high-value candidate for any next materially different denominator search. Avoid repeating exhausted generic `10065 + remaining/cap/API-field`, registration-number, or Trendyol searches.
+3. Re-snapshot Azerlotereya Cosmic Orange with timestamp. If sold% changes, expire 43% and recompute cap ceilings immediately. Do not interpret stale lower values from other surfaces as rollback.
+4. If cap/remaining is recovered for any current draw, compute live ROI immediately under 60/70/80/100% value haircuts, 14% property-prize tax and an execution buffer for sell-through between observation and purchase.
+5. Re-acquire the current 1000-AZN gift coupon only if it appears as one fresh bound record: prize + draw date + ticket price + sold% + timestamp. Do not reuse the expired 17% input otherwise.
+6. Seek first-party evidence for coupon tax/settlement classification; default to 14% property-prize treatment until proven otherwise.
+7. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
+8. After APL round 3 completes, inspect the next newly dated result artifact once for materially new wallet/category/standings evidence.
+9. Revisit RadioArena or 10→10 only on materially new operational evidence.
+10. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
+11. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+12. Do not reopen rejected draw-history prediction branches without materially new information.
