@@ -67,6 +67,7 @@ Latest checkpoints include:
 - `PHASE18AC_1001_SEVINC_FINITE_POOL_ROUTE.md`
 - `PHASE18AD_1001_SEVINC_UNDERSOLD_DRAW_RULE_CONFIRMED.md`
 - `PHASE18AE_1001_SEVINC_DRAW_ID_RESET_AND_STALE_PERCENT_CORRECTION.md`
+- `PHASE18AF_1001_SEVINC_CLIENT_SHELL_DENOMINATOR_BLOCKER.md`
 
 ## 10→10 classification
 
@@ -130,7 +131,7 @@ Decision: `explicit Lotereya-eligible promotional balance` is now a **proven ope
 
 This does **not** change APL Fantasy or RadioArena classifications. Generic `bonus` or `promokod` wording remains insufficient; exact product-category wording or account evidence is still required.
 
-## Phase 18AC–AE — active finite-pool mechanism
+## Phase 18AC–AF — active finite-pool mechanism
 
 A materially different operator-side mechanism was identified in active `1001 Sevinc` in-kind draws.
 
@@ -151,6 +152,10 @@ Important data-integrity correction from Phase 18AE:
 - the official social feed now reports that cycle's iPhone 17 Pro / Galaxy TAB S10+ / scooter / microwave / gift-coupon prizes as already drawn;
 - therefore the old 33% value is **expired observational evidence** and must not be used in the current 16.09.2026 ROI calculation.
 
+Phase 18AF directly opened all 11 current draw-ID URLs. The public crawler-visible detail pages expose only the client shell (`Tirajlar / Biletlərim / Tiraj nəticələri`) and do **not** server-render prize name, sold %, sold count, remaining count, or cap. Search-index queries combining the current IDs with `Satıldı` / `Qalan` likewise produced no current absolute denominator payload.
+
+Interpretation: current sold/remaining state is client-loaded and/or authenticated rather than available in the public HTML/search surface. Routine generic search against the same draw IDs is therefore closed until a new indexed screenshot/client payload appears.
+
 For `1001 Sevinc`, denominator data is valid only when keyed to:
 
 `(drawId, prize, ticket price, draw date, observed timestamp)`.
@@ -167,6 +172,7 @@ See:
 - `results/PHASE18AC_1001_SEVINC_FINITE_POOL_ROUTE.md`
 - `results/PHASE18AD_1001_SEVINC_UNDERSOLD_DRAW_RULE_CONFIRMED.md`
 - `results/PHASE18AE_1001_SEVINC_DRAW_ID_RESET_AND_STALE_PERCENT_CORRECTION.md`
+- `results/PHASE18AF_1001_SEVINC_CLIENT_SHELL_DENOMINATOR_BLOCKER.md`
 
 ## CURRENT CLASSIFICATION
 
@@ -179,7 +185,7 @@ Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qu
 - withdrawal treatment;
 - Misli private-league participant/team count.
 
-Separately, `1001 Sevinc` is the strongest materially new **finite-denominator operator mechanism**, but it is not yet classified +EV. Current 16.09.2026 draw IDs are known; current absolute denominators are not.
+Separately, `1001 Sevinc` is the strongest materially new **finite-denominator operator mechanism**, but it is not yet classified +EV. Current 16.09.2026 draw IDs are known; the public crawler/search surface does not expose their current absolute denominators.
 
 ## NEXT ACTION — Phase 18 continuation
 
@@ -189,6 +195,7 @@ Separately, `1001 Sevinc` is the strongest materially new **finite-denominator o
 4. Search for exact first-party phrases proving product scope (`Lotereya bölməsində istifadə`, `əlavə balans`, `dövriyyə şərti yoxdur`) rather than generic bonus language.
 5. Revisit RadioArena or 10→10 only on materially new operational evidence.
 6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
-7. Secondary finite-pool route: target current 16.09.2026 draw IDs **10064..10074** directly for exact cap / sold / remaining payloads or first-party screenshots. Never reuse sold percentages from prior draw IDs. Compute conservative ROI immediately if an absolute denominator becomes available.
-8. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-9. Do not reopen rejected draw-history prediction branches without materially new information.
+7. Secondary finite-pool route: **do not repeat generic search-index attempts for current draw IDs 10064..10074**. Target materially different public artifacts instead: newly indexed screenshots/social cards, first-party rendered images, cached client payloads, or any surface exposing an absolute `cap / sold / remaining` number tied to the exact draw ID.
+8. If an absolute current denominator is recovered, bind prize identity + ticket price + date + timestamp to the same draw ID and compute conservative live ROI immediately.
+9. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+10. Do not reopen rejected draw-history prediction branches without materially new information.
