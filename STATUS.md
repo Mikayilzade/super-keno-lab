@@ -52,38 +52,59 @@ If exact sold tickets `M` are recovered, conservative single-prize ROI is:
 `ROI = V_net / (p * M)`.
 If cap `C` and remaining `R` are recovered, use `M = C - R`.
 
-### Phase 18AJ — live sold% recovered
+### Phase 18AJ — first live sold% recovered
 
 See `results/PHASE18AJ_1001_SEVINC_LIVE_SOLD_PERCENT_AND_CAP_THRESHOLDS.md`.
 
-On **27 Aug 2026**, the official `1001 Sevinc / Tirajlar` surface was newly indexed with a current-cycle live observation:
-
+On 27 Aug 2026, the official `1001 Sevinc / Tirajlar` search-index surface exposed:
 - **iPhone 17 Pro 256 GB Cosmic Orange**;
 - ticket price **1 AZN**;
 - draw date **16.09.2026**;
 - **Satıldı: 43%**.
 
-This is the first safe current-cycle sell-through observation. Previous Deep Blue/Galaxy TAB/coupon social snippets belong to a completed cycle and remain invalid for current draw IDs.
+Current Azerbaijan retail benchmark used for this exact iPhone: **3,289 AZN**. At 43% sold, break-even cap thresholds were approximately:
+- 60% net value: **4,589**;
+- 70%: **5,354**;
+- 80%: **6,119**;
+- 100% retail ceiling: **7,649**.
 
-Current Azerbaijan official Apple-partner retail benchmark for this exact iPhone is **3,289 AZN**. This is a valuation ceiling/reference, not guaranteed net realizable value.
+### Phase 18AK — multi-prize live sell-through snapshot
 
-At 43% sold, break-even cap thresholds are:
-- if `V_net = 60%` of retail: cap **< 4,589**;
-- 70%: **< 5,354**;
-- 80%: **< 6,119**;
-- 100% retail ceiling: **< 7,649**.
+See `results/PHASE18AK_1001_SEVINC_MULTI_PRIZE_LIVE_SELLTHROUGH.md`.
 
-These are **cap thresholds, not proof of positive EV**. Absolute cap/remaining count is still missing, and the Cosmic Orange prize is not yet safely bound to one exact drawId among `10065/10064/10066`.
+The current first-party search index now exposes multiple current-cycle prize names and sold percentages.
+
+Current 1-AZN iPhone draws on Azerlotereya, crawled 27 Aug 2026:
+- Cosmic Orange **43%**;
+- Deep Blue **35%**;
+- Silver **32%**.
+
+Misli's index from about three days earlier showed approximately Cosmic **41–42%** and Deep Blue **33–34%**, giving the first short live sell-through trajectory. Treat crawl timing as coarse, but sales are directionally increasing by roughly 1–2 percentage points over a few days.
+
+Current 0.5-AZN observations on Azerlotereya:
+- PlayStation 5 Slim 1 TB **55%**;
+- Samsung Galaxy S25 Ultra Black **42%**;
+- 1000-AZN gift coupon **17%**;
+- iPad Air 13-inch (M2) Starlight 128GB **26%**.
+
+Misli's earlier index showed roughly PS5 **53%**, Samsung **41%**, coupon **16%**.
+
+Important implications:
+- denominator recovery is now **time-sensitive** because sold fraction is rising;
+- percentage alone still cannot prove EV;
+- exact mapping of the three iPhone colors to draw IDs `10065/10064/10066` remains unproven and must not be guessed from ordering;
+- at current 17% sold, the 1000-AZN coupon's no-haircut break-even cap ceiling is about **11,765 tickets**; with 20% value haircut, about **9,412**.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. Prioritize the now-current **Cosmic Orange** prize: recover predetermined cap or absolute remaining/sold count from newly indexed/rendered first-party cards, social artifacts, client/account surfaces or cached payloads.
-2. Bind Cosmic Orange to its exact drawId among `10065/10064/10066`; do not guess from ordering alone.
-3. If cap/remaining is recovered, compute conservative live ROI immediately using multiple `V_net` haircuts and tax/resale friction.
-4. If new current prizes expose sold%, record cap-threshold tables even before absolute cap is known; do not infer EV from percentage alone.
-5. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers that explicitly name `Lotereya` or expose a product-category label for credited bonus/promocode balance.
-6. After APL round 3 completes, inspect the next newly dated Misli APL result artifact once for materially new wallet/category/standings evidence.
-7. Revisit RadioArena or 10→10 only on materially new operational evidence.
-8. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
-9. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-10. Do not reopen rejected draw-history prediction branches without materially new information.
+1. Continue priority search for predetermined **cap / absolute remaining / sold count** for current 16.09.2026 `1001 Sevinc` draws, especially Cosmic Orange and the 1000-AZN coupon.
+2. Bind prize names to exact draw IDs only from explicit evidence, never from card ordering alone.
+3. Re-snapshot current sold percentages on later dates to estimate sell-through velocity; always store crawl/observation date.
+4. If cap/remaining is recovered, compute conservative live ROI immediately using several `V_net` haircuts and tax/resale/usage friction.
+5. Expand the current-cycle prize/sold table only when first-party indexed evidence exposes additional prizes; do not mix old-cycle snippets.
+6. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers that explicitly name `Lotereya` or expose a product-category label for credited bonus/promocode balance.
+7. After APL round 3 completes, inspect the next newly dated Misli APL result artifact once for materially new wallet/category/standings evidence.
+8. Revisit RadioArena or 10→10 only on materially new operational evidence.
+9. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
+10. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+11. Do not reopen rejected draw-history prediction branches without materially new information.
