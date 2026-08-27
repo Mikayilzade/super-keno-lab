@@ -75,13 +75,30 @@ Using ~3,150 AZN market value, the standing 14% property-prize tax model and 33%
 
 This is materially better cap tolerance than Cosmic Orange at 43% sold.
 
+### Phase 18BA — Silver freshness + execution buffer
+
+See `results/PHASE18BA_1001_SEVINC_SILVER_FRESHNESS_AND_EXECUTION_BUFFER.md`.
+
+A fresh first-party crawl on 2026-08-28 again explicitly shows Silver at **33% sold**, so the fully bound execution record is still fresh. Deep Blue is again present as a current 1-AZN card but its sold percentage is not safely attributable in the crawler output; do not infer it from neighboring text/order.
+
+For Silver, the break-even total-cap ceilings shrink materially if sell-through advances before execution. Using the same ~3,150 AZN market reference and 14% property-prize tax model:
+
+| usable value | 33% sold | 35% sold | 38% sold | 43% sold |
+|---:|---:|---:|---:|---:|
+| 60% | 4,391 | 4,140 | 3,814 | 3,370 |
+| 70% | 5,346 | 5,040 | 4,642 | 4,103 |
+| 80% | 6,300 | 5,940 | 5,471 | 4,835 |
+| 100% | 8,210 | 7,740 | 7,129 | 6,300 |
+
+Any future positive-EV call must therefore use the current sold fraction or a conservative forward execution buffer, not merely the latest historical snapshot.
+
 Current candidate hierarchy:
-1. **drawId=10066 Silver** — fully bound; 1 AZN; 16.09.2026; 33% sold; primary denominator target;
+1. **drawId=10066 Silver** — fully bound; 1 AZN; 16.09.2026; fresh 33% sold; primary denominator target;
 2. **drawId=10065 Cosmic Orange** — fully bound; 1 AZN; 16.09.2026; last complete first-party sold input 43%;
 3. **drawId=10064 Deep Blue** — prize/price/date bound, fresh sold% unresolved;
 4. iPad/S25 and other 0.5-AZN candidates — only re-promote on a fresh complete current-cycle artifact.
 
-The decisive variable remains absolute `cap / remaining / sold-count`. Direct exact-URL and targeted text searches in Phase 18AZ did not expose a denominator, so exhausted generic API/client-shell/registry/Trendyol/local-download paths remain closed.
+The decisive variable remains absolute `cap / remaining / sold-count`. Exhausted generic API/client-shell/registry/Trendyol/local-download paths remain closed.
 
 ### Property-prize tax model
 
@@ -91,7 +108,7 @@ Azerbaijan State Tax Service guidance indicates property/non-cash lottery prizes
 
 1. **Highest priority:** seek absolute `cap / remaining / sold-count` for fully bound `drawId=10066 Silver` through a materially different rendered/account/client artifact. Do not reopen exhausted generic API, registration-number, Trendyol or local-container-download paths.
 2. Continue denominator search for `drawId=10065 Cosmic Orange` only when the surface is genuinely different from already exhausted routes.
-3. Recover a fresh sold% for bound `drawId=10064 Deep Blue`; if materially below 33%, it may replace Silver as denominator target.
+3. Recover a fresh sold% for bound `drawId=10064 Deep Blue`; if materially below 33%, it may replace Silver as denominator target. Do not infer sold% from neighboring snippets.
 4. Re-promote iPad Air 13 M2 or Galaxy S25 Ultra immediately if a new first-party current-cycle artifact reproduces `(prize, price, 16.09.2026, sold%, timestamp)` and permits drawId binding.
 5. Recover other current 0.5-AZN candidates only from fresh current-cycle artifacts; never import previous-cycle prize names.
 6. If cap/remaining is recovered for any current draw, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer.
