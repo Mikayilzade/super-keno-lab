@@ -65,6 +65,8 @@ Latest checkpoints include:
 - `PHASE18AA_APL_ROUND3_TIMING_AND_FRESH_CANONICAL_FEED.md`
 - `PHASE18AB_PROMOCODE_BONUS_ARCHITECTURE_AND_FRESH_SCAN.md`
 - `PHASE18AC_1001_SEVINC_FINITE_POOL_ROUTE.md`
+- `PHASE18AD_1001_SEVINC_UNDERSOLD_DRAW_RULE_CONFIRMED.md`
+- `PHASE18AE_1001_SEVINC_DRAW_ID_RESET_AND_STALE_PERCENT_CORRECTION.md`
 
 ## 10→10 classification
 
@@ -128,28 +130,43 @@ Decision: `explicit Lotereya-eligible promotional balance` is now a **proven ope
 
 This does **not** change APL Fantasy or RadioArena classifications. Generic `bonus` or `promokod` wording remains insufficient; exact product-category wording or account evidence is still required.
 
-## Phase 18AC — active finite-pool mechanism discovered
+## Phase 18AC–AE — active finite-pool mechanism
 
 A materially different operator-side mechanism was identified in active `1001 Sevinc` in-kind draws.
 
-Current first-party/public surfaces establish:
-- each prize category has a finite ticket inventory and a predeclared draw date;
-- if the inventory sells out early, the draw may be moved earlier;
-- Misli exposes a live `Satıldı:` percentage for active items;
-- current indexed surface includes an iPhone 17 Pro 256 GB Deep Blue draw at **33% sold**;
-- current Azerlotereya surface lists eleven draws for **16.09.2026** at 0.5/1 AZN ticket prices.
+Established first-party facts:
+- each prize category has a finite predetermined ticket quantity and draw date;
+- sales stop either before the scheduled draw date or earlier when the predetermined ticket quantity is reached;
+- under-sold scheduled draws are therefore an intended operating state;
+- every purchased ticket has its own chance number;
+- the site exposes live sold/remaining information in client-visible surfaces;
+- the current game page has rolled to **11 new draws dated 16.09.2026**.
 
-If a draw occurs among sold tickets even when the inventory is under-subscribed, the generic single-prize ROI is approximately:
+Current first-party draw IDs recovered directly from the 11 live cards:
+- 1 AZN: **10065, 10064, 10066**;
+- 0.5 AZN: **10072, 10073, 10067, 10071, 10068, 10069, 10070, 10074**.
 
-`ROI = V / (p * M)`
+Important data-integrity correction from Phase 18AE:
+- an earlier search-indexed iPhone 17 Pro card at roughly **33% sold** belonged to a prior draw cycle;
+- the official social feed now reports that cycle's iPhone 17 Pro / Galaxy TAB S10+ / scooter / microwave / gift-coupon prizes as already drawn;
+- therefore the old 33% value is **expired observational evidence** and must not be used in the current 16.09.2026 ROI calculation.
 
-where `V` is conservative net realizable prize value, `p` ticket price and `M` valid sold-ticket count. This can exceed 1 when the realized denominator is sufficiently low.
+For `1001 Sevinc`, denominator data is valid only when keyed to:
 
-This is **not a Super Keno modifier** and is not added to the Super Keno EV-modifier ledger. It is retained as a separate secondary finite-pool route because it uses live denominator information rather than draw prediction.
+`(drawId, prize, ticket price, draw date, observed timestamp)`.
 
-Current blockers: exact ticket cap per draw, exact sold count, unsold-ticket treatment/minimum-sales rule, conservative prize resale value and in-kind tax/friction.
+If exact sold tickets `M` become available, conservative single-prize ROI is:
 
-See `results/PHASE18AC_1001_SEVINC_FINITE_POOL_ROUTE.md`.
+`ROI = V_net / (p * M)`.
+
+If cap `C` and remaining count `R` are available, use `M = C - R`.
+
+This is **not a Super Keno modifier** and is retained as a separate secondary finite-pool route. It remains unpromoted because absolute current caps/sold counts and conservative net prize value are not yet fully recovered.
+
+See:
+- `results/PHASE18AC_1001_SEVINC_FINITE_POOL_ROUTE.md`
+- `results/PHASE18AD_1001_SEVINC_UNDERSOLD_DRAW_RULE_CONFIRMED.md`
+- `results/PHASE18AE_1001_SEVINC_DRAW_ID_RESET_AND_STALE_PERCENT_CORRECTION.md`
 
 ## CURRENT CLASSIFICATION
 
@@ -162,7 +179,7 @@ Misli APL Fantasy remains the strongest live Super-Keno-adjacent lead because qu
 - withdrawal treatment;
 - Misli private-league participant/team count.
 
-Separately, `1001 Sevinc` is now the strongest materially new **finite-denominator operator mechanism**, but it is not yet classified +EV and is kept separate from Super Keno.
+Separately, `1001 Sevinc` is the strongest materially new **finite-denominator operator mechanism**, but it is not yet classified +EV. Current 16.09.2026 draw IDs are known; current absolute denominators are not.
 
 ## NEXT ACTION — Phase 18 continuation
 
@@ -172,6 +189,6 @@ Separately, `1001 Sevinc` is now the strongest materially new **finite-denominat
 4. Search for exact first-party phrases proving product scope (`Lotereya bölməsində istifadə`, `əlavə balans`, `dövriyyə şərti yoxdur`) rather than generic bonus language.
 5. Revisit RadioArena or 10→10 only on materially new operational evidence.
 6. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
-7. Secondary finite-pool route: recover `1001 Sevinc` ticket caps / sold counts / unsold-ticket treatment for current draw IDs and compute conservative ROI bounds if the denominator becomes available.
+7. Secondary finite-pool route: target current 16.09.2026 draw IDs **10064..10074** directly for exact cap / sold / remaining payloads or first-party screenshots. Never reuse sold percentages from prior draw IDs. Compute conservative ROI immediately if an absolute denominator becomes available.
 8. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
 9. Do not reopen rejected draw-history prediction branches without materially new information.
