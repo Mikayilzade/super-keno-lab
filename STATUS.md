@@ -62,63 +62,68 @@ On 27 Aug 2026, the official `1001 Sevinc / Tirajlar` search-index surface expos
 - draw date **16.09.2026**;
 - **Satıldı: 43%**.
 
-Current Azerbaijan retail benchmark used for this exact iPhone: **3,289 AZN**. At 43% sold, break-even cap thresholds were approximately:
-- 60% net value: **4,589**;
-- 70%: **5,354**;
-- 80%: **6,119**;
-- 100% retail ceiling: **7,649**.
+Current Azerbaijan retail benchmark used for this exact iPhone: **3,289 AZN**.
 
 ### Phase 18AK — multi-prize live sell-through snapshot
 
 See `results/PHASE18AK_1001_SEVINC_MULTI_PRIZE_LIVE_SELLTHROUGH.md`.
 
-The current first-party search index now exposes multiple current-cycle prize names and sold percentages.
-
-Current 1-AZN iPhone draws on Azerlotereya, crawled 27 Aug 2026:
-- Cosmic Orange **43%**;
+Current first-party search-index observations on 27 Aug 2026:
+- iPhone 17 Pro Cosmic Orange **43%**;
 - Deep Blue **35%**;
-- Silver **32%**.
-
-Misli's index from about three days earlier showed approximately Cosmic **41–42%** and Deep Blue **33–34%**, giving the first short live sell-through trajectory. Treat crawl timing as coarse, but sales are directionally increasing by roughly 1–2 percentage points over a few days.
-
-Current 0.5-AZN observations on Azerlotereya:
+- Silver **32%**;
 - PlayStation 5 Slim 1 TB **55%**;
 - Samsung Galaxy S25 Ultra Black **42%**;
 - 1000-AZN gift coupon **17%**;
 - iPad Air 13-inch (M2) Starlight 128GB **26%**.
 
-Misli's earlier index showed roughly PS5 **53%**, Samsung **41%**, coupon **16%**.
+Earlier Misli index values imply sell-through is directionally rising by roughly 1–2 percentage points over several days for some prizes. Percent alone still cannot prove EV.
 
-Important implications:
-- denominator recovery is now **time-sensitive** because sold fraction is rising;
-- percentage alone still cannot prove EV;
-- exact mapping of the three iPhone colors to draw IDs `10065/10064/10066` remains unproven and must not be guessed from ordering;
-- at current 17% sold, the 1000-AZN coupon's no-haircut break-even cap ceiling is about **11,765 tickets**; with 20% value haircut, about **9,412**.
+### Phase 18AM — property-prize tax correction
 
-### Phase 18AL — live cap-tolerance ranking
+See `results/PHASE18AM_1001_SEVINC_PROPERTY_PRIZE_TAX_CORRECTION.md`.
 
-See `results/PHASE18AL_1001_SEVINC_CAP_TOLERANCE_RANKING.md`.
+New first-party tax evidence materially corrects prior cap ceilings. Azerbaijan State Tax Service guidance states that lottery prizes paid in **property/non-cash form** are treated as non-business income; after deducting participation cash outlay, the remaining amount is taxed at **14%**. The 500-AZN lottery exemption discussed elsewhere applies to **cash-form** winnings.
 
-Current cap-tolerance ranking using live sold fractions and current Azerbaijan value benchmarks:
+Therefore physical-prize EV must use, approximately:
 
-1. **1000-AZN gift coupon** — 0.5 AZN ticket, 17% sold: break-even cap about **7,059 / 8,235 / 9,412 / 11,765** tickets at 60% / 70% / 80% / 100% usable value.
-2. **iPhone 17 Pro 256 GB Cosmic Orange** — 1 AZN ticket, 43% sold, 3,289-AZN current official-retailer benchmark: cap about **4,589 / 5,354 / 6,119 / 7,649** at the same value fractions.
-3. **PlayStation 5 Slim 1 TB** — 0.5 AZN ticket, 55% sold, ~1,449.99-AZN current retail benchmark: cap about **3,164 / 3,691 / 4,218 / 5,273**.
+`V_after_tax = V - 0.14 * (V - p)`
 
-The 1000-AZN coupon is therefore the **highest-information denominator target**: even with a severe value haircut it can tolerate a materially larger cap than the electronics cards. The official explainer explicitly states that players can see how many tickets remain until the draw, confirming that an absolute remaining-count exists in the operator/client surface even though the public crawler does not expose it.
+and a conservative resale/use model:
+
+`V_economic = h*V - 0.14*(V-p)`
+
+where `h` is usable/resale value fraction. This is stricter than taxing only the haircut value.
+
+Corrected current break-even cap ceilings:
+
+1. **1000-AZN gift coupon**, 0.5 AZN ticket, 17% sold — assuming conservative property-prize tax treatment until exact coupon classification is proven:
+   - 60% usable value: **~5,413** cap;
+   - 70%: **~6,589**;
+   - 80%: **~7,766**;
+   - 100% face value: **~10,118**.
+2. **iPhone 17 Pro 256 GB Cosmic Orange**, 1 AZN, 43% sold, 3,289-AZN retail benchmark:
+   - after-tax full-use value ≈ **2,828.68 AZN**;
+   - break-even cap ≈ **6,578** before any resale haircut.
+3. **PS5 Slim 1 TB**, 0.5 AZN, 55% sold, ~1,449.99-AZN benchmark:
+   - after-tax full-use value ≈ **1,247.06 AZN**;
+   - break-even cap ≈ **4,535** before resale haircut.
+
+Previous untaxed Phase 18AL ceilings must **not** be used for execution. The coupon remains the highest-information denominator target, but its tax classification is itself an unresolved variable: gift coupon may be property/voucher/cash-equivalent operationally. Until proven otherwise, use the 14% property-prize model.
 
 No +EV claim is made until exact cap/remaining is recovered.
 
 ## NEXT ACTION — Phase 18 continuation
 
 1. Highest priority: recover predetermined **cap / absolute remaining / sold count** for the current **1000-AZN gift coupon** draw; second priority Cosmic Orange.
-2. Bind prize names to exact draw IDs only from explicit evidence, never from card ordering alone.
-3. Re-snapshot current sold percentages on later dates to estimate sell-through velocity; always store crawl/observation date.
-4. If cap/remaining is recovered, compute conservative live ROI immediately using several `V_net` haircuts and tax/resale/usage friction.
-5. Expand the current-cycle prize/sold table only when first-party indexed evidence exposes additional prizes; do not mix old-cycle snippets.
-6. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers that explicitly name `Lotereya` or expose a product-category label for credited bonus/promocode balance.
-7. After APL round 3 completes, inspect the next newly dated Misli APL result artifact once for materially new wallet/category/standings evidence.
-8. Revisit RadioArena or 10→10 only on materially new operational evidence.
-9. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
-10. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-11. Do not reopen rejected draw-history prediction branches without materially new information.
+2. Seek first-party evidence for the **tax/settlement classification of the 1000-AZN gift coupon**; default conservatively to 14% property-prize treatment until proven otherwise.
+3. Bind prize names to exact draw IDs only from explicit evidence, never from card ordering alone.
+4. Re-snapshot current sold percentages on later dates to estimate sell-through velocity; always store crawl/observation date.
+5. If cap/remaining is recovered, compute conservative live ROI immediately using property-form tax, multiple `V_net` haircuts, resale/usage friction and any exact coupon-specific treatment.
+6. Expand the current-cycle prize/sold table only when first-party indexed evidence exposes additional prizes; do not mix old-cycle snippets.
+7. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers that explicitly name `Lotereya` or expose a product-category label for credited bonus/promocode balance.
+8. After APL round 3 completes, inspect the next newly dated Misli APL result artifact once for materially new wallet/category/standings evidence.
+9. Revisit RadioArena or 10→10 only on materially new operational evidence.
+10. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
+11. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+12. Do not reopen rejected draw-history prediction branches without materially new information.
