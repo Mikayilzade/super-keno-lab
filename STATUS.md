@@ -53,9 +53,9 @@ If exact sold tickets `M` are recovered:
 `ROI = V_net / (p * M)`.
 If cap `C` and remaining `R` are recovered, use `M = C - R`.
 
-### Live sell-through snapshot — 27 Aug 2026
+### Live sell-through snapshot integrity — 27 Aug 2026
 
-First-party indexed observations previously recovered:
+Previously recovered indexed observations included:
 - iPhone 17 Pro Cosmic Orange **43%**;
 - Deep Blue **35%**;
 - Silver **32%**;
@@ -64,7 +64,11 @@ First-party indexed observations previously recovered:
 - 1000-AZN gift coupon **17%**;
 - iPad Air 13-inch (M2) Starlight 128GB **26%**.
 
-Sell-through is directionally rising by roughly 1–2 percentage points over several days for some prizes. Percent alone cannot prove EV.
+Phase 18AP rechecked the current public first-party index. The **Cosmic Orange 43% / 1 AZN / 16.09.2026** card is freshly reproducible, but targeted searches did **not** reproduce a current 1000-AZN coupon card with its price + sold% + draw date bound together.
+
+Therefore the old coupon **17% sold observation is no longer an execution-valid live input**. Retain it as a prior snapshot only. Do not use it to claim current ROI until the coupon card is freshly re-observed and tied to current price/drawId/date.
+
+Sell-through percentages are draw-instance/time-specific state. Percent alone cannot prove EV.
 
 ### Property-prize tax model
 
@@ -78,33 +82,29 @@ where `h` is usable/resale value fraction.
 
 See `results/PHASE18AO_1001_SEVINC_COUPON_PRICE_STALE_SOURCE_CORRECTION.md`.
 
-The source that triggered Phase 18AN's apparent **1-AZN current coupon** conflict was re-audited and is historical: it is the old Misli post that lists `iPhone 16 Pro Max`, AirPods Max and says prizes would be added by **18 July**. It therefore cannot price the current 16.09.2026 coupon.
+The source that triggered Phase 18AN's apparent **1-AZN current coupon** conflict was historical and cannot price the current 16.09.2026 coupon.
 
-**Current coupon price is again unresolved.** The official live parent page proves there are 3×1-AZN and 8×0.5-AZN current draws, but crawler-visible HTML still does not map prize names to those slots.
+**Current coupon price remains unresolved.** The official live parent page proves there are 3×1-AZN and 8×0.5-AZN current draws, but crawler-visible HTML still does not map prize names to those slots.
 
-If the current coupon with observed 17% sold is **0.5 AZN**, conservative property-tax break-even cap ceilings are approximately:
-- 60% usable value: **5,413**;
-- 70%: **6,589**;
-- 80%: **7,766**;
-- 100% face value: **10,119**.
+Former coupon cap thresholds based on `sold=17%` are now **diagnostic only** after Phase 18AP because the 17% value was not freshly reproducible in a current bound coupon card.
 
-If the same current coupon is **1 AZN**, ceilings are approximately:
-- 60% usable value: **2,707**;
-- 70%: **3,295**;
-- 80%: **3,883**;
-- 100% face value: **5,060**.
+### Phase 18AP — coupon live-observation expiry
 
-No +EV claim is made until exact current price + sold% + cap/remaining are bound to one draw.
+See `results/PHASE18AP_1001_SEVINC_COUPON_LIVE_OBSERVATION_EXPIRY.md`.
+
+Fresh 27-Aug first-party crawl still confirms the current 11-draw 16.09.2026 set. The current index reproducibly exposes Cosmic Orange at **1 AZN / 43% sold / 16.09.2026**, but does not currently reproduce the 1000-AZN coupon card under targeted current-date/price/sold queries.
+
+Decision: do not combine the earlier coupon 17% observation with any current price or cap unless it is re-observed as one current record.
 
 The official 1001 Sevinc explainer confirms the client surface shows how many tickets remain until the draw, so the required absolute denominator exists operationally even though crawler-accessible pages have not exposed it.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** recover exact current prize→drawId mapping for the 1000-AZN gift coupon; price must come from that same current draw card, not an older social post.
-2. Recover predetermined **cap / absolute remaining / sold count** for that exact coupon draw. Second priority: Cosmic Orange.
-3. Keep both 0.5-AZN and 1-AZN coupon EV thresholds live until exact mapping resolves the price.
+1. **Highest priority:** re-acquire the current 1000-AZN gift coupon card as one fresh bound record: prize + draw date + ticket price + sold% + timestamp; then recover exact prize→drawId mapping.
+2. Recover predetermined **cap / absolute remaining / sold count** for that exact coupon draw. Do not use the old 17% snapshot unless freshly reproduced.
+3. In parallel, Cosmic Orange is the strongest currently reproducible finite-pool target: **1 AZN / 43% / 16.09.2026**. Recover its exact drawId and cap/remaining.
 4. Seek first-party evidence for coupon tax/settlement classification; default to 14% property-prize treatment until proven otherwise.
-5. Re-snapshot sold percentages later to estimate velocity; always store observation date.
+5. Re-snapshot sell-through later to estimate velocity; always store observation date and never transfer percentages across draw cycles.
 6. If cap/remaining is recovered, compute conservative live ROI immediately with multiple value haircuts and friction.
 7. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
 8. After APL round 3 completes, inspect the next newly dated result artifact once for materially new wallet/category/standings evidence.
