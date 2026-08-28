@@ -1,6 +1,6 @@
 # Super Keno Lab — status
 
-Last updated: 2026-08-28
+Last updated: 2026-08-29
 
 ## Phase
 
@@ -18,7 +18,7 @@ Last updated: 2026-08-28
 
 ## Current conclusion
 
-No **fully verified executable repeatable positive-EV Super Keno modifier** is known at the 2026-08-28 snapshot.
+No **fully verified executable repeatable positive-EV Super Keno modifier** is known at the 2026-08-29 snapshot.
 
 ### Modifier state
 
@@ -51,7 +51,8 @@ Established facts:
 - Trendyol Azerbaijan is an official `1001 Sevinc` e-commerce sub-distributor with a `Sifarişlərim / My Orders -> 1001 Sevinc` account surface, but public Trendyol searching exposed no denominator field and is bounded until a new authenticated/runtime artifact appears;
 - Misli mobile app has a live `Lotereya -> 1001 Sevinc` surface; generic public Misli searching is bounded;
 - Phase 18BU identified the exact current first-party Android binary entrypoint: `https://yukle.misli.az/misliaz_android.apk?v=1361` with Android-package MIME;
-- **Phase 18BV bounded the current APK-acquisition route:** browser-backed fetch still reaches the exact APK and rejects body extraction only because of `application/vnd.android.package-archive`; direct container download attempts fail at DNS resolution for `yukle.misli.az`, and fresh exact-string searches recover no cache, mirror, hash, package name, versionCode, or decompiled Azerbaijan build. This is an execution-environment/retrieval boundary, not evidence the APK is unavailable. Generic mirror/package searching for build 1361 is now deprioritized until a new build/cache/file-reference surface appears.
+- Phase 18BV bounded the current APK-acquisition route: browser-backed fetch reaches the exact APK but cannot persist its package MIME; direct container download remains DNS-blocked and no useful cache/mirror/package identifier was found;
+- **Phase 18BW tested the newly surfaced `endir.misli.az` lead and bounded it:** the hostname is historically legitimate but currently redirects to `yukle.misli.az`, whose Android control still resolves to build `v=1361`. It is not an independent CDN/file route and should not be reprobed unless redirect/DNS/file-reference evidence materially changes.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -93,11 +94,12 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 - `results/PHASE18BT_MISLI_CURRENT_MOBILE_SURFACE_AND_DENOMINATOR_BOUNDARY.md`
 - `results/PHASE18BU_MISLI_OFFICIAL_ANDROID_APK_RUNTIME_ENTRYPOINT.md`
 - `results/PHASE18BV_MISLI_APK_1361_ACQUISITION_BOUNDARY.md`
+- `results/PHASE18BW_ENDIR_REDIRECT_SURFACE_AND_ANDROID_ROUTE_BOUNDARY.md`
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` through a runtime/file reference/cache that can persist binary content. Once available, statically extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` product-card schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
-2. Do **not** repeat generic exact-string mirror/package searches for build 1361 unless there is a materially new build number, cache surface, package identifier, support artifact, or retrievable file reference.
+1. **Highest priority:** obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` through a genuinely new runtime/file reference/cache/CDN artifact that can persist binary content. Once available, statically extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` product-card schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
+2. Do **not** repeat generic exact-string mirror/package searches for build 1361, and do not treat `endir.misli.az` as independent from `yukle.misli.az`, unless there is a materially new build number, direct-file URL, cache surface, package identifier, DNS/CDN target, response-header artifact, support artifact, or retrievable file reference.
 3. In parallel, prioritize genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing an absolute denominator for current `10066 Silver` / `10072 S25`.
 4. For Trendyol, revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
 5. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
