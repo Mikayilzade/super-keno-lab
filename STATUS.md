@@ -28,12 +28,13 @@ No **fully verified executable repeatable positive-EV Super Keno modifier** is k
 - RadioArena promo: `current_terms_unresolved_sports_context`; revisit only on materially new product-scope/account evidence.
 - Misli APL Fantasy: `current_repeatable_free_entry_bonus_product_scope_unresolved`; 30/20/10 AZN weekly bonus, zero paid gambling spend stated for qualification, but `Lotereya` eligibility/wagering/expiry/withdrawal and exact Misli private-league denominator remain unresolved.
 - Do not search for APL round-3 winner artifacts before round 3 is complete (28–31 Aug 2026).
+- Fresh modifier scan in Phase 18BG found no new zero-cost offer explicitly proving current `Lotereya` eligibility.
 
 Historical official 10→10 terms prove promotional balance can be explicitly scoped to `Lotereya` and produce withdrawable winnings. Generic `bonus` wording alone is not evidence that another promotion has this scope.
 
 ## Secondary finite-pool route — `1001 Sevinc`
 
-This is the strongest materially different operator-side finite-denominator mechanism currently known.
+This remains the strongest materially different operator-side finite-denominator mechanism currently known.
 
 Established facts:
 - each prize category has a finite predetermined ticket quantity and draw date;
@@ -41,7 +42,8 @@ Established facts:
 - current parent page shows **11 draws dated 16.09.2026**: 3 at 1 AZN and 8 at 0.5 AZN;
 - current link order recovered as: `10065,10064,10066,10072,10073,10067,10071,10068,10069,10070,10074`;
 - historical raw winning chance IDs use an offset/namespace, so `max(chance ID)` must not be used as sold count;
-- generic API/client-shell/registry/Trendyol/local-download paths have not exposed current cap/sold/remaining and remain closed unless materially new surface appears.
+- generic API/client-shell/registry/Trendyol/local-download/public-Telegram paths have not exposed current cap/sold/remaining and remain closed unless materially new surface appears;
+- official explainer states the account/client surface can show how many tickets remain until the draw, confirming that the absolute denominator exists operationally.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -52,22 +54,7 @@ If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and r
 - `10064` — iPhone 17 Pro 256 GB Deep Blue — 1 AZN — 16.09.2026 — fresh sold% unresolved; older Misli snapshot ~34% is monitoring only.
 - `10066` — iPhone 17 Pro 256 GB Silver — 1 AZN — 16.09.2026 — fresh first-party sold **33%**; current execution target #1.
 - `10072` — Samsung Galaxy S25 Ultra Black — 0.5 AZN — 16.09.2026 — drawId-bound; current sold% still requires fresh reacquisition before execution use.
-
-### Phase 18BC — S25 binding + coupon price resolution
-
-See `results/PHASE18BC_1001_SEVINC_S25_DRAWID_AND_COUPON_PRICE_RESOLUTION.md`.
-
-A current-cycle Misli cache exposes the DOM/card sequence `Silver (1 AZN) -> Samsung Galaxy S25 Ultra Black (0.5 AZN)`. Since Silver is already `10066` and the recovered current link order switches immediately after it to the first 0.5-AZN ID, **S25 is safely bound to `drawId=10072`**. This is an order binding within the same 16.09.2026 cycle, not an inference from prize similarity.
-
-The same current-cycle cache also shows `PlayStation 5 Slim 1 TB (0.5 AZN) -> 1000 AZN-lik Hədiyyə Kuponu (0.5 AZN)`. Therefore the current-cycle **1000-AZN gift coupon ticket price is resolved as 0.5 AZN**. Its drawId and fresh sold% remain unresolved; the expired 17% observation must not be reused.
-
-### Phase 18BF — S25 fresh sell-through reacquisition failed
-
-See `results/PHASE18BF_1001_SEVINC_S25_FRESHNESS_REACQUISITION_FAILED.md`.
-
-Targeted first-party searches on 2026-08-28 did **not** return a complete current S25 record containing prize + 0.5 AZN price + 16.09.2026 date + sold percentage. Therefore the older ~41% S25 observation remains monitoring-only and cannot be used for live ROI ranking. The same fresh Azerlotereya surface still reproduces Cosmic Orange at **43% sold**, so the missing S25 percentage is a current rendering/indexing limitation, not evidence that the entire cycle is stale.
-
-No materially new absolute denominator surface appeared. `10066 Silver` therefore remains denominator target #1 until S25 receives a new complete first-party sold observation or another better-bound 0.5-AZN candidate appears.
+- `1000-AZN gift coupon` — current ticket price resolved as **0.5 AZN**; drawId and fresh sold% unresolved; expired 17% observation must not be reused.
 
 ### Silver execution buffer
 
@@ -86,27 +73,38 @@ Any future positive-EV call must use current sold fraction or a conservative for
 
 Azerbaijan State Tax Service guidance indicates property/non-cash lottery prizes are treated as non-business income; after deducting participation cash outlay, the remainder is taxed at **14%**. Until prize-specific classification is proven otherwise, use `V_economic = h*V - 0.14*(V-p)`, where `h` is usable/resale value fraction.
 
+### Phase 18BG — controlled sold-% transition cap solver
+
+See `results/PHASE18BG_1001_SEVINC_PERCENT_TRANSITION_CAP_PROBE.md` and `scripts/phase18bg_percent_transition_cap_solver.py`.
+
+No new public absolute denominator was found. A new non-API fallback has been formalized: infer hidden ticket cap `C` from the integer `Satıldı %` display across **controlled consecutive percentage transitions**. Under a floor-display model, visible `p%` implies `ceil(p*C/100) <= M <= ceil((p+1)*C/100)-1`; known cumulative ticket additions allow these intervals to be intersected across observations. The solver supports floor and nearest-integer models.
+
+A single percentage jump does not identify `C`. The useful pattern is the last no-change point and first-change point around **two consecutive percentage boundaries**. This can narrow a cap near ~5k to a tight band. External purchases contaminate exact inference, so any such test would need a short observation window and conservative bounds.
+
+**No paid probe was executed and no autonomous spend is authorized.** The route is kept as a fallback if account screenshots/observations become available or if a controlled manual probe is later explicitly chosen.
+
 ## Current candidate hierarchy
 
-1. **`10066 Silver`** — fully bound; 1 AZN; fresh 33% sold; denominator target #1 because it has the freshest complete execution record.
-2. **`10072 S25 Ultra Black`** — fully drawId-bound; 0.5 AZN; potentially superior economics, but fresh sold% could not be reacquired in Phase 18BF and the old ~41% remains monitoring-only.
+1. **`10066 Silver`** — fully bound; 1 AZN; fresh 33% sold; denominator target #1.
+2. **`10072 S25 Ultra Black`** — fully drawId-bound; 0.5 AZN; potentially superior economics, but fresh sold% remains unresolved.
 3. `10065 Cosmic Orange` — fully bound; 1 AZN; last complete sold input 43%.
 4. `10064 Deep Blue` — fully bound; 1 AZN; fresh sold% unresolved.
-5. `1000-AZN gift coupon` — current price now resolved at 0.5 AZN; drawId and fresh sold% unresolved.
+5. `1000-AZN gift coupon` — current price 0.5 AZN; drawId and fresh sold% unresolved.
 
 The decisive variable remains absolute `cap / remaining / sold-count`.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** seek absolute `cap / remaining / sold-count` for `10066 Silver` and `10072 S25` only through materially new rendered/account/client artifacts. Do not reopen exhausted generic API, registry, Trendyol or local-download paths.
-2. Reacquire a fresh complete first-party sold percentage for `10072 / S25` only when a newly dated/current card or rendered artifact surfaces; do not spend repeated cycles on the same exhausted queries.
-3. Recover a fresh sold% for `10064 Deep Blue`; never infer it from neighboring snippets.
-4. Bind the 1000-AZN gift coupon to a current drawId and reacquire its sold% as one fresh record; current ticket price is resolved at 0.5 AZN.
-5. Recover other current 0.5-AZN candidates only from current-cycle artifacts; never import previous-cycle prize names.
-6. If cap/remaining is recovered for any current draw, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer.
-7. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
-8. After APL round 3 completes, inspect the next newly dated result artifact once for materially new wallet/category/standings evidence.
-9. Revisit RadioArena or 10→10 only on materially new operational evidence.
-10. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
-11. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-12. Do not reopen rejected draw-history prediction branches without materially new information.
+1. **Highest priority:** seek absolute `cap / remaining / sold-count` for `10066 Silver` and `10072 S25` only through materially new rendered/account/client artifacts. Do not reopen exhausted generic API, registry, Trendyol, local-download or stale social paths.
+2. If sequential account/rendered sold-% observations around known ticket additions become available, run `scripts/phase18bg_percent_transition_cap_solver.py` immediately; do not execute paid probes autonomously.
+3. Reacquire a fresh complete first-party sold percentage for `10072 / S25` only when a newly dated/current card or rendered artifact surfaces.
+4. Recover a fresh sold% for `10064 Deep Blue`; never infer it from neighboring snippets.
+5. Bind the 1000-AZN gift coupon to a current drawId and reacquire its sold% as one fresh record.
+6. Recover other current 0.5-AZN candidates only from current-cycle artifacts; never import previous-cycle prize names.
+7. If cap/remaining is recovered for any current draw, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer.
+8. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
+9. After APL round 3 completes, inspect the next newly dated result artifact once for materially new wallet/category/standings evidence.
+10. Revisit RadioArena or 10→10 only on materially new operational evidence.
+11. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
+12. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+13. Do not reopen rejected draw-history prediction branches without materially new information.
