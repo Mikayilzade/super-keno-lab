@@ -37,18 +37,16 @@ Historical official 10→10 terms prove promotional balance can be explicitly sc
 This remains the strongest materially different operator-side finite-denominator mechanism currently known.
 
 Established facts:
-- each prize category has a finite predetermined ticket quantity and draw date;
+- each prize category has a finite predetermined ticket quantity and draw date as an operational working model, but the exact registered quantity semantics remain unresolved;
 - sales can close at scheduled cutoff even if not sold out, so under-sold draws are intended;
 - current parent page shows **11 draws dated 16.09.2026**: 3 at 1 AZN and 8 at 0.5 AZN;
 - current link order recovered as: `10065,10064,10066,10072,10073,10067,10071,10068,10069,10070,10074`;
-- **Phase 18BH live-link integrity check (2026-08-28) reconfirmed the currently rendered third 1-AZN card resolves to `drawId=10066`, and the first 0.5-AZN card resolves to `drawId=10072`; the live card-link order has not drifted.**
+- Phase 18BH reconfirmed `10066` and `10072` live-link integrity; direct detail pages still expose only the client shell and that exact crawl remains closed until material surface change;
 - historical raw winning chance IDs use an offset/namespace, so `max(chance ID)` must not be used as sold count;
-- generic API/client-shell/registry/Trendyol/local-download/public-Telegram paths have not exposed current cap/sold/remaining and remain closed unless materially new surface appears;
-- direct public detail pages for `10066` and `10072` were rechecked in Phase 18BH and still render only the client shell; do not repeat this exact crawl unless the surface materially changes;
-- official explainer states the account/client surface can show how many tickets remain until the draw, confirming that the absolute denominator exists operationally;
-- **Phase 18BI confirmed a materially different current retail artifact surface:** fresh official current-product messaging says next-draw `1001 Sevinc` tickets are sold through Azerlotereya retail points and Misli points as well as the online channels. Physical ticket/receipt artifacts are therefore a valid new denominator lead, but a lone six-digit chance number is insufficient because the chance-ID namespace is not a 1..C sold counter.
-- **Phase 18BJ added an operational-integrity constraint:** an official Azerlotereya notice dated 15.03.2026 states that a technical problem caused some purchased `1001 Sevinc` tickets not to enter scheduled 07.03.2026 draws; additional draws were announced for those omitted tickets. Therefore finite-pool coverage can be a mathematical guarantee only conditional on correct ticket admission.
-- **Phase 18BK opened a materially new registered-terms route:** Azerbaijan's lottery rules require lottery conditions to contain ticket quantity/numbers in the fixed-pool case and require the organizer to provide the conditions to a participant on request. The current first-party page identifies `1001 Sevinc` registration as **316 / 12.05.2025**. The registered conditions/document package is now the primary denominator target.
+- official explainer states the account/client surface can show how many tickets remain until the draw;
+- Phase 18BI established current retail/POS artifacts as a materially distinct denominator lead; lone six-digit chance numbers remain insufficient;
+- Phase 18BJ added an `operational_integrity_status` requirement after an official March-2026 notice showed some purchased tickets had failed to enter scheduled draws due to a technical problem;
+- `1001 Sevinc` is first-party identified as registration **316 / 12.05.2025**.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -76,62 +74,57 @@ Any future positive-EV call must use current sold fraction or a conservative for
 
 ### Property-prize tax model
 
-Azerbaijan State Tax Service guidance indicates property/non-cash lottery prizes are treated as non-business income; after deducting participation cash outlay, the remainder is taxed at **14%**. Until prize-specific classification is proven otherwise, use `V_economic = h*V - 0.14*(V-p)`, where `h` is usable/resale value fraction.
+Until prize-specific classification is proven otherwise, use `V_economic = h*V - 0.14*(V-p)`, where `h` is usable/resale value fraction.
 
-### Phase 18BG — controlled sold-% transition cap solver
+### Phase 18BG — sold-% transition solver
 
 See `results/PHASE18BG_1001_SEVINC_PERCENT_TRANSITION_CAP_PROBE.md` and `scripts/phase18bg_percent_transition_cap_solver.py`.
+No paid probe was executed and no autonomous spend is authorized.
 
-No new public absolute denominator was found. A non-API fallback is available: infer hidden ticket cap `C` from integer `Satıldı %` across controlled consecutive percentage transitions. **No paid probe was executed and no autonomous spend is authorized.**
-
-### Phase 18BH — live link-integrity check
-
-See `results/PHASE18BH_1001_SEVINC_LIVE_LINK_INTEGRITY_AND_DENOMINATOR_RECHECK.md`.
-
-Fresh first-party crawl reconfirmed `10066` and `10072`; direct detail pages still expose only the client shell. Exact crawl closed until material surface change.
-
-### Phase 18BI — retail ticket artifact route
-
-See `results/PHASE18BI_1001_SEVINC_RETAIL_TICKET_ARTIFACT_ROUTE.md`.
-
-Physical ticket/POS artifacts remain valid only if they expose structured quantity/range/batch semantics; lone six-digit chance numbers are not denominators.
-
-### Phase 18BJ — operational draw-inclusion risk
-
-See `results/PHASE18BJ_1001_SEVINC_OPERATIONAL_DRAW_INCLUSION_RISK.md`.
-
-A real prior omission event separates mathematical coverage from operational certainty. Any eventual execution dossier must preserve ticket/order IDs and verify draw admission.
-
-### Phase 18BK — registered conditions denominator route
+### Phase 18BK — registered-conditions route
 
 See `results/PHASE18BK_1001_SEVINC_REGISTERED_TERMS_DENOMINATOR_ROUTE.md`.
+Registration **316 / 12.05.2025** was identified as the governing document key.
 
-The governing lottery rules require lottery conditions to state ticket quantity and numbers for fixed-pool lotteries, require the organizer to provide the conditions to a participant upon request, and require ticket/sales records to be maintained. `1001 Sevinc` is currently identified first-party as registration **316 / 12.05.2025**. No indexed copy of the registration-316 conditions was found in this batch, but the exact registered conditions/document package is now a concrete denominator route materially distinct from exhausted public API/detail-page inference.
+### Phase 18BL — current-law validation and publication route
+
+See `results/PHASE18BL_1001_SEVINC_CURRENT_RULES_AND_PUBLICATION_ROUTE.md`.
+
+The current 2019 `Lotereyaların təşkili və keçirilməsi Qaydası` materially refines Phase 18BK:
+- §2.2.5 requires lottery conditions to contain ticket quantity and ticket numbers **except** where the prize-fund amount is determined as a function of sold-ticket amount;
+- §2.4 requires the organizer to provide the lottery conditions to a participant on request;
+- §2.5 requires the organizer to announce the registered conditions through mass media before ticket sales begin.
+
+Therefore the denominator route remains strong, but future claims must preserve the §2.2.5 exception. `1001 Sevinc` appears economically consistent with fixed non-cash prize-category draws rather than a sold-dependent prize fund, but this remains an inference until registration 316 / an amendment is recovered.
+
+A new archival target is now explicit: the **pre-sale publication of the registered conditions around 12–15 May 2025**, not just the regulator-held registration package. Generic May-2025 launch news found in this phase does not itself contain the conditions or denominator.
+
+Do not use the repealed 2006 Azərlotereya rules as primary authority going forward.
 
 ## Current candidate hierarchy
 
 1. **`10066 Silver`** — fully bound; 1 AZN; fresh 33% sold; denominator target #1.
-2. **`10072 S25 Ultra Black`** — fully drawId-bound; 0.5 AZN; potentially superior economics, but fresh sold% remains unresolved.
+2. **`10072 S25 Ultra Black`** — fully drawId-bound; 0.5 AZN; potentially superior economics, but fresh sold% unresolved.
 3. `10065 Cosmic Orange` — fully bound; 1 AZN; last complete sold input 43%.
-4. `10064 Deep Blue` — fully bound; 1 AZN; fresh sold% unresolved.
+4. `10064 Deep Blue` — fully bound; fresh sold% unresolved.
 5. `1000-AZN gift coupon` — current price 0.5 AZN; drawId and fresh sold% unresolved.
 
 The decisive variable remains absolute `cap / remaining / sold-count`.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** locate the registered `1001 Sevinc` lottery conditions/document package keyed by **registration 316 / 12.05.2025**, including amendments/new editions. Extract ticket quantity/range semantics and determine whether quantity applies globally, by prize category, by draw, or by issuance batch.
-2. Bind any recovered quantity to `10066 Silver` / `10072 S25` only after matching category/draw/date semantics; do not assume one global `C`.
-3. In parallel, accept denominator evidence only from materially new account/rendered/retail/POS artifacts; do not repeat the exhausted direct-detail/API/registry/Trendyol-download/stale-social routes.
-4. For any new physical/current ticket artifact, require more than a lone chance number: total/remaining quantity, validated issuance ordinal, explicit range endpoints, or meaningful batch/series semantics; validate across at least two artifacts/draws before translating to `C` or `M`.
-5. If sequential account/rendered sold-% observations around known ticket additions become available, run `scripts/phase18bg_percent_transition_cap_solver.py`; do not execute paid probes autonomously.
-6. Reacquire a fresh complete first-party sold percentage for `10072 / S25` only when a newly dated/current card or rendered artifact surfaces.
-7. Recover a fresh sold% for `10064 Deep Blue`; never infer it from neighboring snippets.
-8. Bind the 1000-AZN gift coupon to a current drawId and reacquire its sold% as one fresh record.
-9. If cap/remaining is recovered for any current draw, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer, and report `operational_integrity_status` separately.
-10. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
+1. **Highest priority:** search specifically for the §2.5 pre-sale publication/archived `1001 Sevinc` conditions around May 2025 and for the registration **316 / 12.05.2025** document package, amendments, or new editions.
+2. Determine whether registration 316 classifies `1001 Sevinc` under the §2.2.5 sold-dependent-prize-fund exception. Do not assume the ticket-count requirement applies until this is resolved.
+3. If ticket quantity/range is recovered, determine whether it applies globally, by prize category, by draw, or by issuance batch; bind to `10066 Silver` / `10072 S25` only after matching category/draw/date semantics.
+4. In parallel, accept denominator evidence only from materially new account/rendered/retail/POS artifacts; do not repeat exhausted direct-detail/API/registry/Trendyol-download/stale-social routes.
+5. For physical/current artifacts, require total/remaining quantity, validated issuance ordinal, explicit range endpoints, or meaningful batch/series semantics; validate across at least two artifacts/draws before translating to `C` or `M`.
+6. If sequential sold-% observations around known ticket additions become available, run `scripts/phase18bg_percent_transition_cap_solver.py`; do not execute paid probes autonomously.
+7. Reacquire fresh complete sold% for `10072 S25` or `10064 Deep Blue` only from genuinely new/current artifacts.
+8. Bind the 1000-AZN gift coupon to a current drawId and reacquire sold% as one fresh record.
+9. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` separately.
+10. Continue fresh modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
 11. After APL round 3 completes, inspect the next newly dated result artifact once for materially new wallet/category/standings evidence.
 12. Revisit RadioArena or 10→10 only on materially new operational evidence.
-13. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
+13. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
 14. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
 15. Do not reopen rejected draw-history prediction branches without materially new information.
