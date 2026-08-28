@@ -49,7 +49,8 @@ Established facts:
 - Phase 18BN identified the first-party conditions-document namespace `st.azerlotereya.com/public/data/files/WidgetFileController/documents/.../*.docx`; no indexed registration-316 DOCX has yet been recovered;
 - **Phase 18BP materially changed the legal-denominator expectation:** a first-party property-draw terms PDF states that all sold tickets in a prize category participate in forming that category's prize fund, each prize value is at least 50% of total tickets sold in that category, tickets may sell out before the planned sales-end date, and tickets are generated/printed for the specific prize category + draw period. This makes the 2019 §2.2.5 sold-dependent-prize-fund exception a serious/default interpretation rather than a remote caveat. Therefore registration 316 is no longer assumed to be legally required to disclose an absolute ticket count/range;
 - the same Phase 18BP artifact directly supports the standing 14% property-prize tax model after subtracting the ticket stake;
-- **Phase 18BQ strengthened but did not complete the document identity:** search-index metadata places the exact Phase 18BP PDF around the spring-2025 launch window, and its mechanics are a very strong match to the live `1001 Sevinc` model, but exhaustive UUID/title/unique-sentence searches plus visual inspection of all three PDF pages still expose no direct `PDF UUID -> registration 316` identifier. Exact registration-document linkage is therefore downgraded from highest priority to opportunistic; do not repeat this search branch without a materially new CMS/archive/document surface.
+- **Phase 18BQ strengthened but did not complete the document identity:** search-index metadata places the exact Phase 18BP PDF around the spring-2025 launch window, and its mechanics are a very strong match to the live `1001 Sevinc` model, but exhaustive UUID/title/unique-sentence searches plus visual inspection of all three PDF pages still expose no direct `PDF UUID -> registration 316` identifier. Exact registration-document linkage is therefore downgraded from highest priority to opportunistic; do not repeat this search branch without a materially new CMS/archive/document surface;
+- **Phase 18BR opened a materially new authenticated account route:** Trendyol Azerbaijan is documented as an official Azərlotereya e-commerce sub-distributor for `1001 Sevinc`, with a dedicated `Sifarişlərim / My Orders -> 1001 Sevinc` account surface exposing purchased-ticket status, draw date and lottery results. No public indexed artifact in this batch exposed `remaining`, `total`, issuance count, or cap, but Trendyol is now a distinct denominator-surface target alongside Azerlotereya/Misli and retail/POS.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -86,16 +87,18 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 - `results/PHASE18BO_10X10_LIVE_TERMS_RECHECK_AND_1001_FAST_SETTLEMENT.md`
 - `results/PHASE18BP_1001_SEVINC_OFFICIAL_DRAW_TERMS_AND_225_EXCEPTION.md`
 - `results/PHASE18BQ_1001_SEVINC_PDF_INDEX_DATE_AND_LINKAGE_REASSESSMENT.md`
+- `results/PHASE18BR_1001_SEVINC_TRENDYOL_ACCOUNT_SURFACE.md`
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** seek materially new account/rendered/retail/POS evidence exposing `remaining`, `total`, issuance count, or an equivalent absolute denominator for current `10066 Silver` / `10072 S25`.
-2. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
-3. Treat denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
-4. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` separately.
-5. Reacquire fresh complete sold% for `10072 S25` / `10064 Deep Blue` only from genuinely new artifacts.
-6. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears; do not repeat UUID/title/unique-sentence searching.
-7. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
-8. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
-9. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-10. Do not reopen rejected draw-history prediction branches without materially new information.
+1. **Highest priority:** seek materially new authenticated/account/rendered evidence exposing `remaining`, `total`, issuance count, inventory/stock, or an equivalent absolute denominator for current `10066 Silver` / `10072 S25`; include the newly proven Trendyol `Sifarişlərim -> 1001 Sevinc` surface alongside Azerlotereya/Misli.
+2. Seek public screenshots/help/cached app payloads/technical artifacts that reveal the actual Trendyol 1001 Sevinc ticket-card fields; do not infer cap unless the field semantics are directly interpretable.
+3. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
+4. Treat denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
+5. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` separately.
+6. Reacquire fresh complete sold% for `10072 S25` / `10064 Deep Blue` only from genuinely new artifacts.
+7. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears; do not repeat UUID/title/unique-sentence searching.
+8. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
+9. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
+10. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+11. Do not reopen rejected draw-history prediction branches without materially new information.
