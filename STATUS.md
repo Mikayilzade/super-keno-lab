@@ -41,8 +41,10 @@ Established facts:
 - sales can close at scheduled cutoff even if not sold out, so under-sold draws are intended;
 - current parent page shows **11 draws dated 16.09.2026**: 3 at 1 AZN and 8 at 0.5 AZN;
 - current link order recovered as: `10065,10064,10066,10072,10073,10067,10071,10068,10069,10070,10074`;
+- **Phase 18BH live-link integrity check (2026-08-28) reconfirmed the currently rendered third 1-AZN card resolves to `drawId=10066`, and the first 0.5-AZN card resolves to `drawId=10072`; the live card-link order has not drifted.**
 - historical raw winning chance IDs use an offset/namespace, so `max(chance ID)` must not be used as sold count;
 - generic API/client-shell/registry/Trendyol/local-download/public-Telegram paths have not exposed current cap/sold/remaining and remain closed unless materially new surface appears;
+- direct public detail pages for `10066` and `10072` were rechecked in Phase 18BH and still render only the client shell; do not repeat this exact crawl unless the surface materially changes;
 - official explainer states the account/client surface can show how many tickets remain until the draw, confirming that the absolute denominator exists operationally.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
@@ -83,6 +85,12 @@ A single percentage jump does not identify `C`. The useful pattern is the last n
 
 **No paid probe was executed and no autonomous spend is authorized.** The route is kept as a fallback if account screenshots/observations become available or if a controlled manual probe is later explicitly chosen.
 
+### Phase 18BH — live link-integrity check
+
+See `results/PHASE18BH_1001_SEVINC_LIVE_LINK_INTEGRITY_AND_DENOMINATOR_RECHECK.md`.
+
+A fresh same-day first-party parent-page crawl independently reconfirmed live link targets `10066` (third 1-AZN card) and `10072` (first 0.5-AZN card). Both detail pages still expose only the public client shell and no absolute denominator. The exact direct-detail-page crawl is therefore closed until the rendered surface changes materially.
+
 ## Current candidate hierarchy
 
 1. **`10066 Silver`** — fully bound; 1 AZN; fresh 33% sold; denominator target #1.
@@ -95,7 +103,7 @@ The decisive variable remains absolute `cap / remaining / sold-count`.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** seek absolute `cap / remaining / sold-count` for `10066 Silver` and `10072 S25` only through materially new rendered/account/client artifacts. Do not reopen exhausted generic API, registry, Trendyol, local-download or stale social paths.
+1. **Highest priority:** seek absolute `cap / remaining / sold-count` for `10066 Silver` and `10072 S25` only through a materially new account/rendered artifact. Do not repeat the same public detail-page crawl and do not reopen exhausted generic API, registry, Trendyol, local-download or stale social paths.
 2. If sequential account/rendered sold-% observations around known ticket additions become available, run `scripts/phase18bg_percent_transition_cap_solver.py` immediately; do not execute paid probes autonomously.
 3. Reacquire a fresh complete first-party sold percentage for `10072 / S25` only when a newly dated/current card or rendered artifact surfaces.
 4. Recover a fresh sold% for `10064 Deep Blue`; never infer it from neighboring snippets.
