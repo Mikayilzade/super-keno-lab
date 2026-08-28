@@ -22,11 +22,10 @@ No **fully verified executable repeatable positive-EV Super Keno modifier** is k
 
 ### Modifier state
 
-- `10→10`: `official_status_conflict_conditional_positive`; conditional ROI **1.183614067** if operational/eligible. Phase 18BO rechecked fresh first-party terms: the main campaign terms say valid through **31 Aug 23:59**, while the same page FAQ still says **31 Jul 23:59**. Do not stake without materially new account/support/current-UI confirmation.
-- Phase 18BO also recovered a useful execution detail: **1001 Sevinc ticket purchases count immediately toward the 10 AZN qualifying wager without waiting for the item draw**. Added balance is described as having no turnover requirement, but current Super-Keno product eligibility is still not proven strongly enough for an executable call.
+- `10→10`: `official_status_conflict_conditional_positive`; conditional ROI **1.183614067** if operational/eligible. Main campaign terms say valid through **31 Aug 23:59**, FAQ still says **31 Jul 23:59**. Do not stake without materially new account/support/current-UI confirmation.
+- `1001 Sevinc` purchases count immediately toward the 10 AZN qualifying wager; bonus balance is described as having no turnover requirement, but current Super-Keno eligibility is not proven strongly enough for an executable call.
 - RadioArena promo: revisit only on materially new product-scope/account evidence.
 - Misli APL Fantasy: current repeatable free-entry bonus; 30/20/10 AZN weekly bonus, but `Lotereya` eligibility/wagering/expiry/withdrawal and exact private-league denominator remain unresolved. Do not search round-3 winner artifacts before round 3 is complete (28–31 Aug 2026).
-- Fresh modifier scan in Phase 18BG found no new zero-cost offer explicitly proving current `Lotereya` eligibility.
 
 ## Closed primary routes
 
@@ -39,21 +38,20 @@ This remains the strongest materially different operator-side finite-denominator
 Established facts:
 - current parent page shows **11 draws dated 16.09.2026**: 3 at 1 AZN and 8 at 0.5 AZN;
 - current link order recovered as `10065,10064,10066,10072,10073,10067,10071,10068,10069,10070,10074`;
-- Phase 18BH reconfirmed `10066` and `10072` live-link integrity; direct detail pages remain client-shell only and that exact crawl is closed until material surface change;
+- `10066` and `10072` live-link integrity was reconfirmed; direct detail pages remain client-shell only;
 - historical chance IDs are offset/namespace values, so `max(chance ID)` must not be used as sold count;
 - official explainer states account/client surface can show how many tickets remain until the draw;
-- Phase 18BI established current retail/POS artifacts as a distinct denominator lead; lone six-digit chance numbers are insufficient;
-- Phase 18BJ added `operational_integrity_status` after an official March-2026 incident where some purchased tickets failed to enter scheduled draws;
+- retail/POS artifacts remain a distinct denominator lead; lone six-digit chance numbers are insufficient;
+- `operational_integrity_status` remains required after an official March-2026 incident where some purchased tickets failed to enter scheduled draws;
 - `1001 Sevinc` is first-party identified as registration **316 / 12.05.2025**;
-- Phase 18BM recovered the official launch publication dated **14.05.2025**; it contains no ticket quantity/range and links only to the ordinary game page;
-- Phase 18BN identified the first-party conditions-document namespace `st.azerlotereya.com/public/data/files/WidgetFileController/documents/.../*.docx`; no indexed registration-316 DOCX has yet been recovered;
-- **Phase 18BP materially changed the legal-denominator expectation:** a first-party property-draw terms PDF states that all sold tickets in a prize category participate in forming that category's prize fund, each prize value is at least 50% of total tickets sold in that category, tickets may sell out before the planned sales-end date, and tickets are generated/printed for the specific prize category + draw period. This makes the 2019 §2.2.5 sold-dependent-prize-fund exception a serious/default interpretation rather than a remote caveat. Therefore registration 316 is no longer assumed to be legally required to disclose an absolute ticket count/range;
-- the same Phase 18BP artifact directly supports the standing 14% property-prize tax model after subtracting the ticket stake;
-- **Phase 18BQ strengthened but did not complete the document identity:** search-index metadata places the exact Phase 18BP PDF around the spring-2025 launch window, and its mechanics are a very strong match to the live `1001 Sevinc` model, but exhaustive UUID/title/unique-sentence searches plus visual inspection of all three PDF pages still expose no direct `PDF UUID -> registration 316` identifier. Exact registration-document linkage is therefore downgraded from highest priority to opportunistic; do not repeat this search branch without a materially new CMS/archive/document surface;
-- **Phase 18BR opened a materially new authenticated account route:** Trendyol Azerbaijan is documented as an official Azərlotereya e-commerce sub-distributor for `1001 Sevinc`, with a dedicated `Sifarişlərim / My Orders -> 1001 Sevinc` account surface exposing purchased-ticket status, draw date and lottery results;
-- **Phase 18BS bounded the public Trendyol branch:** a real indexed Trendyol Azerbaijan order-confirmation screenshot was recovered with a `1001 Sevinc` acquisition banner and `BİLET AL` CTA, proving another live integration surface beyond `My Orders`; however fresh public screenshot/help/API/schema/code searches still exposed no `remaining`, `total`, issuance, stock or other absolute-denominator field. Generic Trendyol public-index searching is now deprioritized until a materially new authenticated/runtime/help/payload surface appears;
-- **Phase 18BT opened a materially different Misli mobile-app route:** a current first-party `endir.misli.az` promotional asset shows the redesigned Misli app home screen with a live `Lotereya -> 1001 Sevinc` tile, while App Store version history independently confirms `1001 Sevinc` app integration from December 2025. The public home-screen asset itself exposes no absolute denominator, so generic public Misli search is now bounded;
-- **Phase 18BU converted the Misli runtime route into a concrete artifact:** the current first-party `yukle.misli.az` Android download action resolves to `https://yukle.misli.az/misliaz_android.apk?v=1361` with Android-package MIME. This is the exact current binary entrypoint to prioritize for static endpoint/schema extraction. The present toolchain could resolve the APK URL/MIME but could not persist the binary, so no decompilation claims are made yet.
+- official launch publication dated **14.05.2025** contains no ticket quantity/range and links only to the ordinary game page;
+- first-party conditions-document namespace `st.azerlotereya.com/public/data/files/WidgetFileController/documents/.../*.docx` is known, but no indexed registration-316 DOCX has been recovered;
+- a first-party property-draw terms PDF supports sold-dependent prize-fund mechanics, category + draw-period ticket generation, sell-out before planned sales-end, and the standing 14% property-prize tax model after subtracting ticket stake;
+- exact PDF UUID -> registration 316 identity remains unproven and is opportunistic only until a materially new CMS/archive/document surface appears;
+- Trendyol Azerbaijan is an official `1001 Sevinc` e-commerce sub-distributor with a `Sifarişlərim / My Orders -> 1001 Sevinc` account surface, but public Trendyol searching exposed no denominator field and is bounded until a new authenticated/runtime artifact appears;
+- Misli mobile app has a live `Lotereya -> 1001 Sevinc` surface; generic public Misli searching is bounded;
+- Phase 18BU identified the exact current first-party Android binary entrypoint: `https://yukle.misli.az/misliaz_android.apk?v=1361` with Android-package MIME;
+- **Phase 18BV bounded the current APK-acquisition route:** browser-backed fetch still reaches the exact APK and rejects body extraction only because of `application/vnd.android.package-archive`; direct container download attempts fail at DNS resolution for `yukle.misli.az`, and fresh exact-string searches recover no cache, mirror, hash, package name, versionCode, or decompiled Azerbaijan build. This is an execution-environment/retrieval boundary, not evidence the APK is unavailable. Generic mirror/package searching for build 1361 is now deprioritized until a new build/cache/file-reference surface appears.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -94,18 +92,19 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 - `results/PHASE18BS_TRENDYOL_PUBLIC_ARTIFACT_FIELD_BOUNDARY.md`
 - `results/PHASE18BT_MISLI_CURRENT_MOBILE_SURFACE_AND_DENOMINATOR_BOUNDARY.md`
 - `results/PHASE18BU_MISLI_OFFICIAL_ANDROID_APK_RUNTIME_ENTRYPOINT.md`
+- `results/PHASE18BV_MISLI_APK_1361_ACQUISITION_BOUNDARY.md`
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** acquire or recover a retrievable copy/cache/hash/package metadata for the exact first-party Misli Android artifact `misliaz_android.apk?v=1361`; once binary access is available, statically extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` product-card schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
-2. In parallel, seek genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing an absolute denominator for current `10066 Silver` / `10072 S25`.
-3. For Trendyol, do **not** repeat generic public web/image/search-index permutations; revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
-4. For Misli, do **not** repeat generic public web/image permutations after 18BT/18BU; work from the exact APK/build or a materially new app/support/runtime artifact.
+1. **Highest priority:** obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` through a runtime/file reference/cache that can persist binary content. Once available, statically extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` product-card schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
+2. Do **not** repeat generic exact-string mirror/package searches for build 1361 unless there is a materially new build number, cache surface, package identifier, support artifact, or retrievable file reference.
+3. In parallel, prioritize genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing an absolute denominator for current `10066 Silver` / `10072 S25`.
+4. For Trendyol, revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
 5. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
 6. Treat denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
 7. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` separately.
 8. Reacquire fresh complete sold% for `10072 S25` / `10064 Deep Blue` only from genuinely new artifacts.
-9. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears; do not repeat UUID/title/unique-sentence searching.
+9. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears.
 10. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
 11. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
 12. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
