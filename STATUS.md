@@ -47,7 +47,8 @@ Established facts:
 - Phase 18BI established current retail/POS artifacts as a materially distinct denominator lead; lone six-digit chance numbers remain insufficient;
 - Phase 18BJ added an `operational_integrity_status` requirement after an official March-2026 notice showed some purchased tickets had failed to enter scheduled draws due to a technical problem;
 - `1001 Sevinc` is first-party identified as registration **316 / 12.05.2025**;
-- Phase 18BM recovered the official first-party launch publication dated **14.05.2025**, two days after registration. Its `1001 Sevinc` Bitly link resolves to the ordinary game page, not to a visible registered-conditions document, and the article contains no ticket quantity/range.
+- Phase 18BM recovered the official first-party launch publication dated **14.05.2025**, two days after registration. Its `1001 Sevinc` Bitly link resolves to the ordinary game page, not to a visible registered-conditions document, and the article contains no ticket quantity/range;
+- Phase 18BN identified a proven first-party lottery-conditions storage namespace: `st.azerlotereya.com/public/data/files/WidgetFileController/documents/.../*.docx`. The official `Keçmiş Oyunlar` page exposes many formal lottery-condition DOCX files from this namespace, but no indexed `1001 Sevinc` conditions file was recovered in this batch.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -112,6 +113,16 @@ A first-party Azərlotereya launch article dated **14/05/2025** was recovered, t
 
 The archival target is therefore narrowed from generic May-2025 press coverage to **first-party archived/static game-page assets, document/storage namespaces, old page payloads, and registration-316 amendments/packages**.
 
+### Phase 18BN — first-party conditions document namespace
+
+See `results/PHASE18BN_1001_SEVINC_FIRST_PARTY_DOCUMENT_NAMESPACE.md`.
+
+The official `Keçmiş Oyunlar` page proves that Azərlotereya publishes formal lottery-condition documents as `.docx` files from a dedicated static namespace:
+
+`st.azerlotereya.com/public/data/files/WidgetFileController/documents/<2>/<2>/<2>/<2>/<uuid>.docx`
+
+One live first-party example was resolved from that page. Targeted searches for `1001 Sevinc`, registration 316, DOCX/PDF, and this exact namespace returned no indexed conditions file. Random UUID brute force is not a useful route. The next archival step is therefore metadata discovery: old CMS/page JSON, sitemap/search-index artifacts, historical document listings, or other first-party payloads that can reveal the UUID/link for the registration-316 document.
+
 ## Current candidate hierarchy
 
 1. **`10066 Silver`** — fully bound; 1 AZN; fresh 33% sold; denominator target #1.
@@ -124,7 +135,7 @@ The decisive variable remains absolute `cap / remaining / sold-count`.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** search first-party archived/static `1001 Sevinc` assets and old page payloads around **12–15 May 2025**, plus registration **316 / 12.05.2025** PDF/document/storage namespaces, amendments, or new editions. Do not repeat generic launch-media mirrors.
+1. **Highest priority:** discover first-party metadata/payloads that can reveal a `WidgetFileController/documents` link for `1001 Sevinc` registration **316 / 12.05.2025**: old CMS/page JSON, sitemap/search-index artifacts, historical condition-document listings, archived/static game assets, amendments, or new editions. Do not repeat generic launch-media mirrors or random UUID guessing.
 2. Determine whether registration 316 classifies `1001 Sevinc` under the §2.2.5 sold-dependent-prize-fund exception. Do not assume the ticket-count requirement applies until this is resolved.
 3. If ticket quantity/range is recovered, determine whether it applies globally, by prize category, by draw, or by issuance batch; bind to `10066 Silver` / `10072 S25` only after matching category/draw/date semantics.
 4. In parallel, accept denominator evidence only from materially new account/rendered/retail/POS artifacts; do not repeat exhausted direct-detail/API/registry/Trendyol-download/stale-social routes.
