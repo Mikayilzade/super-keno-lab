@@ -46,7 +46,8 @@ Established facts:
 - official explainer states the account/client surface can show how many tickets remain until the draw;
 - Phase 18BI established current retail/POS artifacts as a materially distinct denominator lead; lone six-digit chance numbers remain insufficient;
 - Phase 18BJ added an `operational_integrity_status` requirement after an official March-2026 notice showed some purchased tickets had failed to enter scheduled draws due to a technical problem;
-- `1001 Sevinc` is first-party identified as registration **316 / 12.05.2025**.
+- `1001 Sevinc` is first-party identified as registration **316 / 12.05.2025**;
+- Phase 18BM recovered the official first-party launch publication dated **14.05.2025**, two days after registration. Its `1001 Sevinc` Bitly link resolves to the ordinary game page, not to a visible registered-conditions document, and the article contains no ticket quantity/range.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -97,9 +98,19 @@ The current 2019 `Lotereyaların təşkili və keçirilməsi Qaydası` materiall
 
 Therefore the denominator route remains strong, but future claims must preserve the §2.2.5 exception. `1001 Sevinc` appears economically consistent with fixed non-cash prize-category draws rather than a sold-dependent prize fund, but this remains an inference until registration 316 / an amendment is recovered.
 
-A new archival target is now explicit: the **pre-sale publication of the registered conditions around 12–15 May 2025**, not just the regulator-held registration package. Generic May-2025 launch news found in this phase does not itself contain the conditions or denominator.
-
 Do not use the repealed 2006 Azərlotereya rules as primary authority going forward.
+
+### Phase 18BM — official pre-sale publication trace
+
+See `results/PHASE18BM_1001_SEVINC_OFFICIAL_PRESALE_PUBLICATION_TRACE.md`.
+
+A first-party Azərlotereya launch article dated **14/05/2025** was recovered, two days after registration 316. It is now the strongest known public launch/§2.5-adjacent artifact. However:
+- it contains no ticket quantity, ticket-number range, cap, or denominator;
+- it exposes no visible attached registration/conditions PDF;
+- its `1001 Sevinc` link redirects to the ordinary game page;
+- generic 15-May media mirrors repeat the same launch text and are now closed as denominator leads unless materially new content appears.
+
+The archival target is therefore narrowed from generic May-2025 press coverage to **first-party archived/static game-page assets, document/storage namespaces, old page payloads, and registration-316 amendments/packages**.
 
 ## Current candidate hierarchy
 
@@ -113,7 +124,7 @@ The decisive variable remains absolute `cap / remaining / sold-count`.
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** search specifically for the §2.5 pre-sale publication/archived `1001 Sevinc` conditions around May 2025 and for the registration **316 / 12.05.2025** document package, amendments, or new editions.
+1. **Highest priority:** search first-party archived/static `1001 Sevinc` assets and old page payloads around **12–15 May 2025**, plus registration **316 / 12.05.2025** PDF/document/storage namespaces, amendments, or new editions. Do not repeat generic launch-media mirrors.
 2. Determine whether registration 316 classifies `1001 Sevinc` under the §2.2.5 sold-dependent-prize-fund exception. Do not assume the ticket-count requirement applies until this is resolved.
 3. If ticket quantity/range is recovered, determine whether it applies globally, by prize category, by draw, or by issuance batch; bind to `10066 Silver` / `10072 S25` only after matching category/draw/date semantics.
 4. In parallel, accept denominator evidence only from materially new account/rendered/retail/POS artifacts; do not repeat exhausted direct-detail/API/registry/Trendyol-download/stale-social routes.
