@@ -55,7 +55,8 @@ Established facts:
 - **Phase 18BW tested the newly surfaced `endir.misli.az` lead and bounded it:** the hostname is historically legitimate but currently redirects to `yukle.misli.az`, whose Android control still resolves to build `v=1361`. It is not an independent CDN/file route and should not be reprobed unless redirect/DNS/file-reference evidence materially changes;
 - **Phase 18BX added a materially new first-party runtime surface:** public `Biletini Yoxla` is live at `/biletini-yoxla` with a product-routed `/keno/biletini-yoxla` alias and accepts a ticket number for resolution. No indexed response schema was recovered yet, so it remains a lead rather than a denominator;
 - Phase 18BX also reconfirmed from current official social output that `1001 Sevinc` is actively sold through Azerlotereya sales points and Misli points as well as Azerlotereya.com, Misli.az and Trendyol.az, keeping current retail/POS artifacts as a distinct denominator route;
-- **Phase 18BY recovered five legitimate public winning `1001 Sevinc` chance numbers from the first draw:** `103932, 107185, 112723, 116364, 121104` for five iPhone 16 Pro Max prizes. These are now vetted zero-cost schema fixtures, but the result graphic labels them `şans nömrələri` while `Biletini Yoxla` asks for `Bilet nömrəsi`; do not submit or equate the fields until runtime/UI evidence bridges that ambiguity. They do not establish sold count or cap.
+- **Phase 18BY recovered five legitimate public winning `1001 Sevinc` chance numbers from the first draw:** `103932, 107185, 112723, 116364, 121104` for five iPhone 16 Pro Max prizes. These are vetted zero-cost schema fixtures, but they do not establish sold count or cap;
+- **Phase 18BZ materially sharpened field semantics:** the first-party 1001-Sevinc explainer says every purchased ticket has its own `şans nömrəsi`, while the generic checker explicitly asks for `Bilet nömrəsi`; separate first-party physical-ticket pages also distinguish ticket serial numbers from game-result values. Treat `Bilet nömrəsi`/serial and `şans nömrəsi` as distinct unless a direct artifact proves equivalence. Do not submit the Phase-18BY chance numbers to the checker. The checker branch is now bounded until paired ticket+chance evidence or request/response schema appears.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -101,12 +102,13 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 - `results/PHASE18BX_PUBLIC_TICKET_CHECKER_AND_LIVE_RETAIL_ROUTE.md`
 - `results/PHASE18BY_PUBLIC_WINNING_CHANCE_NUMBERS_AND_CHECKER_INPUT_BOUNDARY.md`
 - `results/phase18by_public_1001sevinc_identifiers.csv`
+- `results/PHASE18BZ_1001_SEVINC_TICKET_VS_CHANCE_NUMBER_SEMANTICS.md`
 
 ## NEXT ACTION — Phase 18 continuation
 
 1. **Highest priority:** obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` through a genuinely new runtime/file reference/cache/CDN artifact that can persist binary content. Once available, statically extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` product-card schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
 2. Do **not** repeat generic exact-string mirror/package searches for build 1361, and do not treat `endir.misli.az` as independent from `yukle.misli.az`, unless there is a materially new build number, direct-file URL, cache surface, package identifier, DNS/CDN target, response-header artifact, support artifact, or retrievable file reference.
-3. In parallel, resolve the first-party `Biletini Yoxla` schema from genuinely new runtime/static evidence. Phase 18BY provides five legitimate public `1001 Sevinc` chance-number fixtures, but do not submit them until field semantics establish that `şans nömrəsi` is accepted as `Bilet nömrəsi`. Prioritize an artifact exposing both a full ticket/serial number and its chance number.
+3. `Biletini Yoxla` is now secondary/bounded: first-party semantics favor `Bilet nömrəsi`/serial being distinct from 1001-Sevinc `şans nömrəsi`. Reopen only with a paired full ticket/serial + chance-number artifact, safe runtime/static request schema, or network/API evidence. Do not submit guessed/public chance numbers.
 4. Continue genuinely new Misli/Azerlotereya authenticated/runtime/rendered or current retail/POS evidence exposing an absolute denominator for `10066 Silver` / `10072 S25`.
 5. For Trendyol, revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
 6. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
