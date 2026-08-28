@@ -52,7 +52,8 @@ Established facts:
 - **Phase 18BQ strengthened but did not complete the document identity:** search-index metadata places the exact Phase 18BP PDF around the spring-2025 launch window, and its mechanics are a very strong match to the live `1001 Sevinc` model, but exhaustive UUID/title/unique-sentence searches plus visual inspection of all three PDF pages still expose no direct `PDF UUID -> registration 316` identifier. Exact registration-document linkage is therefore downgraded from highest priority to opportunistic; do not repeat this search branch without a materially new CMS/archive/document surface;
 - **Phase 18BR opened a materially new authenticated account route:** Trendyol Azerbaijan is documented as an official Azərlotereya e-commerce sub-distributor for `1001 Sevinc`, with a dedicated `Sifarişlərim / My Orders -> 1001 Sevinc` account surface exposing purchased-ticket status, draw date and lottery results;
 - **Phase 18BS bounded the public Trendyol branch:** a real indexed Trendyol Azerbaijan order-confirmation screenshot was recovered with a `1001 Sevinc` acquisition banner and `BİLET AL` CTA, proving another live integration surface beyond `My Orders`; however fresh public screenshot/help/API/schema/code searches still exposed no `remaining`, `total`, issuance, stock or other absolute-denominator field. Generic Trendyol public-index searching is now deprioritized until a materially new authenticated/runtime/help/payload surface appears;
-- **Phase 18BT opened a materially different Misli mobile-app route:** a current first-party `endir.misli.az` promotional asset shows the redesigned Misli app home screen with a live `Lotereya -> 1001 Sevinc` tile, while App Store version history independently confirms `1001 Sevinc` app integration from December 2025. The public home-screen asset itself exposes no absolute denominator, so generic public Misli search is now bounded; the actionable target is app-specific runtime/static-manifest/product-card payload evidence (`remaining`, `total`, soldCount, stock, issuance, maxTickets or equivalent).
+- **Phase 18BT opened a materially different Misli mobile-app route:** a current first-party `endir.misli.az` promotional asset shows the redesigned Misli app home screen with a live `Lotereya -> 1001 Sevinc` tile, while App Store version history independently confirms `1001 Sevinc` app integration from December 2025. The public home-screen asset itself exposes no absolute denominator, so generic public Misli search is now bounded;
+- **Phase 18BU converted the Misli runtime route into a concrete artifact:** the current first-party `yukle.misli.az` Android download action resolves to `https://yukle.misli.az/misliaz_android.apk?v=1361` with Android-package MIME. This is the exact current binary entrypoint to prioritize for static endpoint/schema extraction. The present toolchain could resolve the APK URL/MIME but could not persist the binary, so no decompilation claims are made yet.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -92,18 +93,20 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 - `results/PHASE18BR_1001_SEVINC_TRENDYOL_ACCOUNT_SURFACE.md`
 - `results/PHASE18BS_TRENDYOL_PUBLIC_ARTIFACT_FIELD_BOUNDARY.md`
 - `results/PHASE18BT_MISLI_CURRENT_MOBILE_SURFACE_AND_DENOMINATOR_BOUNDARY.md`
+- `results/PHASE18BU_MISLI_OFFICIAL_ANDROID_APK_RUNTIME_ENTRYPOINT.md`
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest priority:** seek materially new Misli/Azerlotereya authenticated/runtime/rendered evidence exposing `remaining`, `total`, issuance count, inventory/stock, or an equivalent absolute denominator for current `10066 Silver` / `10072 S25`; prioritize Misli mobile app runtime/static-manifest/product-card payloads and retail/POS, while retaining Trendyol only for genuinely new authenticated/runtime artifacts.
-2. For Trendyol, do **not** repeat generic public web/image/search-index permutations; revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
-3. For Misli, do **not** repeat generic public web/image permutations after 18BT; revisit on a materially new app screenshot, static manifest, package metadata, support artifact, runtime/network payload, or directly interpretable `1001 Sevinc` product-card schema.
-4. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
-5. Treat denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
-6. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` separately.
-7. Reacquire fresh complete sold% for `10072 S25` / `10064 Deep Blue` only from genuinely new artifacts.
-8. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears; do not repeat UUID/title/unique-sentence searching.
-9. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
-10. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
-11. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-12. Do not reopen rejected draw-history prediction branches without materially new information.
+1. **Highest priority:** acquire or recover a retrievable copy/cache/hash/package metadata for the exact first-party Misli Android artifact `misliaz_android.apk?v=1361`; once binary access is available, statically extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` product-card schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
+2. In parallel, seek genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing an absolute denominator for current `10066 Silver` / `10072 S25`.
+3. For Trendyol, do **not** repeat generic public web/image/search-index permutations; revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
+4. For Misli, do **not** repeat generic public web/image permutations after 18BT/18BU; work from the exact APK/build or a materially new app/support/runtime artifact.
+5. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
+6. Treat denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
+7. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` separately.
+8. Reacquire fresh complete sold% for `10072 S25` / `10064 Deep Blue` only from genuinely new artifacts.
+9. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears; do not repeat UUID/title/unique-sentence searching.
+10. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
+11. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
+12. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+13. Do not reopen rejected draw-history prediction branches without materially new information.
