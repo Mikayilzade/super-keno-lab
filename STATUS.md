@@ -47,6 +47,7 @@ Established facts:
 - direct public detail pages for `10066` and `10072` were rechecked in Phase 18BH and still render only the client shell; do not repeat this exact crawl unless the surface materially changes;
 - official explainer states the account/client surface can show how many tickets remain until the draw, confirming that the absolute denominator exists operationally;
 - **Phase 18BI confirmed a materially different current retail artifact surface:** fresh official current-product messaging says next-draw `1001 Sevinc` tickets are sold through Azerlotereya retail points and Misli points as well as the online channels. Physical ticket/receipt artifacts are therefore a valid new denominator lead, but a lone six-digit chance number is insufficient because the chance-ID namespace is not a 1..C sold counter.
+- **Phase 18BJ added an operational-integrity constraint:** an official Azerlotereya notice dated 15.03.2026 states that a technical problem caused some purchased `1001 Sevinc` tickets not to enter scheduled 07.03.2026 draws; additional draws were announced for those omitted tickets. Therefore finite-pool coverage can be a mathematical guarantee only conditional on correct ticket admission. Any future execution must separately verify ticket status/inclusion before being described as an unconditional real-world guarantee.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -98,6 +99,12 @@ See `results/PHASE18BI_1001_SEVINC_RETAIL_TICKET_ARTIFACT_ROUTE.md`.
 
 Fresh official current-product evidence confirms the next `1001 Sevinc` draw is also sold through physical Azerlotereya and Misli points. This creates a materially different artifact class: printed ticket / POS receipt / retailer purchase-history image. Fresh public searches did not surface a current 16.09.2026 artifact carrying an absolute quantity. Historical winner graphics again show six-digit chance numbers, but these must not be treated as sold ordinals. The retail route stays open only for artifacts exposing additional structured fields (remaining/total quantity, validated issuance ordinal, range endpoint, or meaningful batch/series code); generic ticket-image searches should not be repeated without a newly dated artifact.
 
+### Phase 18BJ — operational draw-inclusion risk
+
+See `results/PHASE18BJ_1001_SEVINC_OPERATIONAL_DRAW_INCLUSION_RISK.md`.
+
+A materially new first-party notice documents a real 1001 Sevinc execution failure mode: some tickets were omitted from scheduled draws because of a technical problem, followed by announced additional draws for those omitted tickets. This does not invalidate finite-pool EV, but it separates **mathematical coverage** from **operational certainty**. Any eventual execution dossier must preserve ticket/order IDs and verify ticket status/inclusion; report `operational_integrity_status` alongside mathematical ROI.
+
 ## Current candidate hierarchy
 
 1. **`10066 Silver`** — fully bound; 1 AZN; fresh 33% sold; denominator target #1.
@@ -112,15 +119,16 @@ The decisive variable remains absolute `cap / remaining / sold-count`.
 
 1. **Highest priority:** seek absolute `cap / remaining / sold-count` for `10066 Silver` and `10072 S25` only through a materially new account/rendered/**retail ticket or POS-receipt** artifact. Do not repeat the same public detail-page crawl and do not reopen exhausted generic API, registry, Trendyol-download or stale social paths.
 2. For any new physical/current ticket artifact, require more than a lone chance number: look for total/remaining quantity, validated issuance ordinal, explicit range endpoints, or batch/series semantics; validate across at least two artifacts/draws before translating to `C` or `M`.
-3. If sequential account/rendered sold-% observations around known ticket additions become available, run `scripts/phase18bg_percent_transition_cap_solver.py` immediately; do not execute paid probes autonomously.
-4. Reacquire a fresh complete first-party sold percentage for `10072 / S25` only when a newly dated/current card or rendered artifact surfaces.
-5. Recover a fresh sold% for `10064 Deep Blue`; never infer it from neighboring snippets.
-6. Bind the 1000-AZN gift coupon to a current drawId and reacquire its sold% as one fresh record.
-7. Recover other current 0.5-AZN candidates only from current-cycle artifacts; never import previous-cycle prize names.
-8. If cap/remaining is recovered for any current draw, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer.
-9. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
-10. After APL round 3 completes, inspect the next newly dated result artifact once for materially new wallet/category/standings evidence.
-11. Revisit RadioArena or 10→10 only on materially new operational evidence.
-12. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
-13. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-14. Do not reopen rejected draw-history prediction branches without materially new information.
+3. **Operational-integrity layer:** if a new account/rendered/retail artifact exposes ticket status, capture it together with denominator fields. Before any eventual staking, preserve order/ticket IDs and verify purchased tickets are admitted to the intended draw; do not call finite-pool coverage an unconditional operational guarantee without this check.
+4. If sequential account/rendered sold-% observations around known ticket additions become available, run `scripts/phase18bg_percent_transition_cap_solver.py` immediately; do not execute paid probes autonomously.
+5. Reacquire a fresh complete first-party sold percentage for `10072 / S25` only when a newly dated/current card or rendered artifact surfaces.
+6. Recover a fresh sold% for `10064 Deep Blue`; never infer it from neighboring snippets.
+7. Bind the 1000-AZN gift coupon to a current drawId and reacquire its sold% as one fresh record.
+8. Recover other current 0.5-AZN candidates only from current-cycle artifacts; never import previous-cycle prize names.
+9. If cap/remaining is recovered for any current draw, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer, and report `operational_integrity_status` separately.
+10. Continue fresh Super-Keno modifier scans only for genuinely new zero-cost/free-entry offers explicitly naming `Lotereya` or exposing a product-category label for credited balance.
+11. After APL round 3 completes, inspect the next newly dated result artifact once for materially new wallet/category/standings evidence.
+12. Revisit RadioArena or 10→10 only on materially new operational evidence.
+13. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when Super-Keno modifier classifications actually change.
+14. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+15. Do not reopen rejected draw-history prediction branches without materially new information.
