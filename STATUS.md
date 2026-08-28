@@ -52,7 +52,9 @@ Established facts:
 - Misli mobile app has a live `Lotereya -> 1001 Sevinc` surface; generic public Misli searching is bounded;
 - Phase 18BU identified the exact current first-party Android binary entrypoint: `https://yukle.misli.az/misliaz_android.apk?v=1361` with Android-package MIME;
 - Phase 18BV bounded the current APK-acquisition route: browser-backed fetch reaches the exact APK but cannot persist its package MIME; direct container download remains DNS-blocked and no useful cache/mirror/package identifier was found;
-- **Phase 18BW tested the newly surfaced `endir.misli.az` lead and bounded it:** the hostname is historically legitimate but currently redirects to `yukle.misli.az`, whose Android control still resolves to build `v=1361`. It is not an independent CDN/file route and should not be reprobed unless redirect/DNS/file-reference evidence materially changes.
+- **Phase 18BW tested the newly surfaced `endir.misli.az` lead and bounded it:** the hostname is historically legitimate but currently redirects to `yukle.misli.az`, whose Android control still resolves to build `v=1361`. It is not an independent CDN/file route and should not be reprobed unless redirect/DNS/file-reference evidence materially changes;
+- **Phase 18BX added a materially new first-party runtime surface:** public `Biletini Yoxla` is live at `/biletini-yoxla` with a product-routed `/keno/biletini-yoxla` alias and accepts a ticket number for resolution. No indexed response schema or valid current `1001 Sevinc` ticket identifier was recovered yet, so it is a lead rather than a denominator;
+- Phase 18BX also reconfirmed from current official social output that `1001 Sevinc` is actively sold through Azerlotereya sales points and Misli points as well as Azerlotereya.com, Misli.az and Trendyol.az, keeping current retail/POS artifacts as a distinct denominator route.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -95,19 +97,21 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 - `results/PHASE18BU_MISLI_OFFICIAL_ANDROID_APK_RUNTIME_ENTRYPOINT.md`
 - `results/PHASE18BV_MISLI_APK_1361_ACQUISITION_BOUNDARY.md`
 - `results/PHASE18BW_ENDIR_REDIRECT_SURFACE_AND_ANDROID_ROUTE_BOUNDARY.md`
+- `results/PHASE18BX_PUBLIC_TICKET_CHECKER_AND_LIVE_RETAIL_ROUTE.md`
 
 ## NEXT ACTION — Phase 18 continuation
 
 1. **Highest priority:** obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` through a genuinely new runtime/file reference/cache/CDN artifact that can persist binary content. Once available, statically extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` product-card schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
 2. Do **not** repeat generic exact-string mirror/package searches for build 1361, and do not treat `endir.misli.az` as independent from `yukle.misli.az`, unless there is a materially new build number, direct-file URL, cache surface, package identifier, DNS/CDN target, response-header artifact, support artifact, or retrievable file reference.
-3. In parallel, prioritize genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing an absolute denominator for current `10066 Silver` / `10072 S25`.
-4. For Trendyol, revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
-5. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
-6. Treat denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
-7. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` separately.
-8. Reacquire fresh complete sold% for `10072 S25` / `10064 Deep Blue` only from genuinely new artifacts.
-9. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears.
-10. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
-11. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
-12. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-13. Do not reopen rejected draw-history prediction branches without materially new information.
+3. In parallel, prioritize the new first-party `Biletini Yoxla` resolver surface: identify its request/response schema or API route from genuinely new runtime/static evidence, and use only a legitimate already-public ticket identifier if one becomes available; do not brute-force ticket numbers.
+4. Continue genuinely new Misli/Azerlotereya authenticated/runtime/rendered or current retail/POS evidence exposing an absolute denominator for `10066 Silver` / `10072 S25`.
+5. For Trendyol, revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
+6. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
+7. Treat denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
+8. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` separately.
+9. Reacquire fresh complete sold% for `10072 S25` / `10064 Deep Blue` only from genuinely new artifacts.
+10. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears.
+11. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
+12. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
+13. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+14. Do not reopen rejected draw-history prediction branches without materially new information.
