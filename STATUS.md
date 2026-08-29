@@ -26,7 +26,7 @@ No **fully verified executable repeatable positive-EV Super Keno modifier** is k
 - `1001 Sevinc` purchases count immediately toward the 10 AZN qualifying wager; bonus balance is described as having no turnover requirement, but current Super-Keno eligibility is not proven strongly enough for an executable call.
 - RadioArena promo: revisit only on materially new product-scope/account evidence.
 - Misli APL Fantasy: repeatable free-entry bonus, but `Lotereya` eligibility/wagering/expiry/withdrawal and exact denominator remain unresolved.
-- **Phase 18CB — Oley Oley: materially new live modifier.** Current Misli operator-channel copy explicitly states that every **5 AZN in Lotereya earns 2 promo chances**. Launch inventory: **2 Changan UNI-Z + 18 iPhone 17 Pro + 30 PlayStation 5 + 60,000 AZN bonus**. Weekly ordinary bundle is consistent with **3 iPhone + 5 PS5 + 50×200 AZN bonus**; week 3 additionally included one Changan. The inventory arithmetic is consistent with six weekly draws. For Super Keno base EV, 5 AZN stake needs **2.0409648325 AZN** overlay, so the required Oley-Oley EV is **1.02048241625 AZN per promo chance**. Bonus-only (ignoring all physical prizes) becomes enough if a weekly draw has fewer than approximately **9,799 eligible chances**. This is **not yet executable**: exact Oley Oley terms, Super-Keno-specific eligibility, ticket timing, bonus restrictions, and weekly chance denominator remain unresolved.
+- **Oley Oley:** `historical_lottery_eligible_overlay_denominator_unresolved`; no longer treat as a live executable modifier. Official launch copy on **2026-06-09** explicitly gave **2 promo chances per 5 AZN** for `Virtual İdman, ePoz-Qazan, Lotereya`. Third-week inventory and a **2026-07-17** campaign update are consistent with a six-week June–July run; by 17 July the first Changan had been awarded and the second/final car was scheduled for the following week's draw. No current/renewal artifact was recovered for the 2026-08-29 snapshot. Historical economics remain useful: Super Keno needs **1.02048241625 AZN EV per Oley-Oley chance** to break even; bonus-only 10,000 AZN weekly pool would suffice only below roughly **9,799 eligible chances** before bonus haircuts. `T_week` remains unknown.
 
 ## Closed primary routes
 
@@ -100,20 +100,20 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 - `results/PHASE18BZ_1001_SEVINC_TICKET_VS_CHANCE_NUMBER_SEMANTICS.md`
 - `results/PHASE18CA_1001_SEVINC_REPEAT_SELLOUT_AND_EXECUTION_RISK.md`
 - `results/PHASE18CB_OLEY_OLEY_LOTTERY_DOUBLE_CHANCE_OVERLAY.md`
+- `results/PHASE18CC_OLEY_OLEY_CAMPAIGN_TIMING_AND_LIVE_STATUS_BOUNDARY.md`
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest immediate priority: Oley Oley terms/denominator.** Recover the current full campaign terms or a live account/support artifact. Prove whether Super Keno specifically qualifies for the advertised `Lotereya = 2 chances per 5 AZN`, establish ticket timing and bonus restrictions, and recover/bound weekly total eligible chance count `T_week`. If `T_week` is bounded, compute full combined Super-Keno + promo ROI immediately. The conservative bonus-only break-even target is `T_week < ~9,799`; physical prizes raise this ceiling.
-2. Value Oley Oley weekly physical prizes under 0/60/70/80/100% usable-value haircuts only after campaign eligibility/timing is confirmed. Keep bonus withdrawal/turnover as a separate haircut rather than treating 200-AZN bonus as cash by default.
-3. **Parallel finite-pool priority:** obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` only through a genuinely new runtime/file reference/cache/CDN artifact. Once available, extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
-4. Do **not** repeat generic exact-string mirror/package searches for build 1361 or treat `endir.misli.az` as independent unless a materially new build number, direct-file URL, cache surface, package identifier, DNS/CDN target, response-header artifact, support artifact, or retrievable file reference appears.
+1. **Highest immediate priority returns to `1001 Sevinc` denominator recovery.** Obtain genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing an absolute denominator for `10066 Silver` / `10072 S25`.
+2. Obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` only through a genuinely new runtime/file reference/cache/CDN artifact. Once available, extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
+3. Do **not** repeat generic exact-string mirror/package searches for build 1361 or treat `endir.misli.az` as independent unless a materially new build number, direct-file URL, cache surface, package identifier, DNS/CDN target, response-header artifact, support artifact, or retrievable file reference appears.
+4. **Oley Oley is bounded as historical unless renewed.** Reopen only on materially new current Misli Campaigns/account/support/terms evidence, a renewal/relaunch, or a denominator-bearing artifact. Do not treat June–July evidence as proof of current eligibility.
 5. `Biletini Yoxla` remains bounded; reopen only with paired full ticket/serial + chance-number artifact, safe request schema, or network/API evidence. Do not submit guessed/public chance numbers.
-6. Continue genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing an absolute denominator for `10066 Silver` / `10072 S25`.
-7. Trendyol: revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
-8. Historical social/POS searching should prioritize **numeric** sold/remaining quantities, progress screenshots, receipt/terminal fields, or direct product-card captures; do not spend cycles on additional qualitative sold-out posts alone.
-9. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
-10. Treat `1001 Sevinc` denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
-11. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
-12. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
-13. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-14. Do not reopen rejected draw-history prediction branches without materially new information.
+6. Trendyol: revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
+7. Historical social/POS searching should prioritize **numeric** sold/remaining quantities, progress screenshots, receipt/terminal fields, or direct product-card captures; do not spend cycles on additional qualitative sold-out posts alone.
+8. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
+9. Treat `1001 Sevinc` denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
+10. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
+11. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
+12. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+13. Do not reopen rejected draw-history prediction branches without materially new information.
