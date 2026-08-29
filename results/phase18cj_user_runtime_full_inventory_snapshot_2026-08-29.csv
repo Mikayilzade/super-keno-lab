@@ -1,0 +1,12 @@
+draw_id,prize,stated_value_azn,prize_count,card_ticket_price_azn,modal_ticket_price_azn,total_ticket_cap,displayed_sold_pct,draw_date,notes
+10065,iPhone 17 Pro 256 GB Cosmic Orange,3200,1,1.0,1.0,6400,45,2026-09-16,user runtime modal + parent card
+10064,iPhone 17 Pro 256 GB Deep Blue,3200,1,1.0,1.0,6400,36,2026-09-16,user runtime modal + parent card
+10066,iPhone 17 Pro 256 GB Silver,3200,1,1.0,1.0,6400,34,2026-09-16,user runtime modal + parent card; updates stale 33%
+10072,PlayStation 5 Slim 1TB,1200,1,0.5,0.5,4000,57,2026-09-16,user runtime modal; corrects prior erroneous S25 mapping
+10073,Samsung Galaxy S25 Ultra Black,2500,1,0.5,1.0,8800,44,2026-09-16,PRICE CONFLICT: live card shows 0.5 AZN while modal text shows 1 manat; do not execute until checkout/network resolves transactional price
+10067,1000 AZN-lik Hediyye Kuponu,1000,3,0.5,0.5,12000,17,2026-09-16,three prizes; total stated face pool 3000 AZN; coupon tax/transferability classification unresolved
+10071,"iPad Air 13\" (M2) Starlight 128GB",1500,1,0.5,0.5,6000,27,2026-09-16,user runtime modal + parent card
+10068,Samsung Soyuducu,1200,1,0.5,0.5,4800,24,2026-09-16,user runtime modal + parent card
+10069,Samsung Paltaryuyan,700,1,0.5,0.5,2800,33,2026-09-16,user runtime modal + parent card
+10070,Samsung Qabyuyan,765,1,0.5,0.5,3000,36,2026-09-16,user runtime modal + parent card
+10074,Samsung TV OLED 55,1100,1,0.5,0.5,4000,28,2026-09-16,user runtime modal + parent card
