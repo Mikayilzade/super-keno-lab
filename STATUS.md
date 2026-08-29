@@ -56,7 +56,8 @@ Established facts:
 - **Phase 18BX added a materially new first-party runtime surface:** public `Biletini Yoxla` is live at `/biletini-yoxla` with a product-routed `/keno/biletini-yoxla` alias and accepts a ticket number for resolution. No indexed response schema was recovered yet, so it remains a lead rather than a denominator;
 - Phase 18BX also reconfirmed from current official social output that `1001 Sevinc` is actively sold through Azerlotereya sales points and Misli points as well as Azerlotereya.com, Misli.az and Trendyol.az, keeping current retail/POS artifacts as a distinct denominator route;
 - **Phase 18BY recovered five legitimate public winning `1001 Sevinc` chance numbers from the first draw:** `103932, 107185, 112723, 116364, 121104` for five iPhone 16 Pro Max prizes. These are vetted zero-cost schema fixtures, but they do not establish sold count or cap;
-- **Phase 18BZ materially sharpened field semantics:** the first-party 1001-Sevinc explainer says every purchased ticket has its own `şans nömrəsi`, while the generic checker explicitly asks for `Bilet nömrəsi`; separate first-party physical-ticket pages also distinguish ticket serial numbers from game-result values. Treat `Bilet nömrəsi`/serial and `şans nömrəsi` as distinct unless a direct artifact proves equivalence. Do not submit the Phase-18BY chance numbers to the checker. The checker branch is now bounded until paired ticket+chance evidence or request/response schema appears.
+- **Phase 18BZ materially sharpened field semantics:** the first-party 1001-Sevinc explainer says every purchased ticket has its own `şans nömrəsi`, while the generic checker explicitly asks for `Bilet nömrəsi`; separate first-party physical-ticket pages also distinguish ticket serial numbers from game-result values. Treat `Bilet nömrəsi`/serial and `şans nömrəsi` as distinct unless a direct artifact proves equivalence. Do not submit the Phase-18BY chance numbers to the checker. The checker branch is now bounded until paired ticket+chance evidence or request/response schema appears;
+- **Phase 18CA verifies repeated real category-level sellouts from first-party operator channels:** the first 1001-Sevinc iPhone pool sold out quickly and was drawn early; a later three-iPhone pool was publicly described as having `very few tickets left` with three days remaining and then also sold out early (`Azerlotereya/2108` -> `/2122`). This proves operational exhaustion is not merely theoretical and makes `execution_closure_risk` a required field for future live opportunities. The posts remain qualitative and do not reveal cap/remaining; additional qualitative `few tickets left` social searching is now bounded unless a numeric quantity or interpretable product screenshot appears.
 
 For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
 If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`.
@@ -103,6 +104,7 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 - `results/PHASE18BY_PUBLIC_WINNING_CHANCE_NUMBERS_AND_CHECKER_INPUT_BOUNDARY.md`
 - `results/phase18by_public_1001sevinc_identifiers.csv`
 - `results/PHASE18BZ_1001_SEVINC_TICKET_VS_CHANCE_NUMBER_SEMANTICS.md`
+- `results/PHASE18CA_1001_SEVINC_REPEAT_SELLOUT_AND_EXECUTION_RISK.md`
 
 ## NEXT ACTION — Phase 18 continuation
 
@@ -111,12 +113,13 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 3. `Biletini Yoxla` is now secondary/bounded: first-party semantics favor `Bilet nömrəsi`/serial being distinct from 1001-Sevinc `şans nömrəsi`. Reopen only with a paired full ticket/serial + chance-number artifact, safe runtime/static request schema, or network/API evidence. Do not submit guessed/public chance numbers.
 4. Continue genuinely new Misli/Azerlotereya authenticated/runtime/rendered or current retail/POS evidence exposing an absolute denominator for `10066 Silver` / `10072 S25`.
 5. For Trendyol, revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
-6. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
-7. Treat denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
-8. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` separately.
-9. Reacquire fresh complete sold% for `10072 S25` / `10064 Deep Blue` only from genuinely new artifacts.
-10. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears.
-11. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
-12. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
-13. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-14. Do not reopen rejected draw-history prediction branches without materially new information.
+6. Historical social/POS searching should now prioritize **numeric** sold/remaining quantities, progress screenshots, receipt/terminal fields, or direct product-card captures. Do not spend cycles on additional qualitative `few tickets left` / sold-out posts alone.
+7. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
+8. Treat denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
+9. If cap/remaining is recovered, compute buffered live ROI immediately under 60/70/80/100% usable value, 14% property-prize tax and a sell-through execution buffer; report `operational_integrity_status` and `execution_closure_risk` separately.
+10. Reacquire fresh complete sold% for `10072 S25` / `10064 Deep Blue` only from genuinely new artifacts.
+11. Revisit exact registration-316 PDF identity only if a materially new first-party CMS/archive/document-index surface appears.
+12. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
+13. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
+14. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+15. Do not reopen rejected draw-history prediction branches without materially new information.
