@@ -4,134 +4,129 @@ Last updated: 2026-08-29
 
 ## Phase
 
-`PHASE 18 — external EV modifiers / promotion overlays / finite-pool execution`
+`PHASE 18CJ — external EV modifiers / 1001 Sevinc finite-pool execution`
 
 ## Core state
 
 - Dedicated repo: `Mikayilzade/super-keno-lab`; broad `loto-research` remains separate.
 - **195** validated Super Keno draws, 2022-12-21..2026-08-23.
 - Portfolio size **N remains a free integer optimization variable**.
-- History-based predictive branches remain closed as primary edge sources after strict walk-forward/seed testing.
-- Fixed-list universal guarantee is mathematically impossible for the base game.
+- Base-game fixed-list universal guarantee is mathematically impossible.
+- History-based predictive branches are closed as primary edge sources after strict walk-forward/seed testing: hot/cold/pairs/context/mean-reversion, supervised per-number ranking, payoff regression, continuous structure, discrete regime/Markov.
 - Exact after-tax 1x Super Keno expected cash-return ratio: **0.5918070335**.
-- Break-even modifier thresholds: direct cash-equivalent subsidy **40.82%**; one-wager bonus **68.97%**.
+- Base-game break-even modifier thresholds: direct cash-equivalent subsidy **40.82%**; one-wager bonus **68.97%**.
 
 ## Current conclusion
 
-No **fully verified executable repeatable positive-EV Super Keno modifier** is known at the 2026-08-29 snapshot.
+No fully verified **guaranteed-profit** or repeatable executable +EV Super Keno strategy is yet declared.
 
-### Modifier state
+However, the major `1001 Sevinc` execution blocker changed materially on 2026-08-29: user-runtime product modals expose the absolute specified ticket count (`Biletlərin sayı`) for current draws. We no longer need to reverse-engineer the denominator from search/API guesses.
 
-- `10→10`: `official_status_conflict_conditional_positive`; conditional ROI **1.183614067** if operational/eligible. Main campaign terms say valid through **31 Aug 23:59**, FAQ still says **31 Jul 23:59**. Do not stake without materially new account/support/current-UI confirmation.
-- `1001 Sevinc` purchases count immediately toward the 10 AZN qualifying wager; bonus balance is described as having no turnover requirement, but current Super-Keno eligibility is not proven strongly enough for an executable call.
+Canonical new evidence/checkpoint:
+
+- `results/phase18cj_user_runtime_full_inventory_snapshot_2026-08-29.csv`
+- `results/PHASE18CJ_USER_RUNTIME_FULL_INVENTORY_BREAKTHROUGH.md`
+
+## Modifier state
+
+- `10→10`: `official_status_conflict_conditional_positive`; conditional Super-Keno ROI **1.183614067** if operational/eligible. Main terms say through **31 Aug 23:59**, FAQ still says **31 Jul 23:59**. Do not stake solely for this without current account/support/UI confirmation.
 - RadioArena promo: revisit only on materially new product-scope/account evidence.
-- Misli APL Fantasy: repeatable free-entry bonus, but `Lotereya` eligibility/wagering/expiry/withdrawal and exact denominator remain unresolved.
-- **Oley Oley:** `historical_lottery_eligible_overlay_denominator_unresolved`; no longer treat as a live executable modifier. Official launch copy on **2026-06-09** explicitly gave **2 promo chances per 5 AZN** for `Virtual İdman, ePoz-Qazan, Lotereya`. Third-week inventory and a **2026-07-17** campaign update are consistent with a six-week June–July run; by 17 July the first Changan had been awarded and the second/final car was scheduled for the following week's draw. No current/renewal artifact was recovered for the 2026-08-29 snapshot. Historical economics remain useful: Super Keno needs **1.02048241625 AZN EV per Oley-Oley chance** to break even; bonus-only 10,000 AZN weekly pool would suffice only below roughly **9,799 eligible chances** before bonus haircuts. `T_week` remains unknown.
+- Misli APL Fantasy: free-entry bonus pattern exists but `Lotereya` eligibility/wagering/expiry/withdrawal remains unresolved.
+- Oley Oley: historical only unless renewed; do not treat June–July 2026 evidence as current.
 
-## Closed primary routes
+## 1001 Sevinc — current 16.09.2026 cycle
 
-Do not reopen without materially new information: fixed-list geometry alone; hot/cold/pair/context/mean-reversion; supervised per-number ranking; ticket-payoff regression; continuous structure forecasting; discrete regime/Markov forecasting.
+User-runtime screenshots now bind current draw IDs, operator-stated prize values, ticket quantities/caps, prize counts and sold percentages.
 
-## Secondary finite-pool route — `1001 Sevinc`
+| drawId | prize | qty | stated value each | live card price | modal price | cap C | sold% |
+|---:|---|---:|---:|---:|---:|---:|---:|
+| 10065 | iPhone 17 Pro 256GB Cosmic Orange | 1 | 3200 | 1.0 | 1.0 | 6400 | 45 |
+| 10064 | iPhone 17 Pro 256GB Deep Blue | 1 | 3200 | 1.0 | 1.0 | 6400 | 36 |
+| 10066 | iPhone 17 Pro 256GB Silver | 1 | 3200 | 1.0 | 1.0 | 6400 | 34 |
+| 10072 | PlayStation 5 Slim 1TB | 1 | 1200 | 0.5 | 0.5 | 4000 | 57 |
+| 10073 | Samsung Galaxy S25 Ultra Black | 1 | 2500 | **0.5** | **1.0** | 8800 | 44 |
+| 10067 | 1000-AZN gift coupon | 3 | 1000 | 0.5 | 0.5 | 12000 | 17 |
+| 10071 | iPad Air 13-inch M2 128GB | 1 | 1500 | 0.5 | 0.5 | 6000 | 27 |
+| 10068 | Samsung refrigerator | 1 | 1200 | 0.5 | 0.5 | 4800 | 24 |
+| 10069 | Samsung washing machine | 1 | 700 | 0.5 | 0.5 | 2800 | 33 |
+| 10070 | Samsung dishwasher | 1 | 765 | 0.5 | 0.5 | 3000 | 36 |
+| 10074 | Samsung TV OLED 55 | 1 | 1100 | 0.5 | 0.5 | 4000 | 28 |
 
-This remains the strongest materially different operator-side finite-denominator mechanism currently known.
+### Critical corrections
 
-Established facts:
-- current parent page shows **11 draws dated 16.09.2026**: 3 at 1 AZN and 8 at 0.5 AZN;
-- current link order recovered as `10065,10064,10066,10072,10073,10067,10071,10068,10069,10070,10074`;
-- `10066` and `10072` live-link integrity reconfirmed; direct detail pages remain client-shell only;
-- fresh public search index (2026-08-29) exposes the current 11-draw parent collection but no denominator-bearing indexed detail result for exact `drawId=10066` / `drawId=10072`; historical `drawId` detail routes are indexable, so generic exact-ID search is now bounded until a new cached/detail/rendered artifact appears;
-- historical chance IDs are offset/namespace values, so `max(chance ID)` must not be used as sold count;
-- official explainer states account/client surface can show how many tickets remain until the draw;
-- **Phase 18CF tightens that semantic:** first-party wording says the surface shows how many tickets remain **for the draw to take place**, while sales stop when the **specified ticket count** is reached. Therefore a draw-bound exact remaining count `R` is operationally `C-M`, where `C` is the specified ticket target/cap and `M` sold. When paired with the already preserved integer sold%, `R` can recover or sharply narrow `C` even if the percentage is rounded/truncated. Solver: `scripts/phase18cf_remaining_plus_percent_cap_solver.py`;
-- retail/POS artifacts remain a distinct denominator lead; lone six-digit chance numbers are insufficient;
-- `operational_integrity_status` remains required after an official March-2026 incident where some purchased tickets failed to enter scheduled draws;
-- `1001 Sevinc` is first-party identified as registration **316 / 12.05.2025**;
-- first-party conditions-document namespace is known, but no indexed registration-316 DOCX has been recovered;
-- Trendyol Azerbaijan is an official `1001 Sevinc` sub-distributor with an account ticket surface, but public searching exposed no denominator field;
-- Misli mobile app has a live `Lotereya -> 1001 Sevinc` surface;
-- exact first-party Android binary entrypoint remains `https://yukle.misli.az/misliaz_android.apk?v=1361`; browser fetch reaches APK MIME but cannot persist bytes; generic mirror/package and `endir.misli.az` branches are bounded absent new evidence;
-- public `Biletini Yoxla` is live, but first-party semantics favor `Bilet nömrəsi`/serial being distinct from `şans nömrəsi`; do not submit guessed/public chance numbers;
-- five legitimate public winning chance numbers from the first draw are preserved only as schema fixtures: `103932, 107185, 112723, 116364, 121104`;
-- repeated real category-level sellouts are verified from first-party operator channels; `execution_closure_risk` is mandatory for future live opportunities;
-- Telemetr indexes historical posts from the official `@azerlotereya` Telegram channel and exposes real `1001 Sevinc` operator copy. A targeted numeric-denominator probe (`Silver`, `S25`, `33%`, `qalıb`, `satılıb`) yielded no absolute count/cap, so classify as `NEW_SURFACE_NO_NUMERIC_HIT_YET` and do not repeat the same empty keyword set unless a new indexed artifact appears;
-- **Phase 18CG adds the direct official Telegram web viewer as a distinct live first-party surface.** It exposes current message-level context and demonstrates that `1001 Sevinc` prize names + ticket prices can appear in plaintext, but the inspected live window contained no exact `R`, `M`, `C`, stock, issuance, maxTickets or numerator/denominator for `10066 Silver` / `10072 S25`. Classification: `NEW_FIRST_PARTY_SOCIAL_SURFACE_NO_DENOMINATOR_HIT`. Do not mechanically rescan the same plaintext window; reopen only on a new prize-specific/numeric post or directly inspectable media artifact.
-- **Phase 18CH adds a new product-design artifact route.** A public LinkedIn post by Zulfiyya Shikhaliyeva states that she and Hasan Aliyev designed the `1001 Sevinc` UX/UI and names Azərlotereya Digital/QA contributors. Her public Behance profile lists `Middle UX/UI Designer — Azərlotereya`; the indexed first portfolio page does not expose a `1001 Sevinc` case study, while later pages/redirect destinations remain unresolved. Classification: `NEW_PRODUCT_DESIGN_ARTIFACT_ROUTE_NO_DENOMINATOR_YET`. This route is now preferred over repeating generic keyword searches because real UI mockups/screenshots could reveal exact progress/remaining field labels or values.
-- **Phase 18CI adds operator-side product-management evidence that `stok` is an explicit component of the `1001 Sevinc` operating model.** A public 2025 product overview by Azərlotereya product leader Tabriz Dumanlı describes the end-to-end product setup as covering `prize/price` structure, **stock**, partner-channel launch, draw coordination and prize-claim coordination. This materially strengthens the hypothesis that a stock/remaining object exists in product/operations data, but no numeric count or backend field name is exposed. Classification: `NEW_OPERATOR_PRODUCT_MODEL_EVIDENCE_NO_NUMERIC_DENOMINATOR_YET`. The two Phase 18CH LinkedIn short links remain unresolved because the public redirect endpoint is fetch-restricted and exact-link searches only re-index the source post; do not repeat that route without a new cache/destination artifact.
+- Prior mapping `10072 -> S25` was wrong. **10072 is PS5; 10073 is S25**.
+- S25 has a live UI price conflict: parent card shows **0.5 AZN**, detail modal says **1 manat**. Do not execute S25 until checkout/network confirms actual transactional price.
+- Silver advanced from the previous 33% observation to **34%**.
+- The old parent-page characterization `3 x 1 AZN + 8 x 0.5 AZN` is not enough to resolve S25 because its own card/modal conflict is explicit.
 
-For any denominator observation bind `(drawId, prize, ticket price, draw date, sold%, source surface, crawl timestamp)`.
-If exact sold tickets `M` are recovered: `ROI = V_net / (p*M)`. If cap `C` and remaining `R` are recovered, use `M=C-R`. If only exact `R` plus a contemporaneous integer sold% are recovered, enumerate integer `C` under plausible display rounding rules with the Phase 18CF solver.
+## Finite-pool economics
+
+Standing working model for a non-cash/property prize:
+
+`V_net_per_prize(h) = h*V - 0.14*(V-p)`
+
+where `h` is the fraction of operator-stated value that is actually usable/liquidatable. For `q` prizes:
+
+`Pool_net = q * V_net_per_prize`.
+
+Break-even final sold share:
+
+`S_BE = Pool_net / (p*C)`.
+
+Snapshot diagnostics using current displayed sold% (future sales are NOT locked):
+
+| draw | sold% | BE @100% usable | ROI-now @100% | BE @80% usable | ROI-now @80% |
+|---|---:|---:|---:|---:|---:|
+| 10065 Cosmic | 45 | 43.00 | 0.956 | 33.00 | 0.733 |
+| 10064 Deep Blue | 36 | 43.00 | 1.195 | 33.00 | 0.917 |
+| 10066 Silver | 34 | 43.00 | 1.265 | 33.00 | 0.971 |
+| 10072 PS5 | 57 | 51.60 | 0.905 | 39.60 | 0.695 |
+| 10073 S25 (`p=0.5` hypothesis only) | 44 | 48.87 | 1.111 | 37.50 | 0.852 |
+| 10067 3x1000 coupon | 17 | 43.00 | **2.530** | 33.00 | **1.941** |
+| 10071 iPad | 27 | 43.00 | **1.593** | 33.00 | **1.222** |
+| 10068 refrigerator | 24 | 43.00 | **1.792** | 33.00 | **1.375** |
+| 10069 washer | 33 | 43.00 | 1.303 | 33.01 | ~1.000 |
+| 10070 dishwasher | 36 | 43.86 | 1.218 | 33.66 | 0.935 |
+| 10074 TV OLED | 28 | 47.30 | **1.689** | 36.30 | **1.297** |
+
+These are **if-the-pool-froze-now** expected-value diagnostics, not a guarantee and not a recommendation to buy now. Sales continue until the scheduled close or early sellout, so later external purchases dilute tickets bought earlier.
 
 ### Current candidate hierarchy
 
-1. **`10066 Silver`** — 1 AZN; fresh first-party sold **33%**; denominator target #1. An exact draw-bound **remaining-ticket count alone** is now sufficient to invert/narrow the cap when contemporaneous with 33%.
-2. **`10072 S25 Ultra Black`** — 0.5 AZN; drawId-bound; fresh sold% unresolved.
-3. `10065 Cosmic Orange` — 1 AZN; last complete first-party sold input **43%**.
-4. `10064 Deep Blue` — 1 AZN; fresh sold% unresolved.
-5. `1000-AZN gift coupon` — current price 0.5 AZN; drawId and fresh sold% unresolved.
+1. **10067 — 3x1000-AZN gift coupons, 17% sold.** Largest headroom. Must resolve coupon issuer/restrictions/transferability/expiry and exact tax classification.
+2. **10068 — refrigerator, 24% sold.** Strong headroom even under 80% usable-value stress.
+3. **10074 — TV OLED 55, 28% sold.** Strong 80%-usable headroom.
+4. **10071 — iPad, 27% sold.** Still positive under 80%-usable stress at snapshot.
+5. 10069 washer, 10066 Silver, 10064 Deep Blue, 10070 dishwasher are thinner and sensitive to resale value + future sales.
+6. 10065 Cosmic and 10072 PS5 are already below break-even under the standing 100%-usable after-tax model at current displayed sold%.
+7. 10073 S25 is withheld from execution classification until price conflict is resolved.
 
-### Silver execution buffer
+## Free integer N
 
-Using ~3,150 AZN market reference and the standing 14% property-prize tax model, approximate break-even total-cap ceilings are:
+`N` remains free. If external sales froze at `M` and net prize pool is `P`, approximate expected profit after buying `N` tickets is:
 
-| usable value | 33% sold | 35% sold | 38% sold | 43% sold |
-|---:|---:|---:|---:|---:|
-| 60% | 4,391 | 4,140 | 3,814 | 3,370 |
-| 70% | 5,346 | 5,040 | 4,642 | 4,103 |
-| 80% | 6,300 | 5,940 | 5,471 | 4,835 |
-| 100% | 8,210 | 7,740 | 7,129 | 6,300 |
+`EV_profit(N) = N*P/(M+N) - p*N`.
 
-Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specific tax classification is proven otherwise.
+The continuous interior optimum is:
 
-## Recent phase files
+`N* = sqrt(P*M/p) - M`
 
-- `results/PHASE18BG_1001_SEVINC_PERCENT_TRANSITION_CAP_PROBE.md`
-- `scripts/phase18bg_percent_transition_cap_solver.py`
-- `results/PHASE18BK_1001_SEVINC_REGISTERED_TERMS_DENOMINATOR_ROUTE.md`
-- `results/PHASE18BL_1001_SEVINC_CURRENT_RULES_AND_PUBLICATION_ROUTE.md`
-- `results/PHASE18BM_1001_SEVINC_OFFICIAL_PRESALE_PUBLICATION_TRACE.md`
-- `results/PHASE18BN_1001_SEVINC_FIRST_PARTY_DOCUMENT_NAMESPACE.md`
-- `results/PHASE18BO_10X10_LIVE_TERMS_RECHECK_AND_1001_FAST_SETTLEMENT.md`
-- `results/PHASE18BP_1001_SEVINC_OFFICIAL_DRAW_TERMS_AND_225_EXCEPTION.md`
-- `results/PHASE18BQ_1001_SEVINC_PDF_INDEX_DATE_AND_LINKAGE_REASSESSMENT.md`
-- `results/PHASE18BR_1001_SEVINC_TRENDYOL_ACCOUNT_SURFACE.md`
-- `results/PHASE18BS_TRENDYOL_PUBLIC_ARTIFACT_FIELD_BOUNDARY.md`
-- `results/PHASE18BT_MISLI_CURRENT_MOBILE_SURFACE_AND_DENOMINATOR_BOUNDARY.md`
-- `results/PHASE18BU_MISLI_OFFICIAL_ANDROID_APK_RUNTIME_ENTRYPOINT.md`
-- `results/PHASE18BV_MISLI_APK_1361_ACQUISITION_BOUNDARY.md`
-- `results/PHASE18BW_ENDIR_REDIRECT_SURFACE_AND_ANDROID_ROUTE_BOUNDARY.md`
-- `results/PHASE18BX_PUBLIC_TICKET_CHECKER_AND_LIVE_RETAIL_ROUTE.md`
-- `results/PHASE18BY_PUBLIC_WINNING_CHANCE_NUMBERS_AND_CHECKER_INPUT_BOUNDARY.md`
-- `results/phase18by_public_1001sevinc_identifiers.csv`
-- `results/PHASE18BZ_1001_SEVINC_TICKET_VS_CHANCE_NUMBER_SEMANTICS.md`
-- `results/PHASE18CA_1001_SEVINC_REPEAT_SELLOUT_AND_EXECUTION_RISK.md`
-- `results/PHASE18CB_OLEY_OLEY_LOTTERY_DOUBLE_CHANCE_OVERLAY.md`
-- `results/PHASE18CC_OLEY_OLEY_CAMPAIGN_TIMING_AND_LIVE_STATUS_BOUNDARY.md`
-- `results/PHASE18CD_CURRENT_PARENT_INDEX_AND_DRAWID_INDEXABILITY_PROBE.md`
-- `results/PHASE18CE_TELEGRAM_ARCHIVE_NUMERIC_DENOMINATOR_PROBE.md`
-- `results/PHASE18CF_REMAINING_COUNT_SEMANTICS_AND_CAP_INVERSION.md`
-- `scripts/phase18cf_remaining_plus_percent_cap_solver.py`
-- `results/PHASE18CG_DIRECT_TELEGRAM_LIVE_CONTEXT_DENOMINATOR_PROBE.md`
-- `results/PHASE18CH_INTERNAL_UX_ARTIFACT_ROUTE_AND_PUBLIC_CARD_BOUNDARY.md`
-- `results/PHASE18CI_1001_SEVINC_PRODUCT_OWNER_STOCK_MODEL_EVIDENCE.md`
+when positive. Real execution must include future external sales `F`, replacing `M` with `M+F`. Therefore the rational research direction is near-close monitoring and scenario analysis, not early purchase based on today's percentage.
 
-## NEXT ACTION — Phase 18 continuation
+This finite-pool route seeks **positive expected value**, not deterministic guaranteed profit. Owning only some remaining tickets does not guarantee a prize.
 
-1. **Highest immediate priority remains `10066 Silver` denominator recovery.** Target genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing the **absolute number of tickets remaining for the draw**. Because 33% sold is already draw-bound, a contemporaneous exact `R` can now be enough to infer/narrow `C`.
-2. **Phase 18CI priority subroute:** use the newly confirmed product/operations `stok` model to target partner-channel integration artifacts rather than generic keyword pages. Prioritize Azerlotereya/Misli/Trendyol/retail launch screenshots, product-management posts, support text, requirements-like artifacts, POS/receipt surfaces or network/API evidence where inventory/remaining counts must be synchronized across channels. Search for `stok`, `qalıq`, `remaining`, `inventory`, `sold`, `limit`, `ticket count` only when tied to a concrete new operator/partner artifact.
-3. Phase 18CH designer route remains open only for genuinely new portfolio/mockup artifacts. The two known `lnkd.in` short links are bounded until a destination/cache/share surface becomes retrievable; do not mechanically repeat exact-link searches.
-4. Prefer a **single rendered product-card, network/API response, screenshot/social preview, retail terminal or receipt** carrying both the 33% progress and absolute remaining count. `total`, `cap`, `soldCount`, stock or a numerator/denominator remain equally valid. Generic exact-ID search-index probing for `10066`/`10072` is bounded unless a new cached/detail/rendered artifact appears.
-5. If exact `R` is recovered for `10066`, immediately run `scripts/phase18cf_remaining_plus_percent_cap_solver.py` under round/floor/ceil assumptions, compute compatible `C`, `M`, ROI, execution buffer and maximum positive-EV purchase size with **N free**. Do not combine stale percentage and remaining observations without modeling intervening sales.
-6. Social-channel searching is now split into two bounded surfaces: Telemetr and direct official Telegram. Reuse either only when a newly indexed/current prize-specific post, numeric wording, or directly inspectable media artifact appears; do not repeat the Phase 18CE keyword set or the Phase 18CG recent plaintext window mechanically.
-7. Obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` only through a genuinely new runtime/file reference/cache/CDN artifact. Once available, extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
-8. Do **not** repeat generic exact-string mirror/package searches for build 1361 or treat `endir.misli.az` as independent unless a materially new build number, direct-file URL, cache surface, package identifier, DNS/CDN target, response-header artifact, support artifact, or retrievable file reference appears.
-9. **Oley Oley is bounded as historical unless renewed.** Reopen only on materially new current Misli Campaigns/account/support/terms evidence, a renewal/relaunch, or a denominator-bearing artifact. Do not treat June–July evidence as proof of current eligibility.
-10. `Biletini Yoxla` remains bounded; reopen only with paired full ticket/serial + chance-number artifact, safe request schema, or network/API evidence. Do not submit guessed/public chance numbers.
-11. Trendyol: revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
-12. Historical social/POS searching should prioritize **numeric** sold/remaining quantities, progress screenshots, receipt/terminal fields, or direct product-card captures; do not spend cycles on additional qualitative sold-out posts alone.
-13. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
-14. Treat `1001 Sevinc` denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
-15. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
-16. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
-17. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-18. Do not reopen rejected draw-history prediction branches without materially new information.
+## Operational risks already established
+
+- Repeated category-level early sellouts occur; `execution_closure_risk` is real.
+- A March-2026 incident caused some purchased tickets not to enter scheduled draws; `operational_integrity_status` remains required before any final execution claim.
+- Historical chance IDs are namespaced/offset and cannot be used as sold counts.
+- Generic public search, Telemetr/direct Telegram plaintext, Trendyol public search, exact-ID search, registration-DOCX search, APK mirror guesses and ticket-checker guessing are bounded absent materially new evidence.
+
+## NEXT ACTION — Phase 18CJ+
+
+1. **Resolve 10073 S25 actual transactional price** without making a purchase: use checkout preview or browser DevTools/network. The parent card says 0.5 AZN; modal says 1 AZN.
+2. **Research 10067 coupon terms**: issuing electronics retailer, where it can be used, expiry, transferability, cash-equivalent/resale value, exclusions and tax classification. This is now candidate #1.
+3. Build a reusable live finite-pool calculator/watchlist taking `(drawId, V, qty, p, C, sold%, haircut, tax)` and outputting current implied ROI, break-even sold%, remaining headroom, future-sales scenarios, and optimal integer `N`.
+4. Monitor sold% close to sales end / early-sellout events; never treat today's snapshot edge as locked.
+5. Revisit `10→10` only on materially new current-account/support/UI evidence resolving the 31-Aug/31-Jul conflict.
+6. Do not reopen rejected draw-history prediction branches without materially new information.
