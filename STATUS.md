@@ -40,6 +40,7 @@ Established facts:
 - current parent page shows **11 draws dated 16.09.2026**: 3 at 1 AZN and 8 at 0.5 AZN;
 - current link order recovered as `10065,10064,10066,10072,10073,10067,10071,10068,10069,10070,10074`;
 - `10066` and `10072` live-link integrity reconfirmed; direct detail pages remain client-shell only;
+- fresh public search index (2026-08-29) exposes the current 11-draw parent collection but no denominator-bearing indexed detail result for exact `drawId=10066` / `drawId=10072`; historical `drawId` detail routes are indexable, so generic exact-ID search is now bounded until a new cached/detail/rendered artifact appears;
 - historical chance IDs are offset/namespace values, so `max(chance ID)` must not be used as sold count;
 - official explainer states account/client surface can show how many tickets remain until the draw;
 - retail/POS artifacts remain a distinct denominator lead; lone six-digit chance numbers are insufficient;
@@ -101,19 +102,21 @@ Property-prize working model: `V_economic = h*V - 0.14*(V-p)` until prize-specif
 - `results/PHASE18CA_1001_SEVINC_REPEAT_SELLOUT_AND_EXECUTION_RISK.md`
 - `results/PHASE18CB_OLEY_OLEY_LOTTERY_DOUBLE_CHANCE_OVERLAY.md`
 - `results/PHASE18CC_OLEY_OLEY_CAMPAIGN_TIMING_AND_LIVE_STATUS_BOUNDARY.md`
+- `results/PHASE18CD_CURRENT_PARENT_INDEX_AND_DRAWID_INDEXABILITY_PROBE.md`
 
 ## NEXT ACTION — Phase 18 continuation
 
-1. **Highest immediate priority returns to `1001 Sevinc` denominator recovery.** Obtain genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing an absolute denominator for `10066 Silver` / `10072 S25`.
-2. Obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` only through a genuinely new runtime/file reference/cache/CDN artifact. Once available, extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
-3. Do **not** repeat generic exact-string mirror/package searches for build 1361 or treat `endir.misli.az` as independent unless a materially new build number, direct-file URL, cache surface, package identifier, DNS/CDN target, response-header artifact, support artifact, or retrievable file reference appears.
-4. **Oley Oley is bounded as historical unless renewed.** Reopen only on materially new current Misli Campaigns/account/support/terms evidence, a renewal/relaunch, or a denominator-bearing artifact. Do not treat June–July evidence as proof of current eligibility.
-5. `Biletini Yoxla` remains bounded; reopen only with paired full ticket/serial + chance-number artifact, safe request schema, or network/API evidence. Do not submit guessed/public chance numbers.
-6. Trendyol: revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
-7. Historical social/POS searching should prioritize **numeric** sold/remaining quantities, progress screenshots, receipt/terminal fields, or direct product-card captures; do not spend cycles on additional qualitative sold-out posts alone.
-8. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
-9. Treat `1001 Sevinc` denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
-10. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
-11. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
-12. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
-13. Do not reopen rejected draw-history prediction branches without materially new information.
+1. **Highest immediate priority remains `1001 Sevinc` denominator recovery.** Obtain genuinely new Misli/Azerlotereya authenticated/runtime/rendered or retail/POS evidence exposing an absolute denominator for `10066 Silver` / `10072 S25`.
+2. Prefer a **rendered product-card, network/API response, screenshot/social preview, retail terminal or receipt** that exposes numeric `remaining`, `total`, `soldCount`, stock or a progress numerator/denominator. Generic exact-ID search-index probing for `10066`/`10072` is now bounded unless a new cached/detail artifact appears.
+3. Obtain APK bytes for exact first-party build `misliaz_android.apk?v=1361` only through a genuinely new runtime/file reference/cache/CDN artifact. Once available, extract manifest/assets/DEX strings, API hosts/routes and `1001 Sevinc` schema fields (`remaining`, `total`, `soldCount`, `stock`, `issuance`, `maxTickets` or equivalent).
+4. Do **not** repeat generic exact-string mirror/package searches for build 1361 or treat `endir.misli.az` as independent unless a materially new build number, direct-file URL, cache surface, package identifier, DNS/CDN target, response-header artifact, support artifact, or retrievable file reference appears.
+5. **Oley Oley is bounded as historical unless renewed.** Reopen only on materially new current Misli Campaigns/account/support/terms evidence, a renewal/relaunch, or a denominator-bearing artifact. Do not treat June–July evidence as proof of current eligibility.
+6. `Biletini Yoxla` remains bounded; reopen only with paired full ticket/serial + chance-number artifact, safe request schema, or network/API evidence. Do not submit guessed/public chance numbers.
+7. Trendyol: revisit only on a materially new account screenshot, support/help artifact, app payload/network capture, or directly interpretable ticket-card surface.
+8. Historical social/POS searching should prioritize **numeric** sold/remaining quantities, progress screenshots, receipt/terminal fields, or direct product-card captures; do not spend cycles on additional qualitative sold-out posts alone.
+9. If sequential sold-% observations around known ticket additions become available, run the Phase 18BG solver; do not execute paid probes autonomously.
+10. Treat `1001 Sevinc` denominator scope as **draw + prize category + draw period**, not global game-wide, unless an artifact explicitly proves otherwise.
+11. Revisit `10→10` only on materially new evidence resolving the 31-Aug/31-Jul conflict and/or proving current Super-Keno bonus eligibility.
+12. Keep `results/phase18_ev_modifier_ledger.csv` synchronized only when classifications actually change.
+13. If any live zero-cost bonus is proven Super-Keno eligible, immediately design a variance-aware distinct-ticket conversion with **N free**, constrained only by bonus terms.
+14. Do not reopen rejected draw-history prediction branches without materially new information.
