@@ -16,3 +16,17 @@ Sources checked:
 - https://lotteryguru.com/azerbaijan-lottery-results/az-super-keno
 - https://lotteryguru.com/azerbaijan-lottery-results/az-super-keno/az-super-keno-statistics
 - Azerlotereya indexed/search results for official evidence.
+
+## 2026-10-04 verification run
+
+- Added 2026-10-02, official draw 26405, from the Azərlotereya official results page.
+- Numbers: 8, 9, 10, 12, 13, 18, 21, 22, 25, 37, 38, 39, 46, 51, 52, 55, 58, 60, 61, 69.
+- Structural validation: exactly 20 unique integers, all in 1..70.
+- Official page gives date/time 2026-10-02 18:45 and draw number 26405.
+- Searched again for 2026-08-24..2026-08-27 and 2026-06-22..2026-06-25; indexed search results did not yield trustworthy Azerbaijan Super Keno rows. A 2026-08-24 German Keno result was explicitly rejected as the wrong lottery.
+- Remaining priority gaps: 2026-06-22..2026-07-09 and 2026-08-24..2026-08-27. No unverified rows added.
+
+Sources checked:
+- https://www.azerlotereya.com/lotereya-neticeleri
+- https://www.azerlotereya.com/neticeler/super-keno
+- targeted web searches for the unresolved June/August dates.
