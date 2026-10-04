@@ -30,3 +30,17 @@ Sources checked:
 - https://www.azerlotereya.com/lotereya-neticeleri
 - https://www.azerlotereya.com/neticeler/super-keno
 - targeted web searches for the unresolved June/August dates.
+
+## 2026-10-04 backfill write
+
+- Added previously recovered Super Keno draws 2026-06-22 through 2026-06-26 to `data/super_keno_draws_part_003.csv`.
+- Official draw numbers: 26261, 26262, 26263, 26264, 26265.
+- 2026-06-22..2026-06-24 were cross-checked across Eurooppalotto Belgium and Italy and matched exactly.
+- 2026-06-25..2026-06-26 are currently supported by the Eurooppalotto Belgium archive; both rows pass structural validation (20 unique integers, all 1..70), but a second independent source is still pending.
+- No conflicts were found and no existing rows were overwritten.
+- Remaining priority gaps are now 2026-06-27..2026-07-09 and 2026-08-24..2026-08-27.
+
+Sources:
+- https://eurooppalotto.be/andere-loterijen/azerbeidzjan-super-keno-11717.html
+- https://eurooppalotto.it/altre-lotterie/azerbaijan-super-keno-11717.html
+
