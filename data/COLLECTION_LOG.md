@@ -44,3 +44,14 @@ Sources:
 - https://eurooppalotto.be/andere-loterijen/azerbeidzjan-super-keno-11717.html
 - https://eurooppalotto.it/altre-lotterie/azerbaijan-super-keno-11717.html
 
+## 2026-10-04 schedule-gap correction
+
+- Verified from the current Eurooppalotto Azerbaijan Super Keno pages that the published draw schedule is Monday, Tuesday, Thursday, Friday, Saturday and Sunday; Wednesday is not a scheduled draw day.
+- Corrected the unresolved-gap interpretation accordingly: 2026-07-01, 2026-07-08 and 2026-08-26 are Wednesdays and should NOT be treated as missing draws.
+- Remaining actual missing draw dates in the current target windows: 2026-06-27..2026-06-30, 2026-07-02..2026-07-07, 2026-07-09, and 2026-08-24, 2026-08-25, 2026-08-27.
+- Checked Eurooppalotto Belgium/Italy current pages and targeted indexed searches. No trustworthy complete 20-number rows for those older dates were exposed in this run, so no draw row was fabricated or added.
+
+Sources:
+- https://eurooppalotto.be/andere-loterijen/azerbeidzjan-super-keno-11717.html
+- https://eurooppalotto.it/altre-lotterie/azerbaijan-super-keno-11717.html
+
