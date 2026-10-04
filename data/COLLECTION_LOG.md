@@ -55,3 +55,16 @@ Sources:
 - https://eurooppalotto.be/andere-loterijen/azerbeidzjan-super-keno-11717.html
 - https://eurooppalotto.it/altre-lotterie/azerbaijan-super-keno-11717.html
 
+## 2026-10-05 verification run
+
+- Confirmed that 2026-10-04 official draw 26407 is already present in `data/super_keno_draws_part_005.csv`; no duplicate row added.
+- Official Azərlotereya current-results page confirms draw 26407 at 18:45 and the exact 20-number set already stored.
+- LotteryGuru statistics independently show Super Keno activity in the target summer period (including dated signals on 2026-07-02 and a table extending through 2026-08-24), but the indexed statistics page does not expose complete 20-number rows for the unresolved dates. It was therefore used only as corroborating evidence, not to reconstruct draws.
+- Targeted searches for 2026-06-27..2026-06-30, 2026-07-02..2026-07-07, 2026-07-09, and 2026-08-24, 2026-08-25, 2026-08-27 did not yield trustworthy complete 20-number candidate rows in this run.
+- No conflicts found; no unverified numbers added.
+
+Sources checked:
+- https://www.azerlotereya.com/lotereya-neticeleri
+- https://loteriaguru.com/azerbaijao-resultados-loteria/az-super-keno/az-super-keno-estatisticas
+- targeted indexed searches for each unresolved date.
+
