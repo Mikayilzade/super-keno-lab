@@ -68,3 +68,18 @@ Sources checked:
 - https://loteriaguru.com/azerbaijao-resultados-loteria/az-super-keno/az-super-keno-estatisticas
 - targeted indexed searches for each unresolved date.
 
+
+
+## 2026-10-05 schedule correction
+
+- Corrected an earlier erroneous assumption that Wednesday dates were non-draw days. Official Azərlotereya material states Super Keno is held every day, and the official TV schedule lists Super Keno on all seven weekdays.
+- Therefore 2026-07-01, 2026-07-08 and 2026-08-26 remain genuine unresolved candidate gaps and must not be excluded by weekday.
+- Fresh searches did not recover complete trustworthy 20-number rows for the remaining June/July/August gaps, so no draw rows were added in this run.
+- Current official results still show 2026-10-04 draw 26407 as the latest completed Super Keno draw; no newer completed draw was available at check time.
+- No conflicts or existing draw rows were overwritten.
+
+Sources checked:
+- https://www.azerlotereya.com/lotereya-neticeleri
+- https://www.azerlotereya.com/tv-yayimlari
+- https://www.azerlotereya.com/xeberler/super-keno-lotereyaasinda-100-000-manat-uduldu-1905
+
