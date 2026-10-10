@@ -101,3 +101,17 @@ Sources checked:
 - https://loteria.guru/resultados-loteria-azerbaiyan/az-super-keno/resultados-anteriores-super-keno-az
 - https://lucky-numbers.ru/lottery/az/super-keno/trend-chart
 
+## 2026-10-10 verification and completeness audit
+
+- Added 0 draw rows. Latest official published result remains 2026-10-09, draw 26415 (checked before the next evening draw).
+- Independent Statlotto result for 2026-06-22 (internal draw 1645) matches all 20 numbers already in part 003; the existing Belgium/Italy sources are mirrors of one publisher.
+- Targeted searches of Statlotto, Eurooppalotto, LotteryGuru and official Azərlotereya did not expose complete trustworthy rows for 2026-06-27 through 2026-07-09. No conflicts found.
+- Repository-wide audit: 247 distinct dates across five CSV parts; every row has 20 unique integers in 1..70 and no duplicate dates. Coverage is sparse outside the recent period. In 2026 through October 9 there are 96 calendar dates not yet recorded, including the 13-day June/July priority gap. The other missing blocks are Jan 1-Feb 12 (43), Feb 24-Mar 9 (14), Mar 18-26 (9), Mar 28 (1), Mar 30-31 (2), Apr 3 (1), Apr 17-23 (7), Apr 25-27 (3), and May 8-10 (3). These are collection gaps, not proof of completed draws.
+- Statlotto archive exposes only recent rows freely, and attempted direct older-date pages did not return verifiable full results. Do not infer numbers from timestamps or draw IDs.
+
+Sources checked:
+- https://statlotto.com/lottery/az/super-keno/1782143100000
+- https://statlotto.com/lottery/az/super-keno
+- https://www.azerlotereya.com/lotereya-neticeleri
+- https://eurooppalotto.be/andere-loterijen/azerbeidzjan-super-keno-11717.html
+- https://lotteryguru.com/azerbaijan-lottery-results/az-super-keno/az-super-keno-results-history
