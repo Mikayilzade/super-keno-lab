@@ -83,3 +83,21 @@ Sources checked:
 - https://www.azerlotereya.com/tv-yayimlari
 - https://www.azerlotereya.com/xeberler/super-keno-lotereyaasinda-100-000-manat-uduldu-1905
 
+## 2026-10-10 recovery/write check
+
+- GitHub write access is working again.
+- Added 2026-10-07 draw 26413 and 2026-10-08 draw 26414 to `data/super_keno_draws_part_005.csv`; both were cross-checked across independent result sources and pass structural validation.
+- Added 2026-10-09 official draw 26415 to `data/super_keno_draws_part_005.csv`; official Azərlotereya numbers were independently corroborated by Misli. Numbers: 7, 10, 17, 18, 19, 20, 22, 33, 34, 36, 41, 43, 48, 51, 53, 55, 63, 64, 69, 70.
+- Backfilled 2026-08-24 through 2026-08-27 in `data/super_keno_draws_part_004.csv`. 2026-08-24 matched LotteryGuru and Lucky Numbers; 2026-08-25..27 matched Eurooppalotto and LotteryGuru.
+- Every added row contains exactly 20 unique integers in 1..70; no duplicate dates were inserted.
+- Latest completed official Super Keno draw at check time is 2026-10-09 (26415). The 2026-10-10 daily draw has not yet occurred at this check time.
+- Remaining priority historical gap: 2026-06-27 through 2026-07-09 inclusive. Wednesday dates remain valid candidate gaps because official Azərlotereya scheduling shows Super Keno on all seven weekdays.
+- No source conflicts found in this run.
+
+Sources checked:
+- https://www.azerlotereya.com/lotereya-neticeleri
+- https://www.misli.az/lotereya/super-keno/neticeler/
+- https://azerbaijan.eurooppalotto.com/diger-lotereyalar/azerbaycan-super-keno-11717.html
+- https://loteria.guru/resultados-loteria-azerbaiyan/az-super-keno/resultados-anteriores-super-keno-az
+- https://lucky-numbers.ru/lottery/az/super-keno/trend-chart
+
