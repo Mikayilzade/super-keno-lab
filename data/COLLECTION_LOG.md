@@ -17,6 +17,8 @@
 - **2026-10-11 (earlier write):** Added Oct 10 (№26416), official numbers: 2, 4, 5, 8, 9, 14, 15, 18, 19, 23, 24, 32, 36, 40, 42, 44, 60, 62, 65, 68. Independent LotteryGuru check was reported at collection time.
 - **2026-10-11 (this check):** Re-read all five shards, verified 248 rows and 96 missing 2026 dates, and confirmed latest official Oct 10 result. Searched official archive, Eurooppalotto, LotteryGuru, Statlotto and indexed searches for Jun 27–Jul 09; **0 recoverable complete 20-number rows**, 0 conflicts, 0 CSV edits. Statlotto direct older-date URLs inaccessible; official archive renders no historical draw without its interactive date query.
 
+- **2026-10-11 (midday check):** 0 new draws; verified Oct 01–04 against LotteryGuru and Magayo (all 80 numbers matched), checked Eurooppalotto and official archive for Jun 27–Jul 09 without recoverable complete results. No conflicts; 13 priority dates remain unresolved. GitHub CSV provenance update pending due to write restriction.
+
 ## Source register / limitations
 
 - Official results: https://www.azerlotereya.com/lotereya-neticeleri
